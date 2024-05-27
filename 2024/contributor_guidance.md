@@ -8,7 +8,7 @@
   [contributor guide](https://google.github.io/gsocguides/student).
 - Check out our
   [organization profile](https://summerofcode.withgoogle.com/programs/2024/organizations/the-p4-language-consortium) and
-  [ideas list](2024-ideas-list)
+  [ideas list](ideas_list.md)
   to see if they fit your interests and skills.
 - **February 22 - March 18**
   - We encourage you to reach out to mentors of your interested projects as early as possible, so we have enough time to know about you and connect with you.

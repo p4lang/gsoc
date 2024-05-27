@@ -2,7 +2,7 @@
 
 ## Contact
 
-If you are interested in any project listed below, please follow the instructions in our [Contributor Guidance](2024-contributor-guidance) to contact us.
+If you are interested in any project listed below, please follow the instructions in our [Contributor Guidance](contributor_guidance.md) to contact us.
 
 ## Potential mentors
 
@@ -81,7 +81,7 @@ The general idea is to improve documentation for the reference P4 compiler proje
 
 [p4-constraints](https://github.com/p4lang/p4-constraints) is a useful extension of the P4 programming language that is currently architected as a standalone library separate from the P4 compiler, p4c.
 
-<img width="757" alt="image" src="https://github.com/p4lang/gsoc/assets/5176695/4697e134-9e31-49e3-9b62-5205116857ce">
+<img width="757" alt="image" src="assets/p4_constraints.png">
 
 The goal of this project is to integrate the p4-constraints frontend, which parses and type checks the constraint annotations, into the p4c frontend. This architecture change provides the following benefits:
 - **For P4 programmers**: Immediate feedback about syntax or type errors in constraints during P4 compilation.
