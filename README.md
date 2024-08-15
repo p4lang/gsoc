@@ -12,10 +12,10 @@ The repo hosts materials related to [The P4 Language Consortium](https://p4.org/
 
 | Project  | Contributor | Mentors | Final Report |
 | -------- | ----------- | ------- | ------------ |
-| [P4 Compiler Documentation] | Adarsh Rawat ([@AdarshRawat1]) | Davide Scano ([@Dscano]), Fabian Ruffy ([@fruffy]) | [Link](2024/report/AdarshRawat1/) |
-| [P4 Formatter] | Nitish Kumar ([@snapdgn]) | Bili Dong ([@qobilidop]), Fabian Ruffy ([@fruffy]) | [Link](2024/report/snapdgn/) |
-| [BMv2 PNA Support] | Rupesh Chiluka ([@rupesh-chiluka-marvell]) | Bili Dong ([@qobilidop]), Hari Thantry ([@thantry]), Debobroto Das Robin ([@drobinkent]) | [Link](2024/report/rupesh-chiluka-marvell/) |
-| [P4-Enabled Container Migration in Kubernetes] | Stanislav Kosorin ([@stano45]) | Radostin Stoyanov ([@rst0git]), Davide Scano ([@Dscano]) | [Link](2024/report/stano45/) |
+| [P4 Compiler Documentation] | Adarsh Rawat ([@AdarshRawat1]) | Davide Scano ([@Dscano]), Fabian Ruffy ([@fruffy]) | [Link](2024/projects/documentation/) |
+| [P4 Formatter] | Nitish Kumar ([@snapdgn]) | Bili Dong ([@qobilidop]), Fabian Ruffy ([@fruffy]) | [Link](2024/projects/formatter/) |
+| [BMv2 PNA Support] | Rupesh Chiluka ([@rupesh-chiluka-marvell]) | Bili Dong ([@qobilidop]), Hari Thantry ([@thantry]), Debobroto Das Robin ([@drobinkent]) | [Link](2024/projects/bmv2_pna/) |
+| [P4-Enabled Container Migration in Kubernetes] | Stanislav Kosorin ([@stano45]) | Radostin Stoyanov ([@rst0git]), Davide Scano ([@Dscano]) | [Link](2024/projects/container_migration/) |
 
 [P4 Compiler Documentation]: https://summerofcode.withgoogle.com/programs/2024/projects/u2HpJKI2
 [P4 Formatter]: https://summerofcode.withgoogle.com/programs/2024/projects/TbPyjqVw
