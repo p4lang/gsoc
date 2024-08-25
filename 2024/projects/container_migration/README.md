@@ -43,7 +43,7 @@ The project successfully demonstrates the application of the P4 language to addr
 Key contributions include:
 1. **Process migration:** Demonstrating how TCP connections can be maintained during migration of Linux processes from one network namespace to another.
 2. **Container migration with a BMv2 switch:** Demonstrating migration of containers between Pods while preserving TCP connections.
-3. **Container Migration with a Fully Containerized Setup:** Similarly to the above scenario, while also containerizing the BMv2 switch.
+3. **Container migration with a fully containerized setup:** The scenario above has been extended to include the BMv2 switch running in a container.
 4. **Container Migration of an In-Memory Database:** Within a more complex system, this example highlights the successful migration of a containerized in-memory database while preserving two established TCP connections.
 5. **Kubernetes integration using kube-router:** A use case was explored involving kube-router, with plans to replace it with BMv2 in future work.
 
