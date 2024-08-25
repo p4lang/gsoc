@@ -49,7 +49,7 @@ Key contributions include:
 
 
 ## Links
-All of the artifacts developed within this project are available in the following GitHub repository: https://github.com/stano45/p4containerflow
+All artifacts developed throughout this GSoC project are available in the following GitHub repository: https://github.com/stano45/p4containerflow
 
 
 ## Implementation details
