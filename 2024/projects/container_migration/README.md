@@ -53,7 +53,7 @@ All artifacts developed throughout this GSoC project are available in the follow
 
 
 ## Implementation details
-This project was implemented in small, incremental steps, from simple process migration using [CRIU](https://criu.org/Main_Page) to an integration with [Kubernetes](https://kubernetes.io/). We described each step in this document by outlining the key changes, identifying challenges faced during development, and discussing possible solutions. In each step, we linked relevant code and resources that could be helpful for anyone facing similar challenges.
+This project was implemented in small, incremental steps, from simple process migration using [CRIU](https://criu.org/Main_Page) to an integration with [Kubernetes](https://kubernetes.io/). The following sections describe each step of the project, outline some of the key challenges faced during development, and discuss their solutions. The relevant code and resources for each step are linked in the sections below.
 
 ### Initial prototype
 Relevant PR: https://github.com/stano45/p4containerflow/pull/1
