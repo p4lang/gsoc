@@ -58,7 +58,7 @@ This project was implemented in small, incremental steps, from simple process mi
 ### Initial prototype
 Relevant PR: https://github.com/stano45/p4containerflow/pull/1
 
-The P4 organization already provides convenient scripts to build a virtual machine (VM) which includes all relevant P4 packages. This [VM](https://github.com/p4lang/tutorials/tree/master/vm-ubuntu-24.04) runs [Ubuntu 24.04](https://releases.ubuntu.com/noble/) and includes packages such as:
+The [tutorials repository](https://github.com/p4lang/tutorials) provides a set of scripts for building a virtual machine (VM) which includes all relevant P4 packages. This [VM](https://github.com/p4lang/tutorials/tree/master/vm-ubuntu-24.04) runs [Ubuntu 24.04](https://releases.ubuntu.com/noble/) and includes packages such as:
 - [The BMv2 software switch](https://github.com/p4lang/behavioral-model),
 - [The p4 compiler (p4c)](https://github.com/p4lang/p4c),
 - [mininet](https://github.com/mininet/mininet),
