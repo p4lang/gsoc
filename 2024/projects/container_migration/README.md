@@ -41,7 +41,7 @@ Kubernetes has recently introduced a container checkpoint/restore (C/R) feature 
 The project successfully demonstrates the application of the P4 language to address the challenge of preserving established TCP connections during container migration, even when IP addresses change. Several migration scenarios were implemented using the BMv2 switch to illustrate the effectiveness of this approach.
 
 Key contributions include:
-1. **Process Migration:** Demonstrating how TCP connections can be maintained during the migration of processes from one network namespace to another.
+1. **Process migration:** Demonstrating how TCP connections can be maintained during migration of Linux processes from one network namespace to another.
 2. **Container Migration with a Non-Containerized BMv2 Switch:** Demonstrating migration of containers between networks while preserving TCP connections.
 3. **Container Migration with a Fully Containerized Setup:** Similarly to the above scenario, while also containerizing the BMv2 switch.
 4. **Container Migration of an In-Memory Database:** Within a more complex system, this example highlights the successful migration of a containerized in-memory database while preserving two established TCP connections.
