@@ -64,7 +64,7 @@ The P4 organization already provides convenient scripts to build a virtual machi
 - [mininet](https://github.com/mininet/mininet),
 - [p4runtime (python library for interacting with switches)](https://github.com/p4lang/p4runtime).
 
-Furthermore, we reused the load_balance exercise from the [p4lang/tutorials](https://github.com/p4lang/tutorials) repository. This is a simple load balancer, which hashes connections based on the source IP, source port, destination IP, destination port, and protocol into 2 buckets, which represent hosts. The output of this hash is 0 or 1, which is then used to index the target host (`h2` or `h3`) using the `ecmp_nhop` table.
+Our initial prototype was inspired by the load_balance exercise available in the [p4lang/tutorials](https://github.com/p4lang/tutorials) repository. This is a simple example of a P4-based load balancer that hashes connections based on the five-tuple (source IP, source port, destination IP, destination port, and protocol) into 2 buckets representing hosts. The output of this hash is 0 or 1, which is then used to index the target host (`h2` or `h3`) using the `ecmp_nhop` table.
 
 The following diagram shows the initial network topology, with three hosts (`h1`, `h2`, `h3`) and three switches (`s1`, `s2`, `s3`), where `s1` is the load balancer:
 
