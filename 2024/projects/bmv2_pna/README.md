@@ -26,9 +26,9 @@
 
 As the P4 use cases on the NIC side increase, so does the need for a P4 simulator that supports [Portable NIC Architecture (PNA)](https://p4.org/p4-spec/docs/PNA-v0.7.html). Currently, the BMv2 simulator only supports the v1model and [Portable Switch Architecture (PSA)](https://p4.org/p4-spec/docs/PSA-v1.2.html) specifications. This project aims to integrate a minimal core subset of the PNA into the BMv2 and the P4C. The PNA Architecture Block Diagram is shown in below:
 
-<picture>
-  <img alt="PNA Block Diagram" src="assets/pna-block-diagram.png" width="500">
-</picture>
+<p align="center">
+  <img alt="PNA Block Diagram" src="assets/pna-block-diagram.png" width="700">
+</p>
 
 
 ## Goals
@@ -79,28 +79,28 @@ Resultant Binary: `p4c-bm2-pna`
 
 - To start the `pna_nic` target:
 
-<picture>
+<p align="center">
   <img alt="PNA Block Diagram" src="assets/pna_nic.gif" width="500">
-</picture>
+</p>
 
 - start the `pna_nic_CLI` and populate the `L2_fwd` table mentioned in the P4 program using the below example (or your own) data:
   - `table_add L2_fwd L2_send_to_port ba:dd:b1:f5:03:3c => 0`
   - `table_add L2_fwd L2_send_to_port be:05:e2:d2:4a:bc => 1`
   - `table_add L2_fwd L2_send_to_port 52:04:da:9b:15:59 => 2`
 
-<picture>
+<p align="center">
   <img alt="PNA NIC CLI" src="assets/pna_nic_CLI.png" width="500">
-</picture>
+</p>
 
 - Send the Packets from one interface and listen on another interface. Example:
 
-<picture>
+<p align="center">
   <img alt="Sending packet from one veth0" src="assets/scapy-send-packet.png" width="500">
-</picture>
+</p>
 
-<picture>
+<p align="center">
   <img alt="Listening on veth3" src="assets/tcpdump_veth3.png" width="500">
-</picture>
+</p>
 
 ## Future Work
 
