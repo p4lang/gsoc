@@ -18,14 +18,16 @@
     - [New PNA NIC target in BMv2](#new-pna-nic-target-in-bmv2)
     - [P4C backend for the new BMv2 PNA NIC target](#p4c-backend-for-the-new-bmv2-pna-nic-target)
   - [Future Work](#future-work)
-    - [Standard PNA Features](#standard-pna-features)
+    - [Standard PNA Features (Implemented)](#standard-pna-features-implemented)
+    - [Standard PNA Features (Yet to be Implemented)](#standard-pna-features-yet-to-be-implemented)
+    - [Experimental PNA Features (Yet to be Implemented)](#experimental-pna-features-yet-to-be-implemented)
 
 ## Abstract
 
 As the P4 use cases on the NIC side increase, so does the need for a P4 simulator that supports [Portable NIC Architecture (PNA)](https://p4.org/p4-spec/docs/PNA-v0.7.html). Currently, the BMv2 simulator only supports the v1model and [Portable Switch Architecture (PSA)](https://p4.org/p4-spec/docs/PSA-v1.2.html) specifications. This project aims to integrate a minimal core subset of the PNA into the BMv2 and the P4C. The PNA Architecture Block Diagram is shown in below:
 
 <picture>
-  <img alt="PNA Block Diagram" src="assets/pna-block-diagram.png">
+  <img alt="PNA Block Diagram" src="assets/pna-block-diagram.png" width="500">
 </picture>
 
 
@@ -76,27 +78,28 @@ Resultant Binary: `p4c-bm2-pna`
   - `p4c-bm2-pna pna-demo-L2-one-table.p4 -o pna-demo-L2-one-table.json`
 
 - To start the `pna_nic` target:
-  <picture>
-    <img alt="PNA Block Diagram" src="assets/pna_nic.gif">
-  </picture>
+
+<picture>
+  <img alt="PNA Block Diagram" src="assets/pna_nic.gif" width="500">
+</picture>
 
 - start the `pna_nic_CLI` and populate the `L2_fwd` table mentioned in the P4 program using the below example (or your own) data:
   - `table_add L2_fwd L2_send_to_port ba:dd:b1:f5:03:3c => 0`
   - `table_add L2_fwd L2_send_to_port be:05:e2:d2:4a:bc => 1`
   - `table_add L2_fwd L2_send_to_port 52:04:da:9b:15:59 => 2`
 
-  <picture>
-    <img alt="PNA NIC CLI" src="assets/pna_nic_CLI.png">
-  </picture>
+<picture>
+  <img alt="PNA NIC CLI" src="assets/pna_nic_CLI.png" width="500">
+</picture>
 
 - Send the Packets from one interface and listen on another interface. Example:
 
 <picture>
-  <img alt="Sending packet from one veth0" src="assets/scapy-send-packet.png">
+  <img alt="Sending packet from one veth0" src="assets/scapy-send-packet.png" width="500">
 </picture>
 
 <picture>
-  <img alt="Listening on veth3" src="assets/tcpdump_veth3.png">
+  <img alt="Listening on veth3" src="assets/tcpdump_veth3.png" width="500">
 </picture>
 
 ## Future Work
