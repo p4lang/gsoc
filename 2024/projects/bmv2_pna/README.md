@@ -80,7 +80,7 @@ Resultant Binary: `p4c-bm2-pna`
 - To start the `pna_nic` target:
 
 <p align="center">
-  <img alt="PNA Block Diagram" src="assets/pna_nic.gif" width="500">
+  <img alt="pna_nic target demo" src="assets/pna_nic.gif" width="500">
 </p>
 
 - start the `pna_nic_CLI` and populate the `L2_fwd` table mentioned in the P4 program using the below example (or your own) data:
@@ -118,7 +118,6 @@ This project integrates a minimal core subset of the PNA into BMv2 and P4C. Many
 - Recirculation
 - Dropping
 - Differentiate between Host and Network Interfaces
-- Drop
 
 ### Experimental PNA Features (Yet to be Implemented)
 - IPSec Encrypt/Decrypt
