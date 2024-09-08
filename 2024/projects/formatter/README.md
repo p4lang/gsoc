@@ -21,7 +21,7 @@
    * [Future Work](#future-work)
 
 ## Abstract
-This project aims to develop a code formatter for P4. While the reference P4 compiler (p4c) provides foundational components, such as an AST/IR parser and a pretty printer, key gaps remain.
+This project aims to develop a code formatter for P4. While the reference P4 compiler (P4C) provides foundational components, such as an AST/IR parser and a pretty printer, key gaps remain.
 The current AST/IR does not retain comments from the original source code, and the pretty printer lacks the flexibility required for common formatting options.
 This project addresses these issues by enhancing the AST/IR to preserve comments and adapting the pretty printer to support customizable formatting rules, ultimately creating a functional P4 code formatter for the first time.
 
@@ -85,8 +85,24 @@ Key Features:
 Resultant Binary: `checkfmt`
 
 ## Limitations
-- Free floating comments are not handled currently.
+- Free floating comments are not handled currently and remain unassociated with any nodes.
+   ```
+   // struct comment
+   struct headers {
+      ...
+   }
+
+   // free floating comments
+
+   // control block comments
+   control MyVerifyChecksum(inout headers hdr, inout metadata meta) {
+   ...
+   }
+   ```
 - Code constructs with multiple potential points for comment attachment are not supported.
+   ```
+   const /* (1) */ bit<16> /* (2) */  TYPE_IPV4 /* (3) */ = /* (4) */ 0x800 /* (5) */;
+   ```
 - The formatter currently does not preserve comments through IR transformations that occur during compilation. For now, it is designed to handle comment printing immediately after parsing and before any transformations are applied.
 
 ## Future Work
