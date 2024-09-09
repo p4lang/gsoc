@@ -102,6 +102,10 @@ Key Features:
 - The formatter currently does not preserve comments through IR transformations that occur during compilation. For now, it is designed to handle comment printing immediately after parsing and before any transformations are applied.
 
 ## Future Work
-- Better algorithm for comment attachment.
+- Better algorithm for comment attachment.</br>
+   > We need a robust set of heuristics for this, as comment association is the most challenging aspect to get right.</br> For more discussion on the topic, see: </br>
+      - https://github.com/golang/go/issues/20744. </br>
+      - https://github.com/dave/dst. </br>
+      - https://go-review.googlesource.com/c/go/+/429639.
 - Support for formatting options(line wrapping, indentation etc.).
 - Customization of formatting styles via configuration files & cmd-line options.
