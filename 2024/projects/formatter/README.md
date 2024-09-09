@@ -44,7 +44,7 @@ Relevant PRs:
 
 Build & Usage Instructions: https://github.com/p4lang/p4c/tree/main/backends/p4fmt
 
-The primary task in creating the P4Fmt backend was the attachment of comments to IR nodes, ensuring the preservation of comments during code formatting. The design was inspired by how Bazel tools [preserve comments](https://jayconrod.com/posts/129/preserving-comments-when-parsing-and-formatting-code), adapting the strategy to fit the P4 language's specific requirements.
+The primary task in creating the P4Fmt backend was the attachment of comments to IR nodes, ensuring the preservation of comments during code formatting. We drew inspiration from how Bazel tools [preserve comments](https://jayconrod.com/posts/129/preserving-comments-when-parsing-and-formatting-code), and adapted the strategy to fit the P4 language's specific requirements.
 
 The lexer collects all comments along with their position information into a global list managed by the `InputSources` class. Each AST node embeds a `Comments` struct to store relevant comments, which are categorized into two types:
 
@@ -52,14 +52,12 @@ The lexer collects all comments along with their position information into a glo
 - Suffix Comments: Inline comments that trail after a node.
 
 Attachment is done in two AST passes:
-- _Pre-order Pass_: During this traversal, comments preceding a node (i.e., prefix comments) are attached to the AST node immediately after the comment.
-- _Post-order Pass_: For inline trailing comments (suffix comments), they are attached to the AST node right before the comment.
+- _Pre-order Pass_: During this traversal, we attach comments preceding a node (i.e., prefix comments) to the AST node immediately after the comment.
+- _Post-order Pass_: For inline trailing comments (suffix comments), we attach them to the AST node right before the comment.
 
 **Optimizing Comment Management**:
 
-Initially, comments were embedded directly within each AST node, with two vectors (prefix and suffix) for storing the comments. However, this approach might've introduced overhead for every node, potentially slowing down compilation and increasing memory consumption. To resolve this, the comments were moved into a local side map(`<node-id, comments>`), associating unique node IDs(`clone_id`) with their comments. This map allowed for efficient comment attachment during the second traversal, reducing the memory and performance impact.
-
-Resultant Binary: `p4fmt`
+Initially, we embedded comments directly within each AST node, using two vectors (prefix and suffix) to store them. However, this approach could have introduced overhead for every node, potentially slowing down compilation and increasing memory consumption. To address this, we moved the comments into a local side map (<node-id, comments>), associating unique node IDs (clone_id) with their comments. This map allowed us to efficiently attach comments during the second traversal, reducing both memory usage and performance impact.
 
 ### Pretty-Printer for `p4fmt`
 Relevant PRs:
@@ -67,7 +65,7 @@ Relevant PRs:
 - https://github.com/p4lang/p4c/pull/4795
 - https://github.com/p4lang/p4c/pull/4887
 
-The existing pretty-printer, `top4`, was modified to handle the newly attached comments in the P4Fmt backend. This update ensures that both prefix and suffix comments, now stored and attached to IR nodes via the side map, are correctly formatted and printed alongside the relevant P4 constructs.
+We modified the existing pretty-printer, `top4` , to handle the newly attached comments in the P4Fmt backend. This update ensures that both prefix and suffix comments, now stored and attached to IR nodes via the side map, are correctly formatted and printed alongside the relevant P4 constructs.
 
 ### Reference checker for `p4fmt`
 
@@ -75,14 +73,12 @@ Relevant PR: https://github.com/p4lang/p4c/pull/4778
 
 Build & Usage Instructions: https://github.com/p4lang/p4c/tree/main/backends/p4fmt
 
-A reference checker was implemented for the p4fmt formatter, using golden tests to validate the formatted output against expected results. It works by processing an input P4 file, formatting it with p4fmt, and comparing the result to a reference file using `diff`.
+We also implemented a reference checker for the P4Fmt formatter, using golden tests to validate the formatted output against expected results. It processes an input P4 file, formats it with P4Fmt, and then compares the result to a reference file using `diff`.
 
 Key Features:
 
 - Formats the input P4 file and compares it to the provided reference file.
 - The `--overwrite` option or the `P4FMT_REPLACE` environment variable allows updating the reference file with the new formatted output instead of comparing.
-
-Resultant Binary: `checkfmt`
 
 ## Limitations
 - Free floating comments are not handled currently and remain unassociated with any nodes.
