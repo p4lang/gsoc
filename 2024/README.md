@@ -12,7 +12,7 @@
 | Project  | Contributor | Mentors | Final Report and Presentation |
 | -------- | ----------- | ------- | ----------------------------- |
 | [P4 Compiler Documentation] | Adarsh | Davide, Fabian | [Report][p1-report] / Slides / [Recording][p1-rec] |
-| [P4 Formatter] | Nitish | Bili, Fabian | [Report][p2-report] / Slides / [Recording][p2-rec] |
+| [P4 Formatter] | Nitish | Bili, Fabian | [Report][p2-report] / [Slides][p2-slides] / [Recording][p2-rec] |
 | [BMv2 PNA Support] | Rupesh | Bili, Hari | [Report][p3-report] / Slides / [Recording][p3-rec] |
 | [P4-Enabled Container Migration in Kubernetes] | Stanislav | Radostin, Davide | [Report][p4-report] / [Slides][p4-slides] / [Recording][p4-rec] |
 
@@ -23,7 +23,7 @@
 
 [P4 Formatter]: https://summerofcode.withgoogle.com/programs/2024/projects/TbPyjqVw
 [p2-report]: projects/formatter/README.md
-[p2-slides]: TODO
+[p2-slides]: projects/formatter/P4Formatter_GSoC_Final.pdf
 [p2-rec]: https://youtu.be/uh9yFf0OpIQ&t=331
 
 [BMv2 PNA Support]: https://summerofcode.withgoogle.com/programs/2024/projects/oEpUp1dW
