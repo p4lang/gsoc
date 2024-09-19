@@ -13,7 +13,7 @@
 | -------- | ----------- | ------- | ----------------------------- |
 | [P4 Compiler Documentation] | Adarsh | Davide, Fabian | [Report][p1-report] / Slides / [Recording][p1-rec] |
 | [P4 Formatter] | Nitish | Bili, Fabian | [Report][p2-report] / [Slides][p2-slides] / [Recording][p2-rec] |
-| [BMv2 PNA Support] | Rupesh | Bili, Hari | [Report][p3-report] / Slides / [Recording][p3-rec] |
+| [BMv2 PNA Support] | Rupesh | Bili, Hari | [Report][p3-report] / [Slides][p3-slides] / [Recording][p3-rec] |
 | [P4-Enabled Container Migration in Kubernetes] | Stanislav | Radostin, Davide | [Report][p4-report] / [Slides][p4-slides] / [Recording][p4-rec] |
 
 [P4 Compiler Documentation]: https://summerofcode.withgoogle.com/programs/2024/projects/u2HpJKI2
@@ -28,7 +28,7 @@
 
 [BMv2 PNA Support]: https://summerofcode.withgoogle.com/programs/2024/projects/oEpUp1dW
 [p3-report]: projects/bmv2_pna/README.md
-[p3-slides]: TODO
+[p3-slides]: projects/bmv2_pna/assets/GsoC_final_presentation-bmv2_pna.pdf
 [p3-rec]: https://youtu.be/uh9yFf0OpIQ&t=1153
 
 [P4-Enabled Container Migration in Kubernetes]: https://summerofcode.withgoogle.com/programs/2024/projects/sYbpOJhD
