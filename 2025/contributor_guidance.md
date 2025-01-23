@@ -49,17 +49,8 @@
       - What makes you a good candidate to work on this project?
       - What do you expect to get out of this GSoC program?
   - **Qualification Task**
-    - The qualification task is to make a pull request in one of the following repos:
-      - https://github.com/p4lang/tutorials
-      - https://github.com/p4lang/p4c
-        - Only choose this one if your interested project is related to p4c.
-    - Please read [this guide](https://developers.google.com/blockly/guides/contribute/get-started/write_a_good_pr) on how to write a good pull request first.
-    - You can identify any issue or place of improvement to work on by yourself.
-    - Or check out the following labels for beginner-friendly issues:
-      - https://github.com/p4lang/tutorials/labels/help%20wanted
-      - https://github.com/p4lang/p4c/labels/good-first-issue
-    - The pull request doesn’t have to be merged for the qualification task to be considered complete. But if you can manage to get it merged, that’s a bonus point for your application.
-    - Please attach the link to your pull request.
+    -
+
 
 ## P4 onboarding
 
@@ -80,7 +71,7 @@ For all our projects, it’s good to know some P4. Here are some learning materi
 If you have any P4 related questions, there are some communication channels you can use:
 
 - For general P4-related questions, use the [P4 forum](https://forum.p4.org).
-- For more real-time and personal communications, use our [Slack workspace](https://p4-lang.slack.com).
+- For more real-time and personal communications, use our [Zulip workspace](https://p4lang.zulipchat.com/).
   - Use [this link](https://join.slack.com/t/p4-lang/shared_invite/zt-a9pe96br-Th73ueaBAwJw1ZbD_z1Rpg) to join.
   - Note that the Slack link on our website is not the major one we use. We are working on fixing it.
 - For other communication channels, check out https://p4.org/join/.

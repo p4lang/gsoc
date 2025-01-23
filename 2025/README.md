@@ -4,8 +4,6 @@
 
 ## Application
 
-- [Ideas List](ideas_list.md)
-- [Contributor Guidance](contributor_guidance.md)
 
 ## Accepted Projects
 
