@@ -1,8 +1,6 @@
 # P4 GSoC
 
-
 ## About:
-
 This repository is dedicated to the [The P4 Language Consortium](https://p4.org/) participation in [Google Summer of Code](https://summerofcode.withgoogle.com/). In this repository, you will find materials for all ongoing and past P4 GSoC programs.
 
 
