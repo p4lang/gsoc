@@ -6,7 +6,10 @@ Please check our [Contributor Guidance](contributor_guidance.md) for detailed in
 
 ## Potential mentors
 
-1.
+1. Anton Korobeynikov ([@asl](https://github.com/asl), anton@korobeynikov.info)
+1. Bili Dong ([@qobilidop](https://github.com/qobilidop), bilid@google.com)
+1. Davide Scano ([@Dscano](https://github.com/Dscano), d.scano89@gmail.com)
+1. Fabian Ruffy ([@fruffy](https://github.com/fruffy), fruffy@nyu.edu)
 
 ## Project ideas
 
