@@ -31,7 +31,7 @@ If you are interested in any project listed below, please follow the instruction
 
 - Potential mentors
   - Primary: Bili Dong
-  - Support: TBD
+  - Support: Anton Korobeynikov, Fabian Ruffy
 - Skills
   - Required: [MLIR](https://mlir.llvm.org/)
   - Preferred: [BMv2](https://github.com/p4lang/behavioral-model), P4
