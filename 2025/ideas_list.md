@@ -35,7 +35,7 @@ If you are interested in any project listed below, please follow the instruction
 - Skills
   - Required: [MLIR](https://mlir.llvm.org/)
   - Preferred: [BMv2](https://github.com/p4lang/behavioral-model), P4
-- Project difficulty: Medium / Large
+- Project difficulty: Hard
 - Project size: 175 hour / 350 hour
 - Discussion thread: TBD
 
@@ -43,13 +43,10 @@ If you are interested in any project listed below, please follow the instruction
 
 If you want to apply to this project, please complete the following qualification task, instead of the general one:
 
-- Make a pull request (PR) to one of the following repos:
-  - Any MLIR-based compiler project
-  - https://github.com/p4lang/p4mlir
-  - https://github.com/p4lang/p4c
-  - https://github.com/p4lang/behavioral-model
-- In your application, please include a link to this PR.
-- This PR does not have to be merged. But it should at least demonstrate some of your skills relevant for this project.
+- MLIR is a required skill for this project. We expect to see your MLIR skill demonstrated in one of the following ways:
+  - A PR to an existing MLIR-based compiler project.
+  - A personal project that has used MLIR.
+- In your application, please include a link to your MLIR-related PR or project.
 
 #### Project description
 
@@ -64,9 +61,9 @@ In the longer term, we expect a compilation path like P4C frontend -> P4HIR dial
 
 #### Resources
 
+- P4MLIR: https://github.com/p4lang/p4mlir
 - BMv2 JSON format: https://github.com/p4lang/behavioral-model/blob/main/docs/JSON_format.md
 - P4C BMv2 backend: https://github.com/p4lang/p4c/tree/main/backends/bmv2
-- P4MLIR: https://github.com/p4lang/p4mlir
 
 ---
 
