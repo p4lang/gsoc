@@ -25,49 +25,7 @@ Please check our [Contributor Guidance](contributor_guidance.md) for detailed in
 
 ---
 
-### Project 1: Finalize Katran P4 and improve the eBPF backend!
-
-#### Basic info
-- Potential mentors
-  - Primary: Davide Scano
-  - Support: To be defined
-- Skills
-  - Required: [eBPF](https://ebpf.io/)
-  - Preferred: [P4C](https://github.com/p4lang/p4c), P4
-- Project difficulty: Medium
-- Project size: 175 hour / 350 hour
-- Discussion thread: TBD
-
-#### Alternative qualification task
-
-If you want to apply to this project, please complete the following qualification task, instead of the general one:
-
-- The knowledge of XDP eBPF is required for this project. We expect you to demonstrate your XDP eBPF skills in one of the following ways:
-  - A PR to an existing XDP eBPF project.
-  - A personal project that has used XDP eBPF.
-- Basic knowledge of P4 programming language. You can showcase your P4 knowledge through one of the following:
-    - A pull request to an existing P4 project, preferably a P4 tutorials or p4c.
-    - A personal project that incorporates P4.
-- In your application, please include a link to your XDP eBPF and P4-related PRs or projects.
-
-#### Project description
-[Katran](https://github.com/facebookincubator/katran) is designed to build a high-performance load balancer based on C and eBPF. The P4 open-source compiler, [P4C](https://github.com/p4lang/p4c), supports eBPF as one of its possible targets. This allows a P4 program to be converted into an eBPF program for packet processing. The maintenance of the eBPF backend relies on simple examples that are used to test the backend. The lack of complex programs makes developing and evaluating new features, as well as identifying regressions, more challenging.
-
-Finalize the implementation of Katran in P4 helps provide a complex program example imporve the test coverage of eBPF backend. Due to that possible bugs can be identifed and fixd together with new features can be implemented.
-
-#### Expected outcomes
-
-- Document and complete the P4 implementation of Katran.
-- Identify and/or resolve bugs in the P4C eBPF backend.
-- If needed, update the P4C eBPF backend documentation.
-
-#### Resources
-
-- Katran: https://github.com/facebookincubator/katran
-- Katran P4: https://github.com/Dscano/P4-Kataran
-- P4C eBPF backend: https://github.com/p4lang/p4c/tree/main/backends/ebpf
-- NIKSS: https://github.com/NIKSS-vSwitch/nikss
-
+### Project 1:
 ---
 
 #### Project 2:
