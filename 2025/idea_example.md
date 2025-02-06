@@ -1,6 +1,6 @@
 # P4 Compiler Documentation Site
 
-## Basic info
+**Basic info**
 
 - Potential mentors
   - Primary: Davide Scano ([@Dscano](https://github.com/Dscano))
@@ -12,16 +12,16 @@
 - Project size: 90 hour / 175 hour / 350 hour
 - Discussion thread: TBD
 
-## Project description
+**Project description**
 
 The general idea is to improve documentation for the reference P4 compiler project (P4C) by building a central documentation site. Currently we have several markdown files and slides in the repo serving as the main documentation. For a seasoned contributor to P4C, these documents contain valuable information, and they know how to navigate them. But for a new contributor, the organization of these documents can be confusing. This is a situation we wish to improve with this project.
 
-## Expected outcomes
+**Expected outcomes**
 
 - Minimal outcome (Easy + 90 hour): Set up the documentation site infrastructure, and migrate existing documents there with an improved organization.
 - Extended outcome (Medium + 175 hour / 350 hour): Besides minimal outcome, also improve our documentation contents. This would require good technical writing skills, and a deeper knowledge of the P4C project itself.
 
-## Resources
+**Resources**
 
 - The P4C repo to build documentation site for:
   - https://github.com/p4lang/p4c
