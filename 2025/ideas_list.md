@@ -184,7 +184,34 @@ In the longer term, we expect a compilation path like P4C frontend -> P4HIR dial
 
 ---
 
-#### Project 7:
+#### Project 7: OVS backend for P4 Compiler
+
+**Basic info**
+
+ Potential mentors
+  - Primary: Annus Zulfiqar
+  - Support: Ben Pfaff, Davide Scano
+- Skills
+  - Required: [P4C](https://github.com/p4lang/p4c)
+  - Preferred: P4, C++, [OVS](https://www.openvswitch.org/), Compiler Architecture
+- Project difficulty: Hard
+- Project size: 175 hour / 350 hour
+- Discussion thread: TBD
+
+**Project description**
+
+ The P4 open-source compiler, [P4C](https://github.com/p4lang/p4c), supports a wide range of targets. The OVS backend would be a new addition to the P4C compiler.
+
+**Expected outcomes**
+
+- Add the OVS backend as new backend in the P4C
+
+
+**Resources**
+
+- P4C: https://github.com/p4lang/p4c
+- OVS: https://www.openvswitch.org/
+
 
 ---
 
