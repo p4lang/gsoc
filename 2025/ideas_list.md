@@ -64,7 +64,7 @@ Finalize the implementation of Katran in P4 helps provide a complex program exam
 #### Resources
 
 - Katran: https://github.com/facebookincubator/katran
-- Katran P4: https://github.com/Dscano/P4-Kataran
+- Katran P4: https://github.com/Dscano//P4-Katran
 - P4C eBPF backend: https://github.com/p4lang/p4c/tree/main/backends/ebpf
 - NIKSS: https://github.com/NIKSS-vSwitch/nikss
 
