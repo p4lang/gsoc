@@ -11,26 +11,45 @@ Please check our [Contributor Guidance](contributor_guidance.md) for detailed in
 1. Davide Scano ([@Dscano](https://github.com/Dscano), d.scano89@gmail.com)
 1. Fabian Ruffy ([@fruffy](https://github.com/fruffy), fruffy@nyu.edu)
 
+## FAQ
+
+**What do our project difficulties mean?**
+
+- Easy: Basic coding skills shall suffice.
+- Medium: CS undergraduate level knowledge/skills are required.
+- Hard: Deeper and more specialized knowledge/skills are required.
+
+**Project sizes are specifided in hours. How many weeks do they correspond to?**
+
+- 90 hour: 8 weeks
+- 175 hour: 12 weeks
+- 350 hour: 12 weeks
+
 ## Project ideas
 
-- Project difficulties and their meanings:
-  - Easy: Basic coding skills shall suffice.
-  - Medium: Some knowledge/skills are assumed, roughly at the CS undergraduate level.
-  - Hard: Deeper and more specialized knowledge/skills are assumed.
-- Project sizes in hours, and their corresponding weeks:
-  - 90 hour: 8 weeks
-  - 175 hour: 12 weeks
-  - 350 hour: 12 weeks
+### Index
+
+- Category: core P4 tooling
+  - [Project 1: Finalize Katran P4 and improve the eBPF backend!](#project-1)
+  - [Project 2:](#project-2)
+- Category: exploratory P4 tooling
+  - [Project 3: P4MLIR: MLIR-based high-level IR for P4 compilers](#project-3)
+  - [Project 4: P4MLIR BMv2 Dialect Prototype](#project-4)
+- Category: P4 application
+  - [Project 5:](#project-5)
+  - [Project 6:](#project-6)
+- Category: P4 research
+  - [Project 7:](#project-7)
+  - [Project 8:](#project-8)
 
 ---
 
-### Category: core P4 tooling (P4C, BMv2, etc.)
+### <a id='project-1'></a> Project 1: Finalize Katran P4 and improve the eBPF backend!
 
----
+- [Back to index](#index)
 
-### Project 1: Finalize Katran P4 and improve the eBPF backend!
+**Basic info**
 
-#### Basic info
 - Potential mentors
   - Primary: Davide Scano
   - Support: To be defined
@@ -41,7 +60,7 @@ Please check our [Contributor Guidance](contributor_guidance.md) for detailed in
 - Project size: 175 hour / 350 hour
 - Discussion thread: TBD
 
-#### Alternative qualification task
+**Alternative qualification task**
 
 If you want to apply to this project, please complete the following qualification task, instead of the general one:
 
@@ -53,18 +72,19 @@ If you want to apply to this project, please complete the following qualificatio
     - A personal project that incorporates P4.
 - In your application, please include a link to your XDP eBPF and P4-related PRs or projects.
 
-#### Project description
+**Project description**
+
 [Katran](https://github.com/facebookincubator/katran) is designed to build a high-performance load balancer based on C and eBPF. The P4 open-source compiler, [P4C](https://github.com/p4lang/p4c), supports eBPF as one of its possible targets. This allows a P4 program to be converted into an eBPF program for packet processing. The maintenance of the eBPF backend relies on simple examples that are used to test the backend. The lack of complex programs makes developing and evaluating new features, as well as identifying regressions, more challenging.
 
 Finalize the implementation of Katran in P4 helps provide a complex program example imporve the test coverage of eBPF backend. Due to that possible bugs can be identifed and fixd together with new features can be implemented.
 
-#### Expected outcomes
+**Expected outcomes**
 
 - Document and complete the P4 implementation of Katran.
 - Identify and/or resolve bugs in the P4C eBPF backend.
 - If needed, update the P4C eBPF backend documentation.
 
-#### Resources
+**Resources**
 
 - Katran: https://github.com/facebookincubator/katran
 - Katran P4: https://github.com/Dscano//P4-Katran
@@ -73,24 +93,15 @@ Finalize the implementation of Katran in P4 helps provide a complex program exam
 
 ---
 
-#### Project 2:
+### <a id='project-2'></a> Project 2:
+
+- [Back to index](#index)
 
 ---
 
-### Category: exploratory P4 tooling (P4MLIR)
+### <a id='project-3'></a> Project 3: P4MLIR: MLIR-based high-level IR for P4 compilers
 
-**Alternative qualification task**
-
-For projects in this category, please complete the following qualification task, instead of the general one:
-
-- MLIR is a required skill for these projects. We expect to see your MLIR skill demonstrated in one of the following ways:
-  - Existing contributions to [P4MLIR](https://github.com/p4lang/p4mlir).
-  - Existing contributions to any other MLIR-based compiler project (personal project is also fine) that demonstrate your knowledge of MLIR concepts & internals.
-- In your application, please include links to such contributions.
-
----
-
-#### Project 3: P4MLIR: MLIR-based high-level IR for P4 compilers
+- [Back to index](#index)
 
 **Basic info**
 
@@ -104,6 +115,15 @@ For projects in this category, please complete the following qualification task,
 - Project size: 350 hour
 - Discussion thread: TBD
 - A bit more information: [slides](https://p4.org/wp-content/uploads/2024/11/204-P4-Workshop-P4HIR_-Towards-Bridging-P4C-with-MLIR-P4-Workshop-2024.pdf)
+
+**Alternative qualification task**
+
+- For this project, we do not use the general qualification task. Please complete the project-specific qualification task described below.
+- MLIR is a required skill for this project. So we expect to see your MLIR skill demonstred in some way. In your application, please include links to your previous MLIR-related contributions (e.g. PRs on GitHub). These contributions:
+  - Should demonstrate your knowledge of MLIR concepts & internals.
+  - Could be to [P4MLIR](https://github.com/p4lang/p4mlir).
+  - Could be to any other MLIR-based compiler project.
+  - Could be to a personal project.
 
 **Project description**
 
@@ -138,7 +158,9 @@ The exact list of tasks is to be determined with mentors.
 
 ---
 
-#### Project 4: P4MLIR BMv2 Dialect Prototype
+### <a id='project-4'></a> Project 4: P4MLIR BMv2 Dialect Prototype
+
+- [Back to index](#index)
 
 **Basic info**
 
@@ -151,6 +173,15 @@ The exact list of tasks is to be determined with mentors.
 - Project difficulty: Hard
 - Project size: 175 hour / 350 hour
 - Discussion thread: TBD
+
+**Alternative qualification task**
+
+- For this project, we do not use the general qualification task. Please complete the project-specific qualification task described below.
+- MLIR is a required skill for this project. So we expect to see your MLIR skill demonstred in some way. In your application, please include links to your previous MLIR-related contributions (e.g. PRs on GitHub). These contributions:
+  - Should demonstrate your knowledge of MLIR concepts & internals.
+  - Could be to [P4MLIR](https://github.com/p4lang/p4mlir).
+  - Could be to any other MLIR-based compiler project.
+  - Could be to a personal project.
 
 **Project description**
 
@@ -171,26 +202,24 @@ In the longer term, we expect a compilation path like P4C frontend -> P4HIR dial
 
 ---
 
-### Category: P4 application
+### <a id='project-5'></a> Project 5:
+
+- [Back to index](#index)
 
 ---
 
-#### Project 5:
+### <a id='project-6'></a> Project 6:
+
+- [Back to index](#index)
 
 ---
 
-#### Project 6:
+### <a id='project-7'></a> Project 7:
+
+- [Back to index](#index)
 
 ---
 
-### Category: P4 research
+### <a id='project-8'></a> Project 8:
 
----
-
-#### Project 7:
-
----
-
-#### Project 8:
-
----
+- [Back to index](#index)
