@@ -6,11 +6,11 @@ Please check our [Contributor Guidance](contributor_guidance.md) for detailed in
 
 ## Potential mentors
 
+1. Annus Zulfiqar ([@annuszulfiqar2021](https://github.com/annuszulfiqar2021), zulfiqaa@umich.edu)
 1. Anton Korobeynikov ([@asl](https://github.com/asl), anton@korobeynikov.info)
 1. Bili Dong ([@qobilidop](https://github.com/qobilidop), bilid@google.com)
 1. Davide Scano ([@Dscano](https://github.com/Dscano), d.scano89@gmail.com)
 1. Fabian Ruffy ([@fruffy](https://github.com/fruffy), fruffy@nyu.edu)
-1. Annus Zulfiqar ([@annuszulfiqar2021](https://github.com/annuszulfiqar2021), zulfiqaa@umich.edu)
 1. Walter Willinger ([](), zulfiqaa@umich.edu)
 
 ## FAQ
@@ -46,7 +46,7 @@ Please check our [Contributor Guidance](contributor_guidance.md) for detailed in
 
 ---
 
-### Project 1: Finalize Katran P4 and improve the eBPF backend!
+### <a id='project-1'></a> Project 1: Finalize Katran P4 and improve the eBPF backend!
 
 - [Back to index](#index)
 
@@ -95,13 +95,13 @@ Finalize the implementation of Katran in P4 helps provide a complex program exam
 
 ---
 
-### Project 2:
+### <a id='project-2'></a> Project 2:
 
 - [Back to index](#index)
 
 ---
 
-### Project 3: P4MLIR: MLIR-based high-level IR for P4 compilers
+### <a id='project-3'></a> Project 3: P4MLIR: MLIR-based high-level IR for P4 compilers
 
 - [Back to index](#index)
 
@@ -160,7 +160,7 @@ The exact list of tasks is to be determined with mentors.
 
 ---
 
-### Project 4: P4MLIR BMv2 Dialect Prototype
+### <a id='project-4'></a> Project 4: P4MLIR BMv2 Dialect Prototype
 
 - [Back to index](#index)
 
@@ -204,25 +204,25 @@ In the longer term, we expect a compilation path like P4C frontend -> P4HIR dial
 
 ---
 
-### Project 5:
+### <a id='project-5'></a> Project 5:
 
 - [Back to index](#index)
 
 ---
 
-### Project 6:
+### <a id='project-6'></a> Project 6:
 
 - [Back to index](#index)
 
 ---
 
-### Project 7:
+### <a id='project-7'></a> Project 7:
 
 - [Back to index](#index)
 
 ---
 
-### Project 8: Scaling Decision Tree Algorithm in P4
+### <a id='project-8'></a> Project 8: Scaling Decision Tree Algorithm in P4
 
 - [Back to index](#index)
 
