@@ -32,6 +32,7 @@ Please check our [Contributor Guidance](contributor_guidance.md) for detailed in
 - Category: core P4 tooling
   - [Project 1: Finalize Katran P4 and improve the eBPF backend!](#project-1)
   - [Project 2:](#project-2)
+  - [Project 9: Integrate p4-constraints frontend into p4c](#project-9)
 - Category: exploratory P4 tooling
   - [Project 3: P4MLIR: MLIR-based high-level IR for P4 compilers](#project-3)
   - [Project 4: P4MLIR BMv2 Dialect Prototype](#project-4)
@@ -98,6 +99,48 @@ Finalize the implementation of Katran in P4 helps provide a complex program exam
 - [Back to index](#index)
 
 ---
+
+---
+### <a id='project-9'></a> Project 9: Integrate p4-constraints frontend into p4c
+
+- [Back to index](#index)
+
+**Basic info**
+
+- Potential mentors
+  - Primary: TBD
+  - Support: TBD
+- Skills
+  - Required: Git, C++
+  - Preferred: CMake, Bazel, [P4C](https://github.com/p4lang/p4c)
+- Project difficulty: Easy
+- Project size: 175 hour
+- Discussion thread: TBD
+
+**Project description**
+
+[p4-constraints](https://github.com/p4lang/p4-constraints) is a useful extension of the P4 programming language that is currently architected as a standalone library separate from the P4 compiler, p4c.
+
+<img width="757" alt="image" src="assets/p4_constraints.png">
+
+The goal of this project is to integrate the p4-constraints frontend, which parses and type checks the constraint annotations, into the p4c frontend. This architecture change provides the following benefits:
+- **For P4 programmers**: Immediate feedback about syntax or type errors in constraints during P4 compilation.
+- **For p4c backend developers**: Easy consumption of the parsed & type-checked constraints.
+
+[P4TestGen](https://www.cs.cornell.edu/~jnfoster/papers/p4testgen.pdf) is a concrete example of a p4c backend that needs to consume p4-constraints to work correctly, and it currently does this by implementing its own p4-constraints frontend, which is brittle and requires duplication of work for new p4-constraint features.
+
+**Expected outcomes**
+
+- The p4-constraints frontend becomes part of p4c.
+
+**Resources**
+
+- https://github.com/p4lang/p4-constraints
+- https://github.com/p4lang/p4c
+- https://github.com/p4lang/p4c/pull/4387
+
+---
+
 
 ### <a id='project-3'></a> Project 3: P4MLIR: MLIR-based high-level IR for P4 compilers
 
