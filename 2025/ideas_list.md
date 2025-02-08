@@ -6,10 +6,12 @@ Please check our [Contributor Guidance](contributor_guidance.md) for detailed in
 
 ## Potential mentors
 
+1. Annus Zulfiqar ([@annuszulfiqar2021](https://github.com/annuszulfiqar2021), zulfiqaa@umich.edu)
 1. Anton Korobeynikov ([@asl](https://github.com/asl), anton@korobeynikov.info)
 1. Bili Dong ([@qobilidop](https://github.com/qobilidop), bilid@google.com)
 1. Davide Scano ([@Dscano](https://github.com/Dscano), d.scano89@gmail.com)
 1. Fabian Ruffy ([@fruffy](https://github.com/fruffy), fruffy@nyu.edu)
+1. Walter Willinger ([](), zulfiqaa@umich.edu)
 
 ## FAQ
 
@@ -31,7 +33,7 @@ Please check our [Contributor Guidance](contributor_guidance.md) for detailed in
 
 - Category: core P4 tooling
   - [Project 1: Finalize Katran P4 and improve the eBPF backend!](#project-1)
-  - [Project 2:](#project-2)
+  - [Project 2: BMv2 packet trace support](#project-2)
   - [Project 9: Integrate p4-constraints frontend into p4c](#project-9)
 - Category: exploratory P4 tooling
   - [Project 3: P4MLIR: MLIR-based high-level IR for P4 compilers](#project-3)
@@ -41,7 +43,7 @@ Please check our [Contributor Guidance](contributor_guidance.md) for detailed in
   - [Project 6:](#project-6)
 - Category: P4 research
   - [Project 7:](#project-7)
-  - [Project 8:](#project-8)
+  - [Project 8: Scaling Decision Tree Algorithm in P4](#project-8)
 
 ---
 
@@ -94,9 +96,37 @@ Finalize the implementation of Katran in P4 helps provide a complex program exam
 
 ---
 
-### <a id='project-2'></a> Project 2:
+### <a id='project-2'></a> Project 2: BMv2 packet trace support
 
 - [Back to index](#index)
+
+**Basic info**
+
+- Potential mentors
+  - Primary: TBD
+  - Support: TBD
+- Skills
+  - Required: Git, C++
+  - Preferred: P4
+- Project difficulty: Medium
+- Project size: ~175 hour
+- Discussion thread: TBD
+
+**Project description**
+
+Having programmatic access to the trace of a packet going through a P4 pipeline (e.g. applied tables, actions, entries hit, etc) has many use cases from human comprehension to use by automated tools for test coverage measurement, automated test generation, automated root causing, etc. 
+
+BMv2 currently does provide textual logs that can be used to manually track the packet as it goes through the pipeline. However there is no API to access the trace in a more structured and programmatic form (i.e. in a way that can potentially be digested by other tools). 
+
+The goal of this project is to provide a mechanism for BMv2 to record the trace and provide it to the user in a structured format.
+
+**Expected outcomes**
+
+- Structured packet trace outputs supported in BMv2.
+
+**Resources**
+
+- BMv2: https://github.com/p4lang/behavioral-model
 
 ---
 
@@ -263,6 +293,31 @@ In the longer term, we expect a compilation path like P4C frontend -> P4HIR dial
 
 ---
 
-### <a id='project-8'></a> Project 8:
+### <a id='project-8'></a> Project 8: Scaling Decision Tree Algorithm in P4
 
 - [Back to index](#index)
+
+**Basic info**
+
+ Potential mentors
+  - Primary: Annus Zulfiqar
+  - Support: Walter Willinger, Davide Scano
+- Skills
+  - Required: P4
+  - Preferred: Decision Tree Algorithm
+- Project difficulty: Hard
+- Project size: 175 hour / 350 hour
+- Discussion thread: TBD
+
+**Project description**
+
+Scaling the Decision Tree Algorithm in P4
+
+**Expected outcomes**
+
+- Implement the scaling of the Decision Tree Algorithm using P4.
+
+
+**Resources**
+
+- Decision Tree Algorithm: https://en.wikipedia.org/wiki/Decision_tree_learning
