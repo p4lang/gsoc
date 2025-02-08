@@ -66,6 +66,7 @@ Please check our [Contributor Guidance](contributor_guidance.md) for detailed in
 <img width="757" alt="image" src="assets/p4_constraints.png">
 
 The goal of this project is to integrate the p4-constraints frontend, which parses and type checks the constraint annotations, into the p4c frontend. This architecture change provides the following benefits:
+
 - **For P4 programmers**: Immediate feedback about syntax or type errors in constraints during P4 compilation.
 - **For p4c backend developers**: Easy consumption of the parsed & type-checked constraints.
 
@@ -101,9 +102,9 @@ The goal of this project is to integrate the p4-constraints frontend, which pars
 
 **Project description**
 
-Having programmatic access to the trace of a packet going through a P4 pipeline (e.g. applied tables, actions, entries hit, etc) has many use cases from human comprehension to use by automated tools for test coverage measurement, automated test generation, automated root causing, etc. 
+Having programmatic access to the trace of a packet going through a P4 pipeline (e.g. applied tables, actions, entries hit, etc) has many use cases from human comprehension to use by automated tools for test coverage measurement, automated test generation, automated root causing, etc.
 
-BMv2 currently does provide textual logs that can be used to manually track the packet as it goes through the pipeline. However there is no API to access the trace in a more structured and programmatic form (i.e. in a way that can potentially be digested by other tools). 
+BMv2 currently does provide textual logs that can be used to manually track the packet as it goes through the pipeline. However there is no API to access the trace in a more structured and programmatic form (i.e. in a way that can potentially be digested by other tools).
 
 The goal of this project is to provide a mechanism for BMv2 to record the trace and provide it to the user in a structured format.
 
@@ -141,8 +142,8 @@ If you want to apply to this project, please complete the following qualificatio
   - A PR to an existing XDP eBPF project.
   - A personal project that has used XDP eBPF.
 - Basic knowledge of P4 programming language. You can showcase your P4 knowledge through one of the following:
-    - A pull request to an existing P4 project, preferably a P4 tutorials or p4c.
-    - A personal project that incorporates P4.
+  - A pull request to an existing P4 project, preferably a P4 tutorials or p4c.
+  - A personal project that incorporates P4.
 - In your application, please include a link to your XDP eBPF and P4-related PRs or projects.
 
 **Project description**
@@ -201,21 +202,22 @@ Since these problems lie at the foundation of the present IR, as an alternative 
 In particular, we aim to develop a P4-specific MLIR dialect (`P4HIR`) that would allow reuse the infrastructure, code analysis, and transformation passes that have recently been developed within MLIR framework.
 
 Since [P4MLIR](https://github.com/p4lang/p4mlir) is a moving target, the precise set of tasks within this project is TBD at the time of project proposal submission. This might include (but not limited to):
- - Implementation of certain dialect operations corresponding to P4 constructs
- - Implementation of some dialect interfaces allowing high-level transformations (e.g. Mem2Reg, SROA, data flow analyses)
- - Reimplementation of P4C frontend / midend passes in MLIR
- - Lowering to P4 high-level dialect to lower-level constructs:
-    - Perform CFG flattening
-    - Lowering to `llvm` and / or `emitC` dialects
-    - ...
-  - Implementing control plane metadata emission out of `P4HIR`
+
+- Implementation of certain dialect operations corresponding to P4 constructs
+- Implementation of some dialect interfaces allowing high-level transformations (e.g. Mem2Reg, SROA, data flow analyses)
+- Reimplementation of P4C frontend / midend passes in MLIR
+- Lowering to P4 high-level dialect to lower-level constructs:
+  - Perform CFG flattening
+  - Lowering to `llvm` and / or `emitC` dialects
+  - ...
+- Implementing control plane metadata emission out of `P4HIR`
 
 The exact list of tasks is to be determined with mentors.
 
 **Expected outcomes**
 
- - Implementation of the mentioned `P4HIR` advancements
- - Document the changes made
+- Implementation of the mentioned `P4HIR` advancements
+- Document the changes made
 
 **Resources**
 
@@ -275,7 +277,7 @@ In the longer term, we expect a compilation path like P4C frontend -> P4HIR dial
 
 **Basic info**
 
- Potential mentors
+- Potential mentors
   - Primary: Annus Zulfiqar
   - Support: Walter Willinger, Davide Scano
 - Skills
@@ -292,7 +294,6 @@ Scaling the Decision Tree Algorithm in P4
 **Expected outcomes**
 
 - Implement the scaling of the Decision Tree Algorithm using P4.
-
 
 **Resources**
 
