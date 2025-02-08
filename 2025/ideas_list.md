@@ -18,13 +18,13 @@ Please check our [Contributor Guidance](contributor_guidance.md) for detailed in
 
 ## FAQ
 
-Notes: you = contributors, we = mentors.
+Note: you = contributors, we = mentors.
 
-**Some mentors are listed as primary mentor for multiple projects. How does that work?**
+**Q1: Some mentors are listed as primary mentor for multiple projects. How does that work?**
 
 In this ideas list, we want to give more options for you to choose from. Depending on the applications received, eventually they will decide on at most 1 project to commit to as a primary mentor.
 
-**What do our project difficulties mean?**
+**Q2: What do our project difficulties mean?**
 
 [dif-easy]: https://img.shields.io/badge/Difficulty-Easy-green
 [dif-medium]: https://img.shields.io/badge/Difficulty-Medium-blue
@@ -34,7 +34,7 @@ In this ideas list, we want to give more options for you to choose from. Dependi
 - ![dif-medium]: CS undergraduate level knowledge/skills are required.
 - ![dif-hard]: Deeper and more specialized knowledge/skills are required.
 
-**Project sizes are specifided in hours. How many weeks do they correspond to?**
+**Q3: Project sizes are specifided in hours. How many weeks do they correspond to?**
 
 [size-s]: https://img.shields.io/badge/Size-90_hour-green
 [size-m]: https://img.shields.io/badge/Size-175_hour-blue
@@ -44,11 +44,11 @@ In this ideas list, we want to give more options for you to choose from. Dependi
 - ![size-m]: 12 weeks
 - ![size-l]: 12 weeks
 
-**Some projects have an "alternative qualification task" section. What does that mean?**
+**Q4: Some projects have an "alternative qualification task" section. What does that mean?**
 
 It means for that specific project, instead of the general qualification task, you shall complete the alternative qualification task described in that section.
 
-**Some "alternative qualification task" section says "demonstrate your XYZ skills through contributions to". What does that mean?**
+**Q5: Some "alternative qualification task" section says "demonstrate your XYZ skills through contributions to". What does that mean?**
 
 It means we expect you to have made relevant contributions in order to demonstrate your XYZ skills. In your applicaiton, please briefly describe your contributions, and attach related links (e.g. pull requests on GitHub).
 
@@ -201,7 +201,7 @@ Finalize the implementation of Katran in P4 helps provide a complex program exam
 **Alternative qualification task**
 
 - Please demonstrate your **MLIR skills** through contributions to any of the following projects:
-  - [P4MLIR](https://github.com/p4lang/p4mlir).
+  - [P4MLIR](https://github.com/p4lang/p4mlir) itself.
   - Any other MLIR-based compiler project.
   - Your personal project is also fine.
 - Make sure your contributions could demonstrate your knowledge of MLIR concepts & internals.
@@ -256,8 +256,8 @@ The exact list of tasks is to be determined with mentors.
 
 **Alternative qualification task**
 
-- Please demonstrate your **MLIR** skills through contributions to any of the following projects:
-  - [P4MLIR](https://github.com/p4lang/p4mlir).
+- Please demonstrate your **MLIR skills** through contributions to any of the following projects:
+  - [P4MLIR](https://github.com/p4lang/p4mlir) itself.
   - Any other MLIR-based compiler project.
   - Your personal project is also fine.
 - Make sure your contributions could demonstrate your knowledge of MLIR concepts & internals.
