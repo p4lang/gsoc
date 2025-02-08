@@ -32,6 +32,7 @@ Please check our [Contributor Guidance](contributor_guidance.md) for detailed in
 - Category: core P4 tooling
   - [Project 1: Finalize Katran P4 and improve the eBPF backend!](#project-1)
   - [Project 2:](#project-2)
+  - [Project 10: BMv2 with all possible output packets](#project-10)
 - Category: exploratory P4 tooling
   - [Project 3: P4MLIR: MLIR-based high-level IR for P4 compilers](#project-3)
   - [Project 4: P4MLIR BMv2 Dialect Prototype](#project-4)
@@ -96,6 +97,41 @@ Finalize the implementation of Katran in P4 helps provide a complex program exam
 ### <a id='project-2'></a> Project 2:
 
 - [Back to index](#index)
+
+---
+
+### <a id='project-10'></a> Project 10: BMv2 with all possible output packets
+
+- [Back to index](#index)
+
+**Basic info**
+
+- Potential mentors
+  - Primary: TBD
+  - Support: TBD
+- Skills
+  - Required: Git, C++
+  - Preferred: P4
+- Project difficulty: Medium
+- Project size: ~175 hour
+- Discussion thread: TBD
+
+**Project description**
+
+There are many situations where it is more useful to have all possible outputs from a P4 simulation rather than only a single one. For example, we use this for diff testing, to determine whether the switch is doing something correct or something incorrect.
+
+Multiple allowed behaviors usually arise from various multi-path constructs (e.g. ECMP, WCMP, or perhaps LAGs) usually modeled as action profiles in P4. BMv2 currently allows users to set a mode determining action profile behavior, like `round robin` which means that every time you send in the same packet, it should result in the next possible outcome (eventually wrapping around).
+
+The goal of this project is to provide a new mode for BMv2 to instead output ALL possible behaviors. This will both require extending the action profile modes, and likely extending the notion of output from a set of packets to a set of sets of packets.
+
+**Expected outcomes**
+
+- BMv2 has a modality where every possible outcome is generated instead of one possible outcome.
+- Must interact correctly with multicast and punting.
+
+**Resources**
+
+- BMv2: https://github.com/p4lang/behavioral-model
 
 ---
 
