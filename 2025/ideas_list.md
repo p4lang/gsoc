@@ -140,7 +140,7 @@ The goal of this project is to provide a mechanism for BMv2 to record the trace 
 
 ---
 
-### <a name='project-3'></a> Project 10: BMv2 with all possible output packets [⤴️](#index)
+### <a name='project-3'></a> Project 3: BMv2 with all possible output packets [⤴️](#index)
 
 **Basic info**
 
