@@ -14,7 +14,7 @@ Please check our [Contributor Guidance](contributor_guidance.md) for detailed in
 1. ⭐ Davide Scano ([@Dscano](https://github.com/Dscano), d.scano89@gmail.com)
 1. Fabian Ruffy ([@fruffy](https://github.com/fruffy), fruffy@nyu.edu)
 1. Jonathan DiLorenzo ([@jonathan-dilorenzo](https://github.com/jonathan-dilorenzo), dilo@google.com)
-1. Walter Willinger (zulfiqaa@umich.edu)
+1. Walter Willinger
 
 ## FAQ
 
