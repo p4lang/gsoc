@@ -22,17 +22,17 @@ Note: you = contributors, we = mentors.
 
 **Q1: Some mentors are listed as primary mentor for multiple projects. How does that work?**
 
-In this ideas list, we want to give more options for you to choose from. Depending on the applications received, eventually they will decide on at most 1 project to commit to as a primary mentor.
+We'd like to present more options for you to choose from. Eventually, depending on the applications received, they will decide on at most 1 project to commit to as a primary mentor.
 
 **Q2: What do our project difficulties mean?**
 
-[dif-easy]: https://img.shields.io/badge/Difficulty-Easy-green
-[dif-medium]: https://img.shields.io/badge/Difficulty-Medium-blue
-[dif-hard]: https://img.shields.io/badge/Difficulty-Hard-red
+[diffi-easy]: https://img.shields.io/badge/Difficulty-Easy-green
+[diffi-medium]: https://img.shields.io/badge/Difficulty-Medium-blue
+[diffi-hard]: https://img.shields.io/badge/Difficulty-Hard-red
 
-- ![dif-easy]: Basic coding skills are sufficient.
-- ![dif-medium]: CS undergraduate level knowledge/skills are required.
-- ![dif-hard]: Deeper and more specialized knowledge/skills are required.
+- ![diffi-easy]: Basic coding skills are sufficient.
+- ![diffi-medium]: CS undergraduate level knowledge/skills are required.
+- ![diffi-hard]: Deeper and more specialized knowledge/skills are required.
 
 **Q3: Project sizes are specifided in hours. How many weeks do they correspond to?**
 
@@ -72,7 +72,7 @@ It means we expect you to have made relevant contributions in order to demonstra
 
 **Basic info**
 
-![dif-easy] ![size-s]
+![diffi-easy] ![size-s]
 
 - Potential mentors
   - Primary: Bili Dong
@@ -90,8 +90,8 @@ It means we expect you to have made relevant contributions in order to demonstra
 
 The goal of this project is to integrate the p4-constraints frontend, which parses and type checks the constraint annotations, into the P4C frontend. This architecture change provides the following benefits:
 
-- **For P4 programmers**: Immediate feedback about syntax or type errors in constraints during P4 compilation.
-- **For P4C backend developers**: Easy consumption of the parsed & type-checked constraints.
+- For P4 programmers: Immediate feedback about syntax or type errors in constraints during P4 compilation.
+- For P4C backend developers: Easy consumption of the parsed & type-checked constraints.
 
 [P4TestGen](https://www.cs.cornell.edu/~jnfoster/papers/p4testgen.pdf) is a concrete example of a P4C backend that needs to consume p4-constraints to work correctly, and it currently does this by implementing its own p4-constraints frontend, which is brittle and requires duplication of work for new p4-constraint features.
 
@@ -111,7 +111,7 @@ The goal of this project is to integrate the p4-constraints frontend, which pars
 
 **Basic info**
 
-![dif-medium] ![size-m]
+![diffi-medium] ![size-m]
 
 - Potential mentors
   - Primary: Bili Dong
@@ -143,7 +143,7 @@ The goal of this project is to provide a mechanism for BMv2 to record the trace 
 
 **Basic info**
 
-![dif-medium] ![size-m] ![size-l]
+![diffi-medium] ![size-m] ![size-l]
 
 - Potential mentors
   - Primary: Davide Scano
@@ -155,10 +155,10 @@ The goal of this project is to provide a mechanism for BMv2 to record the trace 
 
 **Alternative qualification task**
 
-- Please demonstrate your **XDP eBPF skills** through contributions to any of the following projects:
+- Please demonstrate your XDP eBPF skills through contributions to any of the following projects:
   - Any existing XDP eBPF project.
   - Any personal project that has used XDP eBPF.
-- Please demonstrate your **basic P4 knowledge** through contributions to any of the following projects:
+- Please demonstrate your basic P4 knowledge through contributions to any of the following projects:
   - Any existing P4 project, preferably [P4 tutorials](https://github.com/p4lang/tutorials) or [P4C](https://github.com/p4lang/p4c).
   - Any personal project that incorporates P4.
 
@@ -187,20 +187,20 @@ Finalize the implementation of Katran in P4 helps provide a complex program exam
 
 **Basic info**
 
-![dif-hard] ![size-l]
+![diffi-hard] ![size-l]
 
 - Potential mentors
   - Primary: Anton Korobeynikov
   - Support: Bili Dong, Fabian Ruffy
 - Skills
   - Required: [MLIR](https://mlir.llvm.org/)
-  - Preferred: P4 & P4C
+  - Preferred: P4, P4C
 - Discussion thread: TBD
 - A bit more information: [slides](https://p4.org/wp-content/uploads/2024/11/204-P4-Workshop-P4HIR_-Towards-Bridging-P4C-with-MLIR-P4-Workshop-2024.pdf)
 
 **Alternative qualification task**
 
-- Please demonstrate your **MLIR skills** through contributions to any of the following projects:
+- Please demonstrate your MLIR skills through contributions to any of the following projects:
   - [P4MLIR](https://github.com/p4lang/p4mlir) itself.
   - Any other MLIR-based compiler project.
   - Your personal project is also fine.
@@ -244,7 +244,7 @@ The exact list of tasks is to be determined with mentors.
 
 **Basic info**
 
-![dif-hard] ![size-l]
+![diffi-hard] ![size-l]
 
 - Potential mentors
   - Primary: Bili Dong
@@ -256,7 +256,7 @@ The exact list of tasks is to be determined with mentors.
 
 **Alternative qualification task**
 
-- Please demonstrate your **MLIR skills** through contributions to any of the following projects:
+- Please demonstrate your MLIR skills through contributions to any of the following projects:
   - [P4MLIR](https://github.com/p4lang/p4mlir) itself.
   - Any other MLIR-based compiler project.
   - Your personal project is also fine.
@@ -285,7 +285,7 @@ In the longer term, we expect a compilation path like P4C frontend -> P4HIR dial
 
 **Basic info**
 
-![dif-hard] ![size-m] ![size-l]
+![diffi-hard] ![size-m] ![size-l]
 
 - Potential mentors
   - Primary: Annus Zulfiqar
