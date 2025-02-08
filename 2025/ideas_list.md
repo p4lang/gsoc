@@ -26,15 +26,23 @@ In this ideas list, we want to give more options for you to choose from. Dependi
 
 **What do our project difficulties mean?**
 
-- Easy: Basic coding skills are sufficient.
-- Medium: CS undergraduate level knowledge/skills are required.
-- Hard: Deeper and more specialized knowledge/skills are required.
+[dif-easy]: https://img.shields.io/badge/Difficulty-Easy-green
+[dif-medium]: https://img.shields.io/badge/Difficulty-Medium-blue
+[dif-hard]: https://img.shields.io/badge/Difficulty-Hard-red
+
+- ![dif-easy]: Basic coding skills are sufficient.
+- ![dif-medium]: CS undergraduate level knowledge/skills are required.
+- ![dif-hard]: Deeper and more specialized knowledge/skills are required.
 
 **Project sizes are specifided in hours. How many weeks do they correspond to?**
 
-- 90 hour: 8 weeks
-- 175 hour: 12 weeks
-- 350 hour: 12 weeks
+[size-s]: https://img.shields.io/badge/Size-90_hour-green
+[size-m]: https://img.shields.io/badge/Size-175_hour-blue
+[size-l]: https://img.shields.io/badge/Size-350_hour-red
+
+- ![size-s]: 8 weeks
+- ![size-m]: 12 weeks
+- ![size-l]: 12 weeks
 
 **Some projects have an "alternative qualification task" section. What does that mean?**
 
@@ -60,11 +68,11 @@ It means we expect you to have made relevant contributions in order to demonstra
 
 ---
 
-### <a id='project-1'></a> Project 1: Integrate p4-constraints frontend into P4C
-
-- [Back to index](#index) ⤴️
+### <a name='project-1'></a> Project 1: Integrate p4-constraints frontend into P4C [⤴️](#index)
 
 **Basic info**
+
+![dif-easy] ![size-s]
 
 - Potential mentors
   - Primary: Bili Dong
@@ -72,8 +80,6 @@ It means we expect you to have made relevant contributions in order to demonstra
 - Skills
   - Required: Git, C++
   - Preferred: CMake, Bazel, [P4C](https://github.com/p4lang/p4c)
-- Project difficulty: Easy
-- Project size: 175 hour
 - Discussion thread: TBD
 
 **Project description**
@@ -101,11 +107,11 @@ The goal of this project is to integrate the p4-constraints frontend, which pars
 
 ---
 
-### <a id='project-2'></a> Project 2: BMv2 packet trace support
-
-- [Back to index](#index) ⤴️
+### <a name='project-2'></a> Project 2: BMv2 packet trace support [⤴️](#index)
 
 **Basic info**
+
+![dif-medium] ![size-m]
 
 - Potential mentors
   - Primary: Bili Dong
@@ -113,8 +119,6 @@ The goal of this project is to integrate the p4-constraints frontend, which pars
 - Skills
   - Required: Git, C++
   - Preferred: P4
-- Project difficulty: Medium
-- Project size: ~175 hour
 - Discussion thread: TBD
 
 **Project description**
@@ -135,11 +139,11 @@ The goal of this project is to provide a mechanism for BMv2 to record the trace 
 
 ---
 
-### <a id='project-3'></a> Project 3: Finalize Katran P4 and improve the eBPF backend!
-
-- [Back to index](#index) ⤴️
+### <a name='project-3'></a> Project 3: Finalize Katran P4 and improve the eBPF backend! [⤴️](#index)
 
 **Basic info**
+
+![dif-medium] ![size-m] ![size-l]
 
 - Potential mentors
   - Primary: Davide Scano
@@ -147,8 +151,6 @@ The goal of this project is to provide a mechanism for BMv2 to record the trace 
 - Skills
   - Required: [eBPF](https://ebpf.io/)
   - Preferred: [P4C](https://github.com/p4lang/p4c), P4
-- Project difficulty: Medium
-- Project size: 175 hour / 350 hour
 - Discussion thread: TBD
 
 **Alternative qualification task**
@@ -181,11 +183,11 @@ Finalize the implementation of Katran in P4 helps provide a complex program exam
 
 ---
 
-### <a id='project-4'></a> Project 4: P4MLIR: MLIR-based high-level IR for P4 compilers
-
-- [Back to index](#index) ⤴️
+### <a name='project-4'></a> Project 4: P4MLIR: MLIR-based high-level IR for P4 compilers [⤴️](#index)
 
 **Basic info**
+
+![dif-hard] ![size-l]
 
 - Potential mentors
   - Primary: Anton Korobeynikov
@@ -193,8 +195,6 @@ Finalize the implementation of Katran in P4 helps provide a complex program exam
 - Skills
   - Required: [MLIR](https://mlir.llvm.org/)
   - Preferred: P4 & P4C
-- Project difficulty: Hard
-- Project size: 350 hour
 - Discussion thread: TBD
 - A bit more information: [slides](https://p4.org/wp-content/uploads/2024/11/204-P4-Workshop-P4HIR_-Towards-Bridging-P4C-with-MLIR-P4-Workshop-2024.pdf)
 
@@ -240,11 +240,11 @@ The exact list of tasks is to be determined with mentors.
 
 ---
 
-### <a id='project-5'></a> Project 5: P4MLIR BMv2 Dialect Prototype
-
-- [Back to index](#index) ⤴️
+### <a name='project-5'></a> Project 5: P4MLIR BMv2 Dialect Prototype [⤴️](#index)
 
 **Basic info**
+
+![dif-hard] ![size-l]
 
 - Potential mentors
   - Primary: Bili Dong
@@ -252,8 +252,6 @@ The exact list of tasks is to be determined with mentors.
 - Skills
   - Required: [MLIR](https://mlir.llvm.org/)
   - Preferred: [BMv2](https://github.com/p4lang/behavioral-model), P4
-- Project difficulty: Hard
-- Project size: 175 hour / 350 hour
 - Discussion thread: TBD
 
 **Alternative qualification task**
@@ -283,11 +281,11 @@ In the longer term, we expect a compilation path like P4C frontend -> P4HIR dial
 
 ---
 
-### <a id='project-6'></a> Project 6: Scaling Decision Tree Algorithm in P4
-
-- [Back to index](#index) ⤴️
+### <a name='project-6'></a> Project 6: Scaling Decision Tree Algorithm in P4 [⤴️](#index)
 
 **Basic info**
+
+![dif-hard] ![size-m] ![size-l]
 
 - Potential mentors
   - Primary: Annus Zulfiqar
@@ -295,8 +293,6 @@ In the longer term, we expect a compilation path like P4C frontend -> P4HIR dial
 - Skills
   - Required: P4
   - Preferred: Decision Tree Algorithm
-- Project difficulty: Hard
-- Project size: 175 hour / 350 hour
 - Discussion thread: TBD
 
 **Project description**
