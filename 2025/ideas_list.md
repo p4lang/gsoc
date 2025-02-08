@@ -71,7 +71,7 @@ It means we expect you to have made relevant contributions in order to demonstra
   - Support: Jonathan DiLorenzo, Fabian Ruffy
 - Skills
   - Required: Git, C++
-  - Preferred: CMake, Bazel, [P4C](https://github.com/p4lang/P4C)
+  - Preferred: CMake, Bazel, [P4C](https://github.com/p4lang/p4c)
 - Project difficulty: Easy
 - Project size: 175 hour
 - Discussion thread: TBD
@@ -96,8 +96,8 @@ The goal of this project is to integrate the p4-constraints frontend, which pars
 **Resources**
 
 - https://github.com/p4lang/p4-constraints
-- https://github.com/p4lang/P4C
-- https://github.com/p4lang/P4C/pull/4387
+- https://github.com/p4lang/p4c
+- https://github.com/p4lang/p4c/pull/4387
 
 ---
 
@@ -146,7 +146,7 @@ The goal of this project is to provide a mechanism for BMv2 to record the trace 
   - Support: To be defined
 - Skills
   - Required: [eBPF](https://ebpf.io/)
-  - Preferred: [P4C](https://github.com/p4lang/P4C), P4
+  - Preferred: [P4C](https://github.com/p4lang/p4c), P4
 - Project difficulty: Medium
 - Project size: 175 hour / 350 hour
 - Discussion thread: TBD
@@ -162,7 +162,7 @@ The goal of this project is to provide a mechanism for BMv2 to record the trace 
 
 **Project description**
 
-[Katran](https://github.com/facebookincubator/katran) is designed to build a high-performance load balancer based on C and eBPF. The P4 open-source compiler, [P4C](https://github.com/p4lang/P4C), supports eBPF as one of its possible targets. This allows a P4 program to be converted into an eBPF program for packet processing. The maintenance of the eBPF backend relies on simple examples that are used to test the backend. The lack of complex programs makes developing and evaluating new features, as well as identifying regressions, more challenging.
+[Katran](https://github.com/facebookincubator/katran) is designed to build a high-performance load balancer based on C and eBPF. The P4 open-source compiler, [P4C](https://github.com/p4lang/p4c), supports eBPF as one of its possible targets. This allows a P4 program to be converted into an eBPF program for packet processing. The maintenance of the eBPF backend relies on simple examples that are used to test the backend. The lack of complex programs makes developing and evaluating new features, as well as identifying regressions, more challenging.
 
 Finalize the implementation of Katran in P4 helps provide a complex program example imporve the test coverage of eBPF backend. Due to that possible bugs can be identifed and fixd together with new features can be implemented.
 
@@ -176,7 +176,7 @@ Finalize the implementation of Katran in P4 helps provide a complex program exam
 
 - Katran: https://github.com/facebookincubator/katran
 - Katran P4: https://github.com/Dscano//P4-Katran
-- P4C eBPF backend: https://github.com/p4lang/P4C/tree/main/backends/ebpf
+- P4C eBPF backend: https://github.com/p4lang/p4c/tree/main/backends/ebpf
 - NIKSS: https://github.com/NIKSS-vSwitch/nikss
 
 ---
@@ -235,7 +235,7 @@ The exact list of tasks is to be determined with mentors.
 **Resources**
 
 - P4MLIR: https://github.com/p4lang/p4mlir
-- P4C: https://github.com/p4lang/P4C
+- P4C: https://github.com/p4lang/p4c
 - MLIR: https://mlir.llvm.org/
 
 ---
@@ -266,7 +266,7 @@ The exact list of tasks is to be determined with mentors.
 
 **Project description**
 
-[BMv2](https://github.com/p4lang/behavioral-model) is a popular software simulator target for P4. In our current open source P4 compiler [P4C](https://github.com/p4lang/P4C), when targeting BMv2, a P4 program is converted to a JSON file, which BMv2 uses as a specification for processing packets. In [P4MLIR](https://github.com/p4lang/p4mlir), we plan to add a dialect specifically for modeling [BMv2 JSON primitives](https://github.com/p4lang/behavioral-model/blob/main/docs/JSON_format.md), so that the BMv2 dialect -> BMv2 JSON transformation could be straightforward.
+[BMv2](https://github.com/p4lang/behavioral-model) is a popular software simulator target for P4. In our current open source P4 compiler [P4C](https://github.com/p4lang/p4c), when targeting BMv2, a P4 program is converted to a JSON file, which BMv2 uses as a specification for processing packets. In [P4MLIR](https://github.com/p4lang/p4mlir), we plan to add a dialect specifically for modeling [BMv2 JSON primitives](https://github.com/p4lang/behavioral-model/blob/main/docs/JSON_format.md), so that the BMv2 dialect -> BMv2 JSON transformation could be straightforward.
 
 In the longer term, we expect a compilation path like P4C frontend -> P4HIR dialect -> BMv2 dialect -> BMv2 JSON. For this GSoC project, we will concentrate on implementing a subset of BMv2 JSON primitives in the BMv2 dialect, and implementing the corresponding BMv2 dialect -> BMv2 JSON transformation.
 
@@ -279,7 +279,7 @@ In the longer term, we expect a compilation path like P4C frontend -> P4HIR dial
 
 - P4MLIR: https://github.com/p4lang/p4mlir
 - BMv2 JSON format: https://github.com/p4lang/behavioral-model/blob/main/docs/JSON_format.md
-- P4C BMv2 backend: https://github.com/p4lang/P4C/tree/main/backends/bmv2
+- P4C BMv2 backend: https://github.com/p4lang/p4c/tree/main/backends/bmv2
 
 ---
 
