@@ -32,22 +32,92 @@ Please check our [Contributor Guidance](contributor_guidance.md) for detailed in
 ### Index
 
 - Category: core P4 tooling
-  - [Project 1: Finalize Katran P4 and improve the eBPF backend!](#project-1)
+  - [Project 1: Integrate p4-constraints frontend into p4c](#project-9)
   - [Project 2: BMv2 packet trace support](#project-2)
-  - [Project 9: Integrate p4-constraints frontend into p4c](#project-9)
+  - [Project 3: Finalize Katran P4 and improve the eBPF backend!](#project-1)
 - Category: exploratory P4 tooling
-  - [Project 3: P4MLIR: MLIR-based high-level IR for P4 compilers](#project-3)
-  - [Project 4: P4MLIR BMv2 Dialect Prototype](#project-4)
-- Category: P4 application
-  - [Project 5:](#project-5)
-  - [Project 6:](#project-6)
+  - [Project 4: P4MLIR: MLIR-based high-level IR for P4 compilers](#project-3)
+  - [Project 5: P4MLIR BMv2 Dialect Prototype](#project-4)
 - Category: P4 research
-  - [Project 7:](#project-7)
-  - [Project 8: Scaling Decision Tree Algorithm in P4](#project-8)
+  - [Project 6: Scaling Decision Tree Algorithm in P4](#project-8)
 
 ---
 
-### <a id='project-1'></a> Project 1: Finalize Katran P4 and improve the eBPF backend!
+### <a id='project-1'></a> Project 1: Integrate p4-constraints frontend into p4c
+
+- [Back to index](#index)
+
+**Basic info**
+
+- Potential mentors
+  - Primary: TBD
+  - Support: TBD
+- Skills
+  - Required: Git, C++
+  - Preferred: CMake, Bazel, [P4C](https://github.com/p4lang/p4c)
+- Project difficulty: Easy
+- Project size: 175 hour
+- Discussion thread: TBD
+
+**Project description**
+
+[p4-constraints](https://github.com/p4lang/p4-constraints) is a useful extension of the P4 programming language that is currently architected as a standalone library separate from the P4 compiler, p4c.
+
+<img width="757" alt="image" src="assets/p4_constraints.png">
+
+The goal of this project is to integrate the p4-constraints frontend, which parses and type checks the constraint annotations, into the p4c frontend. This architecture change provides the following benefits:
+- **For P4 programmers**: Immediate feedback about syntax or type errors in constraints during P4 compilation.
+- **For p4c backend developers**: Easy consumption of the parsed & type-checked constraints.
+
+[P4TestGen](https://www.cs.cornell.edu/~jnfoster/papers/p4testgen.pdf) is a concrete example of a p4c backend that needs to consume p4-constraints to work correctly, and it currently does this by implementing its own p4-constraints frontend, which is brittle and requires duplication of work for new p4-constraint features.
+
+**Expected outcomes**
+
+- The p4-constraints frontend becomes part of p4c.
+
+**Resources**
+
+- https://github.com/p4lang/p4-constraints
+- https://github.com/p4lang/p4c
+- https://github.com/p4lang/p4c/pull/4387
+
+---
+
+### <a id='project-2'></a> Project 2: BMv2 packet trace support
+
+- [Back to index](#index)
+
+**Basic info**
+
+- Potential mentors
+  - Primary: TBD
+  - Support: TBD
+- Skills
+  - Required: Git, C++
+  - Preferred: P4
+- Project difficulty: Medium
+- Project size: ~175 hour
+- Discussion thread: TBD
+
+**Project description**
+
+Having programmatic access to the trace of a packet going through a P4 pipeline (e.g. applied tables, actions, entries hit, etc) has many use cases from human comprehension to use by automated tools for test coverage measurement, automated test generation, automated root causing, etc. 
+
+BMv2 currently does provide textual logs that can be used to manually track the packet as it goes through the pipeline. However there is no API to access the trace in a more structured and programmatic form (i.e. in a way that can potentially be digested by other tools). 
+
+The goal of this project is to provide a mechanism for BMv2 to record the trace and provide it to the user in a structured format.
+
+**Expected outcomes**
+
+- Structured packet trace outputs supported in BMv2.
+
+**Resources**
+
+- BMv2: https://github.com/p4lang/behavioral-model
+
+---
+
+### <a id='project-3'></a> Project 3: Finalize Katran P4 and improve the eBPF backend!
 
 - [Back to index](#index)
 
@@ -96,83 +166,7 @@ Finalize the implementation of Katran in P4 helps provide a complex program exam
 
 ---
 
-### <a id='project-2'></a> Project 2: BMv2 packet trace support
-
-- [Back to index](#index)
-
-**Basic info**
-
-- Potential mentors
-  - Primary: TBD
-  - Support: TBD
-- Skills
-  - Required: Git, C++
-  - Preferred: P4
-- Project difficulty: Medium
-- Project size: ~175 hour
-- Discussion thread: TBD
-
-**Project description**
-
-Having programmatic access to the trace of a packet going through a P4 pipeline (e.g. applied tables, actions, entries hit, etc) has many use cases from human comprehension to use by automated tools for test coverage measurement, automated test generation, automated root causing, etc. 
-
-BMv2 currently does provide textual logs that can be used to manually track the packet as it goes through the pipeline. However there is no API to access the trace in a more structured and programmatic form (i.e. in a way that can potentially be digested by other tools). 
-
-The goal of this project is to provide a mechanism for BMv2 to record the trace and provide it to the user in a structured format.
-
-**Expected outcomes**
-
-- Structured packet trace outputs supported in BMv2.
-
-**Resources**
-
-- BMv2: https://github.com/p4lang/behavioral-model
-
----
-
----
-### <a id='project-9'></a> Project 9: Integrate p4-constraints frontend into p4c
-
-- [Back to index](#index)
-
-**Basic info**
-
-- Potential mentors
-  - Primary: TBD
-  - Support: TBD
-- Skills
-  - Required: Git, C++
-  - Preferred: CMake, Bazel, [P4C](https://github.com/p4lang/p4c)
-- Project difficulty: Easy
-- Project size: 175 hour
-- Discussion thread: TBD
-
-**Project description**
-
-[p4-constraints](https://github.com/p4lang/p4-constraints) is a useful extension of the P4 programming language that is currently architected as a standalone library separate from the P4 compiler, p4c.
-
-<img width="757" alt="image" src="assets/p4_constraints.png">
-
-The goal of this project is to integrate the p4-constraints frontend, which parses and type checks the constraint annotations, into the p4c frontend. This architecture change provides the following benefits:
-- **For P4 programmers**: Immediate feedback about syntax or type errors in constraints during P4 compilation.
-- **For p4c backend developers**: Easy consumption of the parsed & type-checked constraints.
-
-[P4TestGen](https://www.cs.cornell.edu/~jnfoster/papers/p4testgen.pdf) is a concrete example of a p4c backend that needs to consume p4-constraints to work correctly, and it currently does this by implementing its own p4-constraints frontend, which is brittle and requires duplication of work for new p4-constraint features.
-
-**Expected outcomes**
-
-- The p4-constraints frontend becomes part of p4c.
-
-**Resources**
-
-- https://github.com/p4lang/p4-constraints
-- https://github.com/p4lang/p4c
-- https://github.com/p4lang/p4c/pull/4387
-
----
-
-
-### <a id='project-3'></a> Project 3: P4MLIR: MLIR-based high-level IR for P4 compilers
+### <a id='project-4'></a> Project 4: P4MLIR: MLIR-based high-level IR for P4 compilers
 
 - [Back to index](#index)
 
@@ -231,7 +225,7 @@ The exact list of tasks is to be determined with mentors.
 
 ---
 
-### <a id='project-4'></a> Project 4: P4MLIR BMv2 Dialect Prototype
+### <a id='project-5'></a> Project 5: P4MLIR BMv2 Dialect Prototype
 
 - [Back to index](#index)
 
@@ -275,25 +269,7 @@ In the longer term, we expect a compilation path like P4C frontend -> P4HIR dial
 
 ---
 
-### <a id='project-5'></a> Project 5:
-
-- [Back to index](#index)
-
----
-
-### <a id='project-6'></a> Project 6:
-
-- [Back to index](#index)
-
----
-
-### <a id='project-7'></a> Project 7:
-
-- [Back to index](#index)
-
----
-
-### <a id='project-8'></a> Project 8: Scaling Decision Tree Algorithm in P4
+### <a id='project-6'></a> Project 6: Scaling Decision Tree Algorithm in P4
 
 - [Back to index](#index)
 
@@ -321,3 +297,5 @@ Scaling the Decision Tree Algorithm in P4
 **Resources**
 
 - Decision Tree Algorithm: https://en.wikipedia.org/wiki/Decision_tree_learning
+
+---
