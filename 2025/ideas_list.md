@@ -6,10 +6,12 @@ Please check our [Contributor Guidance](contributor_guidance.md) for detailed in
 
 ## Potential mentors
 
+1. Annus Zulfiqar ([@annuszulfiqar2021](https://github.com/annuszulfiqar2021), zulfiqaa@umich.edu)
 1. Anton Korobeynikov ([@asl](https://github.com/asl), anton@korobeynikov.info)
 1. Bili Dong ([@qobilidop](https://github.com/qobilidop), bilid@google.com)
 1. Davide Scano ([@Dscano](https://github.com/Dscano), d.scano89@gmail.com)
 1. Fabian Ruffy ([@fruffy](https://github.com/fruffy), fruffy@nyu.edu)
+1. Walter Willinger ([](), zulfiqaa@umich.edu)
 
 ## FAQ
 
@@ -40,7 +42,7 @@ Please check our [Contributor Guidance](contributor_guidance.md) for detailed in
   - [Project 6:](#project-6)
 - Category: P4 research
   - [Project 7:](#project-7)
-  - [Project 8:](#project-8)
+  - [Project 8: Scaling Decision Tree Algorithm in P4](#project-8)
 
 ---
 
@@ -220,6 +222,31 @@ In the longer term, we expect a compilation path like P4C frontend -> P4HIR dial
 
 ---
 
-### <a id='project-8'></a> Project 8:
+### <a id='project-8'></a> Project 8: Scaling Decision Tree Algorithm in P4
 
 - [Back to index](#index)
+
+**Basic info**
+
+ Potential mentors
+  - Primary: Annus Zulfiqar
+  - Support: Walter Willinger, Davide Scano
+- Skills
+  - Required: P4
+  - Preferred: Decision Tree Algorithm
+- Project difficulty: Hard
+- Project size: 175 hour / 350 hour
+- Discussion thread: TBD
+
+**Project description**
+
+Scaling the Decision Tree Algorithm in P4
+
+**Expected outcomes**
+
+- Implement the scaling of the Decision Tree Algorithm using P4.
+
+
+**Resources**
+
+- Decision Tree Algorithm: https://en.wikipedia.org/wiki/Decision_tree_learning
