@@ -10,6 +10,7 @@ Please check our [Contributor Guidance](contributor_guidance.md) for detailed in
 
 1. ⭐ Annus Zulfiqar ([@annuszulfiqar2021](https://github.com/annuszulfiqar2021), zulfiqaa@umich.edu)
 1. ⭐ Anton Korobeynikov ([@asl](https://github.com/asl), anton@korobeynikov.info)
+1. Ben Pfaff ([@blp](https://github.com/blp), blp@cs.stanford.edu)
 1. ⭐ Bili Dong ([@qobilidop](https://github.com/qobilidop), bilid@google.com)
 1. ⭐ Davide Scano ([@Dscano](https://github.com/Dscano), d.scano89@gmail.com)
 1. Fabian Ruffy ([@fruffy](https://github.com/fruffy), fruffy@nyu.edu)
@@ -66,6 +67,7 @@ It means we expect you to have made relevant contributions in order to demonstra
   - [Project 6: P4MLIR BMv2 Dialect Prototype](#project-6)
 - Category: P4 research
   - [Project 7: Scaling Decision Tree Algorithm in P4](#project-7)
+  - [Project 8: OVS backend for P4 Compiler](#project-8)
 
 ---
 
@@ -340,5 +342,34 @@ Scaling the Decision Tree Algorithm in P4
 **Resources**
 
 - Decision Tree Algorithm: https://en.wikipedia.org/wiki/Decision_tree_learning
+
+---
+
+### <a name='project-8'></a> Project 8: OVS backend for P4 Compiler [⤴️](#index)
+
+**Basic info**
+
+![diffi-hard] ![size-l]
+
+ Potential mentors
+  - Primary: Annus Zulfiqar
+  - Support: Ben Pfaff, Davide Scano
+- Skills
+  - Required: [P4C](https://github.com/p4lang/p4c)
+  - Preferred: P4, C++, [OVS](https://www.openvswitch.org/), Compiler Architecture
+- Discussion thread: TBD
+
+**Project description**
+
+ The P4 open-source compiler, [P4C](https://github.com/p4lang/p4c), supports a wide range of targets. The OVS backend would be a new addition to the P4C compiler.
+
+**Expected outcomes**
+
+- Add the OVS backend as new backend in the P4C
+
+**Resources**
+
+- P4C: https://github.com/p4lang/p4c
+- OVS: https://www.openvswitch.org/
 
 ---
