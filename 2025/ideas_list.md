@@ -33,7 +33,7 @@ Please check our [Contributor Guidance](contributor_guidance.md) for detailed in
 
 - Category: core P4 tooling
   - [Project 1: Finalize Katran P4 and improve the eBPF backend!](#project-1)
-  - [Project 2:](#project-2)
+  - [Project 2: BMv2 packet trace support](#project-2)
 - Category: exploratory P4 tooling
   - [Project 3: P4MLIR: MLIR-based high-level IR for P4 compilers](#project-3)
   - [Project 4: P4MLIR BMv2 Dialect Prototype](#project-4)
@@ -95,9 +95,37 @@ Finalize the implementation of Katran in P4 helps provide a complex program exam
 
 ---
 
-### <a id='project-2'></a> Project 2:
+### <a id='project-2'></a> Project 2: BMv2 packet trace support
 
 - [Back to index](#index)
+
+**Basic info**
+
+- Potential mentors
+  - Primary: TBD
+  - Support: TBD
+- Skills
+  - Required: Git, C++
+  - Preferred: P4
+- Project difficulty: Medium
+- Project size: ~175 hour
+- Discussion thread: TBD
+
+**Project description**
+
+Having programmatic access to the trace of a packet going through a P4 pipeline (e.g. applied tables, actions, entries hit, etc) has many use cases from human comprehension to use by automated tools for test coverage measurement, automated test generation, automated root causing, etc. 
+
+BMv2 currently does provide textual logs that can be used to manually track the packet as it goes through the pipeline. However there is no API to access the trace in a more structured and programmatic form (i.e. in a way that can potentially be digested by other tools). 
+
+The goal of this project is to provide a mechanism for BMv2 to record the trace and provide it to the user in a structured format.
+
+**Expected outcomes**
+
+- Structured packet trace outputs supported in BMv2.
+
+**Resources**
+
+- BMv2: https://github.com/p4lang/behavioral-model
 
 ---
 
