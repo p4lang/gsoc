@@ -22,7 +22,7 @@ Note: you = contributors, we = mentors.
 
 **Q1: Some mentors are listed as primary mentor for multiple projects. How does that work?**
 
-We'd like to present more options for you to choose from. Eventually, depending on the applications received, they will decide on at most 1 project to commit to as a primary mentor.
+For the application phase, we'd like to present more options for you to choose from. Eventually, depending on the applications received, they will decide on at most 1 project to commit to as a primary mentor.
 
 **Q2: What do our project difficulties mean?**
 
@@ -221,7 +221,7 @@ Since [P4MLIR](https://github.com/p4lang/p4mlir) is a moving target, the precise
 - Reimplementation of P4C frontend / midend passes in MLIR
 - Lowering to P4 high-level dialect to lower-level constructs:
   - Perform CFG flattening
-  - Lowering to `llvm` and / or `emitC` dialects
+  - Lowering to [`llvm`](https://mlir.llvm.org/docs/Dialects/LLVM/) and / or [`emitc`](https://mlir.llvm.org/docs/Dialects/EmitC/) dialects
   - ...
 - Implementing control plane metadata emission out of `P4HIR`
 
