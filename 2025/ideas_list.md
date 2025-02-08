@@ -59,12 +59,13 @@ It means we expect you to have made relevant contributions in order to demonstra
 - Category: core P4 tooling
   - [Project 1: Integrate p4-constraints frontend into P4C](#project-1)
   - [Project 2: BMv2 packet trace support](#project-2)
-  - [Project 3: Finalize Katran P4 and improve the eBPF backend!](#project-3)
+  - [Project 3: BMv2 with all possible output packets](#project-3)
+  - [Project 4: Finalize Katran P4 and improve the eBPF backend!](#project-4)
 - Category: exploratory P4 tooling
-  - [Project 4: P4MLIR: MLIR-based high-level IR for P4 compilers](#project-4)
-  - [Project 5: P4MLIR BMv2 Dialect Prototype](#project-5)
+  - [Project 5: P4MLIR: MLIR-based high-level IR for P4 compilers](#project-5)
+  - [Project 6: P4MLIR BMv2 Dialect Prototype](#project-6)
 - Category: P4 research
-  - [Project 6: Scaling Decision Tree Algorithm in P4](#project-6)
+  - [Project 7: Scaling Decision Tree Algorithm in P4](#project-7)
 
 ---
 
@@ -139,7 +140,40 @@ The goal of this project is to provide a mechanism for BMv2 to record the trace 
 
 ---
 
-### <a name='project-3'></a> Project 3: Finalize Katran P4 and improve the eBPF backend! [⤴️](#index)
+### <a name='project-3'></a> Project 10: BMv2 with all possible output packets [⤴️](#index)
+
+**Basic info**
+
+![diffi-medium] ![size-m]
+
+- Potential mentors
+  - Primary: Bili Dong
+  - Support: Jonathan DiLorenzo
+- Skills
+  - Required: Git, C++
+  - Preferred: P4
+- Discussion thread: TBD
+
+**Project description**
+
+There are many situations where it is more useful to have all possible outputs from a P4 simulation rather than only a single one. For example, we use this for diff testing, to determine whether the switch is doing something correct or something incorrect.
+
+Multiple allowed behaviors usually arise from various multi-path constructs (e.g. ECMP, WCMP, or perhaps LAGs) usually modeled as action profiles in P4. BMv2 currently allows users to set a mode determining action profile behavior, like `round robin` which means that every time you send in the same packet, it should result in the next possible outcome (eventually wrapping around).
+
+The goal of this project is to provide a new mode for BMv2 to instead output ALL possible behaviors. This will both require extending the action profile modes, and likely extending the notion of output from a set of packets to a set of sets of packets.
+
+**Expected outcomes**
+
+- BMv2 has a modality where every possible outcome is generated instead of one possible outcome.
+- Must interact correctly with multicast and punting.
+
+**Resources**
+
+- BMv2: https://github.com/p4lang/behavioral-model
+
+---
+
+### <a name='project-4'></a> Project 4: Finalize Katran P4 and improve the eBPF backend! [⤴️](#index)
 
 **Basic info**
 
@@ -183,7 +217,7 @@ Finalize the implementation of Katran in P4 helps provide a complex program exam
 
 ---
 
-### <a name='project-4'></a> Project 4: P4MLIR: MLIR-based high-level IR for P4 compilers [⤴️](#index)
+### <a name='project-5'></a> Project 5: P4MLIR: MLIR-based high-level IR for P4 compilers [⤴️](#index)
 
 **Basic info**
 
@@ -240,7 +274,7 @@ The exact list of tasks is to be determined with mentors.
 
 ---
 
-### <a name='project-5'></a> Project 5: P4MLIR BMv2 Dialect Prototype [⤴️](#index)
+### <a name='project-6'></a> Project 6: P4MLIR BMv2 Dialect Prototype [⤴️](#index)
 
 **Basic info**
 
@@ -281,7 +315,7 @@ In the longer term, we expect a compilation path like P4C frontend -> P4HIR dial
 
 ---
 
-### <a name='project-6'></a> Project 6: Scaling Decision Tree Algorithm in P4 [⤴️](#index)
+### <a name='project-7'></a> Project 7: Scaling Decision Tree Algorithm in P4 [⤴️](#index)
 
 **Basic info**
 
