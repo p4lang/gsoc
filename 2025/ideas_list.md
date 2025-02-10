@@ -12,10 +12,10 @@ Please check our [Contributor Guidance](contributor_guidance.md) for detailed in
 1. ⭐ Anton Korobeynikov ([@asl](https://github.com/asl), anton@korobeynikov.info)
 1. ⭐ Bili Dong ([@qobilidop](https://github.com/qobilidop), bilid@google.com)
 1. ⭐ Davide Scano ([@Dscano](https://github.com/Dscano), d.scano89@gmail.com)
+1. ⭐ Mingyu Ma ([@mingyu](https://github.com/Mingyumaz), mingyu.ma@tu-dresden.de)
 1. Fabian Ruffy ([@fruffy](https://github.com/fruffy), fruffy@nyu.edu)
 1. Jonathan DiLorenzo ([@jonathan-dilorenzo](https://github.com/jonathan-dilorenzo), dilo@google.com)
 1. Walter Willinger
-1. Mingyu Ma ([@mingyu](https://github.com/Mingyumaz), mingyu.ma@tu-dresden.de)
 
 ## FAQ
 
@@ -63,11 +63,11 @@ It means we expect you to have made relevant contributions in order to demonstra
   - [Project 3: BMv2 with all possible output packets](#project-3)
   - [Project 4: Finalize Katran P4 and improve the eBPF backend!](#project-4)
 - Category: exploratory P4 tooling
-  - [Project 5: P4MLIR: MLIR-based high-level IR for P4 compilers](#project-5)
-  - [Project 6: P4MLIR BMv2 Dialect Prototype](#project-6)
-  - [Project 8: p4simulator: Simulation p4 in ns-3](#project-8)
+  - [Project 5: P4Simulator: Enabling P4 Simulations in ns-3](#project-5)
+  - [Project 6: P4MLIR: MLIR-based high-level IR for P4 compilers](#project-6)
+  - [Project 7: P4MLIR BMv2 Dialect Prototype](#project-7)
 - Category: P4 research
-  - [Project 7: Scaling Decision Tree Algorithm in P4](#project-7)
+  - [Project 8: Scaling Decision Tree Algorithm in P4](#project-8)
 
 ---
 
@@ -219,7 +219,48 @@ Finalize the implementation of Katran in P4 helps provide a complex program exam
 
 ---
 
-### <a name='project-5'></a> Project 5: P4MLIR: MLIR-based high-level IR for P4 compilers [⤴️](#index)
+### <a name='project-5'></a> Project 5: P4Simulator: Enabling P4 Simulations in ns-3 [⤴️](#index)
+
+**Basic info**
+
+![diffi-Medium] ![size-m]
+
+- Potential mentors
+  - Primary: Mingyu Ma
+  - Support: Tommaso Pecorella, Davide Scano
+- Skills
+  - Required: P4, C++
+  - Preferred: [ns-3](https://www.nsnam.org/), [BMv2](https://github.com/p4lang/behavioral-model)
+- Discussion thread: TBD
+
+**Project description**
+
+P4Simulator is a P4-driven network simulator that aims to combine P4—the state-of-the-art programmable data plane language—with ns-3, one of the most popular and versatile network simulators. While the current module already supports basic P4 functionality in ns-3, there remain numerous areas that require further development, as outlined in the Alternative qualification task. We also welcome discussions on any other ideas or improvements you may wish to propose for P4Simulator.
+
+To advance the development of P4Simulator, we invite contributions in several key areas, including but not limited to:
+
+- Control Plane Enhancement: Improving control plane support for seamless interaction between P4 programs and ns-3.
+- PSA Architecture Completion: Implementing full support for the Portable Switch Architecture (PSA) within P4Simulator.
+- High-Speed Ethernet Link Module: Developing a high-performance Ethernet link model to simulate real-world network conditions.
+- Other Enhancements & Extensions: Exploring additional improvements to expand the functionality and efficiency of P4Simulator.
+
+Furthermore, we encourage discussions on novel ideas and enhancements that could contribute to the evolution of P4Simulator, making it a more powerful and flexible tool for network simulation research.
+
+
+**Expected outcomes**
+
+- Complete the development and submission of the corresponding project.
+
+**Resources**
+
+- [p4simulator](https://github.com/P4-Sim/P4-NS3simulator-module) 
+- [p4sim](https://github.com/HapCommSys/p4sim)
+
+Currently, the p4sim repository is private (Prepare the paper for [ICNS3](https://www.nsnam.org/research/icns3/icns3-2025/)), but it will be made open-source on March 21, 2025, at 17:00 EST. This delay allows for ongoing research, refinement, and the preparation of related publications before public release.
+
+---
+
+### <a name='project-6'></a> Project 6: P4MLIR: MLIR-based high-level IR for P4 compilers [⤴️](#index)
 
 **Basic info**
 
@@ -276,7 +317,7 @@ The exact list of tasks is to be determined with mentors.
 
 ---
 
-### <a name='project-6'></a> Project 6: P4MLIR BMv2 Dialect Prototype [⤴️](#index)
+### <a name='project-7'></a> Project 7: P4MLIR BMv2 Dialect Prototype [⤴️](#index)
 
 **Basic info**
 
@@ -317,7 +358,7 @@ In the longer term, we expect a compilation path like P4C frontend -> P4HIR dial
 
 ---
 
-### <a name='project-7'></a> Project 7: Scaling Decision Tree Algorithm in P4 [⤴️](#index)
+### <a name='project-8'></a> Project 8: Scaling Decision Tree Algorithm in P4 [⤴️](#index)
 
 **Basic info**
 
@@ -346,39 +387,4 @@ Scaling the Decision Tree Algorithm in P4
 ---
 
 
----
 
-### <a name='project-8'></a> Project 8: p4simulator: Simulation p4 in ns-3[⤴️](#index)
-
-**Basic info**
-
-![diffi-Medium] ![size-m]
-
-- Potential mentors
-  - Primary: Mingyu Ma
-- Skills
-  - Required: P4, C++
-  - Preferred: [ns-3](https://www.nsnam.org/), [BMv2](https://github.com/p4lang/behavioral-model)
-- Discussion thread: TBD
-
-**Alternative qualification task**
-
-- Please demonstrate your skills through contributions to any of the following projects:
-  - Control Plane Enhancement for the p4simulator.
-  - Completion of the PSA Architecture in p4simulator.
-  - Construction of a High-Speed Ethernet Link Module.
-  - Any other p4simulator projects.
-
-**Project description**
-
-P4Simulator is a P4-driven network simulator that aims to combine P4—the state-of-the-art programmable data plane language—with ns-3, one of the most popular and versatile network simulators. While the current module already supports basic P4 functionality in ns-3, there remain numerous areas that require further development, as outlined in the Alternative qualification task. We also welcome discussions on any other ideas or improvements you may wish to propose for P4Simulator.
-
-**Expected outcomes**
-
-- Complete the development and submission of the corresponding project.
-
-**Resources**
-
-- [p4simulator](https://github.com/P4-Sim/P4-NS3simulator-module) and [p4sim](https://github.com/HapCommSys/p4sim)
-
----
