@@ -15,7 +15,7 @@ Please check our [Contributor Guidance](contributor_guidance.md) for detailed in
 1. Fabian Ruffy ([@fruffy](https://github.com/fruffy), fruffy@nyu.edu)
 1. Jonathan DiLorenzo ([@jonathan-dilorenzo](https://github.com/jonathan-dilorenzo), dilo@google.com)
 1. Walter Willinger
-1. Mingyu Ma
+1. Mingyu Ma ([@mingyu](https://github.com/Mingyumaz), mingyu.ma@tu-dresden.de)
 
 ## FAQ
 
