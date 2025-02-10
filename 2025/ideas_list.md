@@ -15,6 +15,7 @@ Please check our [Contributor Guidance](contributor_guidance.md) for detailed in
 1. Fabian Ruffy ([@fruffy](https://github.com/fruffy), fruffy@nyu.edu)
 1. Jonathan DiLorenzo ([@jonathan-dilorenzo](https://github.com/jonathan-dilorenzo), dilo@google.com)
 1. Walter Willinger
+1. Mingyu Ma
 
 ## FAQ
 
@@ -64,6 +65,7 @@ It means we expect you to have made relevant contributions in order to demonstra
 - Category: exploratory P4 tooling
   - [Project 5: P4MLIR: MLIR-based high-level IR for P4 compilers](#project-5)
   - [Project 6: P4MLIR BMv2 Dialect Prototype](#project-6)
+  - [Project 8: p4simulator: Simulation p4 in ns-3](#project-8)
 - Category: P4 research
   - [Project 7: Scaling Decision Tree Algorithm in P4](#project-7)
 
@@ -340,5 +342,43 @@ Scaling the Decision Tree Algorithm in P4
 **Resources**
 
 - Decision Tree Algorithm: https://en.wikipedia.org/wiki/Decision_tree_learning
+
+---
+
+
+---
+
+### <a name='project-8'></a> Project 8: p4simulator: Simulation p4 in ns-3[⤴️](#index)
+
+**Basic info**
+
+![diffi-Medium] ![size-m]
+
+- Potential mentors
+  - Primary: Mingyu Ma
+- Skills
+  - Required: P4, C++
+  - Preferred: [ns-3](https://www.nsnam.org/), [BMv2](https://github.com/p4lang/behavioral-model)
+- Discussion thread: TBD
+
+**Alternative qualification task**
+
+- Please demonstrate your skills through contributions to any of the following projects:
+  - Control Plane Enhancement for the p4simulator.
+  - Completion of the PSA Architecture in p4simulator.
+  - Construction of a High-Speed Ethernet Link Module.
+  - Any other p4simulator projects.
+
+**Project description**
+
+P4Simulator is a P4-driven network simulator that aims to combine P4—the state-of-the-art programmable data plane language—with ns-3, one of the most popular and versatile network simulators. While the current module already supports basic P4 functionality in ns-3, there remain numerous areas that require further development, as outlined in the Alternative qualification task. We also welcome discussions on any other ideas or improvements you may wish to propose for P4Simulator.
+
+**Expected outcomes**
+
+- Complete the development and submission of the corresponding project.
+
+**Resources**
+
+- [p4simulator](https://github.com/P4-Sim/P4-NS3simulator-module) and [p4sim](https://github.com/HapCommSys/p4sim)
 
 ---
