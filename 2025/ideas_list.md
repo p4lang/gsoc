@@ -12,9 +12,10 @@ Please check our [Contributor Guidance](contributor_guidance.md) for detailed in
 1. ⭐ Anton Korobeynikov ([@asl](https://github.com/asl), anton@korobeynikov.info)
 1. ⭐ Bili Dong ([@qobilidop](https://github.com/qobilidop), bilid@google.com)
 1. ⭐ Davide Scano ([@Dscano](https://github.com/Dscano), d.scano89@gmail.com)
-1. ⭐ Mingyu Ma ([@mingyu](https://github.com/Mingyumaz), mingyu.ma@tu-dresden.de)
+1. ⭐ Mingyu Ma ([@Mingyumaz](https://github.com/Mingyumaz), mingyu.ma@tu-dresden.de)
 1. Fabian Ruffy ([@fruffy](https://github.com/fruffy), fruffy@nyu.edu)
 1. Jonathan DiLorenzo ([@jonathan-dilorenzo](https://github.com/jonathan-dilorenzo), dilo@google.com)
+1. Tommaso Pecorella([@TommyPec](https://github.com/TommyPec), tpecorella@mac.com)
 1. Walter Willinger
 
 ## FAQ
