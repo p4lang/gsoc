@@ -9,6 +9,7 @@ Please check our [Contributor Guidance](contributor_guidance.md) for detailed in
 ⭐ = available as primary mentor
 
 1. ⭐ Annus Zulfiqar ([@annuszulfiqar2021](https://github.com/annuszulfiqar2021), zulfiqaa@umich.edu)
+1. ⭐ Ali Imran ([@ALI11-2000](https://github.com/ALI11-2000), imranali@umich.edu)
 1. ⭐ Anton Korobeynikov ([@asl](https://github.com/asl), anton@korobeynikov.info)
 1. ⭐ Bili Dong ([@qobilidop](https://github.com/qobilidop), bilid@google.com)
 1. ⭐ Davide Scano ([@Dscano](https://github.com/Dscano), d.scano89@gmail.com)
@@ -367,7 +368,7 @@ In the longer term, we expect a compilation path like P4C frontend -> P4HIR dial
 
 - Potential mentors
   - Primary: Annus Zulfiqar, Ali Imran
-  - Support: Ben Pfaff
+  - Support: Ben Pfaff, Muhammad Shahbaz
 - Skills
   - Required: Xilinx Vivado SDK/FPGA Development
   - Preferred: OVS, P4, DPDK 
@@ -389,7 +390,7 @@ In the longer term, we expect a compilation path like P4C frontend -> P4HIR dial
 
 Open vSwitch (OVS) is a widely-adopted virtual switch (vSwitch) in cloud deployments and data centers. _Gigaflow_ (appearing at ASPLOS'25) is a recent advancement that massively improves OVS forwarding performance by offloading a novel multi-table cache architecture to SmartNICs, thereby reducing the CPU-bound cache misses and improving the end-to-end forwarding latency. This project aims to develop a P4-based SmartNIC backend for Gigaflow cache in OVS for P4-programmable FPGA SmartNICs, e.g., the Xilinx Alveo U55/U250 Data Center Accelerator, and modern off-the-shelf SmartNICs, such as AMD Pensando DPU.
 
-<img width="500" alt="image" src="./gigaflow.png">
+<img width="350" alt="image" src="./gigaflow.png">
 
 **Expected outcomes**
 
