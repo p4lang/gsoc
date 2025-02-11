@@ -432,7 +432,7 @@ Open vSwitch (OVS) is a widely-adopted virtual switch (vSwitch) in cloud deploym
 
 Machine learning is increasingly deployed in programmable network switches for real-time traffic analysis and security monitoring. SpliDT is a scalable framework that removes traditional feature constraints in decision tree (DT) inference by dynamically selecting relevant features at runtime rather than requiring a fixed set per flow. The goal is to enhance accuracy and scalability in high-speed network environments. This project aims to implement and optimize SpliDT using P4, TensorFlow, scikit-learn, and HyperMapper.
 
-<img width="500" alt="image" src="./splidt.png">
+<img width="500" alt="image" src="./splidt.jpg">
 
 **Expected outcomes**
 
