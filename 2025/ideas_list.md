@@ -8,15 +8,17 @@ Please check our [Contributor Guidance](contributor_guidance.md) for detailed in
 
 ⭐ = available as primary mentor
 
-1. ⭐ Annus Zulfiqar ([@annuszulfiqar2021](https://github.com/annuszulfiqar2021), zulfiqaa@umich.edu)
 1. ⭐ Ali Imran ([@ALI11-2000](https://github.com/ALI11-2000), imranali@umich.edu)
+1. ⭐ Annus Zulfiqar ([@annuszulfiqar2021](https://github.com/annuszulfiqar2021), zulfiqaa@umich.edu)
 1. ⭐ Anton Korobeynikov ([@asl](https://github.com/asl), anton@korobeynikov.info)
 1. ⭐ Bili Dong ([@qobilidop](https://github.com/qobilidop), bilid@google.com)
 1. ⭐ Davide Scano ([@Dscano](https://github.com/Dscano), d.scano89@gmail.com)
 1. ⭐ Mingyu Ma ([@Mingyumaz](https://github.com/Mingyumaz), mingyu.ma@tu-dresden.de)
-1. Fabian Ruffy ([@fruffy](https://github.com/fruffy), fruffy@nyu.edu)
-1. Jonathan DiLorenzo ([@jonathan-dilorenzo](https://github.com/jonathan-dilorenzo), dilo@google.com)
-1. Tommaso Pecorella([@TommyPec](https://github.com/TommyPec), tommaso.pecorella@unifi.it)
+1. Ben Pfaff ([@blp](https://github.com/blp))
+1. Fabian Ruffy ([@fruffy](https://github.com/fruffy))
+1. Jonathan DiLorenzo ([@jonathan-dilorenzo](https://github.com/jonathan-dilorenzo))
+1. Muhammad Shahbaz ([@msbaz2013](https://github.com/msbaz2013))
+1. Tommaso Pecorella([@TommyPec](https://github.com/TommyPec))
 1. Walter Willinger
 
 ## FAQ
@@ -69,7 +71,8 @@ It means we expect you to have made relevant contributions in order to demonstra
   - [Project 6: P4MLIR: MLIR-based high-level IR for P4 compilers](#project-6)
   - [Project 7: P4MLIR BMv2 Dialect Prototype](#project-7)
 - Category: P4 research
-  - [Project 8: Scaling Decision Tree Algorithm in P4](#project-8)
+  - [Project 8: Gigaflow: A Smart Cache for a SmartNIC!](#project-8)
+  - [Project 9: SpliDT: Scaling Stateful Decision Tree Algorithms in P4!](#project-9)
 
 ---
 
@@ -248,14 +251,13 @@ To advance the development of P4Simulator, we invite contributions in several ke
 
 Furthermore, we encourage discussions on novel ideas and enhancements that could contribute to the evolution of P4Simulator, making it a more powerful and flexible tool for network simulation research.
 
-
 **Expected outcomes**
 
 - Complete the development and submission of the corresponding project.
 
 **Resources**
 
-- [p4simulator](https://github.com/P4-Sim/P4-NS3simulator-module) 
+- [p4simulator](https://github.com/P4-Sim/P4-NS3simulator-module)
 - [p4sim](https://github.com/HapCommSys/p4sim)
 
 Currently, the p4sim repository is private (Prepare the paper for [ICNS3](https://www.nsnam.org/research/icns3/icns3-2025/)), but it will be made open-source on March 21, 2025, at 17:00 EST. This delay allows for ongoing research, refinement, and the preparation of related publications before public release.
@@ -358,9 +360,9 @@ In the longer term, we expect a compilation path like P4C frontend -> P4HIR dial
 - BMv2 JSON format: https://github.com/p4lang/behavioral-model/blob/main/docs/JSON_format.md
 - P4C BMv2 backend: https://github.com/p4lang/p4c/tree/main/backends/bmv2
 
---- 
+---
 
-### <a name=‘project-8’></a> Project 8: Gigaflow: A Smart Cache for a SmartNIC! [:arrow_heading_up:](#index)
+### <a name='project-8'></a> Project 8: Gigaflow: A Smart Cache for a SmartNIC! [⤴️](#index)
 
 **Basic info**
 
@@ -371,7 +373,7 @@ In the longer term, we expect a compilation path like P4C frontend -> P4HIR dial
   - Support: Ben Pfaff, Muhammad Shahbaz
 - Skills
   - Required: Xilinx Vivado SDK/FPGA Development
-  - Preferred: OVS, P4, DPDK 
+  - Preferred: OVS, P4, DPDK
 - Discussion thread: TBD
 
 **Alternative qualification task**
@@ -394,9 +396,9 @@ Open vSwitch (OVS) is a widely-adopted virtual switch (vSwitch) in cloud deploym
 
 **Expected outcomes**
 
--   **OVS-to-P4 Compilation Pipeline**: Improve the existing OVS → P4-SDNet → FPGA codebase to enable seamless compilation to FPGA-based SmartNICs.
--   **SmartNIC Backend Development**: Extend support beyond FPGA-based SmartNICs to include Pensando DPUs as a backend target.
--   **Upstream Integration**: Work towards making _Gigaflow_ a mainstream OVS backend, ensuring maintainability and adoption.
+- **OVS-to-P4 Compilation Pipeline**: Improve the existing OVS → P4-SDNet → FPGA codebase to enable seamless compilation to FPGA-based SmartNICs.
+- **SmartNIC Backend Development**: Extend support beyond FPGA-based SmartNICs to include Pensando DPUs as a backend target.
+- **Upstream Integration**: Work towards making _Gigaflow_ a mainstream OVS backend, ensuring maintainability and adoption.
 
 **Resources**
 
@@ -406,7 +408,7 @@ Open vSwitch (OVS) is a widely-adopted virtual switch (vSwitch) in cloud deploym
 
 ---
 
-### <a name=‘project-9’></a> Project 9: SpliDT: Scaling Stateful Decision Tree Algorithms in P4! [:arrow_heading_up:](#index)
+### <a name='project-9'></a> Project 9: SpliDT: Scaling Stateful Decision Tree Algorithms in P4! [⤴️](#index)
 
 **Basic info**
 
