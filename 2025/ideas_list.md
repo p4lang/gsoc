@@ -9,6 +9,7 @@ Please check our [Contributor Guidance](contributor_guidance.md) for detailed in
 ⭐ = available as primary mentor
 
 1. ⭐ Annus Zulfiqar ([@annuszulfiqar2021](https://github.com/annuszulfiqar2021), zulfiqaa@umich.edu)
+1. ⭐ Ali Imran ([@ALI11-2000](https://github.com/ALI11-2000), imranali@umich.edu)
 1. ⭐ Anton Korobeynikov ([@asl](https://github.com/asl), anton@korobeynikov.info)
 1. ⭐ Bili Dong ([@qobilidop](https://github.com/qobilidop), bilid@google.com)
 1. ⭐ Davide Scano ([@Dscano](https://github.com/Dscano), d.scano89@gmail.com)
@@ -357,35 +358,94 @@ In the longer term, we expect a compilation path like P4C frontend -> P4HIR dial
 - BMv2 JSON format: https://github.com/p4lang/behavioral-model/blob/main/docs/JSON_format.md
 - P4C BMv2 backend: https://github.com/p4lang/p4c/tree/main/backends/bmv2
 
----
+--- 
 
-### <a name='project-8'></a> Project 8: Scaling Decision Tree Algorithm in P4 [⤴️](#index)
+### <a name=‘project-8’></a> Project 8: Gigaflow: A Smart Cache for a SmartNIC! [:arrow_heading_up:](#index)
 
 **Basic info**
 
-![diffi-hard] ![size-m] ![size-l]
+![diffi-hard] ![size-l]
 
 - Potential mentors
-  - Primary: Annus Zulfiqar
-  - Support: Walter Willinger, Davide Scano
+  - Primary: Annus Zulfiqar, Ali Imran
+  - Support: Ben Pfaff, Muhammad Shahbaz
 - Skills
-  - Required: P4
-  - Preferred: Decision Tree Algorithm
+  - Required: Xilinx Vivado SDK/FPGA Development
+  - Preferred: OVS, P4, DPDK 
 - Discussion thread: TBD
+
+**Alternative qualification task**
+
+- Please demonstrate your FPGA skills through contributions to any of the following projects:
+  - Any existing Xilinx Open NIC or NetFPGA projects.
+  - Any personal project that has used Xilinx Vivao tools.
+- Please demonstrate your basic P4 knowledge through contributions to any of the following projects:
+  - Any existing P4 project.
+  - Any personal project that incorporates P4.
+- Please demonstrate your basic Virtual Networking knowledge through contributions to any of the following projects:
+  - Any existing OVS project.
+  - Any personal project that incorporates OVS.
 
 **Project description**
 
-Scaling the Decision Tree Algorithm in P4
+Open vSwitch (OVS) is a widely-adopted virtual switch (vSwitch) in cloud deployments and data centers. _Gigaflow_ (appearing at ASPLOS'25) is a recent advancement that massively improves OVS forwarding performance by offloading a novel multi-table cache architecture to SmartNICs, thereby reducing the CPU-bound cache misses and improving the end-to-end forwarding latency. This project aims to develop a P4-based SmartNIC backend for Gigaflow cache in OVS for P4-programmable FPGA SmartNICs, e.g., the Xilinx Alveo U55/U250 Data Center Accelerator, and modern off-the-shelf SmartNICs, such as AMD Pensando DPU.
+
+<img width="350" alt="image" src="./gigaflow.png">
 
 **Expected outcomes**
 
-- Implement the scaling of the Decision Tree Algorithm using P4.
+-   **OVS-to-P4 Compilation Pipeline**: Improve the existing OVS → P4-SDNet → FPGA codebase to enable seamless compilation to FPGA-based SmartNICs.
+-   **SmartNIC Backend Development**: Extend support beyond FPGA-based SmartNICs to include Pensando DPUs as a backend target.
+-   **Upstream Integration**: Work towards making _Gigaflow_ a mainstream OVS backend, ensuring maintainability and adoption.
 
 **Resources**
 
-- Decision Tree Algorithm: https://en.wikipedia.org/wiki/Decision_tree_learning
+- Gigaflow ASPLOS-25 Artifact: https://github.com/gigaflow-vswitch
+- Open vSwitch: https://github.com/openvswitch/ovs
+- P4 Language: [Tutorial-1](https://github.com/p4lang/tutorials), [Tutorial-2](https://opennetworking.org/wp-content/uploads/2020/12/P4_D2_East_2018_01_basics.pdf)
 
 ---
 
+### <a name=‘project-9’></a> Project 9: SpliDT: Scaling Stateful Decision Tree Algorithms in P4! [:arrow_heading_up:](#index)
 
+**Basic info**
 
+![diffi-medium] ![size-l]
+
+- Potential mentors
+  - Primary: Annus Zulfiqar, Ali Imran
+  - Support: Walter Willinger, Davide Scano, Muhammad Shahbaz
+- Skills
+  - Required: P4, HyperMapper
+  - Preferred: Scikit-Learn, PyTorch, Tensorflow, P4Studio
+- Discussion thread: TBD
+
+**Alternative qualification task**
+
+- Please demonstrate your basic P4 knowledge through contributions to any of the following projects:
+  - Any existing P4 project.
+  - Any personal project that incorporates P4.
+- Please demonstrate your basic ML and Decision Tree knowledge through contributions to any of the following projects:
+  - Any personal project that incorporates Scikit-Learn or PyTorch/Tensorflow.
+
+**Project description**
+
+Machine learning is increasingly deployed in programmable network switches for real-time traffic analysis and security monitoring. SpliDT is a scalable framework that removes traditional feature constraints in decision tree (DT) inference by dynamically selecting relevant features at runtime rather than requiring a fixed set per flow. The goal is to enhance accuracy and scalability in high-speed network environments. This project aims to implement and optimize SpliDT using P4, TensorFlow, scikit-learn, and HyperMapper.
+
+<img width="500" alt="image" src="./splidt.jpg">
+
+**Expected outcomes**
+
+- Develop a P4-based implementation of the partitioned DT inference model for P4-programmable switches, leveraging recirculation to efficiently manage resources.
+- Use TensorFlow and scikit-learn to enhance DT training and feature selection through a custom optimization framework based on HyperMapper and Bayesian Optimization.
+- Evaluate performance across programmable data planes, optimizing the balance between accuracy, scalability, and switch resource efficiency.
+- The project will target deployment on Tofino-based switches and other programmable switch architectures, ensuring practical applicability in real-world network monitoring and security scenarios.
+
+**Resources**
+
+- P4 Language: [Tutorial-1](https://github.com/p4lang/tutorials), [Tutorial-2](https://opennetworking.org/wp-content/uploads/2020/12/P4_D2_East_2018_01_basics.pdf)
+- In-Network ML: [Taurus Tutorial at SIGCOMM](https://conferences.sigcomm.org/sigcomm/2022/tutorial-taurus.html)
+- HyperMapper: https://github.com/luinardi/hypermapper
+- Tensorflow: https://www.tensorflow.org/
+
+---
