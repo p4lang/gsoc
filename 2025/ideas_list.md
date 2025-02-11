@@ -392,7 +392,7 @@ In the longer term, we expect a compilation path like P4C frontend -> P4HIR dial
 
 Open vSwitch (OVS) is a widely-adopted virtual switch (vSwitch) in cloud deployments and data centers. _Gigaflow_ (appearing at ASPLOS'25) is a recent advancement that massively improves OVS forwarding performance by offloading a novel multi-table cache architecture to SmartNICs, thereby reducing the CPU-bound cache misses and improving the end-to-end forwarding latency. This project aims to develop a P4-based SmartNIC backend for Gigaflow cache in OVS for P4-programmable FPGA SmartNICs, e.g., the Xilinx Alveo U55/U250 Data Center Accelerator, and modern off-the-shelf SmartNICs, such as AMD Pensando DPU.
 
-<img width="350" alt="image" src="./gigaflow.png">
+<img width="350" alt="image" src="assets/gigaflow.png">
 
 **Expected outcomes**
 
@@ -434,7 +434,7 @@ Open vSwitch (OVS) is a widely-adopted virtual switch (vSwitch) in cloud deploym
 
 Machine learning is increasingly deployed in programmable network switches for real-time traffic analysis and security monitoring. SpliDT is a scalable framework that removes traditional feature constraints in decision tree (DT) inference by dynamically selecting relevant features at runtime rather than requiring a fixed set per flow. The goal is to enhance accuracy and scalability in high-speed network environments. This project aims to implement and optimize SpliDT using P4, TensorFlow, scikit-learn, and HyperMapper.
 
-<img width="500" alt="image" src="./splidt.jpg">
+<img width="500" alt="image" src="assets/splidt.jpg">
 
 **Expected outcomes**
 
