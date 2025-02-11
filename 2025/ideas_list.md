@@ -406,32 +406,46 @@ Open vSwitch (OVS) is a widely-adopted virtual switch (vSwitch) in cloud deploym
 
 ---
 
-### <a name='project-8'></a> Project 8: Scaling Decision Tree Algorithm in P4 [⤴️](#index)
+### <a name=‘project-9’></a> Project 9: SpliDT: Scaling Stateful Decision Tree Algorithms in P4! [:arrow_heading_up:](#index)
 
 **Basic info**
-![diffi-hard] ![size-m] ![size-l]
+
+![diffi-medium] ![size-l]
 
 - Potential mentors
-  - Primary: Annus Zulfiqar
-  - Support: Walter Willinger, Davide Scano
+  - Primary: Annus Zulfiqar, Ali Imran
+  - Support: Walter Willinger, Davide Scano, Muhammad Shahbaz
 - Skills
-  - Required: P4
-  - Preferred: Decision Tree Algorithm
+  - Required: P4, HyperMapper
+  - Preferred: Scikit-Learn, PyTorch, Tensorflow, P4Studio
 - Discussion thread: TBD
+
+**Alternative qualification task**
+
+- Please demonstrate your basic P4 knowledge through contributions to any of the following projects:
+  - Any existing P4 project.
+  - Any personal project that incorporates P4.
+- Please demonstrate your basic ML and Decision Tree knowledge through contributions to any of the following projects:
+  - Any personal project that incorporates Scikit-Learn or PyTorch/Tensorflow.
 
 **Project description**
 
-Scaling the Decision Tree Algorithm in P4
+Machine learning is increasingly deployed in programmable network switches for real-time traffic analysis and security monitoring. SpliDT is a scalable framework that removes traditional feature constraints in decision tree (DT) inference by dynamically selecting relevant features at runtime rather than requiring a fixed set per flow. The goal is to enhance accuracy and scalability in high-speed network environments. This project aims to implement and optimize SpliDT using P4, TensorFlow, scikit-learn, and HyperMapper.
+
+<img width="500" alt="image" src="./splidt.png">
 
 **Expected outcomes**
 
-- Implement the scaling of the Decision Tree Algorithm using P4.
+- Develop a P4-based implementation of the partitioned DT inference model for P4-programmable switches, leveraging recirculation to efficiently manage resources.
+- Use TensorFlow and scikit-learn to enhance DT training and feature selection through a custom optimization framework based on HyperMapper and Bayesian Optimization.
+- Evaluate performance across programmable data planes, optimizing the balance between accuracy, scalability, and switch resource efficiency.
+- The project will target deployment on Tofino-based switches and other programmable switch architectures, ensuring practical applicability in real-world network monitoring and security scenarios.
 
 **Resources**
 
-- Decision Tree Algorithm: https://en.wikipedia.org/wiki/Decision_tree_learning
+- P4 Language: [Tutorial-1](https://github.com/p4lang/tutorials), [Tutorial-2](https://opennetworking.org/wp-content/uploads/2020/12/P4_D2_East_2018_01_basics.pdf)
+- In-Network ML: [Taurus Tutorial at SIGCOMM](https://conferences.sigcomm.org/sigcomm/2022/tutorial-taurus.html)
+- HyperMapper: https://github.com/luinardi/hypermapper
+- Tensorflow: https://www.tensorflow.org/
 
 ---
-
-
-
