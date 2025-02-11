@@ -357,12 +357,57 @@ In the longer term, we expect a compilation path like P4C frontend -> P4HIR dial
 - BMv2 JSON format: https://github.com/p4lang/behavioral-model/blob/main/docs/JSON_format.md
 - P4C BMv2 backend: https://github.com/p4lang/p4c/tree/main/backends/bmv2
 
+--- 
+
+### <a name=‘project-8’></a> Project 8: Gigaflow: A Smart Cache for a SmartNIC! [:arrow_heading_up:](#index)
+
+**Basic info**
+
+![diffi-hard] ![size-l]
+
+- Potential mentors
+  - Primary: Annus Zulfiqar, Ali Imran
+  - Support: Ben Pfaff
+- Skills
+  - Required: Xilinx Vivado SDK/FPGA Development
+  - Preferred: OVS, P4, DPDK 
+- Discussion thread: TBD
+
+**Alternative qualification task**
+
+- Please demonstrate your FPGA skills through contributions to any of the following projects:
+  - Any existing Xilinx Open NIC or NetFPGA projects.
+  - Any personal project that has used Xilinx Vivao tools.
+- Please demonstrate your basic P4 knowledge through contributions to any of the following projects:
+  - Any existing P4 project.
+  - Any personal project that incorporates P4.
+- Please demonstrate your basic Virtual Networking knowledge through contributions to any of the following projects:
+  - Any existing OVS project.
+  - Any personal project that incorporates OVS.
+
+**Project description**
+
+Open vSwitch (OVS) is a widely-adopted virtual switch (vSwitch) in cloud deployments and data centers. _Gigaflow_ (appearing at ASPLOS'25) is a recent advancement that massively improves OVS forwarding performance by offloading a novel multi-table cache architecture to SmartNICs, thereby reducing the CPU-bound cache misses and improving the end-to-end forwarding latency. This project aims to develop a P4-based SmartNIC backend for Gigaflow cache in OVS for P4-programmable FPGA SmartNICs, e.g., the Xilinx Alveo U55/U250 Data Center Accelerator, and modern off-the-shelf SmartNICs, such as AMD Pensando DPU.
+
+<img width="500" alt="image" src="./gigaflow.png">
+
+**Expected outcomes**
+
+-   **OVS-to-P4 Compilation Pipeline**: Improve the existing OVS → P4-SDNet → FPGA codebase to enable seamless compilation to FPGA-based SmartNICs.
+-   **SmartNIC Backend Development**: Extend support beyond FPGA-based SmartNICs to include Pensando DPUs as a backend target.
+-   **Upstream Integration**: Work towards making _Gigaflow_ a mainstream OVS backend, ensuring maintainability and adoption.
+
+**Resources**
+
+- Gigaflow ASPLOS-25 Artifact: https://github.com/gigaflow-vswitch
+- Open vSwitch: https://github.com/openvswitch/ovs
+- P4 Language: [Tutorial-1](https://github.com/p4lang/tutorials), [Tutorial-2](https://opennetworking.org/wp-content/uploads/2020/12/P4_D2_East_2018_01_basics.pdf)
+
 ---
 
 ### <a name='project-8'></a> Project 8: Scaling Decision Tree Algorithm in P4 [⤴️](#index)
 
 **Basic info**
-
 ![diffi-hard] ![size-m] ![size-l]
 
 - Potential mentors
