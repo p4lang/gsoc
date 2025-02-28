@@ -13,6 +13,7 @@ Please check our [Contributor Guidance](contributor_guidance.md) for detailed in
 1. ⭐ Anton Korobeynikov ([@asl](https://github.com/asl), anton@korobeynikov.info)
 1. ⭐ Bili Dong ([@qobilidop](https://github.com/qobilidop), bilid@google.com)
 1. ⭐ Davide Scano ([@Dscano](https://github.com/Dscano), d.scano89@gmail.com)
+1. ⭐ Matthew Lam ([@matthewtlam](https://github.com/matthewtlam), matthewtlam@google.com)
 1. ⭐ Mingyu Ma ([@Mingyumaz](https://github.com/Mingyumaz), mingyu.ma@tu-dresden.de)
 1. Ben Pfaff ([@blp](https://github.com/blp))
 1. Fabian Ruffy ([@fruffy](https://github.com/fruffy), fruffy@nyu.edu)
@@ -83,7 +84,7 @@ It means we expect you to have made relevant contributions in order to demonstra
 ![diffi-easy] ![size-s]
 
 - Potential mentors
-  - Primary: Bili Dong
+  - Primary: Matthew Lam
   - Support: Jonathan DiLorenzo, Fabian Ruffy
 - Skills
   - Required: Git, C++
@@ -122,8 +123,8 @@ The goal of this project is to integrate the p4-constraints frontend, which pars
 ![diffi-medium] ![size-m]
 
 - Potential mentors
-  - Primary: Bili Dong
-  - Support: Jonathan DiLorenzo
+  - Primary: Matthew Lam
+  - Support: Jonathan DiLorenzo, Bili Dong
 - Skills
   - Required: Git, C++
   - Preferred: P4
@@ -151,11 +152,11 @@ The goal of this project is to provide a mechanism for BMv2 to record the trace 
 
 **Basic info**
 
-![diffi-medium] ![size-m]
+![diffi-hard] ![size-m]
 
 - Potential mentors
-  - Primary: Bili Dong
-  - Support: Jonathan DiLorenzo
+  - Primary: Matthew Lam
+  - Support: Jonathan DiLorenzo, Bili Dong
 - Skills
   - Required: Git, C++
   - Preferred: P4
