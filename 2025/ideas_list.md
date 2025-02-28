@@ -91,11 +91,6 @@ It means we expect you to have made relevant contributions in order to demonstra
   - Preferred: CMake, Bazel, [P4C](https://github.com/p4lang/p4c)
 - Discussion thread: TBD
 
-**Alternative qualification task**
-In p4-constraints, we use a type-checking function, [InferAndCheckTypes](https://github.com/p4lang/p4-constraints/blob/bbab7db20b0ec5517b14ee6775f5e71d44d48d38/p4_constraints/backend/type_checker.h#L40C1-L42C50), that infers and checks the type of an `Expression` for a given `TableInfo` or `ActionSet`. This allows expressions to be properly typed and have certain types.
-
-Currently, the type-checking function explicitly fails when called on an already type-checked expression. Ideally, this behavior should be idempotent, it should cause no changes to an already type-checked expression, but also not returning an error either.
-
 **Project description**
 
 [p4-constraints](https://github.com/p4lang/p4-constraints) is a useful extension of the P4 programming language that is currently architected as a standalone library separate from the P4 compiler, P4C.
@@ -135,11 +130,6 @@ The goal of this project is to integrate the p4-constraints frontend, which pars
   - Preferred: P4
 - Discussion thread: TBD
 
-**Alternative qualification task**
-In p4-constraints, we use a type-checking function, [InferAndCheckTypes](https://github.com/p4lang/p4-constraints/blob/bbab7db20b0ec5517b14ee6775f5e71d44d48d38/p4_constraints/backend/type_checker.h#L40C1-L42C50), that infers and checks the type of an `Expression` for a given `TableInfo` or `ActionSet`. This allows expressions to be properly typed and have certain types.
-
-Currently, the type-checking function explicitly fails when called on an already type-checked expression. Ideally, this behavior should be idempotent, it should cause no changes to an already type-checked expression, but also not returning an error either.
-
 **Project description**
 
 Having programmatic access to the trace of a packet going through a P4 pipeline (e.g. applied tables, actions, entries hit, etc) has many use cases from human comprehension to use by automated tools for test coverage measurement, automated test generation, automated root causing, etc.
@@ -171,11 +161,6 @@ The goal of this project is to provide a mechanism for BMv2 to record the trace 
   - Required: Git, C++
   - Preferred: P4
 - Discussion thread: TBD
-
-**Alternative qualification task**
-In p4-constraints, we use a type-checking function, [InferAndCheckTypes](https://github.com/p4lang/p4-constraints/blob/bbab7db20b0ec5517b14ee6775f5e71d44d48d38/p4_constraints/backend/type_checker.h#L40C1-L42C50), that infers and checks the type of an `Expression` for a given `TableInfo` or `ActionSet`. This allows expressions to be properly typed and have certain types.
-
-Currently, the type-checking function explicitly fails when called on an already type-checked expression. Ideally, this behavior should be idempotent, it should cause no changes to an already type-checked expression, but also not returning an error either.
 
 **Project description**
 
