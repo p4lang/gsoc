@@ -166,7 +166,7 @@ The goal of this project is to provide a mechanism for BMv2 to record the trace 
 
 - Potential mentors
   - Primary: Matthew Lam
-  - Support: Jonathan DiLorenzo,git Bili Dong
+  - Support: Jonathan DiLorenzo, Bili Dong
 - Skills
   - Required: Git, C++
   - Preferred: P4
