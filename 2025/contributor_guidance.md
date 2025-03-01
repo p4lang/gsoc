@@ -16,7 +16,7 @@
 1. Email mentors (both primary and support) of your interested projects.
    - You only need to email mentors whose emails are listed.
    - We encourage you to reach out to mentors as early as possible, so we have enough time to know about you and connect with you.
-   - In your first email to mentors, please attach a draft proposal (see template below). It doesn't have to be complete. But we expect to see a draft so we can start the conversation, and help you polish it.
+   - **In your first email to mentors, please attach a draft proposal (see template below).** It doesn't have to be complete. But we expect to see a draft so we can start the conversation, and help you polish it.
 2. Apply through the [GSoC website](https://summerofcode.withgoogle.com).
    - Before submitting your formal application, make sure you have communicated with mentors through emails already.
 3. Wait for your application result.
