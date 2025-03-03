@@ -372,7 +372,7 @@ In the longer term, we expect a compilation path like P4C frontend -> P4HIR dial
 
 - Potential mentors
   - Primary: Annus Zulfiqar, Ali Imran
-  - Support: Ben Pfaff, Muhammad Shahbaz
+  - Support: Davide Scano, Ben Pfaff, Muhammad Shahbaz
 - Skills
   - Required: Xilinx Vivado SDK/FPGA Development
   - Preferred: OVS, P4, DPDK
@@ -418,7 +418,7 @@ Open vSwitch (OVS) is a widely-adopted virtual switch (vSwitch) in cloud deploym
 
 - Potential mentors
   - Primary: Annus Zulfiqar, Ali Imran
-  - Support: Walter Willinger, Davide Scano, Muhammad Shahbaz
+  - Support: Davide Scano, Walter Willinger, Muhammad Shahbaz
 - Skills
   - Required: P4, HyperMapper
   - Preferred: Scikit-Learn, PyTorch, Tensorflow, P4Studio
