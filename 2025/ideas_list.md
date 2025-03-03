@@ -15,6 +15,7 @@ Please check our [Contributor Guidance](contributor_guidance.md) for detailed in
 1. ⭐ Davide Scano ([@Dscano](https://github.com/Dscano), d.scano89@gmail.com)
 1. ⭐ Matthew Lam ([@matthewtlam](https://github.com/matthewtlam), matthewtlam@google.com)
 1. ⭐ Mingyu Ma ([@Mingyumaz](https://github.com/Mingyumaz), mingyu.ma@tu-dresden.de)
+1. Antonin Bas ([@antoninbas](https://github.com/antoninbas)) 
 1. Ben Pfaff ([@blp](https://github.com/blp))
 1. Fabian Ruffy ([@fruffy](https://github.com/fruffy), fruffy@nyu.edu)
 1. Jonathan DiLorenzo ([@jonathan-dilorenzo](https://github.com/jonathan-dilorenzo), dilo@google.com)
@@ -124,7 +125,7 @@ The goal of this project is to integrate the p4-constraints frontend, which pars
 
 - Potential mentors
   - Primary: Matthew Lam
-  - Support: Jonathan DiLorenzo, Bili Dong
+  - Support: Jonathan DiLorenzo, Bili Dong, Antonin Bas
 - Skills
   - Required: Git, C++
   - Preferred: P4
@@ -156,7 +157,7 @@ The goal of this project is to provide a mechanism for BMv2 to record the trace 
 
 - Potential mentors
   - Primary: Matthew Lam
-  - Support: Jonathan DiLorenzo, Bili Dong
+  - Support: Jonathan DiLorenzo, Bili Dong, Antonin Bas
 - Skills
   - Required: Git, C++
   - Preferred: P4
@@ -189,7 +190,7 @@ The goal of this project is to provide a new mode for BMv2 to instead output ALL
 
 - Potential mentors
   - Primary: Davide Scano
-  - Support: To be defined
+  - Support: Fabian Ruffy
 - Skills
   - Required: [eBPF](https://ebpf.io/)
   - Preferred: [P4C](https://github.com/p4lang/p4c), P4
