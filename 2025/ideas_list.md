@@ -20,6 +20,7 @@ Please check our [Contributor Guidance](contributor_guidance.md) for detailed in
 1. Fabian Ruffy ([@fruffy](https://github.com/fruffy), fruffy@nyu.edu)
 1. Jonathan DiLorenzo ([@jonathan-dilorenzo](https://github.com/jonathan-dilorenzo), dilo@google.com)
 1. Muhammad Shahbaz ([@msbaz2013](https://github.com/msbaz2013), msbaz@umich.edu)
+1. Murayyiam-Parvez ([@Murayyiam-Parvez](https://github.com/Murayyiam-Parvez), parvezm@purdue.edu)
 1. Tommaso Pecorella([@TommyPec](https://github.com/TommyPec), tommaso.pecorella@unifi.it)
 1. Walter Willinger
 
@@ -418,7 +419,7 @@ Open vSwitch (OVS) is a widely-adopted virtual switch (vSwitch) in cloud deploym
 
 - Potential mentors
   - Primary: Annus Zulfiqar, Ali Imran
-  - Support: Davide Scano, Walter Willinger, Muhammad Shahbaz
+  - Support: Davide Scano, Walter Willinger, Muhammad Shahbaz, Murayyiam-Parvez
 - Skills
   - Required: P4, HyperMapper
   - Preferred: Scikit-Learn, PyTorch, Tensorflow, P4Studio
