@@ -91,6 +91,12 @@ It means we expect you to have made relevant contributions in order to demonstra
   - Preferred: CMake, Bazel, [P4C](https://github.com/p4lang/p4c)
 - Discussion thread: TBD
 
+**Alternative qualification task**
+- Currently, the type checking function, [InferAndCheckTypes](https://github.com/p4lang/p4-constraints/blob/bbab7db20b0ec5517b14ee6775f5e71d44d48d38/p4_constraints/backend/type_checker.h#L40C1-L42C50), explicitly fails when called on an already type-checked expression. Ideally, this behavior should be idempotent; causing no change to an already type-checked expression, but also not causing an error.
+- Create an PR under https://github.com/p4lang/p4-constraints with the fix.
+
+This would allow us to use it to ensure that expression were properly typed and had certain types.
+
 **Project description**
 
 [p4-constraints](https://github.com/p4lang/p4-constraints) is a useful extension of the P4 programming language that is currently architected as a standalone library separate from the P4 compiler, P4C.
@@ -130,6 +136,10 @@ The goal of this project is to integrate the p4-constraints frontend, which pars
   - Preferred: P4
 - Discussion thread: TBD
 
+**Alternative qualification task**
+- Currently, BMv2 uses some legacy code written in C with [bf_lpm_trie.c](https://github.com/p4lang/behavioral-model/blob/d12eefc7bc19fb4da615b1b45c1235899f2e4fb1/src/bf_lpm_trie/bf_lpm_trie.c) being one of the instances.
+- Create a PR under https://github.com/p4lang/behavioral-model that converts the C code to C++. Note that style and readability are key.
+
 **Project description**
 
 Having programmatic access to the trace of a packet going through a P4 pipeline (e.g. applied tables, actions, entries hit, etc) has many use cases from human comprehension to use by automated tools for test coverage measurement, automated test generation, automated root causing, etc.
@@ -161,6 +171,10 @@ The goal of this project is to provide a mechanism for BMv2 to record the trace 
   - Required: Git, C++
   - Preferred: P4
 - Discussion thread: TBD
+
+**Alternative qualification task**
+- Currently, BMv2 uses some legacy code written in C with [bf_lpm_trie.c](https://github.com/p4lang/behavioral-model/blob/d12eefc7bc19fb4da615b1b45c1235899f2e4fb1/src/bf_lpm_trie/bf_lpm_trie.c) being one of the instances.
+- Create a PR under https://github.com/p4lang/behavioral-model that converts the C code to C++. Note that style and readability are key.
 
 **Project description**
 
