@@ -15,10 +15,12 @@ Please check our [Contributor Guidance](contributor_guidance.md) for detailed in
 1. ⭐ Davide Scano ([@Dscano](https://github.com/Dscano), d.scano89@gmail.com)
 1. ⭐ Matthew Lam ([@matthewtlam](https://github.com/matthewtlam), matthewtlam@google.com)
 1. ⭐ Mingyu Ma ([@Mingyumaz](https://github.com/Mingyumaz), mingyu.ma@tu-dresden.de)
+1. Antonin Bas ([@antoninbas](https://github.com/antoninbas)) 
 1. Ben Pfaff ([@blp](https://github.com/blp))
 1. Fabian Ruffy ([@fruffy](https://github.com/fruffy), fruffy@nyu.edu)
 1. Jonathan DiLorenzo ([@jonathan-dilorenzo](https://github.com/jonathan-dilorenzo), dilo@google.com)
 1. Muhammad Shahbaz ([@msbaz2013](https://github.com/msbaz2013), msbaz@umich.edu)
+1. Murayyiam-Parvez ([@Murayyiam-Parvez](https://github.com/Murayyiam-Parvez), parvezm@purdue.edu)
 1. Tommaso Pecorella([@TommyPec](https://github.com/TommyPec), tommaso.pecorella@unifi.it)
 1. Walter Willinger
 
@@ -92,10 +94,8 @@ It means we expect you to have made relevant contributions in order to demonstra
 - Discussion thread: TBD
 
 **Alternative qualification task**
-- Currently, the type checking function, [InferAndCheckTypes](https://github.com/p4lang/p4-constraints/blob/bbab7db20b0ec5517b14ee6775f5e71d44d48d38/p4_constraints/backend/type_checker.h#L40C1-L42C50), explicitly fails when called on an already type-checked expression. Ideally, this behavior should be idempotent; causing no change to an already type-checked expression, but also not causing an error.
+- Currently, the type checking function, [InferAndCheckTypes](https://github.com/p4lang/p4-constraints/blob/bbab7db20b0ec5517b14ee6775f5e71d44d48d38/p4_constraints/backend/type_checker.h#L40C1-L42C50), explicitly fails when called on an already type-checked expression. Ideally, this behavior should be idempotent; causing no change to an already type-checked expression, but also not causing an error. This would allow us to use it to ensure that expression were properly typed and had certain types.
 - Create an PR under https://github.com/p4lang/p4-constraints with the fix.
-
-This would allow us to use it to ensure that expression were properly typed and had certain types.
 
 **Project description**
 
@@ -130,7 +130,7 @@ The goal of this project is to integrate the p4-constraints frontend, which pars
 
 - Potential mentors
   - Primary: Matthew Lam
-  - Support: Jonathan DiLorenzo, Bili Dong
+  - Support: Jonathan DiLorenzo, Bili Dong, Antonin Bas
 - Skills
   - Required: Git, C++
   - Preferred: P4
@@ -166,7 +166,7 @@ The goal of this project is to provide a mechanism for BMv2 to record the trace 
 
 - Potential mentors
   - Primary: Matthew Lam
-  - Support: Jonathan DiLorenzo, Bili Dong
+  - Support: Jonathan DiLorenzo, Bili Dong, Antonin Bas
 - Skills
   - Required: Git, C++
   - Preferred: P4
@@ -203,7 +203,7 @@ The goal of this project is to provide a new mode for BMv2 to instead output ALL
 
 - Potential mentors
   - Primary: Davide Scano
-  - Support: To be defined
+  - Support: Fabian Ruffy
 - Skills
   - Required: [eBPF](https://ebpf.io/)
   - Preferred: [P4C](https://github.com/p4lang/p4c), P4
@@ -385,7 +385,7 @@ In the longer term, we expect a compilation path like P4C frontend -> P4HIR dial
 
 - Potential mentors
   - Primary: Annus Zulfiqar, Ali Imran
-  - Support: Ben Pfaff, Muhammad Shahbaz
+  - Support: Davide Scano, Ben Pfaff, Muhammad Shahbaz
 - Skills
   - Required: Xilinx Vivado SDK/FPGA Development
   - Preferred: OVS, P4, DPDK
@@ -431,7 +431,7 @@ Open vSwitch (OVS) is a widely-adopted virtual switch (vSwitch) in cloud deploym
 
 - Potential mentors
   - Primary: Annus Zulfiqar, Ali Imran
-  - Support: Walter Willinger, Davide Scano, Muhammad Shahbaz
+  - Support: Davide Scano, Walter Willinger, Muhammad Shahbaz, Murayyiam-Parvez
 - Skills
   - Required: P4, HyperMapper
   - Preferred: Scikit-Learn, PyTorch, Tensorflow, P4Studio
