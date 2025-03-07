@@ -95,7 +95,7 @@ It means we expect you to have made relevant contributions in order to demonstra
 
 **Alternative qualification task**
 - Currently, the type checking function, [InferAndCheckTypes](https://github.com/p4lang/p4-constraints/blob/bbab7db20b0ec5517b14ee6775f5e71d44d48d38/p4_constraints/backend/type_checker.h#L40C1-L42C50), explicitly fails when called on an already type-checked expression. Ideally, this behavior should be idempotent; causing no change to an already type-checked expression, but also not causing an error. This would allow us to use it to ensure that expression were properly typed and had certain types.
-- Create an PR under https://github.com/p4lang/p4-constraints with the fix.
+- Create a PR under https://github.com/p4lang/p4-constraints with the fix.
 
 **Project description**
 
