@@ -1,5 +1,8 @@
 # P4 GSoC 2025 Contributor Guidance
 
+> [!Warning]
+> Please note that proposals completely generated using Large Language Models (LLMs) will not be accepted. Using LLM to assist you is acceptable, but letting LLM replace you is not. If you do use LLM, use your best judgement to use it responsibly. During the application process, if we find out it's easier to work with an LLM directly than working with you, it will be an immediate reject.
+
 ## Before the Application
 
 - Go through the general GSoC
@@ -22,9 +25,6 @@
 3. Wait for your application result.
 
 ## Proposal Template
-
-> [!Warning]
-> Please note that proposals generated using Large Language Models (LLMs) will not be accepted. We expect original work and thoughtful responses. Correcting grammar and spelling errors with the help of technology is acceptable, but we draw a clear line at using LLMs to create content.
 
 - Please follow this
   [guide](https://google.github.io/gsocguides/student/writing-a-proposal)
