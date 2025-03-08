@@ -23,6 +23,9 @@
 
 ## Proposal Template
 
+> [!Warning]
+> Please note that proposals generated using Large Language Models (LLMs) will not be accepted. We expect original work and thoughtful responses. Correcting grammar and spelling errors with the help of technology is acceptable, but we draw a clear line at using LLMs to create content.
+
 - Please follow this
   [guide](https://google.github.io/gsocguides/student/writing-a-proposal)
   and use these examples ([1](https://google.github.io/gsocguides/student/proposal-example-1) &
