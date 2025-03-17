@@ -65,7 +65,7 @@ It means we expect you to have made relevant contributions in order to demonstra
 ### Index
 
 - Category: core P4 tooling
-  - [Project 1: Integrate p4-constraints frontend into P4C](#project-1)
+  - [Project 1: Integrate p4-constraints frontend into P4C](#project-1) (Cancelled)
   - [Project 2: BMv2 packet trace support](#project-2)
   - [Project 3: BMv2 with all possible output packets](#project-3)
   - [Project 4: Finalize Katran P4 and improve the eBPF backend!](#project-4)
@@ -80,6 +80,9 @@ It means we expect you to have made relevant contributions in order to demonstra
 ---
 
 ### <a name='project-1'></a> Project 1: Integrate p4-constraints frontend into P4C [⤴️](#index)
+
+> [!Note]
+> This project is cancelled for this year.
 
 **Basic info**
 
