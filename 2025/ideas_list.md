@@ -351,7 +351,7 @@ The exact list of tasks is to be determined with mentors.
 - Skills
   - Required: [MLIR](https://mlir.llvm.org/)
   - Preferred: [BMv2](https://github.com/p4lang/behavioral-model), P4
-- Discussion thread: TBD
+- Discussion thread: https://github.com/p4lang/p4mlir-incubator/issues/139
 
 **Alternative qualification task**
 
