@@ -436,8 +436,8 @@ Open vSwitch (OVS) is a widely-adopted virtual switch (vSwitch) in cloud deploym
   - Primary: Annus Zulfiqar, Ali Imran
   - Support: Davide Scano, Walter Willinger, Muhammad Shahbaz, Murayyiam-Parvez
 - Skills
-  - Required: P4, HyperMapper
-  - Preferred: Scikit-Learn, PyTorch, Tensorflow, P4Studio
+  - Required: P4, P4RT
+  - Preferred: P4Studio, Familiarity with P4Runtime architecture and using gRPC to manage pipeline state (e.g., rule insertion, digest processing).
 - Discussion thread: TBD
 
 **Alternative qualification task**
@@ -445,8 +445,7 @@ Open vSwitch (OVS) is a widely-adopted virtual switch (vSwitch) in cloud deploym
 - Please demonstrate your basic P4 knowledge through contributions to any of the following projects:
   - Any existing P4 project.
   - Any personal project that incorporates P4.
-- Please demonstrate your basic ML and Decision Tree knowledge through contributions to any of the following projects:
-  - Any personal project that incorporates Scikit-Learn or PyTorch/Tensorflow.
+- Qualification Task: https://github.com/nextgarch/gsoc/tree/main
 
 **Project description**
 
@@ -457,7 +456,6 @@ Machine learning is increasingly deployed in programmable network switches for r
 **Expected outcomes**
 
 - Develop a P4-based implementation of the partitioned DT inference model for P4-programmable switches, leveraging recirculation to efficiently manage resources.
-- Use TensorFlow and scikit-learn to enhance DT training and feature selection through a custom optimization framework based on HyperMapper and Bayesian Optimization.
 - Evaluate performance across programmable data planes, optimizing the balance between accuracy, scalability, and switch resource efficiency.
 - The project will target deployment on Tofino-based switches and other programmable switch architectures, ensuring practical applicability in real-world network monitoring and security scenarios.
 
