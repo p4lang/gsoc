@@ -437,7 +437,7 @@ Open vSwitch (OVS) is a widely-adopted virtual switch (vSwitch) in cloud deploym
   - Support: Davide Scano, Walter Willinger, Muhammad Shahbaz, Murayyiam-Parvez
 - Skills
   - Required: P4, P4RT
-  - Preferred: P4Studio, Familiarity with P4Runtime architecture and using gRPC to manage pipeline state (e.g., rule insertion, digest processing).
+  - Preferred: P4Studio, Familiarity with P4Runtime architecture and using gRPC to manage pipeline state (e.g., rule insertion, digest processing, registers).
 - Discussion thread: TBD
 
 **Alternative qualification task**
