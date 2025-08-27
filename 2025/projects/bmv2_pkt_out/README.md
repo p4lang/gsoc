@@ -21,6 +21,9 @@
     - [Tracing](#tracing)
     - [Test cases](#test-cases)
   - [How it works](#how-it-works)
+      - [Packet Fanout Mode](#packet-fanout-mode)
+      - [Fanout Packet Replication](#fanout-packet-replication)
+      - [Fanout Packet Continuation](#fanout-packet-continuation)
   - [Example](#example)
       - [Setup](#setup)
       - [Trace Output](#trace-output)
@@ -45,7 +48,8 @@ Multiple allowed behaviors usually arise from various multi-path constructs (e.g
 - A new trace instance in the event logger when fanout is triggered;
 - Updated documentation on `simple_switch`'s pipeline. 
 
-<p align="center">
+[pipeline]: assets/pipeline.png
+<p align="center" name="pipeline">
   <img src="assets/pipeline.png" width="600"><br>Pipeline Overview
 </p>
 
@@ -115,9 +119,40 @@ List of test cases for fanout:
 
 Here we briefly introduce the lifetime of a packet when fanout is on. 
 
+#### Packet Fanout Mode
 
+This fanout extension exists in the form of a new `HashAlgorithm` defined in `v1model.p4`:
 
+```
+enum HashAlgorithm {
+    selector_fanout,
+    crc32,
+    crc32_custom,
+    random,
+    identity,
+    ...
+}
+```
 
+By specifying the mode of a selector to `selector_fanout`, BMv2 marks the selector as *fanout-enabled* during pipeline initialization. 
+
+We have not really merged the change to the `v1model.p4` in `p4lang/p4c`. Similar to modes like `round_robin`, they are implemented in BMv2, but not added to the `enum`. The user of such mode should add the mode to the enum. 
+
+#### Fanout Packet Replication
+
+As outlined in the [pipeline](#pipeline), when a input packet arrives to a fanout-enabled selector, it will be passed to fanout packet manager. It is processed as following:
+
+1. Its header is matched against the table for entry lookups;
+2. The entry of a table with action selector is either a group of member actions or a single member action;
+3. If it is single action, then no fanout behavior. If it is a group of N members, it will:
+   - Take out the first member, apply it to the input packet, make it flow downwards, as if it actually selected one member;
+   - Replicate one packet for each of the remaining N-1 member actions, and the `next_table` will also be extracted as part of the action information.
+
+#### Fanout Packet Continuation
+
+Upon starting handling a new input packet, `simple_switch` will first check if the packet has the optional field `next_node` specified right after it gets popped from the buffer. If no, it will be processed as a normal input packet. If yes, it will bypass the parsing, as it is already "parsed" by inheriting the layout and information from the packet it replicates from. 
+
+For normal packets, `mau->apply` is invoked, which iteratively applies tables to the packet from the initial table. Yet for fanout packets, `mau->apply_from_next_node` is invoked, which takes out the `next_node` field in the packet, and continue the execution from that point. Conceptually, it "inserts" the packet back to some spot in the pipeline.
 
 ## Example
 
@@ -142,7 +177,9 @@ type: FANOUT_GEN, switch_id: 0, cxt_id: 0, sig: 7317885152576657337, id: 0, copy
 type: FANOUT_GEN, switch_id: 0, cxt_id: 0, sig: 7317885152576657337, id: 0, copy_id: 9, table_id: 1 (selector_tbl), parent_packet_copy_id: 3
 ```
 
-We observe 6 FANOUT_GEN events because 3 of the 9 packets are flowed downward instead of getting held by the fanout packet manager. Since all the packets are derived from the same packet with ID 0, their "packet ID" are also 0. The `copy_id` ranges from 4 to 9 because 1~3 are flowed doward directly. As suggested by `parent_packet_copy_id`, we can track which packet a fanout packet was replicated from. 
+We observe 6 FANOUT_GEN events because 3 of the 9 packets are the original packets arrive at egress due to multicast and flowed downward instead of getting held by the fanout packet manager. 
+
+Since all the packets are derived from the same packet with ID 0, their "packet ID" are also 0. The `copy_id` ranges from 4 to 9 because, again, 1~3 are flowed doward directly. As suggested by `parent_packet_copy_id`, we can track which packet a fanout packet was replicated from. 
 
 PACKET_OUT event:
 ```
