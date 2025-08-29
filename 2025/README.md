@@ -4,7 +4,7 @@
 
 ## Updates
 - (2025-09-17) 📅 **Upcoming** → P4 GSoC 2025 Wrap-up  
-- (2025-06-11) 🎤 [P4 GSoC 2025 Kickoff Meeting](https://www.youtube.com/watch?v=6PLrLzVYWPY)
+- (2025-06-11) 🎥 [P4 GSoC 2025 Kickoff Meeting](https://www.youtube.com/watch?v=6PLrLzVYWPY)
 - (2025-05-08) 📝 [Announcing P4 Projects Selected for 2025 GSoC](https://p4.org/announcing-p4-projects-selected-for-2025-gsoc/)
 
 ## Accepted Projects
