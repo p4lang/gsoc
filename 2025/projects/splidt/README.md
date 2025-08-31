@@ -59,7 +59,7 @@ By combining **P4-based dataplane logic** with a lightweight control plane, Spli
 - **Control Protocols:** P4Runtime and Barefoot Python SDK integration
 
 ## Implementation Details
-![alt text](<Screenshot 2025-09-01 at 12.27.23 AM.png>)
+<img width="2518" height="1268" alt="image" src="https://github.com/user-attachments/assets/2e18d3f1-a6f6-4c02-b651-2cec0bb4742b" />
 
 
 
