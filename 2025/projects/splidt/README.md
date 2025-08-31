@@ -6,12 +6,10 @@
 **Organization:** [P4 Language Consortium](https://p4.org/)  
 **Contributor:** [Sankalp Jha](https://github.com/blackdragoon26)  
 **Mentors:** [Murayyiam Parvez](https://github.com/Murayyiam-Parvez), [Ali Imran](https://github.com/ALI11-2000), [Davide Scano](https://github.com/Dscano), [Muhammad Shahbaz](https://github.com/msbaz2013)  
+**Project Repository:** [SpliDT Codebase](https://github.com/blackdragoon26/splidt.git)
 
 ---
-
-## 📖 Journal
-I also maintained a detailed **GSoC Journal** documenting my weekly journey, challenges, and learnings.  
-📄 Published on Medium: [GSoC’25 Journal – Sankalp Jha](https://medium.com/@sankalp.jha9643/gsoc25-journal-ea09e2451fe3)
+y
 
 ---
 
@@ -31,24 +29,56 @@ I also maintained a detailed **GSoC Journal** documenting my weekly journey, cha
 ---
 
 ## Project Overview
-The aim of **SpliDT** was to design a **scalable, stateful decision tree framework in P4**, enabling machine learning inference at line rate on programmable switches.  
+**SpliDT** is a compiler framework that enables stateful decision tree inference directly in programmable switches, bringing real-time machine learning into the network data plane. A major challenge in deploying decision trees in this environment is the limited stateful memory of ASIC chips, which makes it inefficient to track many packet features at once. This leads to a trade-off between accuracy (more features) and latency (faster processing), and results in poor resource utilization in existing approaches.
 
-Traditional ML models are trained offline and applied post-capture. This project sought to **bridge the offline–online gap** by translating decision trees into **P4 match-action pipelines** with stateful per-flow classification, scaling across multiple decision trees.  
+SpliDT solves this with **Partitioned Decision Trees (PDTs)**. Instead of evaluating all features simultaneously, the tree is split into smaller subtrees, each handling only three features at a time. Flows are guided across subtrees using Subtree IDs (SIDs), ensuring that all features are eventually considered without exceeding hardware limits. This design reduces memory usage, removes latency overheads, and maintains classification accuracy, while making the system scalable and efficient.
 
-Core objectives included:
-- Automated translation of decision tree models into P4 table rules.
-- Stateful execution across features (`meta.f1, meta.f2, meta.f3, meta.sid`) with recirculation logic.
-- Control plane that dynamically installs rules from `.pkl` models.
-- Testing via Mininet for reproducible evaluation.
+By combining **P4-based dataplane logic** with a lightweight control plane, SpliDT provides a practical and extensible framework for developers and researchers working on in-network ML, traffic classification, and real-time security detection.
 
 ---
 
 ## Goals
-- ✅ Implement **stateful decision tree traversal** in P4.  
-- ✅ Build a **controller** that loads and installs tree rules at runtime.  
-- ✅ Automate **P4 code generation** for scalable model support.  
-- ✅ Provide **Mininet-based simulation environment**.  
-- ✅ Document workflows, examples, and troubleshooting.
+
+### Memory Optimization
+
+- Current: 10+ features tracked simultaneously
+- Target: Only 5 features at any time
+- Method: Partition decision tree into subtrees with SID-based traversal
+
+
+
+🎯 Deliverable Requirements
+P4 Data Plane
+
+Stateful processing with meta.f1, meta.f2, meta.f3, meta.f4, meta.f5, meta.sid
+Packet recirculation for multi-stage traversal
+Support for multiple concurrent decision trees
+
+Control Plane
+
+Load .pkl decision tree models at runtime
+Install rules dynamically via P4Runtime
+Handle multiple class_flow_model__<SID>.pkl files
+
+Code Generation
+
+Convert trained ML models → P4 match-action tables
+Jinja2-based automated P4 code generation
+Support custom decision tree architectures
+
+Testing Infrastructure
+
+Mininet simulation environment
+Tofino hardware validation
+End-to-end Makefile workflow
+
+🎯 Success Metrics
+
+Memory: 5 features max instead of 10+
+Performance: Line-rate classification without latency
+Accuracy: Maintain F1 scores on 7 security datasets
+Deployment: Automated pipeline from training → switch
+
 
 ---
 
@@ -179,6 +209,9 @@ I also learned to **"learn in public"** – documenting progress, mistakes, and 
 ---
 
 ## Closing Note
+I also maintained a detailed **GSoC Journal** documenting my weekly journey, challenges, and learnings.  
+📄 Published on Medium: [GSoC’25 Journal – Sankalp Jha](https://medium.com/@sankalp.jha9643/gsoc25-journal-ea09e2451fe3)
+
 This project was my introduction to **real-world programmable networking and in-network ML**.  
 
 It showed me how **theory (ML algorithms) meets practice (hardware-constrained P4 pipelines)**.  
