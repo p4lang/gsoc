@@ -1,6 +1,8 @@
-# GSoC 2024 Report: SpliDT: Scaling Stateful Decision Tree Algorithms in P4
+# SpliDT: Scaling Stateful Decision Tree Algorithms in P4
 
-The official report of [my project in Google Summer of Code 2024](https://summerofcode.withgoogle.com/)  
+## Google Summer of Code 2025 Final Report
+<img width="1400" height="604" alt="image" src="https://github.com/user-attachments/assets/99b70979-e9e0-46c9-8ae0-e1386950bbf5" />
+
 **Organization:** [P4 Language Consortium](https://p4.org/)  
 **Contributor:** [Sankalp Jha](https://github.com/blackdragoon26)  
 **Mentors:** [Murayyiam Parvez](https://github.com/Murayyiam-Parvez), [Ali Imran](https://github.com/ALI11-2000), [Davide Scano](https://github.com/Dscano), [Muhammad Shahbaz](https://github.com/msbaz2013)  
