@@ -13,12 +13,15 @@
 
 ## Table of Contents
 1. [Project Overview](#project-overview)  
-2. [Project Goals](#project-goals)  
-3. [The Current state of Project](#the-current-state-of-project)  
-4. [Implementation Details](#implementation-details)  
-5. [Future Scope](#future-scope)  
-6. [Critical Technical Insights](#critical-technical-insights)  
-7. [Conclusion](#conclusion)  
+2. [Project Goals](#project-goals)
+    - [Core Framework](#core-framework)
+    - [Production-Ready Components](#production-ready-components)
+3. [Implementation Details](#implementation-details) 
+    - [Critical Technical Insights](#critical-technical-insights) 
+        - [P4 Programming Patterns](#p4-programming-patterns)
+        - [Controller Architecture Principles](#controller-architecture-principles)
+4. [Future Scope](#future-scope)  
+5. [Conclusion](#conclusion)  
 
 ---
 
@@ -62,23 +65,8 @@ By combining **P4-based dataplane logic** with a lightweight control plane, Spli
 <img width="2518" height="1268" alt="image" src="https://github.com/user-attachments/assets/2e18d3f1-a6f6-4c02-b651-2cec0bb4742b" />
 
 
-
-
-
-
-
-## Future Scope
-- **Ansible-based Deployment:** Ansible playbooks for automating environment setup, model deployment, controller startup.
-- **MoonGen Traffic Generation Integration:** Enable 100 Gbps stress testing with realistic traffic patterns for comprehensive performance validation
-- **Window-based feature extraction:** A network traffic flow generator that extracts bidirectional flow features from PCAP datasets for model training
-- **500k Scalable:** P4 implementation for 500k+ flows processable by compiler error-free 
-- **Intel Tofino-2,3:** Support for latest version of Tofino Models
-- **Advanced ML Model Support:** Extend beyond decision trees to support Random Forests and ensemble methods
-
-- **SmartNIC Platform Support:** Port to AMD Pensando DPUs and NVIDIA BlueField platforms for broader hardware compatibility
-
-## Critical Technical Insights
-### P4 Programming Patterns
+### Critical Technical Insights
+#### P4 Programming Patterns
 
 - **Recirculation Logic:** Powerful technique for multi-stage processing but requires careful loop prevention and state management
 - **Match-Action Table Design:** Table sequence and key selection significantly impact both performance and resource utilization
@@ -89,11 +77,24 @@ Developed SID-based partitioning to process only 5 features per subtree stage in
 - **Model Format Standardization Challenge:**
  Built comprehensive conversion pipeline with graceful error handling, multiple environment management and format validation to handle inconsistent decision tree formats (.pkl, .dot)
 
-### Controller Architecture Principles
+#### Controller Architecture Principles
 
 - **Graceful Degradation:** Controllers must handle partial failures without crashing the entire system
 - **Debug Visibility:** Extensive logging and state introspection are essential for troubleshooting distributed networking systems
 - **State Consistency:** Maintaining synchronization between controller state and switch state requires careful protocol design
+
+
+
+## Future Scope
+- **Ansible-based Deployment:** Ansible playbooks for automating environment setup, model deployment, controller startup.
+- **MoonGen Traffic Generation Integration:** Enable 100 Gbps stress testing with realistic traffic patterns for comprehensive performance validation
+- **Window-based feature extraction:** A network traffic flow generator that extracts bidirectional flow features from PCAP datasets for model training
+- **500k Scalable:** P4 implementation for 500k+ flows without compiler breaking down
+- **Intel Tofino-2,3:** Support for latest version of Tofino Models
+- **Advanced ML Model Support:** Extend beyond decision trees to support Random Forests and ensemble methods
+
+- **SmartNIC Platform Support:** Port to AMD Pensando DPUs and NVIDIA BlueField platforms for broader hardware compatibility
+
 
 ## Conclusion
 This GSoC project presented a steep learning curve that opened entirely new technical domains to me, from P4 programmable networking to ASIC engineering constraints. Working at the intersection of machine learning and hardware limitations fundamentally changed my understanding of systems design, where programs must adapt to silicon realities.
