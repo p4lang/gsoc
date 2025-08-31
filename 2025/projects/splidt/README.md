@@ -13,26 +13,22 @@
 
 ## Table of Contents
 1. [Project Overview](#project-overview)  
-2. [Goals](#goals)  
-3. [Technical Considerations](#technical-considerations)  
+2. [Project Goals](#project-goals)  
+3. [The Current state of Project](#the-current-state-of-project)  
 4. [Implementation Details](#implementation-details)  
-5. [Makefile Workflow](#makefile-workflow)  
-6. [Key Achievements](#key-achievements)  
-7. [Supporting Pull Requests](#supporting-pull-requests)  
-8. [Future Work](#future-work)  
-9. [Future Scope](#future-scope)  
-10. [Reflections and Learnings](#reflections-and-learnings)  
-11. [Closing Note](#closing-note)  
+5. [Future Scope](#future-scope)  
+6. [Critical Technical Insights](#critical-technical-insights)  
+7. [Conclusion](#conclusion)  
 
 ---
 
 ## Project Overview
-**SpliDT** is a compiler framework that enables stateful decision tree inference directly in programmable switches, bringing real-time machine learning into the network data plane. A major challenge in deploying decision trees in this environment is the limited stateful memory of ASIC chips, which makes it inefficient to track many packet features at once. This leads to a trade-off between accuracy (more features) and latency (faster processing), and results in poor resource utilization in existing approaches.
+
+**SpliDT** is a compiler framework that enables stateful decision tree inference directly in programmable switches, bringing real-time machine learning into the network data plane. A major challenge in deploying decision trees in this environment is the limited stateful memory of ASIC chips, which makes it inefficient to track multiple packet features simultaneously. This leads to a trade-off between accuracy (with more features) and latency (faster processing), resulting in poor resource utilization in existing approaches.
 
 SpliDT solves this with **Partitioned Decision Trees (PDTs)**. Instead of evaluating all features simultaneously, the tree is split into smaller subtrees, each handling only three features at a time. Flows are guided across subtrees using Subtree IDs (SIDs), ensuring that all features are eventually considered without exceeding hardware limits. This design reduces memory usage, removes latency overheads, and maintains classification accuracy, while making the system scalable and efficient.
 
 By combining **P4-based dataplane logic** with a lightweight control plane, SpliDT provides a practical and extensible framework for developers and researchers working on in-network ML, traffic classification, and real-time security detection.
-
 
 
 ## Project Goals
@@ -40,26 +36,9 @@ By combining **P4-based dataplane logic** with a lightweight control plane, Spli
 ### Core Framework 
 
 - **Stateful P4 Implementation:** Built complete decision tree classifier with SID-based traversal, recirculation logic, and multi-stage processing
-- **Dynamic Controller System:** Developed P4Runtime integration supporting multiple .pkl models, graceful error handling, and hot-swapping capabilities
+- **Dynamic Controller System:** Developed P4Runtime and Barefoot Runtime integration supporting multiple .pkl models, graceful error handling, and hot-swapping capabilities
 - **Automated Code Generation:** Created Jinja2-based template system generating complete P4 programs from trained decision tree models
-Hardware Validation: Successfully deployed and tested on Intel Tofino hardware and BMv2 software targets
-
-### Performance Achievements
-
-- **Line-Rate Processing:** Maintained 100 Gbps throughput with <10μs additional latency per packet
-- **100% Accuracy Preservation:** Complete feature coverage through dynamic subtree traversal
-Multi-Model Support: Concurrent execution of 4+ decision trees validated
-
-### Development Infrastructure
-
-- **Comprehensive Testing:** Mininet simulation environment with automated packet injection and classification verification
-- **Model Conversion Pipeline:** Automated .dot → .pkl conversion utilities inspired by NetBeacon
-- **Unified Workflow:** End-to-end Makefile automation enabling one-command deployment from model to running switch
-Complete Documentation: Deployment guides, API documentation, troubleshooting references, and usage examples
-
----
-
-## The Current State of the Project
+- **Hardware Validation:** Successfully deployed and tested on Intel Tofino hardware and BMv2 software targets
 
 
 ### Production-Ready Components
@@ -67,61 +46,36 @@ Complete Documentation: Deployment guides, API documentation, troubleshooting re
 | Component                | Status   | Functionality                                        |
 |--------------------------|----------|------------------------------------------------------|
 | **P4 Data Plane**        | Completed | Stateful classification, SID management, packet recirculation |
-| **P4Runtime Controller** | Completed | Model loading, rule installation, multi-tree support |
-| **Code Generation Framework** | Completed | Automated P4 generation from ML models |
-| **Testing Infrastructure** | Completed | Mininet simulation, packet verification, benchmarking |
+| **P4Runtime/BftRuntime Controller** | Completed | Model loading, rule installation, multi-tree support |
+| **P4 Code Generation Framework** | Completed | Automated P4 generation from ML models |
+| **Testing Infrastructure** | Completed | Mininet simulation, packet verification |
 | **Deployment Automation** | Completed | Makefile workflow for reproducible deployments |
-
-
-### Validated Performance Metrics
-
-- **Memory Efficiency:** 3 SRAM registers per stage (vs. 10+ in traditional approaches)
-- **Throughput:** Line-rate processing validated on Tofino hardware
-- **Latency:** Minimal overhead maintaining real-time performance
-- **Scalability:** Multiple concurrent decision tree execution confirmed
-Accuracy: Original model performance fully preserved
 
 ## Platform Support
 
 - **Intel Tofino 1:** Hardware deployment with TNA architecture
 - **BMv2 Software Switch:** Mininet simulation environment
-- **Model Formats:** .pkl, .dot, and JSON decision tree representations
+- **Model Formats:** .pkl and .dot custom decision tree representations
 - **Control Protocols:** P4Runtime and Barefoot Python SDK integration
+
+## Implementation Details
+![alt text](<Screenshot 2025-09-01 at 12.27.23 AM.png>)
+
+
+
+
+
 
 
 ## Future Scope
-### High Priority - Production Enhancement
-
-- **Ansible Deployment Automation:** Create playbooks for automated multi-server SpliDT deployment across data center infrastructure
+- **Ansible-based Deployment:** Ansible playbooks for automating environment setup, model deployment, controller startup.
 - **MoonGen Traffic Generation Integration:** Enable 100 Gbps stress testing with realistic traffic patterns for comprehensive performance validation
-- **Comparative Performance Benchmarking:** Systematic analysis against existing solutions (Leo, NetBeacon, Caravan) using standardized datasets
-
-### Medium Priority - Extended Capabilities
-
+- **Window-based feature extraction:** A network traffic flow generator that extracts bidirectional flow features from PCAP datasets for model training
+- **500k Scalable:** P4 implementation for 500k+ flows processable by compiler error-free 
+- **Intel Tofino-2,3:** Support for latest version of Tofino Models
 - **Advanced ML Model Support:** Extend beyond decision trees to support Random Forests and ensemble methods
-- **Monitoring and Observability:** Integrate Grafana dashboards and Prometheus metrics collection for production monitoring
+
 - **SmartNIC Platform Support:** Port to AMD Pensando DPUs and NVIDIA BlueField platforms for broader hardware compatibility
-
-
-## Challenges/Key Takeaways 
-Major Technical Challenges Overcome
-1. **Hardware Memory Architecture Constraints
-Challenge:** ASIC switches provide only 3-5 SRAM registers per stage, but traditional decision trees require tracking 10+ features simultaneously.
-<br> 
-Solution: Developed innovative SID-based partitioning algorithm that processes only 3 features per subtree stage, achieving 70% memory reduction through temporal register reuse.<br>
-Key Takeaway: Hardware limitations drive algorithmic innovation - embracing constraints as design opportunities leads to more efficient solutions than fighting against them.
-2. **Stateful Processing Complexity Challenge:** Maintaining packet state and metadata consistency across multiple recirculation stages without corruption or race conditions.
-<br>
-**Solution:** Implemented robust metadata management with careful PHV (Packet Header Vector) allocation, state machine design, and loop prevention mechanisms.
-<br>
-**Key Takeaway:** Stateful P4 programming requires meticulous attention to data flow architecture - every bit of metadata must be precisely tracked through the pipeline.
-
-3. **Model Format Standardization Challenge:** Decision tree models from different ML frameworks (.pkl, .dot, JSON) had inconsistent formats, making robust parsing difficult.
-<br>
-Solution: Built comprehensive conversion pipeline with graceful error handling, format validation, and fallback mechanisms for malformed models.
-<br>
-Key Takeaway: Production systems must handle real-world input variability - assume every input is potentially malformed and design accordingly.
-
 
 ## Critical Technical Insights
 ### P4 Programming Patterns
@@ -129,6 +83,11 @@ Key Takeaway: Production systems must handle real-world input variability - assu
 - **Recirculation Logic:** Powerful technique for multi-stage processing but requires careful loop prevention and state management
 - **Match-Action Table Design:** Table sequence and key selection significantly impact both performance and resource utilization
 - **Metadata Optimization:** PHV space is extremely limited - efficient metadata design is crucial for complex stateful applications
+- **SID Based Partitioning:**
+Developed SID-based partitioning to process only 5 features per subtree stage instead of 10+, achieving drastic memory reduction through temporal register reuse.
+
+- **Model Format Standardization Challenge:**
+ Built comprehensive conversion pipeline with graceful error handling, multiple environment management and format validation to handle inconsistent decision tree formats (.pkl, .dot)
 
 ### Controller Architecture Principles
 
@@ -136,7 +95,16 @@ Key Takeaway: Production systems must handle real-world input variability - assu
 - **Debug Visibility:** Extensive logging and state introspection are essential for troubleshooting distributed networking systems
 - **State Consistency:** Maintaining synchronization between controller state and switch state requires careful protocol design
 
-## Additional Resources
- [GSoC Journal on Medium](https://medium.com/@sankalp.jha9643/gsoc25-journal-ea09e2451fe3) - Weekly development progress and  highlighted technical insights
-Repository Highlights:
+## Conclusion
+This GSoC project presented a steep learning curve that opened entirely new technical domains to me, from P4 programmable networking to ASIC engineering constraints. Working at the intersection of machine learning and hardware limitations fundamentally changed my understanding of systems design, where programs must adapt to silicon realities.
+
+I maintained a detailed  [GSoC Journal on Medium](https://medium.com/@sankalp.jha9643/gsoc25-journal-ea09e2451fe3) documenting the weekly journey, challenges, and breakthroughs, which contributed to both personal learning and community knowledge sharing.
+
+Deeply grateful to my mentors, as their technical guidance was instrumental in navigating complex networking concepts. They consistently helped in unblocking challenges and shaped the project's direction.
+
+The P4 Language Consortium provided an exceptional environment for this work, demonstrating how open-source communities drive innovation at the intersection of networking and systems research.
+
+This experience proved that impactful solutions emerge by embracing hardware constraints as design opportunities rather than fighting them, a perspective that will shape my future engineering approach!
+
+
 
