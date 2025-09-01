@@ -16,7 +16,13 @@
 2. [Project Goals](#project-goals)
     - [Core Framework](#core-framework)
     - [Production-Ready Components](#production-ready-components)
-3. [Implementation Details](#implementation-details) 
+3. [Implementation Details](#implementation-details)
+    - [Project Architecture](#project-architecture)
+        - [Model Compilation (SpliDT Compiler)](#model-compilation-splidt-compiler)
+        - [Code Generation and Standardization (SpliDT Generator)](#code-generation-and-standardization-splidt-generator)
+        - [Runtime Deployment (Control + Data Plane) ](#runtime-deployment-control--data-plane)
+    - [Repository Structure](#repository-structure)
+    - [Example- Custom Decision Tree (custom_DTs/e1)](#example--custom-decision-tree-custom_dtse1)
     - [Critical Technical Insights](#critical-technical-insights) 
         - [P4 Programming Patterns](#p4-programming-patterns)
         - [Controller Architecture Principles](#controller-architecture-principles)
@@ -62,7 +68,80 @@ By combining **P4-based dataplane logic** with a lightweight control plane, Spli
 - **Control Protocols:** P4Runtime and Barefoot Python SDK integration
 
 ## Implementation Details
+### Project Architecture
+The SpliDT framework implements a complete **custom-model/model-to-deployment pipeline** that transforms network datasets into hardware-optimized decision tree inference running on programmable switches. The architecture bridges machine learning model training with P4-based data plane deployment through automated code generation and runtime management.
+
 <img width="2518" height="1268" alt="image" src="https://github.com/user-attachments/assets/2e18d3f1-a6f6-4c02-b651-2cec0bb4742b" />
+
+
+#### Model Compilation (SpliDT Compiler)
+Repository Location: `dt-framework/` + `custom_DTs/`
+
+The SpliDT Compiler processes raw network datasets and produces optimal partitioned decision tree models:
+- Input: Dataset, target objectives, performance constraints
+- Components:
+
+    - CICFlowMeter: Extracts bidirectional flow features from PCAP files
+    - HyperMapper: Automated hyperparameter optimization for tree partitioning
+    - Grafana + Postgres: Performance monitoring and dataset analysis
+- Training Process: Uses design search exploration and feasibility testing to determine optimal subtree partitions
+Output: Partitioned decision tree model as JSON/DOT files + corresponding pickle files
+
+Key Innovation: The compiler automatically determines how to split decision trees into SID-based subtrees that fit within ASIC memory constraints while maintaining classification accuracy.
+
+#### Code Generation and Standardization (SpliDT Generator)
+Repository Location: `utility/`
+
+The SpliDT Generator transforms trained models into deployable P4 programs:
+
+Input Processing:
+- `utility/filter/`: Processes custom decision trees through model_parse.py → produces filtered DOT files + data.json mappings
+- `utility/netbeacon/`: Converts filtered DOT files → PKL format (inspired by NetBeacon architecture)
+
+Code Generation:
+- `utility/p4codegen/`: Jinja2-based P4 generator that creates complete P4 programs from model inputs
+
+Outputs:
+- P4 Program: Complete data plane implementation with SID-based stateful processing
+- Controller Code: P4Runtime client for dynamic rule installation
+- Configuration Files: Mapping between model features and P4 metadata fields
+#### Runtime Deployment (Control + Data Plane) 
+Repository Location: `dataplane_driver/`
+
+The Runtime Deployment stage compiles and deploys the generated code:
+
+Compilation Pipeline:
+- P4 Compiler: Processes generated P4 program → produces target binary
+- p4info Generation: Creates P4Runtime interface definitions
+- Target Driver: Intel Tofino(`switch`) or BMv2(`mininet`) software switch initialization
+
+Control Plane Operation:
+
+- P4 Runtime Client: Loads filtered pickle files containing subtree rules
+- gRPC Communication: Installs match-action table entries via P4Runtime protocol
+
+Data Plane Execution:
+
+- Stateful Processing: Packets processed through SID-based subtree traversal
+- Feature Extraction: Headers parsed into metadata fields (f1, f2, f3, sid)
+- Classification: Multi-stage decision tree inference with recirculation
+- Result Output: Classification results via digest emission
+
+
+
+### Repository Structure
+| Architecture Component | Repository Location      | Function                                        |
+|-------------------------|--------------------------|------------------------------------------------|
+| **SpliDT Compiler**    | `dt-framework/`          | Dataset processing, model training, hyperparameter optimization |
+| **Sample Models**      | `custom_DTs/`            | Pre-trained decision trees with visualizations  |
+| **Model Processing**   | `utility/filter/`        | DOT file parsing and data mapping               |
+| **Format Conversion**  | `utility/NetBeacon/`     | DOT to PKL conversion pipeline                  |
+| **Code Generation**    | `utility/p4codegen/`     | P4 program and controller generation            |
+| **Runtime Deployment** | `dataplane_driver/`      | P4 compilation, switch deployment, testing      |
+| **Workflow Automation**| `Makefile`               | End-to-end pipeline orchestration               |
+
+
+### Example- Custom Decision Tree (custom_DTs/e1)
 
 
 ### Critical Technical Insights
