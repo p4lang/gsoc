@@ -31,19 +31,20 @@
 
 ## Abstract
 
-There are many situations where it is more useful to have all possible outputs from a P4 simulation rather than only a single one. For example, we use this for diff testing, to determine whether the switch is doing something correct or something incorrect.
+There are many situations where it is more useful to have all possible outputs from a P4 simulation rather than only a single one. One such instance is diff testing. Diff testing compares the outputs of packets sent through the switch and BMv2. By providing multiple outputs to the packets that get sent to BMv2, it provides more accurate portrayal of the the correctness of the switch's behavior.
+
 
 Multiple allowed behaviors usually arise from various multi-path constructs (e.g. ECMP, WCMP, or perhaps LAGs) usually modeled as action profiles/selectors in P4. BMv2 currently allows users to set a mode determining action selector behavior, like `round robin` which means that every time you send in the same packet, it should result in the next possible outcome (eventually wrapping around). 
 
 ## Goals
 - Provide a new **fanout** mode for BMv2 to instead output ALL possible outputs from action selectors;
 - Add corresponding tests for correctness check;
-- Support better traces that can distinguish normal packets from fanout packets;
+- Support better traces that can help distinguish usual packets (*e.g.* the ones replicated for multicast) from fanout packets (*e.g.* the ones fanout for ActionSelector-based WCMP);
 - Document all changes for better maintainability.
 
 ## Results
 
-- A complete implementation of an extended mode for V1Model called ***selector_fanout***. To be merged;
+- A complete implementation of an extended optional mode for V1Model called ***selector_fanout***.
 - A set of test cases for different dataplane setups;
 - A new trace instance in the event logger when fanout is triggered;
 - Updated documentation on `simple_switch`'s pipeline. 
@@ -62,8 +63,14 @@ Project PR: https://github.com/p4lang/behavioral-model/pull/1316
 It is a singleton instantiated with the switch. It handles the following:
 
 1. Thread registration: because in BMv2, each -gress would be an individual thread, like in simple_switch there is a single thread for ingress and N egress threads where N is the number of egress ports, we need to maintain info per -gress. For instance, the most important info we need to carry would be what packets got replicated from the fanout.
-2. Context capture: since we want to replicate for all possible members in a selector, we need to have information on which selector it is, which table the selector is in, and which group of members to replicate for, we use the instance to capture such information. This is a bit of hacky because it requires aggregating pointers of aforementioned objects, which adds intrusive coupling. Yet as of now it is a less intrusive approach.
-3. Packet replication: with all the necessary information mentioned above, packets can be replicated. The replicated packets will be stored in the manager untill the current pipeline is done.
+2. Context capture: since we want to replicate for all possible members in a selector, we need to have the following critical information:
+   - the current selector;
+   - the table the selector is applied to;
+   - the group of members to replicate for.
+  
+    We use the instance to capture such information. This is a bit of hacky because it requires aggregating pointers of aforementioned objects, which adds extra coupling. Yet as of now it is a less intrusive approach.
+
+3. Packet replication: with all the necessary information mentioned above, packets can be replicated. The replicated packets will be stored in the manager until the current pipeline is done.
 
 ### Fanout Pkt Selection
 
@@ -78,7 +85,7 @@ It is a class inherits `SelectorIface`, which is an abstract class used for cust
 
 ### Tracing
 
-Currently, trace in BMv2 is using packed trivial struct for storing trace information and transmitting it via NanoMsg as raw binaries. The receiving side of the trace (`nanomsg_client.py`) is connected with the switch instance. Upon receiving a trace, it checks the raw binrary for harcoded position of event id and parse it accordingly. Alough this approach could be less flexible, it is efficient and requires only a few changes, so we adopted it.
+Currently, trace in BMv2 is using packed trivial struct for storing trace information and transmitting it via NanoMsg as raw binaries. The receiving side of the trace (`nanomsg_client.py`) is connected with the switch instance. Upon receiving a trace, it checks the raw binary for hardcoded position of event id and parse it accordingly. Although this approach could be less flexible, it is efficient and requires only a few changes, so we adopted it.
 
 Traces in BMv2 is handled by an event logger, where trace is produced upon an event is triggered. For instance, BMv2 supports `ActionExecute` which produces a trace whenever an action is executed. Similarly, a new event called `FanoutGen` is produced each time a packet is replicated for fanout. 
 
@@ -145,7 +152,7 @@ As outlined in the [pipeline](#pipeline), when a input packet arrives to a fanou
 1. Its header is matched against the table for entry lookups;
 2. The entry of a table with action selector is either a group of member actions or a single member action;
 3. If it is single action, then no fanout behavior. If it is a group of N members, it will:
-   - Take out the first member, apply it to the input packet, make it flow downwards, as if it actually selected one member;
+   - Take out the first member, apply it to the input packet, make it flow down the pipeline, as if it actually selected one member;
    - Replicate one packet for each of the remaining N-1 member actions, and the `next_table` will also be extracted as part of the action information.
 
 #### Fanout Packet Continuation
@@ -163,7 +170,7 @@ Here we use the aforementioned test case `egress_single_selector_test` as an exa
   <img src="assets/egress_example.png" width="700"><br>egress_single_selector_test Overview
 </p>
 
-We have a multicast after the ingress, which pushes to replicas to 3 egress ports. They will go through the selector in the egress block, which has 3 members in this configured group (foo1~3). So in total, it will have 3*3=9 packets output. Note that after multicast, the original packet will be dropped. 
+We have a multicast after the ingress, which pushes to replicas to 3 egress ports. They will go through the selector in the egress block, which has 3 members in this configured group (foo1~3). So in total, it will have 3*3=9 packets output. Be aware that only 2 of the 3 output packets (colored yellow with dashed borderline) are "generated" from the fanout (see the demo below for corresponding event logs). They green one is generated from applying the first member to the input packet. Note that after multicast, the original packet will be dropped. 
 
 #### Trace Output
 
@@ -179,7 +186,7 @@ type: FANOUT_GEN, switch_id: 0, cxt_id: 0, sig: 7317885152576657337, id: 0, copy
 
 We observe 6 FANOUT_GEN events because 3 of the 9 packets are the original packets arrive at egress due to multicast and flowed downward instead of getting held by the fanout packet manager. 
 
-Since all the packets are derived from the same packet with ID 0, their "packet ID" are also 0. The `copy_id` ranges from 4 to 9 because, again, 1~3 are flowed doward directly. As suggested by `parent_packet_copy_id`, we can track which packet a fanout packet was replicated from. 
+Since all the packets are derived from the same packet with ID 0, their "packet ID" are also 0. The `copy_id` ranges from 4 to 9 because, again, 1~3 are flowed downward the pipeline directly. As suggested by `parent_packet_copy_id`, we can track which packet a fanout packet was replicated from. 
 
 PACKET_OUT event:
 ```
