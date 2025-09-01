@@ -74,7 +74,7 @@ The SpliDT framework implements a complete **custom-model/model-to-deployment pi
 <img width="2518" height="1268" alt="image" src="https://github.com/user-attachments/assets/2e18d3f1-a6f6-4c02-b651-2cec0bb4742b" />
 
 
-#### Model Compilation (SpliDT Compiler)
+#### 1. Model Compilation (SpliDT Compiler)
 Repository Location: `dt-framework/` + `custom_DTs/`
 
 The SpliDT Compiler processes raw network datasets and produces optimal partitioned decision tree models:
@@ -87,9 +87,9 @@ The SpliDT Compiler processes raw network datasets and produces optimal partitio
 - Training Process: Uses design search exploration and feasibility testing to determine optimal subtree partitions
 Output: Partitioned decision tree model as JSON/DOT files + corresponding pickle files
 
-Key Innovation: The compiler automatically determines how to split decision trees into SID-based subtrees that fit within ASIC memory constraints while maintaining classification accuracy.
+- Key Innovation: The compiler automatically determines how to split decision trees into SID-based subtrees that fit within ASIC memory constraints while maintaining classification accuracy.
 
-#### Code Generation and Standardization (SpliDT Generator)
+#### 2. Code Generation and Standardization (SpliDT Generator)
 Repository Location: `utility/`
 
 The SpliDT Generator transforms trained models into deployable P4 programs:
@@ -105,27 +105,27 @@ Outputs:
 - P4 Program: Complete data plane implementation with SID-based stateful processing
 - Controller Code: P4Runtime client for dynamic rule installation
 - Configuration Files: Mapping between model features and P4 metadata fields
-#### Runtime Deployment (Control + Data Plane) 
+#### 3. Runtime Deployment (Control + Data Plane) 
 Repository Location: `dataplane_driver/`
 
 The Runtime Deployment stage compiles and deploys the generated code:
 
-Compilation Pipeline:
-- P4 Compiler: Processes generated P4 program → produces target binary
-- p4info Generation: Creates P4Runtime interface definitions
-- Target Driver: Intel Tofino(`switch`) or BMv2(`mininet`) software switch initialization
+- Compilation Pipeline:
+    - P4 Compiler: Processes generated P4 program → produces target binary
+    - p4info Generation: Creates P4Runtime interface definitions
+    - Target Driver: Intel Tofino(`switch`) or BMv2(`mininet`) software switch initialization
 
-Control Plane Operation:
+- Control Plane Operation:
 
-- P4 Runtime Client: Loads filtered pickle files containing subtree rules
-- gRPC Communication: Installs match-action table entries via P4Runtime protocol
+    - P4/Bft Runtime Client: Loads filtered pickle files containing subtree rules
+    - gRPC Communication: Installs match-action table entries via P4Runtime protocol
 
-Data Plane Execution:
+- Data Plane Execution:
 
-- Stateful Processing: Packets processed through SID-based subtree traversal
-- Feature Extraction: Headers parsed into metadata fields (f1, f2, f3, sid)
-- Classification: Multi-stage decision tree inference with recirculation
-- Result Output: Classification results via digest emission
+    - Stateful Processing: Packets processed through SID-based subtree traversal
+    - Feature Extraction: Headers parsed into metadata fields `f1, f2, f3, sid`
+    - Classification: Multi-stage decision tree inference with recirculation
+    - Result Output: Classification results via digest emission
 
 
 
@@ -167,8 +167,6 @@ Developed SID-based partitioning to process only 5 features per subtree stage in
 - **Window-based feature extraction:** A network traffic flow generator that extracts bidirectional flow features from PCAP datasets for model training
 - **500k Scalable:** P4 implementation for 500k+ flows without compiler breaking down
 - **Intel Tofino-2,3:** Support for latest version of Tofino Models
-- **Advanced ML Model Support:** Extend beyond decision trees to support Random Forests and ensemble methods
-- **SmartNIC Platform Support:** Port to AMD Pensando DPUs and NVIDIA BlueField platforms for broader hardware compatibility
 
 
 ## Conclusion
