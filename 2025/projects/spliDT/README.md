@@ -38,6 +38,7 @@ SpliDT solves the issue with **Partitioned Decision Trees (PDTs)**. Instead of e
 <p align="center">
 <img width="734" height="381" alt="Screenshot 2025-09-01 at 5 17 58 AM" src="https://github.com/user-attachments/assets/37485143-71a3-47f2-8508-b25fc549ce9b" />
 </p>
+
 By combining **P4-based dataplane logic** with a lightweight control plane, SpliDT provides a practical and extensible framework for developers and researchers working on in-network ML, traffic classification, and real-time security detection.
 
 ## Project Goals
