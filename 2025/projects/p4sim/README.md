@@ -40,7 +40,9 @@ Key contributions include:
 All artifacts developed throughout this GSoC project are available in the following GitHub repository: https://github.com/HapCommSys/p4sim
 
 
-## Implementation details
+## Architecture
+
+
 
 ### Controller 
 Relevant PRs:  https://github.com/HapCommSys/p4sim/pull/4
@@ -53,13 +55,27 @@ At this point we have `P4SwitchNetdevice` and `P4CoreV1model` and the initial im
 ### Tracing Mechanism
 Relevant PR: https://github.com/HapCommSys/p4sim/pull/5
 
-At this point, we have a working control plane in P4Sim. Now we need to test whether in simulation the switch is able to communicate with the control plane and control plane is able to extract useful data from the switch during the runtime. This can be done using [Trace Sources](https://www.nsnam.org/docs/manual/html/tracing.html) in ns-3. 
+A key part of this project is enabling **runtime communication between the switch and the control plane** inside the ns-3 simulation.  
+To achieve this, we have added support for the **ns-3 Trace Source mechanism**.  
 
-To support Tracing mechanism , the following needs to be adjusted:
-1. Switch could send a message to the control plane when a desired event happens or control plane should retrieve data from switch when an event happens
-2. Based on the recieved data from switch the control plane should be able to take certain actions accordingly (This is done using control plane functions which are already implemented [Controller](#controller))
+This means that:
+- The **switch (P4SwitchNetDevice)** can emit events at runtime when something of interest happens (e.g., a flow entry is added, a packet is processed, or an error occurs).  
+- The **controller (P4Controller)** can subscribe (connect) to these events and react accordingly using its control-plane functions.  
 
-If you want to extend the control-plane support by introducing new events (e.g., custom switch notifications, statistics updates, error messages), you can follow these steps:
+For example, when a switch emits a `SwitchEvent` trace source with a message string, the controller can log it, update state, or make flow table modifications.
+
+#### Current Status
+- **Trace Source support is implemented and working** for basic switch-to-controller events.  
+- The controller can already listen to these events and take actions (via functions like those in the [Controller](#controller) section).  
+- This lays the foundation for advanced telemetry and event-driven control logic.
+
+#### How It Works
+1. A **Trace Source** is defined inside `P4SwitchNetDevice` (e.g., `m_switchEvent`).
+2. The **controller registers a callback** (e.g., `HandleSwitchEvent`) to this Trace Source.
+3. When the switch triggers the event, the callback in the controller is invoked with the event data.
+
+#### Extending with New Events
+If you want to extend the control-plane support by introducing **new switch events** (e.g., statistics updates, error messages, custom notifications), you can follow these steps:
 
 1. **Declare the TraceSource in your class**
 
@@ -135,8 +151,14 @@ To run any example
   ./ns3 run scratch/example-file.cc
 ```
 
+To run tests
+```bash
+  ./test.py --suite=p4-controller --text=result.txt
+```
+
 ### Documentation
-Relevant PR: 
+Relevant PR:https://github.com/p4lang/gsoc/pull/38
+
 
 ## Future Work
 
