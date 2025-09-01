@@ -128,7 +128,7 @@ The Runtime Deployment stage compiles and deploys the generated code:
 | **SpliDT Compiler**    | `dt-framework/`          | Dataset processing, model training, hyperparameter optimization |
 | **Sample Models**      | `custom_dts/`            | Custom decision trees with visualizations  |
 | **Model Processing**   | `utility/filter/`        | DOT file parsing and data mapping               |
-| **Format Conversion**  | `utility/NetBeacon/`     | DOT to PKL conversion pipeline                  |
+| **Format Conversion**  | `utility/netbeacon/`     | DOT to PKL conversion pipeline                  |
 | **Code Generation**    | `utility/p4codegen/`     | P4 program and controller generation            |
 | **Runtime Deployment** | `dataplane_driver/`      | P4 compilation, switch deployment, testing      |
 | **Workflow Automation**| `Makefile`               | End-to-end pipeline orchestration               |
