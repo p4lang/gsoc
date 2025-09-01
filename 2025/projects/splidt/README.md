@@ -30,14 +30,13 @@
 ## Project Overview
 
 **SpliDT** is a switch-native compiler framework that enables stateful decision tree inference directly in programmable switches, bringing real-time machine learning into the network data plane. 
-Splidt compiles high-performance decision tree models to enable detection and observability of security-significant flow behaviors across diverse traffic workloads.
+SpliDT compiles high-performance decision tree models to enable detection and observability of security-significant flow behaviors across diverse traffic workloads.
 
 A major challenge in deploying decision trees in this environment is the limited stateful memory of ASIC chips, which makes it impossible to store multiple packet features simultaneously. 
-
-It solves the issue with **Partitioned Decision Trees (PDTs)**. Instead of evaluating all features simultaneously, the tree is split into smaller subtrees, each handling only k-features at a time. Flows are guided across subtrees using Subtree IDs (SIDs), ensuring that all features are eventually considered without exceeding hardware limits. This design reduces memory usage, removes latency overheads, and maintains classification accuracy, while making the system scalable and efficient.
-
+SpliDT solves the issue with **Partitioned Decision Trees (PDTs)**. Instead of evaluating all features simultaneously, the tree is split into smaller subtrees, each handling only top k-features at a time. Flows are guided across subtrees using Subtree IDs (SIDs), ensuring that all features are eventually considered without exceeding hardware limits. This design reduces memory usage, removes latency overheads, and maintains classification accuracy, while making the system scalable and efficient.
+<p align="center">
 <img width="734" height="381" alt="Screenshot 2025-09-01 at 5 17 58 AM" src="https://github.com/user-attachments/assets/37485143-71a3-47f2-8508-b25fc549ce9b" />
-
+</p>
 By combining **P4-based dataplane logic** with a lightweight control plane, SpliDT provides a practical and extensible framework for developers and researchers working on in-network ML, traffic classification, and real-time security detection.
 
 ## Project Goals
@@ -47,7 +46,7 @@ By combining **P4-based dataplane logic** with a lightweight control plane, Spli
 - **Stateful P4 Implementation:** Built complete decision tree classifier with SID-based traversal, recirculation logic, and multi-stage processing
 - **Dynamic Controller System:** Developed P4Runtime and Barefoot Runtime integration supporting installation of control plane rules for partitioned models, graceful error handling
 - **Automated Code Generation:** Created Jinja2-based template system generating complete P4 programs from user-given partitioned DT models
-- **Hardware Validation:** Successfully deployed and tested on Intel Tofino hardware and BMv2 software targets
+- **Hardware Validation:** Successfully deployed and tested on Intel Tofino Model and BMv2 software targets
 
 
 ### Production-Ready Components
@@ -62,10 +61,10 @@ By combining **P4-based dataplane logic** with a lightweight control plane, Spli
 
 ## Implementation Details
 ### Project Architecture
-The SpliDT framework implements a complete **custom-model/model-to-deployment pipeline** that transforms network datasets into hardware-optimized decision tree inference running on programmable switches. The architecture bridges machine learning model training with P4-based data plane deployment through automated code generation and runtime management.
-
+The SpliDT framework implements a complete **model-to-deployment pipeline** that transforms network datasets into hardware-optimized decision tree inference running on programmable switches. The architecture bridges machine learning model training with P4-based data plane deployment through automated code generation and runtime management.
+<p align="center">
 <img width="2518" height="1268" alt="image" src="https://github.com/user-attachments/assets/2e18d3f1-a6f6-4c02-b651-2cec0bb4742b" />
-
+</p>
 
 #### 1. Model Compilation (SpliDT Compiler)
 Repository Location: `dt-framework/` + `custom_dts/`
@@ -88,8 +87,8 @@ Repository Location: `utility/`
 The SpliDT Generator transforms trained models into deployable P4 programs:
 
 Input Processing:
-- `utility/filter/`: Processes decision tree models to create files which map the required stateful features in P4 File to the operations(sum, min, max).
-- `utility/netbeacon/`: Converts decisiion tree models into TCAM Rules (inspired by NetBeacon architecture)
+- `utility/filter/`: Processes decision tree models to generate files that map the required stateful features in the P4 program to their corresponding operations (sum, min, max)
+- `utility/netbeacon/`: Converts decision tree models into TCAM rules (inspired by NetBeacon [[1]](#references) )
 
 Code Generation:
 - `utility/p4codegen/`: Jinja2-based P4 generator that creates complete P4 programs from model inputs
@@ -154,5 +153,8 @@ The P4 Language Consortium provided an exceptional environment for this work, de
 
 This experience proved that impactful solutions emerge by embracing hardware constraints as design opportunities rather than fighting them, a perspective that will shape my future engineering approach!
 
+## References
 
-
+[1] NetBeacon Project: [IDP-code/NetBeacon](https://www.usenix.org/conference/usenixsecurity23/presentation/zhou-guangmeng)  
+Guangmeng Zhou, Zhuotao Liu, Chuanpu Fu, Qi Li, and Ke Xu. *An Efficient Design of Intelligent Network Data Plane.*  
+In *32nd USENIX Security Symposium (USENIX Security 23)*, pages 6203–6220, Anaheim, CA, August 2023. USENIX Association.
