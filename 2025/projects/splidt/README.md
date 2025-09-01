@@ -5,7 +5,7 @@
 
 **Organization:** [P4 Language Consortium](https://p4.org/)  
 **Contributor:** [Sankalp Jha](https://github.com/blackdragoon26)  
-**Mentors:** [Murayyiam Parvez](https://github.com/Murayyiam-Parvez), [Ali Imran](https://github.com/ALI11-2000), [Davide Scano](https://github.com/Dscano), [Muhammad Shahbaz](https://github.com/msbaz2013)  
+**Mentors:** [Murayyiam Parvez](https://github.com/Murayyiam-Parvez), [Annus Zulfiqar](https://github.com/annuszulfiqar2021), [Ali Imran](https://github.com/ALI11-2000), [Davide Scano](https://github.com/Dscano), [Muhammad Shahbaz](https://github.com/msbaz2013)  
 **Project Repository:** [SpliDT Codebase](https://github.com/blackdragoon26/splidt.git)
 
 
@@ -32,9 +32,12 @@
 
 ## Project Overview
 
-**SpliDT** is a compiler framework that enables stateful decision tree inference directly in programmable switches, bringing real-time machine learning into the network data plane. A major challenge in deploying decision trees in this environment is the limited stateful memory of ASIC chips, which makes it inefficient to track multiple packet features simultaneously. This leads to a trade-off between accuracy (with more features) and latency (faster processing), resulting in poor resource utilization in existing approaches.
+**SpliDT** is a switch-native compiler framework that enables stateful decision tree inference directly in programmable switches, bringing real-time machine learning into the network data plane. 
+Splidt compiles high-performance decision tree models to enable detection and observability of security-significant flow behaviors across diverse traffic workloads.
 
-SpliDT solves this with **Partitioned Decision Trees (PDTs)**. Instead of evaluating all features simultaneously, the tree is split into smaller subtrees, each handling only three features at a time. Flows are guided across subtrees using Subtree IDs (SIDs), ensuring that all features are eventually considered without exceeding hardware limits. This design reduces memory usage, removes latency overheads, and maintains classification accuracy, while making the system scalable and efficient.
+A major challenge in deploying decision trees in this environment is the limited stateful memory of ASIC chips, which makes it impossible to store multiple packet features simultaneously. 
+
+It solves the issue with **Partitioned Decision Trees (PDTs)**. Instead of evaluating all features simultaneously, the tree is split into smaller subtrees, each handling only k-features at a time. Flows are guided across subtrees using Subtree IDs (SIDs), ensuring that all features are eventually considered without exceeding hardware limits. This design reduces memory usage, removes latency overheads, and maintains classification accuracy, while making the system scalable and efficient.
 
 <img width="734" height="381" alt="Screenshot 2025-09-01 at 5 17 58 AM" src="https://github.com/user-attachments/assets/37485143-71a3-47f2-8508-b25fc549ce9b" />
 
@@ -45,8 +48,8 @@ By combining **P4-based dataplane logic** with a lightweight control plane, Spli
 ### Core Framework 
 
 - **Stateful P4 Implementation:** Built complete decision tree classifier with SID-based traversal, recirculation logic, and multi-stage processing
-- **Dynamic Controller System:** Developed P4Runtime and Barefoot Runtime integration supporting multiple .pkl models, graceful error handling, and hot-swapping capabilities
-- **Automated Code Generation:** Created Jinja2-based template system generating complete P4 programs from trained decision tree models
+- **Dynamic Controller System:** Developed P4Runtime and Barefoot Runtime integration supporting installation of control plane rules for partitioned models, graceful error handling
+- **Automated Code Generation:** Created Jinja2-based template system generating complete P4 programs from user-given partitioned DT models
 - **Hardware Validation:** Successfully deployed and tested on Intel Tofino hardware and BMv2 software targets
 
 
@@ -55,17 +58,10 @@ By combining **P4-based dataplane logic** with a lightweight control plane, Spli
 | Component                | Status   | Functionality                                        |
 |--------------------------|----------|------------------------------------------------------|
 | **P4 Data Plane**        | Completed | Stateful classification, SID management, packet recirculation |
-| **P4Runtime/BftRuntime Controller** | Completed | Model loading, rule installation, multi-tree support |
+| **P4Runtime/BftRuntime Controller** | Completed | Custom-DT Model loading, rule installation|
 | **P4 Code Generation Framework** | Completed | Automated P4 generation from ML models |
 | **Testing Infrastructure** | Completed | Mininet simulation, packet verification |
 | **Deployment Automation** | Completed | Makefile workflow for reproducible deployments |
-
-## Platform Support
-
-- **Intel Tofino 1:** Hardware deployment with TNA architecture
-- **BMv2 Software Switch:** Mininet simulation environment
-- **Model Formats:** .pkl and .dot custom decision tree representations
-- **Control Protocols:** P4Runtime and Barefoot Python SDK integration
 
 ## Implementation Details
 ### Project Architecture
@@ -95,8 +91,8 @@ Repository Location: `utility/`
 The SpliDT Generator transforms trained models into deployable P4 programs:
 
 Input Processing:
-- `utility/filter/`: Processes custom decision trees through model_parse.py → produces filtered DOT files + data.json mappings
-- `utility/netbeacon/`: Converts filtered DOT files → PKL format (inspired by NetBeacon architecture)
+- `utility/filter/`: Processes decision tree models to create files which map the required stateful features in P4 File to the operations(sum, min, max).
+- `utility/netbeacon/`: Converts decisiion tree models into TCAM Rules (inspired by NetBeacon architecture)
 
 Code Generation:
 - `utility/p4codegen/`: Jinja2-based P4 generator that creates complete P4 programs from model inputs
@@ -112,19 +108,19 @@ The Runtime Deployment stage compiles and deploys the generated code:
 
 - Compilation Pipeline:
     - P4 Compiler: Processes generated P4 program → produces target binary
-    - p4info Generation: Creates P4Runtime interface definitions
+    - `.p4info` Generation: Creates P4Runtime interface definitions
     - Target Driver: Intel Tofino(`switch`) or BMv2(`mininet`) software switch initialization
 
 - Control Plane Operation:
 
-    - P4/Bft Runtime Client: Loads filtered pickle files containing subtree rules
+    - P4/Bft Runtime Client: Installs the TCAM Rules of each SID
     - gRPC Communication: Installs match-action table entries via P4Runtime protocol
 
 - Data Plane Execution:
 
     - Stateful Processing: Packets processed through SID-based subtree traversal
     - Feature Extraction: Headers parsed into metadata fields `f1, f2, f3, sid`
-    - Classification: Multi-stage decision tree inference with recirculation
+    - Classification: Partitioned decision-tree inference with recirculation
     - Result Output: Classification results via digest emission
 
 
@@ -133,7 +129,7 @@ The Runtime Deployment stage compiles and deploys the generated code:
 | Architecture Component | Repository Location      | Function                                        |
 |-------------------------|--------------------------|------------------------------------------------|
 | **SpliDT Compiler**    | `dt-framework/`          | Dataset processing, model training, hyperparameter optimization |
-| **Sample Models**      | `custom_DTs/`            | Pre-trained decision trees with visualizations  |
+| **Sample Models**      | `custom_DTs/`            | Custom decision trees with visualizations  |
 | **Model Processing**   | `utility/filter/`        | DOT file parsing and data mapping               |
 | **Format Conversion**  | `utility/NetBeacon/`     | DOT to PKL conversion pipeline                  |
 | **Code Generation**    | `utility/p4codegen/`     | P4 program and controller generation            |
@@ -141,32 +137,14 @@ The Runtime Deployment stage compiles and deploys the generated code:
 | **Workflow Automation**| `Makefile`               | End-to-end pipeline orchestration               |
 
 
-### Critical Technical Insights
-#### P4 Programming Patterns
-
-- **Recirculation Logic:** Powerful technique for multi-stage processing but requires careful loop prevention and state management
-- **Match-Action Table Design:** Table sequence and key selection significantly impact both performance and resource utilization
-- **Metadata Optimization:** PHV space is extremely limited - efficient metadata design is crucial for complex stateful applications
-- **SID Based Partitioning:**
-Developed SID-based partitioning to process only 5 features per subtree stage instead of 10+, achieving drastic memory reduction through temporal register reuse.
-
-- **Model Format Standardization Challenge:**
- Built comprehensive conversion pipeline with graceful error handling, multiple environment management and format validation to handle inconsistent decision tree formats (.pkl, .dot)
-
-#### Controller Architecture Principles
-
-- **Graceful Degradation:** Controllers must handle partial failures without crashing the entire system
-- **Debug Visibility:** Extensive logging and state introspection are essential for troubleshooting distributed networking systems
-- **State Consistency:** Maintaining synchronization between controller state and switch state requires careful protocol design
-
-
-
 ## Future Scope
 - **Ansible-based Deployment:** Ansible playbooks for automating environment setup, model deployment, controller startup.
 - **MoonGen Traffic Generation Integration:** Enable 100 Gbps stress testing with realistic traffic patterns for comprehensive performance validation
-- **Window-based feature extraction:** A network traffic flow generator that extracts bidirectional flow features from PCAP datasets for model training
-- **500k Scalable:** P4 implementation for 500k+ flows without compiler breaking down
-- **Intel Tofino-2,3:** Support for latest version of Tofino Models
+- **Decision Tree Pipeline Integration:** The pipeline integration for trained decision tree models generated by `dt_framework` is pending. <br>
+At present, only custom decision tree models can execute the full pipeline, while dt_framework-generated trained models cannot yet be combined seamlessly into the splidt DT pipeline.
+
+
+
 
 
 ## Conclusion
