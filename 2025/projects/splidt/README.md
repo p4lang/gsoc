@@ -22,7 +22,6 @@
         - [Code Generation and Standardization (SpliDT Generator)](#code-generation-and-standardization-splidt-generator)
         - [Runtime Deployment (Control + Data Plane) ](#runtime-deployment-control--data-plane)
     - [Repository Structure](#repository-structure)
-    - [Example- Custom Decision Tree (custom_DTs/e1)](#example--custom-decision-tree-custom_dtse1)
     - [Critical Technical Insights](#critical-technical-insights) 
         - [P4 Programming Patterns](#p4-programming-patterns)
         - [Controller Architecture Principles](#controller-architecture-principles)
@@ -142,9 +141,6 @@ Data Plane Execution:
 | **Workflow Automation**| `Makefile`               | End-to-end pipeline orchestration               |
 
 
-### Example- Custom Decision Tree (custom_DTs/e1)
-
-
 ### Critical Technical Insights
 #### P4 Programming Patterns
 
@@ -172,7 +168,6 @@ Developed SID-based partitioning to process only 5 features per subtree stage in
 - **500k Scalable:** P4 implementation for 500k+ flows without compiler breaking down
 - **Intel Tofino-2,3:** Support for latest version of Tofino Models
 - **Advanced ML Model Support:** Extend beyond decision trees to support Random Forests and ensemble methods
-
 - **SmartNIC Platform Support:** Port to AMD Pensando DPUs and NVIDIA BlueField platforms for broader hardware compatibility
 
 
