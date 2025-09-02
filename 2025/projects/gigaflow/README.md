@@ -22,7 +22,7 @@ This project successfully extends the Gigaflow Virtual Switch (GVS) (find out mo
 
 The core contribution of this project is the extension of the Gigaflow Virtual Switch to support hardware acceleration through SmartNIC offload. The enhanced GVS maintains full backward compatibility with the software-only implementation while adding comprehensive hardware acceleration capabilities.
 
-**Repository**: [Enhanced GVS](https://github.com/AdvaySingh1/gvs/tree/main)
+**Repository**: [Enhanced GVS](https://github.com/AdvaySingh1/gvs-offload/tree/main)
 
 ### Architecture and Design
 
