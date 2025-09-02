@@ -145,15 +145,19 @@ The Runtime Deployment stage compiles and deploys the generated code:
 
 
 ## Conclusion
-This GSoC project presented a steep learning curve that opened entirely new technical domains to me, from P4 programmable networking to ASIC engineering constraints. Working at the intersection of machine learning and hardware limitations fundamentally changed my understanding of systems design, where programs must adapt to silicon realities.
+This GSoC journey truly provided me with the exposure I was seeking to the vastness of Computer Science!
 
-I maintained a detailed  [GSoC Journal on Medium](https://medium.com/@sankalp.jha9643/gsoc25-journal-ea09e2451fe3) documenting the weekly journey, challenges, and breakthroughs, which contributed to both personal learning and community knowledge sharing.
+Understanding the P4 Language Consortium itself opened up numerous branches for me to explore. <br>
+From diving into ASICs, programmable packets, and SDNs, to researching technical terms through YouTube conference archives, community blogs, and GitHub repositories, I discovered countless new domains to personally pursue where I actually find my passion, far beyond the conventional paths many often get stuck in.
 
-Deeply grateful to my mentors, as their technical guidance was instrumental in navigating complex networking concepts. They consistently helped in unblocking challenges and shaped the project's direction.
+As the project has matured, I have felt a significant leap in my skillset. It has provided me with the perspective of not just system design, but also in understanding the practical constraints of silicon realities that shape industrial standards.
 
-The P4 Language Consortium provided an exceptional environment for this work, demonstrating how open-source communities drive innovation at the intersection of networking and systems research.
+I would also like to share my [Journal](https://medium.com/@sankalp.jha9643/gsoc25-journal-ea09e2451fe3), where I documented my learnings, hiccups, and breakthroughs throughout my GSoC journey.<br>
+Speaking of breakthroughs, I cannot express enough gratitude to my mentors. Their technical guidance was instrumental in navigating through my hardship. 
+They consistently helped me overcome challenges while nurturing my growth as an engineer.<br>
+Signing off, with my dreamy endeavours to fuel!
 
-This experience proved that impactful solutions emerge by embracing hardware constraints as design opportunities rather than fighting them, a perspective that will shape my future engineering approach!
+
 
 ## References
 
