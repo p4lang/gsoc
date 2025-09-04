@@ -145,17 +145,15 @@ The Runtime Deployment stage compiles and deploys the generated code:
 
 
 ## Conclusion
-This GSoC journey truly provided me with the exposure I was seeking to the vastness of Computer Science!
 
-Understanding the P4 Language Consortium itself opened up numerous branches for me to explore. <br>
-From diving into ASICs, programmable packets, and SDNs, to researching technical terms through YouTube conference archives, community blogs, and GitHub repositories, I discovered countless new domains to personally pursue where I actually find my passion, far beyond the conventional paths many often get stuck in.
+This GSoC journey gave me valuable research experience in the field of computer science and networking within an open-source community. More specifically, the SpliDT project allowed me to improve my understanding of P4, while also exploring network-programmable devices and addressing real research challenges, such as implementing decision tree inference directly in programmable switches.
 
-As the project has matured, I have felt a significant leap in my skillset. It has provided me with the perspective of not just system design, but also in understanding the practical constraints of silicon realities that shape industrial standards.
+Beyond the technical work, I also had the opportunity to engage with the P4 Language Consortium Community by participating in community activities and contributing to my project. This experience inspired me to write a [blog](https://medium.com/@sankalp.jha9643/gsoc25-journal-ea09e2451fe3) to share what I learned during Google Summer of Code.
 
-I would also like to share my [Journal](https://medium.com/@sankalp.jha9643/gsoc25-journal-ea09e2451fe3), where I documented my learnings, hiccups, and breakthroughs throughout my GSoC journey.<br>
-Speaking of breakthroughs, I cannot express enough gratitude to my mentors. Their technical guidance was instrumental in navigating through my hardship. 
-They consistently helped me overcome challenges while nurturing my growth as an engineer.<br>
-Signing off, with my dreamy endeavours to fuel!
+The friendly tech savvy, tech-savvy mentors really helped me nurture a lot along with the project, and I would like to thank them again.
+
+With such a colorful time over the past few months, I am truly grateful to everyone for believing in me and making things very real and possible!<br>
+Thanks a lot with deepest regards!
 
 
 
