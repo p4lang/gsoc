@@ -78,9 +78,10 @@ The following is a sample diagram of the project setup:
 
 ## Technical Learning and Expertise Gained
 
-Throughout this project, I gained extensive hands-on experience with cutting-edge data center networking technologies and hardware acceleration frameworks. Key areas include advanced P4 programming with complex match-action table designs and stateful packet processing, comprehensive DPDK expertise for high-performance packet processing and zero-copy techniques, and Vivado Design Suite proficiency for P4-to-HDL compilation workflows and hardware debugging. 
+Throughout this project, I gained hands-on experience with data center networking and hardware acceleration using P4 and FPGA-based frameworks. I worked with Vivado, P4-SDNet, and the NetFPGA shell to compile P4 programs into SDNet IP, which was then integrated into the NetFPGA platform to build an accelerated switch. On the software side, I extended Open vSwitch (OVS) through the Gigaflow Virtual Switch (GVS), which added a caching layer. This required designing match-action tables that handled wide keys and multiple header fields, making the table structures significantly more complex than simple L2/L3 lookups. I also used DPDK in the software-offload design to enable high-performance packet processing with zero-copy techniques. Finally, I learned how to take P4-to-HDL pipelines through Vivado for synthesis and how to debug and validate the resulting hardware designs.
 
-I also developed skills in AXI-Stream protocol design for stream processing pipelines and backpressure handling, low-level driver implementation including PCI Express management and DMA engine programming, and modern data center networking concepts such as SDN principles and network function virtualization. Additionally, I learned critical hardware-software co-design principles including algorithm partitioning and latency optimization across processing boundaries.
+
+I also developed skills in AXI-Stream protocol design for building stream-processing pipelines with backpressure support, and in low-level driver development for PCI Express and DMA engine programming. In learning SDN principles, I worked with the OpenFlow protocol and configured flows directly, installing rules into the Gigaflow pipeline. A key aspect of the project was hardware–software co-design: I partitioned packet-processing algorithms by mapping software pipeline stages into Gigaflow table entries on hardware, optimizing for latency and throughput.
 
 ---
 
