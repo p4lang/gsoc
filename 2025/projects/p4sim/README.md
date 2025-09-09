@@ -9,7 +9,7 @@
   - [Goals](#goals)
   - [Results](#results)
   - [Links](#links)
-  - [Implementation details](#implementation-details)
+  - [Architecture](#architecture)
     - [Controller](#controller)
     - [Tracing Mechanism](#tracing-mechanism)
     - [Examples and Tests](#examples-and-tests)
@@ -42,6 +42,41 @@ All artifacts developed throughout this GSoC project are available in the follow
 
 ## Architecture
 
+![Architecture Diagram](./Simulazione%20della%20rete%20P4.png)
+
+The architecture of this project extends **ns-3 P4Sim** by introducing a working **control-plane abstraction**.  
+It follows a layered design that separates **data-plane execution**, **switch abstraction**, and **controller logic**.
+
+---
+
+### Components
+
+1. **P4CoreV1model**  
+   - Implements the P4 **V1Model architecture** inside the switch.  
+   - Provides functions for flow entry management (insert, delete, modify).  
+   - Exposes an internal API to `P4SwitchNetDevice` for data-plane execution.  
+
+2. **P4SwitchNetDevice**  
+   - Acts as the **ns-3 NetDevice abstraction** for a P4 switch.  
+   - Wraps around the P4 core (`P4CoreV1model`) and exposes it to the simulation.  
+   - Hosts **Trace Sources** that allow the switch to emit events to the controller.  
+   - Bridges between ns-3 simulation environment and the P4 pipeline.  
+
+3. **P4Controller**  
+   - Implements the **control-plane logic** in simulation.  
+   - Provides high-level wrapper functions to interact with the switch (e.g., install flow entries, query table state).  
+   - Subscribes to **Trace Sources** exposed by switches, enabling event-driven control.  
+
+---
+
+### Control-Plane Workflow
+
+1. The **controller** connects to one or more P4 switches.  
+2. During simulation, the **switch emits events** (e.g., flow entry installed, packet processed, error occurred) via Trace Sources.  
+3. The **controller’s callback handlers** receive these events and take action (e.g., log, update flow table, install new rules).  
+4. The controller can also **proactively configure switches** by invoking wrapper APIs (e.g., `AddFlowEntry`, `DeleteFlowEntry`).  
+
+---
 
 
 ### Controller 
@@ -51,6 +86,8 @@ At this point we have `P4SwitchNetdevice` and `P4CoreV1model` and the initial im
 
 
   In this p4 wrapper function are added in the `P4Controller` and `P4CoreV1model` class 
+
+---
 
 ### Tracing Mechanism
 Relevant PR: https://github.com/HapCommSys/p4sim/pull/5
@@ -137,6 +174,8 @@ If you want to extend the control-plane support by introducing **new switch even
 
    * Use `Simulator::Schedule` in a test script to call `EmitNewEvent` and verify that the controller receives it.
 
+---
+
 ### Examples and Tests
 Relevant PR:  https://github.com/HapCommSys/p4sim/pull/4
 
@@ -156,12 +195,8 @@ To run tests
   ./test.py --suite=p4-controller --text=result.txt
 ```
 
-### Documentation
-Relevant PR:https://github.com/p4lang/gsoc/pull/38
-
 
 ## Future Work
 
 1. Although the control-plane feature has been added, it is currently implemented only for the `V1model` architecture. Since P4Sim also supports `PSA` and `PNA`, their control-plane implementations are still required.
-2. Wrapper functions have been added and tested, but only up to flow-entry operations reason being time constraint and as these are the most commonly used ones. The remaining functions still require proper testing and example implementations
-3. Also advanced examples like DDoS attack and many more can be added using the Trace Source feature.
+2. Wrapper functions have been added and tested, but only up to flow-entry operations reason being time constraint and as these are the most commonly used ones. The remaining functions still require proper testing and example implementations.
