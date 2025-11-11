@@ -1,8 +1,5 @@
 # P4 GSoC 2026 Contributor Guidance
 
-> [!Warning]
-> Please note that proposals completely generated using Large Language Models (LLMs) will not be accepted. Using LLM to assist you is acceptable, but letting LLM replace you is not. If you do use LLM, use your best judgement to use it responsibly. During the application process, if we find out it's easier to work with an LLM directly than working with you, it will be an immediate reject.
-
 ## Before the Application
 
 - Go through the general GSoC
@@ -10,7 +7,8 @@
   [timeline](https://developers.google.com/open-source/gsoc/timeline), and
   [contributor guide](https://google.github.io/gsocguides/student).
 - Check out our
-  [organization profile](https://summerofcode.withgoogle.com/programs/2025/organizations/the-p4-language-consortium) and
+  [organization profile](https://summerofcode.withgoogle.com/programs/2025/organizations/the-p4-language-consortium),
+  [project rules](project_rules.md), which are mandatory for all contributors, and the
   [ideas list](ideas_list.md)
   to see if they fit your interests and skills.
 
@@ -55,6 +53,7 @@
     - Please read [this guide](https://developers.google.com/blockly/guides/contribute/get-started/write_a_good_pr) on how to write a good pull request first.
     - The pull request doesn’t have to be merged for the qualification task to be considered complete. But if you can manage to get it merged, that’s a bonus point for your application.
     - Please attach the link to your pull request in the proposal.
+    **Project Timeline**
 
 ## P4 Learning Materials
 
