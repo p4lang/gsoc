@@ -29,5 +29,9 @@ Within your project proposal, please include a section with a clear timeline det
 ## During GSoC
 
 - **Choose Your Communication Method**
+Before starting the coding phase, a private Zulip channel dedicated to the GSoC project will be created as the main communication channel between mentors and the student. In addition, mentors and the student should agree on the communication approach they’ll use during the GSoC period—for example, using only the Zulip channel, having weekly sync-up calls, or any other method that works best for them.
 
-- **Dissemination**
+- **Deliverables**
+Before the end of the GSoC period, for the project to be considered successful, the student must complete all assigned tasks, submit a final project report, write an article about their GSoC project for the P4 Language Consortium blog, and present their work and results at the community kickoff and wrap-up meetings.
+
+Students can use any preferred approach to prepare their report, article, and presentations. A suggested method is the laboratory-diary approach: keep a private log of task progress. This helps track your work and simplifies preparing the final deliverables.
