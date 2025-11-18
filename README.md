@@ -10,9 +10,14 @@ In this repository, you will find materials for all ongoing and past P4 GSoC pro
 </a>
 
 ## Past Programs
+ 
 <a href="2025/README.md" target="_blank" style="margin-right:6px;">
+
+<a href="2025/README.md" target="_blank">
+>>>>>>> 91d681e (Fix GSoC logos)
   <img src="https://img.shields.io/badge/Google%20Summer%20of%20Code-2025-fbbc05?style=flat&logo=google-summer-of-code" height="30"/>
 </a>
+<br>
 
 <a href="2024/README.md" target="_blank">
   <img src="https://img.shields.io/badge/Google%20Summer%20of%20Code-2024-fbbc05?style=flat&logo=google-summer-of-code" height="30"/>
