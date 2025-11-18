@@ -12,9 +12,10 @@ This repository is dedicated to [The P4 Language Consortium](https://p4.org/)'s 
 
 ## Past Programs
 
-<a href="2025/README.md" target="_blank" style="margin-right:6px;">
+<a href="2025/README.md" target="_blank">
   <img src="https://img.shields.io/badge/Google%20Summer%20of%20Code-2025-fbbc05?style=flat&logo=google-summer-of-code" height="30"/>
 </a>
+<br>
 
 <a href="2024/README.md" target="_blank">
   <img src="https://img.shields.io/badge/Google%20Summer%20of%20Code-2024-fbbc05?style=flat&logo=google-summer-of-code" height="30"/>
