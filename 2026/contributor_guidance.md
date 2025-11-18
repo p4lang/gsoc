@@ -1,80 +1,39 @@
-# P4 GSoC 2026 Contributor Guidance
+# Contributor Guidance
 
-> [!Warning]
-> Please note that proposals completely generated using Large Language Models (LLMs) will not be accepted. Using LLM to assist you is acceptable, but letting LLM replace you is not. If you do use LLM, use your best judgement to use it responsibly. During the application process, if we find out it's easier to work with an LLM directly than working with you, it will be an immediate reject.
+Here you will find several important rules which you have to agree to follow in order to be eligible to apply as a contributor for the P4 Language Consortium.
 
-## Before the Application
+These rules are intended to make the program rewarding and problem-free for everyone involved. They are based on our experience with GSoC and are designed to help you get the most out of it.
 
-- Go through the general GSoC
-  [FAQ](https://developers.google.com/open-source/gsoc/faq),
-  [timeline](https://developers.google.com/open-source/gsoc/timeline), and
-  [contributor guide](https://google.github.io/gsocguides/student).
-- Check out our
-  [organization profile](https://summerofcode.withgoogle.com/programs/2025/organizations/the-p4-language-consortium) and
-  [ideas list](ideas_list.md)
-  to see if they fit your interests and skills.
+## Before you apply
 
-## Application Process
+- **Managing Commitments and Avoiding Burnout During GSoC**
+Please note that Google Summer of Code requires a time commitment of 20-40 hours per week, depending on the size of the tasks you choose. If you're considering taking on an additional part-time job, have extensive exams, or plan an extended vacation during the program, you need to carefully evaluate whether you can manage all these commitments without risking burnout. To help us better assess your availability, <ins>please make sure to explicitly list any other obligations in your application.</ins>
 
-1. Email mentors (both primary and support) of your interested projects.
-   - You only need to email mentors whose emails are listed.
-   - We encourage you to reach out to mentors as early as possible, so we have enough time to know about you and connect with you.
-   - **In your first email to mentors, please attach a draft proposal (see template below).** It doesn't have to be complete. But we expect to see a draft so we can start the conversation, and help you polish it.
-2. Apply through the [GSoC website](https://summerofcode.withgoogle.com).
-   - Before submitting your formal application, make sure you have communicated with mentors through emails already.
-3. Wait for your application result.
+- **Get in touch with us and our community**
+ In particular, visit our [Zulip workspace](https://p4lang.zulipchat.com/), [P4 forum](https://forum.p4.org), [P4 Linkdin](https://www.linkedin.com/company/p4-language-consortium/) and/or email the mentors listed on the [ideas list](ideas_list.md) for each project that sounds appealing to you.
 
-## Proposal Template
+- **Respect Mentors, Deliver on Time**
+The P4 Language Consortium values your enthusiasm and willingness to contribute. However, contacting mentors on multiple platforms, sending repeated messages, or asking for shortcuts may be viewed as unprofessional. Likewise, requesting last-minute reviews or urgent feedback when you are close to a deadline can be interpreted as a lack of reliability. Please remember that P4 mentors and admins volunteer their time to support a meaningful and successful GSoC experience.
 
-- Please follow this
-  [guide](https://google.github.io/gsocguides/student/writing-a-proposal)
-  and use these examples ([1](https://google.github.io/gsocguides/student/proposal-example-1) &
-  [2](https://google.github.io/gsocguides/student/proposal-example-2)) as reference.
-- The proposal structure is up to you to decide, but make sure it contains the following elements as mentioned in the guide, with a few additional notes:
-  - **Name and Contact Information**
-    - Please also include a link to your GitHub profile.
-  - **Title**
-  - **Synopsis**
-  - **Benefits to Community**
-  - **Deliverables**
-  - **Related Work**
-  - **Biographical Information**
-    - Please structure this section as a typical 1-page CV/resume.
-    - If you have any prior open source contribution, or P4 related experience, make sure you list and emphasize them in this section.
-  - **Questionnaire**
-    - Please include your answers to the following questions:
-      - Why are you interested in our organization?
-      - Why are you interested in this particular project?
-      - What makes you a good candidate to work on this project?
-      - What do you expect to get out of this GSoC program?
-  - **Qualification Task**
-    - The qualification task is to make a pull request in one of the following repos:
-      - https://github.com/p4lang/tutorials
-      - https://github.com/p4lang/p4c
-    - It's suggested to check out existing issues for inspirations, but your pull request could be anything meaningful.
-    - Please read [this guide](https://developers.google.com/blockly/guides/contribute/get-started/write_a_good_pr) on how to write a good pull request first.
-    - The pull request doesn’t have to be merged for the qualification task to be considered complete. But if you can manage to get it merged, that’s a bonus point for your application.
-    - Please attach the link to your pull request in the proposal.
 
-## P4 Learning Materials
+- **NO LLM-generated code or texts are accepted**
+Please note that proposals completely generated using Large Language Models (LLMs) will not be accepted. Using LLM to assist you is acceptable, but letting LLM replace you is not. If you do use LLM, use your best judgement to use it responsibly. During the application process, if we find out it's easier to work with an LLM directly than working with you, it will be an immediate reject.
 
-For all our projects, it’s good to know some P4. Here are some learning materials:
 
-- General hands-on tutorials: https://github.com/p4lang/tutorials
-- Technical documentation on P4 related topics: https://github.com/jafingerhut/p4-guide?tab=readme-ov-file#introduction
-- Motivating P4: [IEEE ICC 2018 // Keynote: Nick McKeown, Programmable Forwarding Planes Are Here To Stay](https://www.youtube.com/watch?v=8ie0FcsN07U)
-- Introducing P4-16 in detail:
-  - Part 1: [Introduction to P4_16. Part 1](https://www.youtube.com/watch?v=GslseT4hY1w)
-  - Part 2: [Introduction to P4_16. Part 2](https://www.youtube.com/watch?v=yqxpypXIOtQ)
-- Material on the official P4 compiler:
-  - [Understanding the Open-Soure P416 Compiler - February 15, 2022 - Mihai Budiu](https://www.youtube.com/watch?v=Rx5AQ0IF6eU)
-  - [Understanding P416 Open-Source Compiler, Part 2 - March 1, 2022 - Mihai Budiu](https://www.youtube.com/watch?v=YnPHPaPSmpU)
-  - https://github.com/p4lang/p4c/blob/main/docs/compiler-design.pdf
-- Introduction to P4Runtime: [Next-Gen SDN Tutorial - Session 1: P4 and P4Runtime Basics](https://www.youtube.com/watch?v=KRx92qSLgo4)
+## Before you are accepted
 
-## Communication Channels
+- **Prepare a Comprehensive and Detailed Plan**
+Within your project proposal, please include a section with a clear timeline detailing your 12-week project plan. Be sure to note any existing commitments, such as exams, vacations, or other obligations—that could affect your availability.
 
-- For general P4 related questions, use the [P4 forum](https://forum.p4.org).
-- For more real-time and personal communications, use our [Zulip workspace](https://p4lang.zulipchat.com/).
-  - For GSoC related discussion, we have a `#gsoc` channel on Zulip.
-- For other communication channels, check out https://p4.org/join/.
+
+## During GSoC
+
+- **Choose Your Communication Method**
+Before starting the coding phase, a private Zulip channel dedicated to the GSoC project will be created as the main communication channel between mentors and the student. In addition, mentors and the student should agree on the communication approach they’ll use during the GSoC period—for example, using only the Zulip channel, having weekly sync-up calls, or any other method that works best for them.
+
+- **Deliverables**
+Before the end of the GSoC period, for the project to be considered successful, the student must complete all assigned tasks, submit a final project report, and present their work and results at the community kickoff and wrap-up meetings. The report may be used directly as a blog post. For particularly complex projects, and if the student is willing, an additional blog article can be prepared and published on the P4 Language Consortium blog.
+
+Students may use any preferred approach to prepare their report, article, and presentations. One suggested method is the laboratory-diary approach: keeping a private log of task progress helps track the work and simplifies the preparation of the final deliverables.
+
+The report template can be found here:[report template](report_template.md)
