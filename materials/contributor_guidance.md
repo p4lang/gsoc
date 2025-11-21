@@ -36,4 +36,7 @@ Before the end of the GSoC period, for the project to be considered successful, 
 
 Students may use any preferred approach to prepare their report, article, and presentations. One suggested method is the laboratory-diary approach: keeping a private log of task progress helps track the work and simplifies the preparation of the final deliverables.
 
-The report template can be found here:[report template](report_template.md)
+The report template can be found here: [report template](report_template.md). For any insigths here a few example reports that we think is of high quality and roughly follows the template:
+
+- [2025 GSoC - Bmv2 Pkt Out - Xiyu Hao](/2025/projects/bmv2_pkt_out/README.md)
+- [2024 GSoC - Container Migration - Stanislav Kosorin](/2024/projects/container_migration/README.md)
