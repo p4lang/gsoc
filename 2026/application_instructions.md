@@ -9,7 +9,7 @@
 - Check out our
   [organization profile](https://summerofcode.withgoogle.com/programs/2025/organizations/the-p4-language-consortium),
   [learning materials](/materials/learning_materials.md),
-  [contributor guidance](contributor_guidance.md), which are mandatory for all contributors, and the
+  [contributor guidance](/materials/lcontributor_guidance.md), which are mandatory for all contributors, and the
   [ideas list](ideas_list.md)
   to see if they fit your interests and skills.
 
