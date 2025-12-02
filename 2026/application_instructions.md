@@ -1,8 +1,5 @@
 # P4 GSoC 2026 Contributor Guidance
 
-> [!Warning]
-> Please note that proposals completely generated using Large Language Models (LLMs) will not be accepted. Using LLM to assist you is acceptable, but letting LLM replace you is not. If you do use LLM, use your best judgement to use it responsibly. During the application process, if we find out it's easier to work with an LLM directly than working with you, it will be an immediate reject.
-
 ## Before the Application
 
 - Go through the general GSoC
@@ -10,7 +7,9 @@
   [timeline](https://developers.google.com/open-source/gsoc/timeline), and
   [contributor guide](https://google.github.io/gsocguides/student).
 - Check out our
-  [organization profile](https://summerofcode.withgoogle.com/programs/2025/organizations/the-p4-language-consortium) and
+  [organization profile](https://summerofcode.withgoogle.com/programs/2025/organizations/the-p4-language-consortium),
+  [learning materials](/materials/learning_materials.md),
+  [contributor guidance](/materials/lcontributor_guidance.md), which are mandatory for all contributors, and the
   [ideas list](ideas_list.md)
   to see if they fit your interests and skills.
 
@@ -55,22 +54,7 @@
     - Please read [this guide](https://developers.google.com/blockly/guides/contribute/get-started/write_a_good_pr) on how to write a good pull request first.
     - The pull request doesn’t have to be merged for the qualification task to be considered complete. But if you can manage to get it merged, that’s a bonus point for your application.
     - Please attach the link to your pull request in the proposal.
-
-## P4 Learning Materials
-
-For all our projects, it’s good to know some P4. Here are some learning materials:
-
-- General hands-on tutorials: https://github.com/p4lang/tutorials
-- Technical documentation on P4 related topics: https://github.com/jafingerhut/p4-guide?tab=readme-ov-file#introduction
-- Motivating P4: [IEEE ICC 2018 // Keynote: Nick McKeown, Programmable Forwarding Planes Are Here To Stay](https://www.youtube.com/watch?v=8ie0FcsN07U)
-- Introducing P4-16 in detail:
-  - Part 1: [Introduction to P4_16. Part 1](https://www.youtube.com/watch?v=GslseT4hY1w)
-  - Part 2: [Introduction to P4_16. Part 2](https://www.youtube.com/watch?v=yqxpypXIOtQ)
-- Material on the official P4 compiler:
-  - [Understanding the Open-Soure P416 Compiler - February 15, 2022 - Mihai Budiu](https://www.youtube.com/watch?v=Rx5AQ0IF6eU)
-  - [Understanding P416 Open-Source Compiler, Part 2 - March 1, 2022 - Mihai Budiu](https://www.youtube.com/watch?v=YnPHPaPSmpU)
-  - https://github.com/p4lang/p4c/blob/main/docs/compiler-design.pdf
-- Introduction to P4Runtime: [Next-Gen SDN Tutorial - Session 1: P4 and P4Runtime Basics](https://www.youtube.com/watch?v=KRx92qSLgo4)
+    **Project Timeline**
 
 ## Communication Channels
 
