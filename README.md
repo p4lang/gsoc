@@ -12,6 +12,11 @@ In this repository, you will find materials for all ongoing and past P4 GSoC pro
 ## Past Programs
 
 <a href="2025/README.md" target="_blank" style="margin-right:6px;">
+
+
+## Past Programs
+
+<a href="2025/README.md" target="_blank">
   <img src="https://img.shields.io/badge/Google%20Summer%20of%20Code-2025-fbbc05?style=flat&logo=google-summer-of-code" height="30"/>
 </a>
 <br>
@@ -19,6 +24,7 @@ In this repository, you will find materials for all ongoing and past P4 GSoC pro
 <a href="2024/README.md" target="_blank">
   <img src="https://img.shields.io/badge/Google%20Summer%20of%20Code-2024-fbbc05?style=flat&logo=google-summer-of-code" height="30"/>
 </a>
+<br>
 
 ## 📘 Learning Resources
 For all our projects, it’s good to know some P4. Here are some learning materials:
@@ -34,3 +40,4 @@ For all our projects, it’s good to know some P4. Here are some learning materi
   - [Understanding P416 Compiler, Part 2 (Mar 1, 2022) – Mihai Budiu](https://www.youtube.com/watch?v=YnPHPaPSmpU)  
   - [Compiler Design PDF](https://github.com/p4lang/p4c/blob/main/docs/compiler-design.pdf)  
 - Introduction to P4Runtime: [Next-Gen SDN Tutorial – Session 1](https://www.youtube.com/watch?v=KRx92qSLgo4)
+
