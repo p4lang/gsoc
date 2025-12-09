@@ -2,7 +2,7 @@
 
 ## Application process
 
-Please check our [Contributor Guidance](contributor_guidance.md) for detailed instructions.
+Please check our [Contributor Guidance](/materials/contributor_guidance.md) for detailed instructions.
 
 ## Potential mentors
 
