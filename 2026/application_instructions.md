@@ -48,7 +48,7 @@
       - What do you expect to get out of this GSoC program?
   - **Qualification Task**
     - The qualification task is to submit one or more pull requests to one of the following:
-      - Any of the repositories under p4lang, such as p4c, tutorials, P4Runtime, etc.
+      - Any of the repositories under the [P4 Language Organization](https://github.com/p4lang), such as [P4C](https://github.com/p4lang/p4c), [Tutorials](https://github.com/p4lang/tutorials), [BMv2](https://github.com/p4lang/behavorial-model), [P4Runtime](https://github.com/p4lang/p4runtime), etc.
       - Implement one of the project ideas proposed in https://github.com/p4lang/project-ideas/issues.
       - Specific qualification tasks provided by mentors for a given project, defined during the     application period.
     - It's suggested to check out existing issues for inspirations, but your pull request could be anything meaningful.
