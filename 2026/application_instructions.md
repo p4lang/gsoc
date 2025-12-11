@@ -54,7 +54,7 @@
     - Please read [this guide](https://developers.google.com/blockly/guides/contribute/get-started/write_a_good_pr) on how to write a good pull request first.
     - The pull request doesn’t have to be merged for the qualification task to be considered complete. But if you can manage to get it merged, that’s a bonus point for your application.
     - Please attach the link to your pull request in the proposal.
-    **Project Timeline**
+  - **Project Timeline**
 
 ## Communication Channels
 
