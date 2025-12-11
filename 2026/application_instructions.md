@@ -1,4 +1,4 @@
-# P4 GSoC 2026 Contributor Guidance
+# P4 GSoC 2026 Application instructions
 
 ## Before the Application
 
