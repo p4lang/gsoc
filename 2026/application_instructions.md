@@ -47,9 +47,10 @@
       - What makes you a good candidate to work on this project?
       - What do you expect to get out of this GSoC program?
   - **Qualification Task**
-    - The qualification task is to make a pull request in one of the following repos:
-      - https://github.com/p4lang/tutorials
-      - https://github.com/p4lang/p4c
+    - The qualification task is to submit one or more pull requests to one of the following:
+      - Any of the repositories under the [P4 Language Organization](https://github.com/p4lang), such as [P4C](https://github.com/p4lang/p4c), [Tutorials](https://github.com/p4lang/tutorials), [BMv2](https://github.com/p4lang/behavorial-model), [P4Runtime](https://github.com/p4lang/p4runtime), etc.
+      - Implement one of the project ideas proposed in https://github.com/p4lang/project-ideas/issues.
+      - Specific qualification tasks provided by mentors for a given project, defined during the     application period.
     - It's suggested to check out existing issues for inspirations, but your pull request could be anything meaningful.
     - Please read [this guide](https://developers.google.com/blockly/guides/contribute/get-started/write_a_good_pr) on how to write a good pull request first.
     - The pull request doesn’t have to be merged for the qualification task to be considered complete. But if you can manage to get it merged, that’s a bonus point for your application.

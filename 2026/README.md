@@ -23,4 +23,5 @@
 ## Application
 
 - [Ideas List](ideas_list.md)
+- [Application Instructions](application_instructions.md)
 - [Contributor Guidance](/materials/contributor_guidance.md)
