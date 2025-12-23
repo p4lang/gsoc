@@ -5,7 +5,7 @@ on:
     types: [closed]
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   publish-wiki:
@@ -16,10 +16,21 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Checkout wiki repository
-        uses: actions/checkout@v4
-        with:
-          repository: ${{ github.repository }}.wiki
-          path: wiki
+        env:
+          WIKI_TOKEN: ${{ secrets.WIKI_TOKEN }}
+        run: |
+          # Clone the wiki repository (<repo>.wiki.git)
+          # Use env var for token to prevent logging/injection
+          git clone "https://x-access-token:${WIKI_TOKEN}@github.com/${{ github.repository }}.wiki.git" wiki
+          cd wiki
+
+          default_branch="$(git remote show origin | sed -n '/HEAD branch/s/.*: //p')"
+          [ -z "$default_branch" ] && default_branch="master"
+          git checkout "$default_branch"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          cd ..
 
       - name: Find and publish wiki pages
         run: |
@@ -56,7 +67,7 @@ jobs:
           if [[ -n $(git status -s) ]]; then
             git add .
             git commit -m "Update wiki pages from repository"
-            git push
+            git push origin HEAD:"$default_branch"
           else
             echo "No changes to publish."
           fi
