@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Checkout wiki repository
         env:
@@ -33,6 +33,8 @@ jobs:
           cd ..
 
       - name: Find and publish wiki pages
+        env:
+          WIKI_TOKEN: ${{ secrets.WIKI_TOKEN }}
         run: |
           set -e
           
@@ -67,7 +69,8 @@ jobs:
           if [[ -n $(git status -s) ]]; then
             git add .
             git commit -m "Update wiki pages from repository"
-            git push origin HEAD:"$default_branch"
+            # Use explicit token URL for push to ensure authentication works
+            git push "https://x-access-token:${WIKI_TOKEN}@github.com/${{ github.repository }}.wiki.git" "HEAD:master"
           else
             echo "No changes to publish."
           fi
