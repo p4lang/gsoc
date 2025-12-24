@@ -89,7 +89,7 @@ It means we expect you to have made relevant contributions in order to demonstra
 
 **Basic info**
 
-![diffi-easy] ![size-s]
+![diffi-medium] ![size-m]
 
 - Potential mentors
   - Primary: Jaehyun Lee
