@@ -8,8 +8,8 @@ Please check our [Contributor Guidance](/materials/contributor_guidance.md) for 
 
 ⭐ = available as primary mentor
 
-1. ⭐
-1. 
+1. ⭐ Jaehyun Lee ([@jaehyun1ee](https://github.com/jaehyun1ee), 99jaehyunlee@kaist.ac.kr)
+1. Davide Scano ([@Dscano](https://github.com/Dscano), d.scano89@gmail.com)
 
 
 ## FAQ
