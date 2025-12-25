@@ -16,9 +16,9 @@
 - Contributors:
   -
 - Primary mentors:
-  -
+  - Jaehyun Lee ([@jaehyun1ee](https://github.com/jaehyun1ee))
 - Support mentors:
-  - 
+  - Davide Scano ([@Dscano](https://github.com/Dscano))
 
 ## Application
 
