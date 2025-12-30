@@ -4,35 +4,30 @@ on:
   pull_request:
     types: [closed]
 
-permissions:
-  contents: read
-
 jobs:
   publish-wiki:
     if: github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.name, 'publishwiki')
     runs-on: ubuntu-latest
     steps:
+      - name: Verify Merge Status
+        run: |
+          if [ "${{ github.event.pull_request.merged }}" != "true" ]; then
+            echo "Error: PR is not merged. This workflow should only run on merged PRs."
+            exit 1
+          fi
+          echo "PR is merged. Proceeding."
       - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Checkout wiki repository
-        env:
-          WIKI_TOKEN: ${{ secrets.WIKI_TOKEN }}
-        run: |
-          # Clone the wiki repository (<repo>.wiki.git)
-          # Use env var for token to prevent logging/injection
-          git clone "https://x-access-token:${WIKI_TOKEN}@github.com/${{ github.repository }}.wiki.git" wiki
-          cd wiki
-
-          default_branch="$(git remote show origin | sed -n '/HEAD branch/s/.*: //p')"
-          [ -z "$default_branch" ] && default_branch="master"
-          git checkout "$default_branch"
-
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          cd ..
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository }}.wiki
+          path: wiki
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Find and publish wiki pages
+
         run: |
           set -e
           
@@ -67,7 +62,9 @@ jobs:
           if [[ -n $(git status -s) ]]; then
             git add .
             git commit -m "Update wiki pages from repository"
-            git push origin HEAD:"$default_branch"
+            branch_name=$(git rev-parse --abbrev-ref HEAD)
+            # Push using the authenticated session from actions/checkout
+            git push origin "HEAD:$branch_name"
           else
             echo "No changes to publish."
           fi
