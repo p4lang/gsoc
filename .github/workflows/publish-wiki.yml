@@ -4,9 +4,6 @@ on:
   pull_request:
     types: [closed]
 
-permissions:
-  contents: write
-
 jobs:
   publish-wiki:
     if: github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.name, 'publishwiki')
