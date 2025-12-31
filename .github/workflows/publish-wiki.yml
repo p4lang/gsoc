@@ -27,10 +27,10 @@ jobs:
         with:
           repository: ${{ github.repository }}.wiki
           path: wiki
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Find and publish wiki pages
-
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -e
           
@@ -65,9 +65,8 @@ jobs:
           if [[ -n $(git status -s) ]]; then
             git add .
             git commit -m "Update wiki pages from repository"
-            branch_name=$(git rev-parse --abbrev-ref HEAD)
-            # Push using the authenticated session from actions/checkout
-            git push origin "HEAD:$branch_name"
+            # Push using x-access-token with GITHUB_TOKEN
+            git push "https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.wiki.git" "HEAD:master"
           else
             echo "No changes to publish."
           fi
