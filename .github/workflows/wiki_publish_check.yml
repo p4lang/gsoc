@@ -1,0 +1,25 @@
+name: Wiki Publish Check
+
+on:
+  pull_request:
+    types: [closed]
+
+permissions:
+  contents: read
+
+jobs:
+  publish-check:
+    if: github.event.pull_request.merged == true &&
+        contains(github.event.pull_request.labels.*.name, 'publishwiki')
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Create publish check
+        run: |
+          echo "publishwiki=true" > publishwiki.flag
+
+      - name: Upload check
+        uses: actions/upload-artifact@v4
+        with:
+          name: publishwiki
+          path: publishwiki.flag

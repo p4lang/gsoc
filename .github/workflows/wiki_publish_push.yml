@@ -1,0 +1,69 @@
+name: Publish Wiki Pages
+
+on:
+  workflow_run:
+    workflows: ["Wiki Publish Check"]
+    types: [completed]
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  publish-wiki:
+    if: github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download publish check
+        uses: actions/download-artifact@v4
+        with:
+            name: publishwiki
+            run-id: ${{ github.event.workflow_run.id }}
+            repository: ${{ github.repository }}
+            github-token: ${{ github.token }}
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Checkout wiki repository
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository }}.wiki
+          path: wiki
+
+      - name: Configure git author
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Find and publish wiki pages
+        run: |
+          set -e
+
+          find . -path "./*/projects/*/wiki.md" -print0 | while IFS= read -r -d '' file; do
+            project_dir="$(dirname "$file")"
+            project_name="$(basename "$project_dir")"
+
+            grandparent_dir="$(dirname "$(dirname "$project_dir")")"
+            year="$(basename "$grandparent_dir")"
+
+            sanitized_project_name="${project_name//_/‐}"
+            target_name="${year}‐${sanitized_project_name}.md"
+
+            echo "Publishing $file -> wiki/$target_name"
+            cp "$file" "wiki/$target_name"
+          done
+
+      - name: Commit and push wiki changes (skip if no changes)
+        run: |
+          cd wiki
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to publish."
+            exit 0
+          fi
+          git commit -m "Update wiki pages from repository"
+          git push origin HEAD:master
