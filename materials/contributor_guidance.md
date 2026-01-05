@@ -32,11 +32,22 @@ Within your project proposal, please include a section with a clear timeline det
 Before starting the coding phase, a private Zulip channel dedicated to the GSoC project will be created as the main communication channel between mentors and the student. In addition, mentors and the student should agree on the communication approach they’ll use during the GSoC period—for example, using only the Zulip channel, having weekly sync-up calls, or any other method that works best for them.
 
 - **Deliverables**
-Before the end of the GSoC period, for the project to be considered successful, the student must complete all assigned tasks, submit a final project report, and present their work and results at the community kickoff and wrap-up meetings. The report may be used directly as a blog post. For particularly complex projects, and if the student is willing, an additional blog article can be prepared and published on the P4 Language Consortium blog.
+    Before the end of the GSoC period, for the project to be considered successful, the student must complete all assigned tasks, submit a final project report, and present their work and results at the community kickoff and wrap-up meetings. 
 
-Students may use any preferred approach to prepare their report, article, and presentations. One suggested method is the laboratory-diary approach: keeping a private log of task progress helps track the work and simplifies the preparation of the final deliverables.
+    The student should create a project folder containing all the files and directories needed to archive the project. It should be structured as follows:
+    ```
+    year/projects/student_project/
+    ├── assets/
+    ├── README.md
+    ├── wiki.md
+    ```
+    The `assets` folder should contain any assets, such as screenshots, GIFs, etc., used in the report. The `README.md` file contains the report; more details are provided in the following paragraph, and the `wiki.md` file should contain links to the report and to relevant PRs for the project’s development.
 
-The report template can be found here: [report template](report_template.md). For any insigths here a few example reports that we think is of high quality and roughly follows the template:
+    The report may be used directly as a blog post. For particularly complex projects, and if the student is willing, an additional blog article can be prepared and published on the P4 Language Consortium blog.
 
-- [2025 GSoC - Bmv2 Pkt Out - Xiyu Hao](/2025/projects/bmv2_pkt_out/README.md)
-- [2024 GSoC - Container Migration - Stanislav Kosorin](/2024/projects/container_migration/README.md)
+    Students may use any preferred approach to prepare their report, article, and presentations. One suggested method is the laboratory-diary approach: keeping a private log of task progress helps track the work and simplifies the preparation of the final deliverables.
+
+    The report template can be found here: [report template](report_template.md). For any insigths here a few example reports that we think is of high quality and roughly follows the template:
+
+    - [2025 GSoC - Bmv2 Pkt Out - Xiyu Hao](/2025/projects/bmv2_pkt_out/README.md)
+    - [2024 GSoC - Container Migration - Stanislav Kosorin](/2024/projects/container_migration/README.md)
