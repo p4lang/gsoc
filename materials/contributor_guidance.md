@@ -32,7 +32,9 @@ Within your project proposal, please include a section with a clear timeline det
 ## During GSoC
 
 - **AI Use for Code and Deliverables**
-Students, together with their mentors, may discuss and agree on the approach to follow for the use of AI during the coding phase, including the selection of appropriate tools. In all cases, the generated code must meet the mentor’s quality expectations, and the student must be able to fully understand and explain the code they submit.
+The use of AI tools as an aid is acceptable. Students, together with their mentors, may discuss and agree on the approach to using AI during the coding phase, including the selection of appropriate tools. In all cases, the submitted code must meet the mentor’s quality expectations, and the student must be able to fully understand and explain the code they submit.
+
+During code review, if it is determined that the contribution relies primarily on AI rather than the student’s own understanding and effort, the project will be considered unsuccessful.
 
 The use of AI tools as an aid for the deliverables is allowed. Applicants may use AI to improve the clarity and correctness of written English and generate figures. The generation, fabrication, or manipulation of data using AI tools to strengthen a proposal—for example, to produce tables, graphs, diagrams, or similar materials—is not permitted.  
 
