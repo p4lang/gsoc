@@ -38,7 +38,7 @@ During code review, if it is determined that the contribution relies primarily o
 
 Applicants may use AI to improve the clarity and correctness of written English and generate figures. The generation, fabrication, or manipulation of data using AI tools to strengthen a proposal—for example, to produce tables, graphs, diagrams, or similar materials—is not permitted.
 
-Adminis and/or mentors will review and evaluate the quality of the submitted deliverables. If the deliverables contain fabricated, misleading, or meaningless content, the project will be considered unsuccessful. 
+Admins and/or mentors will review and evaluate the quality of the submitted deliverables. If the deliverables contain fabricated, misleading, or meaningless content, the project will be considered unsuccessful. 
 
 
 - **Choose Your Communication Method**
