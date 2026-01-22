@@ -9,7 +9,8 @@ Please check our [Contributor Guidance](/materials/contributor_guidance.md) for 
 ⭐ = available as primary mentor
 
 1. ⭐ Jaehyun Lee ([@jaehyun1ee](https://github.com/jaehyun1ee), 99jaehyunlee@kaist.ac.kr)
-1. Davide Scano ([@Dscano](https://github.com/Dscano), d.scano89@gmail.com)
+2. ⭐ Mingyu Ma ([@Mingyumaz](https://github.com/Mingyumaz), mingyu.ma@tu-dresden.de)
+3. Davide Scano ([@Dscano](https://github.com/Dscano), d.scano89@gmail.com)
 
 
 ## FAQ
@@ -55,6 +56,7 @@ It means we expect you to have made relevant contributions in order to demonstra
 - Category: core P4 tooling
   - [Project 1: ](#project-1)
 - Category: exploratory P4 tooling
+  - [Project 2: Realistic Traffic Manager and Queueing Architecture for P4 Switch Simulation in ns-3 (P4sim)](#project-2)
 - Category: P4 research
   - [Project N: ](#project-N)
 
@@ -83,6 +85,91 @@ It means we expect you to have made relevant contributions in order to demonstra
 
 **Resources**
 
+
+---
+
+### <a name='project-2'></a> Project 2: [Realistic Traffic Manager and Queueing Architecture for P4 Switch Simulation in ns-3 (P4sim)] [⤴️](#index)
+
+**Basic info**
+
+![diffi-hard] ![size-l]
+
+- Potential mentors
+  - Primary: Mingyu Ma 
+  - Support: Davide Scano
+- Skills
+  - Required: C++, Git
+  - Preferred: ns-3, P4, networking simulation
+- Discussion thread: GitHub issue tracker, Zulip
+
+**Alternative qualification task**
+
+1. Skeleton dummy switch model in [ns-3](https://www.nsnam.org/)
+
+Implement a minimal “skeleton” dummy switch model in ns-3 according to the current P4sim Plan A architecture:
+
+- The switch should support a configurable number of ports.
+- Each egress port should be able to attach a configurable [`Traffic Manager/traffic control`](https://github.com/p4lang/tutorials/tree/master/exercises/calc) module.
+- The focus is on designing and implementing the port-level `NetDevice` structure in ns-3, rather than full packet processing logic.
+- The implementation should be submitted to a public GitHub repository.
+
+This skeleton switch will serve as the architectural starting point for the full project.
+
+2. Running a P4 tutorial program on P4sim
+
+Choose one of the following P4 tutorial exercises and make it runnable on P4sim:
+
+- [`source_routing`](https://github.com/p4lang/tutorials/tree/master/exercises/source_routing)
+- [`calc`](https://github.com/p4lang/tutorials/tree/master/exercises/calc)
+
+The task includes:
+
+- Writing the ns-3 simulation scripts and set up the network connnection,
+- Adapting the P4 program to P4sim,
+- Verifying correct functionality in the ns-3 simulation environment,
+- Submitting the implementation as a pull request to the P4sim repository
+
+**Project description**
+
+Modern programmable switches based on P4 (e.g., Intel Tofino, Broadcom ASICs) employ sophisticated traffic management architectures, including multiple queues per output port, strict or weighted scheduling, and accurate modeling of packet transmission delays. However, current P4 switch simulators (P4sim, bmv2 and so on) rely on simplified designs, often using a single centralized traffic manager or a single queue per port.
+
+<img width="700" alt="image" src="assets/P4sim-arch.png">
+
+*Figure 1: Architecture of the P4 switch model in P4sim.*
+
+This project aims to redesign and extend the P4 switch model in ns-3 to provide a realistic traffic management architecture aligned with real hardware designs and the PSA (Portable Switch Architecture) model.
+
+<img width="700" alt="image" src="assets/P4sim-compare.png">
+
+*Figure 2: Currents status and Plan A for switch model.*
+
+The main idea is to move the traffic manager from a centralized pipeline into per-egress-port components, where each port maintains its own queue set and scheduler. The project will also integrate ns-3’s existing queueing and scheduling modules to avoid reimplementing well-tested mechanisms.
+
+Key design aspects include:
+
+- Per-port egress traffic managers instead of a single global manager.
+- Configurable traffic manager, reuse the code of [Traffic Control Layer](https://www.nsnam.org/docs/models/html/traffic-control.html).
+- Explicit modeling of packet serialization delay based on link bandwidth.
+- Configurable ingress and egress pipeline processing delays.
+- Full compatibility with PSA-style ingress/egress pipelines.
+
+The new architecture will enable accurate evaluation of congestion, queue buildup, scheduling policies, and latency in networks using P4-programmable switches.
+
+**Expected outcomes**
+
+- A refactored P4 switch architecture in ns-3 with per-port traffic managers.
+- Support for configurable Traffic control in egress ports.
+- Configurable ingress and egress pipeline processing delays.
+- Documentation and usage examples.
+- Example simulation scenarios demonstrating queueing behavior and congestion effects.
+
+**Resources and References**
+
+- [P4sim](https://dl.acm.org/doi/10.1145/3747204.3747210) and [github](https://github.com/HapCommSys/p4sim)
+- Intel / Barefoot Networks – [*Tofino Native Architecture (Public Version)*](https://raw.githubusercontent.com/barefootnetworks/Open-Tofino/master/PUBLIC_Tofino-Native-Arch.pdf)  
+- P4 Switch Architecture and Traffic Manager ([P4 Workshop 2021 slides](https://opennetworking.org/wp-content/uploads/2021/05/2021-P4-WS-Vladimir-Gurevich-Slides.pdf))  
+- Hot Chips 29 – [*P4 Programmable Switch Architecture Tutorial*](https://old.hotchips.org/wp-content/uploads/hc_archives/hc29/HC29.20-Tutorials-Pub/HC29.20.1-P4-Soft-Net-Pub/HC29.21.100-P4-Tutorial.pdf)  
+   
 ---
 
 ### <a name='project-N'></a> Project N: Tutorial documentation for P4-SpecTec: A P4 specification mechanization framework [⤴️](#index)
