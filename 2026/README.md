@@ -17,6 +17,7 @@
   -
 - Primary mentors:
   - Jaehyun Lee ([@jaehyun1ee](https://github.com/jaehyun1ee))
+  - Mingyu Ma ([@Mingyumaz](https://github.com/Mingyumaz))
 - Support mentors:
   - Davide Scano ([@Dscano](https://github.com/Dscano))
 
