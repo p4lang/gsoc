@@ -88,7 +88,7 @@ It means we expect you to have made relevant contributions in order to demonstra
 
 ---
 
-### <a name='project-2'></a> Project 2: [Realistic Traffic Manager and Queueing Architecture for P4 Switch Simulation in ns-3 (P4sim)] [⤴️](#index)
+### <a name='project-2'></a> Project 2: Realistic Traffic Manager and Queueing Architecture for P4 Switch Simulation in ns-3 (P4sim) [⤴️](#index)
 
 **Basic info**
 
