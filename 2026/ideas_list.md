@@ -56,7 +56,7 @@ It means we expect you to have made relevant contributions in order to demonstra
 - Category: core P4 tooling
   - [Project 1: ](#project-1)
 - Category: exploratory P4 tooling
-  - [Project 2: Realistic Traffic Manager and Queueing Architecture for P4 Switch Simulation in ns-3 (P4sim)](#project-2)
+  - Project 2: Realistic Traffic Manager and Queueing Architecture for P4 Switch Simulation in ns-3 (P4sim)(#project-2)
 - Category: P4 research
   - [Project N: ](#project-N)
 
