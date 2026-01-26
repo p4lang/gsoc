@@ -18,8 +18,11 @@
 - Primary mentors:
   - Jaehyun Lee ([@jaehyun1ee](https://github.com/jaehyun1ee))
   - Mingyu Ma ([@Mingyumaz](https://github.com/Mingyumaz))
+  - Jamal Hadi Salim ([@jhsmt](https://github.com/jhsmt))
+  - Victor Nogueira ([@vbnogueira](https://github.com/vbnogueira))
 - Support mentors:
   - Davide Scano ([@Dscano](https://github.com/Dscano))
+  - Evangelos Haleplidis ([@evhalep](https://github.com/evhalep))
 
 ## Application
 
