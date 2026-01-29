@@ -12,6 +12,7 @@ Please check our [Contributor Guidance](/materials/contributor_guidance.md) for 
 2. ⭐ Mingyu Ma ([@Mingyumaz](https://github.com/Mingyumaz), mingyu.ma@tu-dresden.de)
 3. ⭐ Jamal Hadi Salim ([@jhsmt](https://github.com/jhsmt), jhs@mojatatu.com)
 4. ⭐ Victor Nogueira ([@vbnogueira](https://github.com/vbnogueira), victor@mojatatu.com)
+5. ⭐ Matthew Lam ([@matthewtlam](https://github.com/matthewtlam), matthewtlam@google.com)
 5. Davide Scano ([@Dscano](https://github.com/Dscano), d.scano89@gmail.com)
 6. Evangelos Haleplidis ([@evhalep](https://github.com/evhalep), ehalep@mojatatu.com)
 
@@ -74,21 +75,39 @@ It means we expect you to have made relevant contributions in order to demonstra
 ![diffi-easy] ![size-s]
 
 - Potential mentors
-  - Primary:
-  - Support: 
+  - Primary: Matthew Lam
+  - Support: Bili Dong
 - Skills
-  - Required:
-  - Preferred:
-- Discussion thread:
+  - Required: Git, C++
+  - Preferred: Bazel, P4
+- Discussion thread: Github Issue Tracker, Zulip
 
 **Alternative qualification task**
+TBD
 
 **Project description**
+BMv2 is a P4-based packet processor that has not been well maintained over the years due to lack of accessibility, slow builds/tests, lack of readability and complexity. One factor contributing towards the lack of accessibility is the difficulty of setting up the project prior to development.
+
+There are many different enhancements to the repository that can be made including: 
+* Extending support for BMv2 to build using Bazel
+* Refactoring BMv2 to use Google style guide (https://google.github.io/styleguide/cppguide.html)
+    * Absl Integration
+    * Discourage exceptions (use status-based error propagation)
+    * Use smart pointer over manual memory
+    * Explicit constructors
+    * Flatten the directory structure
+    * Deprecating unused features
+* Converting textual logs that manually track the packet through the pipeline into a structured and programmatic form (e.g. .proto) 
+    * Can read more information [here](https://github.com/p4lang/gsoc/blob/main/2025/ideas_list.md#project-2). 
+
 
 **Expected outcomes**
+* Building BMv2 using Bazel will make it easier to set up, manage dependencies, and faster builds and tests
+* Improving readability of BMv2 and reducing complexity of the repository
+*  Structured packet trace outputs supported in BMv2.
 
 **Resources**
-
+* BMv2: https://github.com/p4lang/behavioral-model
 
 ---
 
