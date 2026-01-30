@@ -19,6 +19,7 @@ title: P4 GSoC # the main title
 tagline: GSoC projects under P4 language Consortium # it will display as the subtitle
 
 include:
+  - _posts/**/assets
   - _posts/2024/projects/bmv2_pna/
   - _posts/2024/projects/container_migration/
   - _posts/2024/projects/formatter/
