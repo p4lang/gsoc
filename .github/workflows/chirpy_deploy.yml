@@ -1,14 +1,7 @@
 name: "Build and Deploy"
 on:
   push:
-    branches:
-      - main
-      - master
-    paths-ignore:
-      - .gitignore
-      - README.md
-      - LICENSE
-
+    branches: ["main", "master"]
   workflow_dispatch:
 
 permissions:
@@ -18,12 +11,11 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -43,13 +35,14 @@ jobs:
 
       - name: Inject Yearly Posts
         run: |
-          # Ensure destination exists
           mkdir -p blog/_posts
           # Move 2024, 2025, etc. into the theme structure
           cp -r 20[0-9][0-9] blog/_posts/ 2>/dev/null || true
 
       - name: Build with Jekyll
-        run: bundle exec jekyll build -s blog -d _site${{ steps.pages.outputs.base_path }}
+        run: |
+          bundle exec jekyll build -s blog -d ${{ github.workspace }}/_site \
+          --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: "production"
           BUNDLE_GEMFILE: ${{ github.workspace }}/blog/Gemfile
@@ -57,7 +50,7 @@ jobs:
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "_site${{ steps.pages.outputs.base_path }}"
+          path: ${{ github.workspace }}/_site
 
   deploy:
     environment:
