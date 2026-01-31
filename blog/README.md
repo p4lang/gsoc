@@ -32,3 +32,14 @@ render_with_liquid: false
 permalink: /posts/2024/idea_list/
 ---
 ```
+
+### How to add images/GIFs
+
+To make sure images don't break on the website, follow these steps:
+
+1. **Upload:** Push your image to the `assets` folder in your project directory.
+2. **Get Link:** Go to the file on GitHub, click on it, and copy the URL. 
+3. **Paste:** Use that full link in your Markdown. 
+
+**Example:**
+![Alt text](https://raw.githubusercontent.com/p4lang/gsoc/main/2025/projects/gigaflow/assets/GSOC_img_2.png)
