@@ -13,8 +13,10 @@ Please check our [Contributor Guidance](/materials/contributor_guidance.md) for 
 3. ⭐ Jamal Hadi Salim ([@jhsmt](https://github.com/jhsmt), jhs@mojatatu.com)
 4. ⭐ Victor Nogueira ([@vbnogueira](https://github.com/vbnogueira), victor@mojatatu.com)
 5. ⭐ Matthew Lam ([@matthewtlam](https://github.com/matthewtlam), matthewtlam@google.com)
-5. Davide Scano ([@Dscano](https://github.com/Dscano), d.scano89@gmail.com)
-6. Evangelos Haleplidis ([@evhalep](https://github.com/evhalep), ehalep@mojatatu.com)
+6. ⭐ Jiaxin Lin ([@jxlin-lock](https://github.com/jxlin-lock), jiaxinl@cornell.edu)
+7. ⭐ Zhiyuan Guo ([@depctg](https://github.com/depctg), zhiyuang@cornell.edu)
+8. Davide Scano ([@Dscano](https://github.com/Dscano), d.scano89@gmail.com)
+9. Evangelos Haleplidis ([@evhalep](https://github.com/evhalep), ehalep@mojatatu.com)
 
 
 ## FAQ
@@ -63,7 +65,8 @@ It means we expect you to have made relevant contributions in order to demonstra
   - [Project 2: Realistic Traffic Manager and Queueing Architecture for P4 Switch Simulation in ns-3 (P4sim)](#project-2)
   - [Project 3: Polyglot P4TC: Python and Rust API Wrappers for Linux TC-based P4](#project-3)
 - Category: P4 research
-  - [Project 4: Tutorial documentation for P4-SpecTec: A P4 specification mechanization framework](#project-4)
+  - [Project 4: Alkali-P4MLIR: Bridging P4 and SmartNICs Through MLIR Dialect Conversion Between Alkali IR and P4MLIR](#project-4)
+  - [Project 5: Tutorial documentation for P4-SpecTec: A P4 specification mechanization framework](#project-5)
 
 
 ---
@@ -559,7 +562,67 @@ You can explore all P4TC repos from the organization page here: [https://github.
 
 ---
 
-### <a name='project-4'></a> Project N: Tutorial documentation for P4-SpecTec: A P4 specification mechanization framework [⤴️](#index)
+### <a name='project-4'></a> Project 4: Alkali-P4MLIR: Bridging P4 and SmartNICs Through MLIR Dialect Conversion Between Alkali IR and P4MLIR. [⤴️](#index)
+
+![diffi-medium] ![size-m]
+
+**Basic info**
+
+Potential mentors
++ Primary: Jiaxin Lin, Zhiyuan Guo
++ Support: -
+
+Skills
++ Required: [MLIR](https://mlir.llvm.org/)
++ Preferred: P4, P4C, P4MLIR
++ Discussion thread: TBD
+
+**Alternative qualification task**
+
+Please demonstrate your MLIR skills through contributions to any of the following projects:
++ [P4MLIR](https://github.com/p4lang/p4mlir-incubator) or [Alkali](https://github.com/utnslab/Alkali) itself.
++ Any other MLIR-based compiler project.
++ Your personal project is also fine.
+Make sure your contributions demonstrate your knowledge of MLIR concepts & internals.
+
+**Project description**
+
+Alkali(published at NSDI'25) is a compiler infrastructure for SmartNICs, delivering both functional and performance portability across a wide range of SmartNIC hardware. It centers on a unified intermediate representation (IR), a common set of optimization and transformation passes, and an automated network-application parallelization pipeline. Currently, the Alkai repo contains a frontend for C, and code generation for the following backends: Verilog(FPGA), MicroC(Netronome), and LLVM(ARM DPDK/RiscV).
+This project aims to extend the existing Alkali infrastructure to support the P4 front-end language and the P4-based SmartNIC backend.
+
+<img width="700" alt="image" src="assets/alkali-p4mlir-alkali.png">
+
+There is a P4-specific MLIR dialect [P4HIR](https://github.com/p4lang/p4mlir-incubator), which implements dialect operations corresponding to P4 constructs and can be used to support the P4 front-end language and the P4-based SmartNIC backend in Alkali. In this project, instead of individually translating P4 sources to and from multiple SmartNIC programming languages (e.g., Verilog, microC), P4 programs could first be converted into P4MLIR and then transformed via operator-to-operator conversion to and from the Alkali IR. As both representations are defined within the MLIR framework, the conversion process can be semantically preserving, incremental, and engineering-maintainable, with support from the MLIR infrastructure.
+
+In the world of MLIR, those language-to-language translations are modeled within the framework of [dialect conversion](https://mlir.llvm.org/docs/DialectConversion/). The major goals of this project include building the dialect conversion passes for both directions: 1) a pass to convert the P4MLIR into Alkali IR, which effectively enables programming diverse SmartNIC hardware using P4, and 2) a pass to convert Alkali IR into P4MLIR, which effectively enables the general Alkali programs and optimization passes on P4-enabled SmartNIC pipelines. 
+
+The precise set of tasks within the project includes:
+- Implementation of dialect conversion components, including type conversions, static operator conversions, control flow conversion, etc.
+- Implement an analysis conversion pass from `P4HIR` to `ep2` dialect.
+- Implement an analysis conversion pass from `ep2` to `P4HIR` dialect.
+  + Implementation of analysis passes, dynamically deciding which operations are legalizable from Alkali IR to P4.
+  + Implementation of the pre-conversion transformation pipeline within Alkali IR, including applying the existing passes and building new transformation passes.
+  + Implementation of generic P4 performance model within Alkali.
+  + Integration of the Alkali compiler optimization pipeline for `P4HIR` target. 
+
+As both P4MLIR and Alkali are experimental and under active development, the dialect interface, including operator definitions, analysis and optimization passes, and other parts, could be changed along with the development of the project to fit the project's needs. The exact list of tasks is to be determined with mentors.
+
+**Expected outcomes**
+
++ Implementation of the bi-directional dialect conversion pass.
++ Document the changes made.
+
+**Resources**
+
+- Alkali: https://github.com/utnslab/Alkali
+- Alkali Paper: https://www.usenix.org/conference/nsdi25/presentation/lin-jiaxin 
+- P4MLIR: https://github.com/p4lang/p4mlir
+- P4C: https://github.com/p4lang/p4c
+- MLIR: https://mlir.llvm.org/
+
+---
+
+### <a name='project-5'></a> Project N: Tutorial documentation for P4-SpecTec: A P4 specification mechanization framework [⤴️](#index)
 
 **Basic info**
 
