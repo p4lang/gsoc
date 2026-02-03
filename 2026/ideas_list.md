@@ -792,3 +792,98 @@ The tutorial documentation is expected to include hands-on examples for nano-P4,
 - Reference project: Wasm-SpecTec
   - https://github.com/Wasm-DSL/spectec
   - https://github.com/Wasm-DSL/spectec/tree/main/spectec/doc
+
+---
+### <a name='project-3'></a> Project 6: Integrating P4-based In-Network Machine Learning framework into P4Pi [⤴️](#index)
+
+**Basic info**
+
+![diffi-medium] ![size-m]
+
+**Potential mentors**
+  - Primary: Peng Qian
+  - Support: TBD
+ 
+**Required Skills**
+- Programming Languages: Python, P4, Git, Bash  
+- Systems & Networking: Programmable data planes, basic Linux networking  
+
+**Preferred Skills**
+- Machine Learning basics (training/inference workflows)
+- P4 tooling: p4c, p4c-dpdk， 
+
+**Discussion thread**
+
+- GitHub issue tracker
+- Zulip
+
+**Alternative Qualification Task**
+
+- Complete an end-to-end Planter workflow, including data loading, training an existing ML module, automatic generation of target-specific P4 dataplane code, and deployment on a BMv2 environment for functional testing and evaluation.
+
+**Project Description**
+
+[P4Pi](https://github.com/p4lang/p4pi) is a Raspberry Pi–based integrated P4 environment that has been widely used for teaching and research on programmable data planes. It provides a low-cost and reproducible platform for experimenting with P4 programs and software switches.
+
+While P4Pi is well suited for teaching traditional P4-based packet processing, it currently lacks native support for machine-learning-enhanced networking workflows. [Planter](https://github.com/In-Network-Machine-Learning/Planter) is an in-network machine learning framework that enables training and inference of lightweight ML models close to the data plane. Planter adopts a modular, target-oriented design that supports mapping ML models to different programmable datapath targets and automatically generates target-specific P4 dataplane logic from trained models.
+
+This project proposes to integrate P4-based in-network machine learning into P4Pi by incorporating Planter into the existing P4Pi software stack.
+
+**Benefits to the Community**
+
+- Adds native support for in-network machine learning to P4Pi  
+- Enables hands-on teaching of P4 and ML co-design on low-cost hardware  
+- Lowers the barrier for students and researchers to explore ML-assisted networking with P4  
+- Provides reusable examples and documentation for research prototyping  
+
+
+**Work Plan** 
+
+**1. Planter–P4Pi Target Integration and p4c-dpdk Support**
+
+- Extend Planter’s existing `src/targets` abstraction by adding a new target adapter for the p4c-dpdk backend.
+- Implement automatic target-specific P4 code generation for the p4c-dpdk backend, enabling Planter-generated ML logic to be compiled and executed via the existing p4c-dpdk toolchain.
+- For each supported ML module, develop corresponding target-level test code to automatically validate correctness and compatibility with the p4c-dpdk datapath.
+
+
+**2. Extension of In-Network ML Algorithm Modules**
+
+- Extend Planter’s ML algorithm library by implementing one to two additional ML modules that have been identified in prior Planter-related research as promising candidates for further exploration.
+- Integrate these new ML modules into the existing Planter workflow, including model configuration, code generation, and target-specific mapping.
+
+
+**3. P4Pi-Based DPDK Software Switch Examples**
+
+- Develop end-to-end example applications on the P4Pi platform that demonstrate ML-assisted packet processing using a DPDK-based software switch.
+- Validate that ML inference results are correctly reflected in P4 control-plane updates and datapath behavior.
+
+
+**4. System Configuration, Packaging, and Automation**
+
+- Develop setup scripts and configuration files to automate deployment of the integrated Planter–P4Pi environment on Raspberry Pi.
+- Package Planter as an integrated component of the P4Pi system, including a pre-configured P4Pi system image for out-of-the-box experimentation.
+
+**5. Testing, Documentation, and Teaching Materials**
+
+- Develop teaching-oriented examples and step-by-step lab exercises (e.g., flow classification, anomaly detection).
+- Write clear documentation describing the system architecture, usage workflow, and extension points for future research and teaching.
+
+**Deliverables**
+
+- A P4Pi system image with Planter integrated, enabling out-of-the-box in-network ML experiments  
+- At least two end-to-end in-network ML example applications on P4PI platform
+- Automated setup and configuration scripts  
+- Teaching-oriented documentation and tutorials  
+
+
+**References**
+
+1. P4Pi: A Raspberry Pi–based P4 Teaching and Research Platform.  
+   https://github.com/p4lang/p4pi
+
+2. Planter: In-Network Machine Learning Framework.  
+   https://github.com/In-Network-Machine-Learning/Planter
+
+3. p4c-dpdk Backend Documentation and Source Code.  
+   https://github.com/p4lang/p4c/tree/main/backends/dpdk
+---
