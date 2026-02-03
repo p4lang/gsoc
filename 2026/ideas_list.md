@@ -14,8 +14,9 @@ Please check our [Contributor Guidance](/materials/contributor_guidance.md) for 
 4. ⭐ Victor Nogueira ([@vbnogueira](https://github.com/vbnogueira), victor@mojatatu.com)
 5. ⭐ Matthew Lam ([@matthewtlam](https://github.com/matthewtlam), matthewtlam@google.com)
 6. ⭐ Takeaki Oura([@iHalt10](https://github.com/iHalt10), ihalt10@icloud.com)
-7. Davide Scano ([@Dscano](https://github.com/Dscano), d.scano89@gmail.com)
-8. Evangelos Haleplidis ([@evhalep](https://github.com/evhalep), ehalep@mojatatu.com)
+7. ⭐ Peng Qian ([@dawndusk0508](https://github.com/dawndusk0508), peng.qian@ox.ac.uk)
+8. Davide Scano ([@Dscano](https://github.com/Dscano), d.scano89@gmail.com)
+9. Evangelos Haleplidis ([@evhalep](https://github.com/evhalep), ehalep@mojatatu.com)
 
 ## FAQ
 
