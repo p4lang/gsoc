@@ -26,6 +26,7 @@
   - Victor Nogueira ([@vbnogueira](https://github.com/vbnogueira))
   - Zhiyuan Guo ([@depctg](https://github.com/depctg))
 - Support mentors:
+  - Anton Korobeynikov ([@asl](https://github.com/asl))
   - Bili Dong ([@qobilidop](https://github.com/qobilidop))
   - Davide Scano ([@Dscano](https://github.com/Dscano))
   - Evangelos Haleplidis ([@evhalep](https://github.com/evhalep))
