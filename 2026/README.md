@@ -25,7 +25,7 @@
 - Support mentors:
   - Davide Scano ([@Dscano](https://github.com/Dscano))
   - Evangelos Haleplidis ([@evhalep](https://github.com/evhalep))
-
+  - Bili Dong ([@qobilidop](https://github.com/qobilidop))
 ## Application
 
 - [Ideas List](ideas_list.md)

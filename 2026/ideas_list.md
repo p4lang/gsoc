@@ -69,11 +69,11 @@ It means we expect you to have made relevant contributions in order to demonstra
 
 ---
 
-### <a name='project-1'></a> Project 1:[⤴️](#index)
+### <a name='project-1'></a> Project 1: Modernizing the P4 Software Switch BMv2 [⤴️](#index)
 
 **Basic info**
 
-![diffi-easy] ![size-s]
+![diffi-medium] ![size-m]
 
 - Potential mentors
   - Primary: Matthew Lam
@@ -84,7 +84,12 @@ It means we expect you to have made relevant contributions in order to demonstra
 - Discussion thread: Github Issue Tracker, Zulip
 
 **Alternative qualification task**
-TBD
+Presently, BMv2 can only be built with CMake. The goal is to modernize BMv2 and get it to build using Bazel 8.5.0 and deploy a Github workflow runs the unit tests for [simple_switch_grpc](https://github.com/p4lang/behavioral-model/tree/main/targets/simple_switch_grpc).
+
+1. Add support for [Bazel 8.5.0](https://bazel.build/versions/8.5.0/run/build) to BMv2's simple_switch_grpc. An example P4 repository that uses Bazel is [P4Runtime](https://github.com/p4lang/p4runtime).
+2. Create a Github workflow that caches, builds, and runs the unit tests. An example P4 repository that has a Github workflow set up is [P4C](https://github.com/p4lang/p4c/blob/7d367760701056cfa4fe0321f62914c0e79a6214/.github/workflows/ci-bazel.yml).
+
+Create a PR under https://github.com/p4lang/behavioral-model.
 
 **Project description**
 BMv2 is a P4-based packet processor that has not been well maintained over the years due to lack of accessibility, slow builds/tests, lack of readability and complexity. One factor contributing towards the lack of accessibility is the difficulty of setting up the project prior to development.
