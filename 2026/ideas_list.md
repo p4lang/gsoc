@@ -65,7 +65,8 @@ It means we expect you to have made relevant contributions in order to demonstra
   - [Project 3: Polyglot P4TC: Python and Rust API Wrappers for Linux TC-based P4](#project-3)
   - [Project 4: PCIe TLP Communication Framework using P4](#project-4)
 - Category: P4 research
-- [Project 5: Tutorial documentation for P4-SpecTec: A P4 specification mechanization framework](#project-5)
+  - [Project 5: Tutorial documentation for P4-SpecTec: A P4 specification mechanization framework](#project-5)
+  - [Project 6: Integrating P4-based In-Network Machine Learning framework into P4Pi](#project-6)
 
 
 ---
