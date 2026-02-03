@@ -13,9 +13,9 @@ Please check our [Contributor Guidance](/materials/contributor_guidance.md) for 
 3. ⭐ Jamal Hadi Salim ([@jhsmt](https://github.com/jhsmt), jhs@mojatatu.com)
 4. ⭐ Victor Nogueira ([@vbnogueira](https://github.com/vbnogueira), victor@mojatatu.com)
 5. ⭐ Matthew Lam ([@matthewtlam](https://github.com/matthewtlam), matthewtlam@google.com)
-5. Davide Scano ([@Dscano](https://github.com/Dscano), d.scano89@gmail.com)
-6. Evangelos Haleplidis ([@evhalep](https://github.com/evhalep), ehalep@mojatatu.com)
-
+6. ⭐ Takeaki Oura([@iHalt10](https://github.com/iHalt10), ihalt10@icloud.com)
+7. Davide Scano ([@Dscano](https://github.com/Dscano), d.scano89@gmail.com)
+8. Evangelos Haleplidis ([@evhalep](https://github.com/evhalep), ehalep@mojatatu.com)
 
 ## FAQ
 
@@ -62,8 +62,9 @@ It means we expect you to have made relevant contributions in order to demonstra
 - Category: exploratory P4 tooling
   - [Project 2: Realistic Traffic Manager and Queueing Architecture for P4 Switch Simulation in ns-3 (P4sim)](#project-2)
   - [Project 3: Polyglot P4TC: Python and Rust API Wrappers for Linux TC-based P4](#project-3)
+  - [Project 4: PCIe TLP Communication Framework using P4](#project-4)
 - Category: P4 research
-  - [Project 4: Tutorial documentation for P4-SpecTec: A P4 specification mechanization framework](#project-4)
+- [Project 5: Tutorial documentation for P4-SpecTec: A P4 specification mechanization framework](#project-5)
 
 
 ---
@@ -564,7 +565,125 @@ You can explore all P4TC repos from the organization page here: [https://github.
 
 ---
 
-### <a name='project-4'></a> Project N: Tutorial documentation for P4-SpecTec: A P4 specification mechanization framework [⤴️](#index)
+### <a name='project-4'></a> Project 4: PCIe TLP Communication Framework using P4 [⤴️](#index)
+
+**Basic info**
+
+![diffi-hard] ![size-l]
+
+- Potential mentors
+  - Primary: Takeoki Oura
+  - Support: -
+- Skills
+  - Required: SystemVerilog (or Verilog) programming with Xilinx Vivado, Git
+  - Preferred: P4 language, PCIe protocol knowledge
+  - Discussion thread: GitHub issue tracker, Zulip
+
+**Alternative qualification task**
+
+- Please demonstrate your FPGA skills through contributions to any of the following (Required):
+  - Any personal project that has used Xilinx Vivado tools
+  - Any existing Xilinx FPGA projects
+  - If you have access to Alveo or similar devices, you may explore the following projects and submit a report (other projects are also acceptable):
+    - [VNP4 Framework](https://github.com/iHalt10/vnp4_framework): Framework for integrating Vitis Networking P4 IP with OpenNIC
+    - [PCIe Subsystem for AMD Xilinx](https://github.com/iHalt10/pcie_subsystem): SystemVerilog modules for PCIe TLP control and DMA transfer
+    - These projects will help you gain the necessary knowledge for this GSoC project. If you have any questions about compilation, operation, or code reading during the application period, feel free to ask.
+
+- Please demonstrate your P4 knowledge through contributions to any of the following (Optional):
+  - Any existing P4 project
+  - Any personal project that incorporates P4
+
+- Please demonstrate your PCIe knowledge through contributions to any of the following (Optional):
+  - Any existing PCIe-related projects
+  - Any personal project that involves PCIe protocol or hardware design
+  - A report or investigation document about PCIe mechanisms and TLP packets
+    - You may refer to resources such as the [PCIe UltraScale+ IP Product Guide (PG213)](https://docs.amd.com/r/en-US/pg213-pcie4-ultrascale-plus) or other AMD Xilinx PCIe IP specification documents
+
+**Project description**
+
+Although P4 is designed to be "Protocol-independent," current practical applications are primarily concentrated on network protocols such as Ethernet, IP, and TCP, with no existing examples of application to low-layer device interconnect protocols like PCIe.
+
+This project aims to demonstrate P4's true versatility by implementing a framework for processing **PCIe Transaction Layer Packets (TLP)** using P4 on AMD Xilinx FPGAs. By combining AMD's **Vitis Networking P4 IP** and **PCIe UltraScale+ IP**, we will develop FPGA hardware logic and P4 programs capable of analyzing, controlling, and forwarding PCIe TLP.
+
+![hardware design](assets/pcie-tlp-p4-hardware-design.png)
+
+*Figure: hardware design showing PCIe TLP processing through P4 engine*
+
+The project consists of two phases:
+
+**Phase 1 (Required): Basic TLP Processing in Conventional DMA Transfer**
+
+In standard PCIe DMA transfers (Endpoint → Host Memory → Endpoint), we will process TLP with P4:
+
+- Parse/Deparse RQ/CQ/RC/CC descriptors (128bit/96bit)
+- Identify and process Memory Read/Write Requests
+- Collect transaction statistics
+- Advanced control using P4 Externs (if needed)
+
+**Application Example:** By converting Ethernet packets to TLP in the P4 engine and directly writing to DMA regions, the PCIe device can be recognized by Linux with any PCIe Class Code (NVMe, GPU, Custom Device, etc.) rather than as a NIC. This enables P4 end users to select arbitrary PCIe devices instead of treating them as network interfaces.
+
+**Phase 2 (Optional - Challenging Goal): PCIe Peer-to-Peer (P2P) Communication**
+
+Direct TLP exchange between devices, bypassing host memory (Endpoint A → PCIe Switch → Endpoint B), provides:
+
+- Host memory bandwidth savings
+- Latency reduction
+- CPU overhead reduction
+
+P4 will implement:
+- PCIe Switch routing control (Address-Based and ID-Based Routing)
+- PCIe TLP access control
+- QoS and traffic management
+
+**Technical Challenges:**
+
+P2P communication faces hardware constraints including PCIe Switch/Root Complex support, IOMMU configuration, and ACS (Access Control Services) limitations. Feasibility verification is an important outcome of this project. While PCIe specifications support P2P and the PCIe UltraScale+ IP provides necessary functionality, system-wide operation verification is required.
+
+**Project Completion Criteria:**
+
+Due to time constraints, complete implementation of all features may not be feasible within the GSoC period. Therefore, the project will be considered complete when simple demo applications are successfully running.
+
+- **Phase 1 Demo Application:** A simple demonstration where a register write (CQ) triggers P4 processing, which then performs a DMA write (RQ) to a designated memory region. The PCIe device is recognized by Linux with a custom Class Code (not as a NIC), demonstrating that P4 can control basic PCIe operations.
+
+- **Phase 2 Demo Application (if Phase 2 is achieved):** A working demonstration where data is transferred directly between two PCIe endpoints (e.g., two Alveo FPGAs) via PCIe Switch, bypassing host memory, with P4 controlling the routing.
+
+Phase 1 is definitely achievable and has academic and practical value in itself as "applying P4 to non-network protocols." Phase 2 is a challenging goal built on Phase 1's foundation, expanding performance improvements and PCIe device application possibilities. Both outcomes have significance in presenting new application domains to the P4 community.
+
+**Expected outcomes**
+
+- **P4 Program for PCIe TLP Processing**
+  - Parsers/Deparsers for all TLP descriptor types (RQ/CQ/RC/CC)
+  - P4 program that enables demo applications to function
+  - Routing logic implementation (Optional - Phase 2)
+
+- **SystemVerilog Integration Logic**
+  - TLP preprocessing and postprocessing modules
+  - Top-level integration with PCIe UltraScale+ IP and Vitis P4 IP
+
+- **Demo Applications**
+  - Arbitrary PCIe Class Code configuration demo (Required - Phase 1)
+  - P2P communication demo (Optional - Phase 2)
+
+- **Documentation**
+  - Design documents
+  - Final project report
+
+- **All deliverables will be published as open source on GitHub**
+
+**Resources and References**
+
+- AMD Xilinx IPs:
+    - [PCIe UltraScale+ IP](https://www.amd.com/en/products/adaptive-socs-and-fpgas/intellectual-property/pcie4-ultrascale-plus.html): TLP transmission/reception, AXI Stream interface
+    - [Vitis Networking P4](https://www.amd.com/en/products/adaptive-socs-and-fpgas/intellectual-property/ef-di-vitisnetp4.html): Hardware execution of P4 programs
+
+- Related Projects by Mentor:
+    - [PCIe Subsystem for AMD Xilinx](https://github.com/iHalt10/pcie_subsystem): DMA transfer and TLP control using PCIe UltraScale+ IP
+    - [VNP4 Framework](https://github.com/iHalt10/vnp4_framework): Framework for integrating Vitis Networking P4 with OpenNIC
+    - [VNP4 Runtime Server](https://github.com/iHalt10/vnp4_runtime_server): P4Runtime-compliant gRPC server for Vitis Networking P4 IP
+
+---
+
+### <a name='project-5'></a> Project 5: Tutorial documentation for P4-SpecTec: A P4 specification mechanization framework [⤴️](#index)
 
 **Basic info**
 
