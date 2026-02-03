@@ -22,6 +22,7 @@
   - Victor Nogueira ([@vbnogueira](https://github.com/vbnogueira))
   - Matthew Lam ([@matthewtlam](https://github.com/matthewtlam))
   - Takeaki Oura([@iHalt10](https://github.com/iHalt10))
+  - Peng Qian ([@dawndusk0508](https://github.com/dawndusk0508))
 - Support mentors:
   - Davide Scano ([@Dscano](https://github.com/Dscano))
   - Evangelos Haleplidis ([@evhalep](https://github.com/evhalep))
