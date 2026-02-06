@@ -17,10 +17,11 @@ Please check our [Contributor Guidance](/materials/contributor_guidance.md) for 
 7. ⭐ Takeaki Oura([@iHalt10](https://github.com/iHalt10), ihalt10@icloud.com)
 8. ⭐ Victor Nogueira ([@vbnogueira](https://github.com/vbnogueira), victor@mojatatu.com)
 9. ⭐ Zhiyuan Guo ([@depctg](https://github.com/depctg), zhiyuang@cornell.edu)
-10. Anton Korobeynikov ([@asl](https://github.com/asl), anton@korobeynikov.info)
-11. Bili Dong ([@qobilidop](https://github.com/qobilidop), bilid@google.com)
-12. Davide Scano ([@Dscano](https://github.com/Dscano), d.scano89@gmail.com)
-13. Evangelos Haleplidis ([@evhalep](https://github.com/evhalep), ehalep@mojatatu.com)
+10. Ali Imran ([@ALI11-2000](https://github.com/ALI11-2000), imranali@umich.edu)
+11. Anton Korobeynikov ([@asl](https://github.com/asl), anton@korobeynikov.info)
+12. Bili Dong ([@qobilidop](https://github.com/qobilidop), bilid@google.com)
+13. Davide Scano ([@Dscano](https://github.com/Dscano), d.scano89@gmail.com)
+14. Evangelos Haleplidis ([@evhalep](https://github.com/evhalep), ehalep@mojatatu.com)
 
 ## FAQ
 
@@ -580,7 +581,7 @@ You can explore all P4TC repos from the organization page here: [https://github.
 
 - Potential mentors
   - Primary: Takeoki Oura
-  - Support: -
+  - Support: Ali Imran
 - Skills
   - Required: SystemVerilog (or Verilog) programming with Xilinx Vivado, Git
   - Preferred: P4 language, PCIe protocol knowledge
