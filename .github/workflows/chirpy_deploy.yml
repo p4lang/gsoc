@@ -1,0 +1,64 @@
+name: "Build and Deploy"
+on:
+  push:
+    branches: ["main", "master"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.3
+          bundler-cache: true
+          working-directory: blog 
+
+      - name: Inject Yearly Posts
+        run: |
+          mkdir -p blog/_posts
+          # Move 2024, 2025, etc. into the theme structure
+          cp -r 20[0-9][0-9] blog/_posts/ 2>/dev/null || true
+
+      - name: Build with Jekyll
+        run: |
+          bundle exec jekyll build -s blog -d ${{ github.workspace }}/_site \
+          --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: "production"
+          BUNDLE_GEMFILE: ${{ github.workspace }}/blog/Gemfile
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ github.workspace }}/_site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
