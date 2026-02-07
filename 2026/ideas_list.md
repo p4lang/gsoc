@@ -22,6 +22,7 @@ Please check our [Contributor Guidance](/materials/contributor_guidance.md) for 
 12. Bili Dong ([@qobilidop](https://github.com/qobilidop), bilid@google.com)
 13. Davide Scano ([@Dscano](https://github.com/Dscano), d.scano89@gmail.com)
 14. Evangelos Haleplidis ([@evhalep](https://github.com/evhalep), ehalep@mojatatu.com)
+15. Fabian Ruffy ([@fruffy](https://github.com/fruffy, fruffy@nyu.edu)
 
 ## FAQ
 
@@ -73,7 +74,7 @@ It means we expect you to have made relevant contributions in order to demonstra
   - [Project 5: Alkali-P4MLIR: Bridging P4 and SmartNICs Through MLIR Dialect Conversion Between Alkali IR and P4MLIR](#project-5)
   - [Project 6: Tutorial documentation for P4-SpecTec: A P4 specification mechanization framework](#project-6)
   - [Project 7: Integrating P4-based In-Network Machine Learning framework into P4Pi](#project-7)
-
+  - [Project 8: P4MLIR Exporter: Generate Valid P4 from P4HIR](#project-8)
 
 ---
 
@@ -943,4 +944,57 @@ This project proposes to integrate P4-based in-network machine learning into P4P
 
 3. p4c-dpdk Backend Documentation and Source Code.  
    https://github.com/p4lang/p4c/tree/main/backends/dpdk
+---
+
+### <a name='project-8'></a> Project 8: P4MLIR Exporter: Generate Valid P4 from P4HIR [⤴️](#index)
+
+**Basic info**
+
+![diffi-medium] ![size-l]
+
+- Potential mentors
+  - Primary: Fabian Ruffy
+  - Support:
+- Skills
+  - Required: MLIR, C++
+  - Preferred: P4, P4C, compiler testing (lit, knowledge of golden testing)
+- Discussion thread: https://github.com/p4lang/p4mlir-incubator/pull/168
+- A bit more information: [slides](https://p4.org/wp-content/uploads/2024/11/204-P4-Workshop-P4HIR_-Towards-Bridging-P4C-with-MLIR-P4-Workshop-2024.pdf)
+
+**Alternative qualification task**
+
+- Please demonstrate your MLIR skills through contributions to any of the following projects:
+  - [P4MLIR](https://github.com/p4lang/p4mlir) itself.
+  - Any other MLIR-based compiler project.
+  - Your personal project is also fine.
+- Make sure your contributions could demonstrate your knowledge of MLIR concepts & internals.
+
+**Project description**
+
+The P4MLIR project's goal is to provide an alternative compiler implementation for the P4 language, implementing using the LLVM MLIR framework (https://mlir.llvm.org/).
+
+P4MLIR provides a high-level MLIR dialect (`P4HIR`) for P4 compilers. This project targets a robust exporter specifically for the P4HIR dialect that can translate P4HIR back into valid, idiomatic P4 code. An exporter like this has several applications: transpiling (converting other languages into P4 code), debugging (checking the representation of a P4 program after transforming it), validation (ensuring transformed code remains semantically equivalent).
+
+The goal of this GSoC project specifically is to build a reliable exporter pass (`export_to_p4.cpp`) that exports P4HIR to correct P4. The exporter must handle a wide range of P4 constructs, preserve annotations and parameter directions, and emit source compatible with `p4test`. The goal is to make the exporter usable as a standalone tool or as part of a compiler pipeline.
+
+Since P4MLIR is a moving target, the precise set of tasks will be finalized with mentors, but may include:
+
+- Extend the exporter coverage for missing P4 constructs (e.g., tables, actions, parsers, controls, enums, annotations).
+- Correctly handle corner cases of the language.
+- Improve type/parameter rendering, name stability, and declaration ordering. Make the P4 generation more idiomatic.
+- Add or refine exporter tests in `test/Translate` and ensure `p4test` can compile all example generated test programs.
+- Integrate the exporter and the reference file generation with existing CMake/lit workflows.
+
+**Expected outcomes**
+
+- Full coverage of all P4 programs in the P4HIR test suite.
+- A robust P4 exporter that can handle export the IR of complex P4 programs, such as [dash-pipeline-v1model-bmv2.p4](https://github.com/p4lang/p4c/blob/main/testdata/p4_16_samples/dash/dash-pipeline-v1model-bmv2.p4) or [fabric.p4](https://github.com/p4lang/p4c/blob/main/testdata/p4_16_samples/fabric_20190420/fabric.p4).
+- Documentation of exporter behavior, limitations, and usage.
+
+**Resources**
+
+- P4MLIR: https://github.com/p4lang/p4mlir
+- P4C: https://github.com/p4lang/p4c
+- MLIR: https://mlir.llvm.org/
+
 ---
