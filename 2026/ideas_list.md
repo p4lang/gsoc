@@ -702,7 +702,7 @@ Phase 1 is definitely achievable and has academic and practical value in itself 
 
 - Potential mentors
   - Primary: Fabian Ruffy
-  - Support:
+  - Support: Anton Korobeynikov
 - Skills
   - Required: MLIR, C++
   - Preferred: P4, P4C, compiler testing (lit, knowledge of golden testing)
