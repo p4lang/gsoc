@@ -699,7 +699,7 @@ Phase 1 is definitely achievable and has academic and practical value in itself 
 
 Potential mentors
 + Primary: Jiaxin Lin, Zhiyuan Guo
-+ Support: Anton Korobeynikov
++ Support: Anton Korobeynikov, Bili Dong 
 
 Skills
 + Required: [MLIR](https://mlir.llvm.org/)
