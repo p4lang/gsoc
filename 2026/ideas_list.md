@@ -77,7 +77,11 @@ It means we expect you to have made relevant contributions in order to demonstra
 
 ---
 
-### <a name='project-1'></a> Project 1: BMv2 packet trace support [⤴️](#index)
+### <a name='project-1'></a> Project 1: Modernizing the P4 Software Switch BMv2 [⤴️](#index)
+
+**Note**
+
+The concrete contents of this project are under discussion at https://github.com/p4lang/gsoc/issues/87. Changes are expected.
 
 **Basic info**
 
@@ -92,8 +96,7 @@ It means we expect you to have made relevant contributions in order to demonstra
 - Discussion thread: Github Issue Tracker, Zulip
 
 **Alternative qualification task**
-
-Presently, BMv2 can only be built with CMake. The goal of this qualification task is to enable building using Bazel 8.5.0 (in addition to CMake) and deploy a Github workflow to test that for [simple_switch_grpc](https://github.com/p4lang/behavioral-model/tree/main/targets/simple_switch_grpc).
+Presently, BMv2 can only be built with CMake. The goal is to modernize BMv2 and get it to build using Bazel 8.5.0 and deploy a Github workflow runs the unit tests for [simple_switch_grpc](https://github.com/p4lang/behavioral-model/tree/main/targets/simple_switch_grpc).
 
 1. Add support for [Bazel 8.5.0](https://bazel.build/versions/8.5.0/run/build) to BMv2's simple_switch_grpc. An example P4 repository that uses Bazel is [P4Runtime](https://github.com/p4lang/p4runtime).
 2. Create a Github workflow that caches, builds, and runs the unit tests. An example P4 repository that has a Github workflow set up is [P4C](https://github.com/p4lang/p4c/blob/7d367760701056cfa4fe0321f62914c0e79a6214/.github/workflows/ci-bazel.yml).
@@ -101,19 +104,27 @@ Presently, BMv2 can only be built with CMake. The goal of this qualification tas
 Create a PR under https://github.com/p4lang/behavioral-model.
 
 **Project description**
+BMv2 is a P4-based packet processor that has not been well maintained over the years due to lack of accessibility, slow builds/tests, lack of readability and complexity. One factor contributing towards the lack of accessibility is the difficulty of setting up the project prior to development.
 
-Having programmatic access to the trace of a packet going through a P4 pipeline (e.g. applied tables, actions, entries hit, etc) has many use cases from human comprehension to use by automated tools for test coverage measurement, automated test generation, automated root causing, etc.
+There are many different enhancements to the repository that can be made including: 
+* Extending support for BMv2 to build using Bazel
+* Refactoring BMv2 to use Google style guide (https://google.github.io/styleguide/cppguide.html)
+    * Absl Integration
+    * Discourage exceptions (use status-based error propagation)
+    * Use smart pointer over manual memory
+    * Explicit constructors
+    * Flatten the directory structure
+    * Deprecating unused features
+* Converting textual logs that manually track the packet through the pipeline into a structured and programmatic form (e.g. .proto) 
+    * Can read more information [here](https://github.com/p4lang/gsoc/blob/main/2025/ideas_list.md#project-2). 
 
-BMv2 currently does provide textual logs that can be used to manually track the packet as it goes through the pipeline. However there is no API to access the trace in a more structured and programmatic form (i.e. in a way that can potentially be digested by other tools).
-
-The goal of this project is to provide a mechanism for BMv2 to record the trace and provide it to the user in a structured format.
 
 **Expected outcomes**
-
+* Building BMv2 using Bazel will make it easier to set up, manage dependencies, and faster builds and tests
+* Improving readability of BMv2 and reducing complexity of the repository
 *  Structured packet trace outputs supported in BMv2.
 
 **Resources**
-
 * BMv2: https://github.com/p4lang/behavioral-model
 
 ---
