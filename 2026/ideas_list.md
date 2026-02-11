@@ -64,7 +64,7 @@ It means we expect you to have made relevant contributions in order to demonstra
 ### Index
 
 - Category: core P4 tooling
-  - [Project 1: Modernizing the P4 Software Switch BMv2](#project-1)
+  - [Under Review] [Project 1: Modernizing the P4 Software Switch BMv2](#project-1)
 - Category: exploratory P4 tooling
   - [Project 2: Realistic Traffic Manager and Queueing Architecture for P4 Switch Simulation in ns-3 (P4sim)](#project-2)
   - [Project 3: Polyglot P4TC: Python and Rust API Wrappers for Linux TC-based P4](#project-3)
@@ -81,7 +81,7 @@ It means we expect you to have made relevant contributions in order to demonstra
 
 **Note**
 
-The concrete contents of this project are under discussion at https://github.com/p4lang/gsoc/issues/87. Changes are expected.
+This project proposal is [under review](https://github.com/p4lang/gsoc/issues/87). Project description changes are expected.
 
 **Basic info**
 
