@@ -25,6 +25,7 @@
   - Takeaki Oura([@iHalt10](https://github.com/iHalt10))
   - Victor Nogueira ([@vbnogueira](https://github.com/vbnogueira))
   - Zhiyuan Guo ([@depctg](https://github.com/depctg))
+  - Fabian Ruffy ([@fruffy](https://github.com/fruffy))
 - Support mentors:
   - Ali Imran ([@ALI11-2000](https://github.com/ALI11-2000))
   - Anton Korobeynikov ([@asl](https://github.com/asl))
