@@ -65,7 +65,7 @@ It means we expect you to have made relevant contributions in order to demonstra
 ### Index
 
 **Category 1: Core P4 Tooling**
-  - [Project 1.1: Modernizing the P4 Software Switch BMv2](#project-1.1)
+  - [Under Review] [Project 1.1: Modernizing the P4 Software Switch BMv2](#project-1.1)
 
 **Category 2: Exploratory P4 Tooling**
   - [Project 2.1: Realistic Traffic Manager and Queueing Architecture for P4 Switch Simulation in ns-3 (P4sim)](#project-2.1)
