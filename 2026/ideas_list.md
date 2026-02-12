@@ -82,6 +82,10 @@ It means we expect you to have made relevant contributions in order to demonstra
 
 ### <a name='project-1.1'></a> Project 1.1: Modernizing the P4 Software Switch BMv2 [⤴️](#index)
 
+**Note**
+
+This project proposal is [under review](https://github.com/p4lang/gsoc/issues/87). Project description changes are expected.
+
 **Basic info**
 
 ![diffi-medium] ![size-m]
