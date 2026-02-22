@@ -16,16 +16,23 @@
 - Contributors:
   -
 - Primary mentors:
-  - Jaehyun Lee ([@jaehyun1ee](https://github.com/jaehyun1ee))
-  - Mingyu Ma ([@Mingyumaz](https://github.com/Mingyumaz))
   - Jamal Hadi Salim ([@jhsmt](https://github.com/jhsmt))
-  - Victor Nogueira ([@vbnogueira](https://github.com/vbnogueira))
+  - Jaehyun Lee ([@jaehyun1ee](https://github.com/jaehyun1ee))
+  - Jiaxin Lin ([@jxlin-lock](https://github.com/jxlin-lock))
+  - Mingyu Ma ([@Mingyumaz](https://github.com/Mingyumaz))
   - Matthew Lam ([@matthewtlam](https://github.com/matthewtlam))
+  - Peng Qian ([@dawndusk0508](https://github.com/dawndusk0508))
   - Takeaki Oura([@iHalt10](https://github.com/iHalt10))
+  - Victor Nogueira ([@vbnogueira](https://github.com/vbnogueira))
+  - Zhiyuan Guo ([@depctg](https://github.com/depctg))
+  - Fabian Ruffy ([@fruffy](https://github.com/fruffy))
 - Support mentors:
+  - Ali Imran ([@ALI11-2000](https://github.com/ALI11-2000))
+  - Anton Korobeynikov ([@asl](https://github.com/asl))
+  - Bili Dong ([@qobilidop](https://github.com/qobilidop))
   - Davide Scano ([@Dscano](https://github.com/Dscano))
   - Evangelos Haleplidis ([@evhalep](https://github.com/evhalep))
-  - Bili Dong ([@qobilidop](https://github.com/qobilidop))
+  
 ## Application
 
 - [Ideas List](ideas_list.md)

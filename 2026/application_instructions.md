@@ -58,7 +58,7 @@ However, proposals must reflect the applicant’s own original work and understa
       - Specific qualification tasks provided by mentors for a given project, defined during the     application period.
     - It's suggested to check out existing issues for inspirations, but your pull request could be anything meaningful.
     - Please read [this guide](https://developers.google.com/blockly/guides/contribute/get-started/write_a_good_pr) on how to write a good pull request first.
-    - The pull request doesn’t have to be merged for the qualification task to be considered complete. But if you can manage to get it merged, that’s a bonus point for your application.
+    - Successfully merged pull requests will be awarded bonus points in the application evaluation. Conversely, pull requests that remain inactive or abandoned will incur a penalty. Additionally, if admins or mentors observe a complete lack of engagement in handling the pull request, the proposal submitted by the student may be automatically rejected.
     - Please attach the link to your pull request in the proposal.
   - **Project Timeline**
 

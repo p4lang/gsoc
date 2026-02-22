@@ -8,14 +8,21 @@ Please check our [Contributor Guidance](/materials/contributor_guidance.md) for 
 
 ⭐ = available as primary mentor
 
-1. ⭐ Jaehyun Lee ([@jaehyun1ee](https://github.com/jaehyun1ee), 99jaehyunlee@kaist.ac.kr)
-2. ⭐ Mingyu Ma ([@Mingyumaz](https://github.com/Mingyumaz), mingyu.ma@tu-dresden.de)
-3. ⭐ Jamal Hadi Salim ([@jhsmt](https://github.com/jhsmt), jhs@mojatatu.com)
-4. ⭐ Victor Nogueira ([@vbnogueira](https://github.com/vbnogueira), victor@mojatatu.com)
+1. ⭐ Jamal Hadi Salim ([@jhsmt](https://github.com/jhsmt), jhs@mojatatu.com)
+2. ⭐ Jaehyun Lee ([@jaehyun1ee](https://github.com/jaehyun1ee), 99jaehyunlee@kaist.ac.kr)
+3. ⭐ Jiaxin Lin ([@jxlin-lock](https://github.com/jxlin-lock), jiaxinl@cornell.edu)
+4. ⭐ Mingyu Ma ([@Mingyumaz](https://github.com/Mingyumaz), mingyu.ma@tu-dresden.de)
 5. ⭐ Matthew Lam ([@matthewtlam](https://github.com/matthewtlam), matthewtlam@google.com)
-6. ⭐ Takeaki Oura([@iHalt10](https://github.com/iHalt10), ihalt10@icloud.com)
-7. Davide Scano ([@Dscano](https://github.com/Dscano), d.scano89@gmail.com)
-8. Evangelos Haleplidis ([@evhalep](https://github.com/evhalep), ehalep@mojatatu.com)
+6. ⭐ Peng Qian ([@dawndusk0508](https://github.com/dawndusk0508), peng.qian@ox.ac.uk)
+7. ⭐ Takeaki Oura([@iHalt10](https://github.com/iHalt10), ihalt10@icloud.com)
+8. ⭐ Victor Nogueira ([@vbnogueira](https://github.com/vbnogueira), victor@mojatatu.com)
+9. ⭐ Zhiyuan Guo ([@depctg](https://github.com/depctg), zhiyuang@cornell.edu)
+10. ⭐ Fabian Ruffy ([@fruffy](https://github.com/fruffy), fruffy@nyu.edu)
+11. Ali Imran ([@ALI11-2000](https://github.com/ALI11-2000), imranali@umich.edu)
+12. Anton Korobeynikov ([@asl](https://github.com/asl), anton@korobeynikov.info)
+13. Bili Dong ([@qobilidop](https://github.com/qobilidop), bilid@google.com)
+14. Davide Scano ([@Dscano](https://github.com/Dscano), d.scano89@gmail.com)
+15. Evangelos Haleplidis ([@evhalep](https://github.com/evhalep), ehalep@mojatatu.com)
 
 ## FAQ
 
@@ -57,19 +64,27 @@ It means we expect you to have made relevant contributions in order to demonstra
 
 ### Index
 
-- Category: core P4 tooling
-  - [Project 1: ](#project-1)
-- Category: exploratory P4 tooling
-  - [Project 2: Realistic Traffic Manager and Queueing Architecture for P4 Switch Simulation in ns-3 (P4sim)](#project-2)
-  - [Project 3: Polyglot P4TC: Python and Rust API Wrappers for Linux TC-based P4](#project-3)
-  - [Project 4: PCIe TLP Communication Framework using P4](#project-4)
-- Category: P4 research
-- [Project 5: Tutorial documentation for P4-SpecTec: A P4 specification mechanization framework](#project-5)
+**Category 1: Core P4 Tooling**
+  - [Under Review] [Project 1.1: Modernizing the P4 Software Switch BMv2](#project-1.1)
 
+**Category 2: Exploratory P4 Tooling**
+  - [Project 2.1: Realistic Traffic Manager and Queueing Architecture for P4 Switch Simulation in ns-3 (P4sim)](#project-2.1)
+  - [Project 2.2: Polyglot P4TC: Python and Rust API Wrappers for Linux TC-based P4](#project-2.2)
+  - [Project 2.3: PCIe TLP Communication Framework using P4](#project-2.3)
+  - [Project 2.4: P4MLIR Exporter: Generate Valid P4 from P4HIR](#project-2.4)
+
+**Category 3: P4 Research**
+  - [Project 3.1: Alkali-P4MLIR: Bridging P4 and SmartNICs Through MLIR Dialect Conversion Between Alkali IR and P4MLIR](#project-3.1)
+  - [Project 3.2: Tutorial documentation for P4-SpecTec: A P4 specification mechanization framework](#project-3.2)
+  - [Project 3.3: Integrating P4-based In-Network Machine Learning framework into P4Pi](#project-3.3)
 
 ---
 
-### <a name='project-1'></a> Project 1: Modernizing the P4 Software Switch BMv2 [⤴️](#index)
+### <a name='project-1.1'></a> Project 1.1: Modernizing the P4 Software Switch BMv2 [⤴️](#index)
+
+**Note**
+
+This project proposal is [under review](https://github.com/p4lang/gsoc/issues/87). Project description changes are expected.
 
 **Basic info**
 
@@ -117,7 +132,7 @@ There are many different enhancements to the repository that can be made includi
 
 ---
 
-### <a name='project-2'></a> Project 2: Realistic Traffic Manager and Queueing Architecture for P4 Switch Simulation in ns-3 (P4sim) [⤴️](#index)
+### <a name='project-2.1'></a> Project 2.1: Realistic Traffic Manager and Queueing Architecture for P4 Switch Simulation in ns-3 (P4sim) [⤴️](#index)
 
 **Basic info**
 
@@ -201,7 +216,7 @@ The new architecture will enable accurate evaluation of congestion, queue buildu
   
 ---
 
-### <a name='project-3'></a> Project 3: Polyglot P4TC: Python and Rust API Wrappers for Linux TC-based P4 [⤴️](#index)
+### <a name='project-2.2'></a> Project 2.2: Polyglot P4TC: Python and Rust API Wrappers for Linux TC-based P4 [⤴️](#index)
 
 **Basic info**
 
@@ -315,71 +330,71 @@ Below is an example code using the C API which provisions the P4 program and add
 
 int main(int argc, char **argv)
 {
-	struct p4tc_runt_tbl_attrs *table_entry;
-	struct pipe_config pipe_config = {};
-	struct p4tc_runt_act_attrs *action;
-	char *ip_addr = "10.10.10.1";
-	struct p4tc_runt_ctx *ctx;
-	struct p4tc_attrs *table;
-	struct p4tc_key *key;
-	int ret;
+    struct p4tc_runt_tbl_attrs *table_entry;
+    struct pipe_config pipe_config = {};
+    struct p4tc_runt_act_attrs *action;
+    char *ip_addr = "10.10.10.1";
+    struct p4tc_runt_ctx *ctx;
+    struct p4tc_attrs *table;
+    struct p4tc_key *key;
+    int ret;
 
-	/* Provision */
-	pipe_config.name = PNAME;
-	pipe_config.template_dir = TMPL_DIR;
-	ret = p4tc_provision(&pipe_config);
-	if (ret < 0)
-		return -1;
+    /* Provision */
+    pipe_config.name = PNAME;
+    pipe_config.template_dir = TMPL_DIR;
+    ret = p4tc_provision(&pipe_config);
+    if (ret < 0)
+        return -1;
 
-	/* Create a table key that will hold 10.10.10.1 */
-	key = make_key(FULL_TBL_PATH, ip_addr);
-	if (!key)
-		return -1;
+    /* Create a table key that will hold 10.10.10.1 */
+    key = make_key(FULL_TBL_PATH, ip_addr);
+    if (!key)
+        return -1;
 
-	/* Create a context struct that uses netlink as its transport */
-	ctx = p4tc_runt_ctx_create(P4TC_TML_OPS_NL);
-	if (!ctx)
-		return -1;
+    /* Create a context struct that uses netlink as its transport */
+    ctx = p4tc_runt_ctx_create(P4TC_TML_OPS_NL);
+    if (!ctx)
+        return -1;
 
-	/* Allocate table that will hold one or more table entries+actions
-	 * to be used in a create command.
-	 */
-	ret = -1;
-	table = p4tc_attrs_create(PNAME, P4TC_OBJ_RUNTIME_TABLE);
-	if (!table)
-		goto ctx_destroy;
+    /* Allocate table that will hold one or more table entries+actions
+     * to be used in a create command.
+     */
+    ret = -1;
+    table = p4tc_attrs_create(PNAME, P4TC_OBJ_RUNTIME_TABLE);
+    if (!table)
+        goto ctx_destroy;
 
-	/* create a table entry on the table */
-	table_entry = p4tc_alloc_table_entry(table, key, P4TC_ENTITY_TC);
-	if (!table_entry)
-		goto free_attrs;
+    /* create a table entry on the table */
+    table_entry = p4tc_alloc_table_entry(table, key, P4TC_ENTITY_TC);
+    if (!table_entry)
+        goto free_attrs;
 
-	/* Allocate table entry action object */
-	action = p4tc_create_runt_action(table_entry, "cb/send_nh", "port_id=eth0",
-					 "dmac=01:02:03:04:05:06",
-					 "smac=07:08:09:0A:0B:0C");
-	if (!action)
-		goto free_attrs;
+    /* Allocate table entry action object */
+    action = p4tc_create_runt_action(table_entry, "cb/send_nh", "port_id=eth0",
+                     "dmac=01:02:03:04:05:06",
+                     "smac=07:08:09:0A:0B:0C");
+    if (!action)
+        goto free_attrs;
 
-	/* Call p4tc_create which will send the runtime create message. NULL
-	 * param is cookie returned in the response callback further down.
-	 */
-	ret = p4tc_create(ctx, table, NULL);
-	if (ret < 0)
-		goto free_attrs;
+    /* Call p4tc_create which will send the runtime create message. NULL
+     * param is cookie returned in the response callback further down.
+     */
+    ret = p4tc_create(ctx, table, NULL);
+    if (ret < 0)
+        goto free_attrs;
 
-	/* Call response handling function. A NULL callback means
-	 * that the default callback (which just prints the echoed back
-	 * data) will be used. The third parameter (1) indicates the number of
-	 * expected response messages.
-	 */
-	ret = p4tc_resp_handle(ctx, NULL, 1);
+    /* Call response handling function. A NULL callback means
+     * that the default callback (which just prints the echoed back
+     * data) will be used. The third parameter (1) indicates the number of
+     * expected response messages.
+     */
+    ret = p4tc_resp_handle(ctx, NULL, 1);
 
 free_attrs:
-	p4tc_attrs_free(table, NULL);
+    p4tc_attrs_free(table, NULL);
 ctx_destroy:
-	p4tc_runt_ctx_destroy(ctx);
-	return ret;
+    p4tc_runt_ctx_destroy(ctx);
+    return ret;
 }
 ```
 
@@ -565,7 +580,7 @@ You can explore all P4TC repos from the organization page here: [https://github.
 
 ---
 
-### <a name='project-4'></a> Project 4: PCIe TLP Communication Framework using P4 [⤴️](#index)
+### <a name='project-2.3'></a> Project 2.3: PCIe TLP Communication Framework using P4 [⤴️](#index)
 
 **Basic info**
 
@@ -573,7 +588,7 @@ You can explore all P4TC repos from the organization page here: [https://github.
 
 - Potential mentors
   - Primary: Takeoki Oura
-  - Support: -
+  - Support: Ali Imran
 - Skills
   - Required: SystemVerilog (or Verilog) programming with Xilinx Vivado, Git
   - Preferred: P4 language, PCIe protocol knowledge
@@ -683,7 +698,119 @@ Phase 1 is definitely achievable and has academic and practical value in itself 
 
 ---
 
-### <a name='project-5'></a> Project 5: Tutorial documentation for P4-SpecTec: A P4 specification mechanization framework [⤴️](#index)
+### <a name='project-2.4'></a> Project 2.4: P4MLIR Exporter: Generate Valid P4 from P4HIR [⤴️](#index)
+
+**Basic info**
+
+![diffi-medium] ![size-m]
+
+- Potential mentors
+  - Primary: Fabian Ruffy
+  - Support: Anton Korobeynikov
+- Skills
+  - Required: MLIR, C++
+  - Preferred: P4, P4C, compiler testing (lit, knowledge of golden testing)
+- Discussion thread: https://github.com/p4lang/p4mlir-incubator/pull/168
+- A bit more information: [slides](https://p4.org/wp-content/uploads/2024/11/204-P4-Workshop-P4HIR_-Towards-Bridging-P4C-with-MLIR-P4-Workshop-2024.pdf)
+
+**Alternative qualification task**
+
+- Please demonstrate your MLIR skills through contributions to any of the following projects:
+  - [P4MLIR](https://github.com/p4lang/p4mlir) itself.
+  - Any other MLIR-based compiler project.
+  - Your personal project is also fine.
+- Make sure your contributions could demonstrate your knowledge of MLIR concepts & internals.
+
+**Project description**
+
+The P4MLIR project's goal is to provide an alternative compiler implementation for the P4 language, implementing using the LLVM MLIR framework (https://mlir.llvm.org/).
+
+P4MLIR provides a high-level MLIR dialect (`P4HIR`) for P4 compilers. This project targets a robust exporter specifically for the P4HIR dialect that can translate P4HIR back into valid, idiomatic P4 code. An exporter like this has several applications: transpiling (converting other languages into P4 code), debugging (checking the representation of a P4 program after transforming it), validation (ensuring transformed code remains semantically equivalent).
+
+The goal of this GSoC project specifically is to build a reliable exporter pass (`export_to_p4.cpp`) that exports P4HIR to correct P4. The exporter must handle a wide range of P4 constructs, preserve annotations and parameter directions, and emit source compatible with `p4test`. The goal is to make the exporter usable as a standalone tool or as part of a compiler pipeline.
+
+Since P4MLIR is a moving target, the precise set of tasks will be finalized with mentors, but may include:
+
+- Extend the exporter coverage for missing P4 constructs (e.g., tables, actions, parsers, controls, enums, annotations).
+- Correctly handle corner cases of the language.
+- Improve type/parameter rendering, name stability, and declaration ordering. Make the P4 generation more idiomatic.
+- Add or refine exporter tests in `test/Translate` and ensure `p4test` can compile all example generated test programs.
+- Integrate the exporter and the reference file generation with existing CMake/lit workflows.
+
+**Expected outcomes**
+
+- Full coverage of all P4 programs in the P4HIR test suite.
+- A robust P4 exporter that can handle export the IR of complex P4 programs, such as [dash-pipeline-v1model-bmv2.p4](https://github.com/p4lang/p4c/blob/main/testdata/p4_16_samples/dash/dash-pipeline-v1model-bmv2.p4) or [fabric.p4](https://github.com/p4lang/p4c/blob/main/testdata/p4_16_samples/fabric_20190420/fabric.p4).
+- Documentation of exporter behavior, limitations, and usage.
+
+**Resources**
+
+- P4MLIR: https://github.com/p4lang/p4mlir
+- P4C: https://github.com/p4lang/p4c
+- MLIR: https://mlir.llvm.org/
+---
+
+### <a name='project-3.1'></a> Project 3.1: Alkali-P4MLIR: Bridging P4 and SmartNICs Through MLIR Dialect Conversion Between Alkali IR and P4MLIR. [⤴️](#index)
+
+![diffi-medium] ![size-m]
+
+**Basic info**
+
+Potential mentors
++ Primary: Jiaxin Lin, Zhiyuan Guo
++ Support: Anton Korobeynikov, Bili Dong 
+
+Skills
++ Required: [MLIR](https://mlir.llvm.org/)
++ Preferred: P4, P4C, P4MLIR
++ Discussion thread: TBD
+
+**Alternative qualification task**
+
+Please demonstrate your MLIR skills through contributions to any of the following projects:
++ [P4MLIR](https://github.com/p4lang/p4mlir-incubator) or [Alkali](https://github.com/utnslab/Alkali) itself.
++ Any other MLIR-based compiler project.
++ Your personal project is also fine.
+Make sure your contributions demonstrate your knowledge of MLIR concepts & internals.
+
+**Project description**
+
+Alkali(published at NSDI'25) is a compiler infrastructure for SmartNICs, delivering both functional and performance portability across a wide range of SmartNIC hardware. It centers on a unified intermediate representation (IR), a common set of optimization and transformation passes, and an automated network-application parallelization pipeline. Currently, the Alkai repo contains a frontend for C, and code generation for the following backends: Verilog(FPGA), MicroC(Netronome), and LLVM(ARM DPDK/RiscV).
+This project aims to extend the existing Alkali infrastructure to support the P4 front-end language and the P4-based SmartNIC backend.
+
+<img width="700" alt="image" src="assets/alkali-p4mlir-alkali.png">
+
+There is a P4-specific MLIR dialect [P4HIR](https://github.com/p4lang/p4mlir-incubator), which implements dialect operations corresponding to P4 constructs and can be used to support the P4 front-end language and the P4-based SmartNIC backend in Alkali. In this project, instead of individually translating P4 sources to and from multiple SmartNIC programming languages (e.g., Verilog, microC), P4 programs could first be converted into P4MLIR and then transformed via operator-to-operator conversion to and from the Alkali IR. As both representations are defined within the MLIR framework, the conversion process can be semantically preserving, incremental, and engineering-maintainable, with support from the MLIR infrastructure.
+
+In the world of MLIR, those language-to-language translations are modeled within the framework of [dialect conversion](https://mlir.llvm.org/docs/DialectConversion/). The major goals of this project include building the dialect conversion passes for both directions: 1) a pass to convert the P4MLIR into Alkali IR, which effectively enables programming diverse SmartNIC hardware using P4, and 2) a pass to convert Alkali IR into P4MLIR, which effectively enables the general Alkali programs and optimization passes on P4-enabled SmartNIC pipelines. 
+
+The precise set of tasks within the project includes:
+- Implementation of dialect conversion components, including type conversions, static operator conversions, control flow conversion, etc.
+- Implement an analysis conversion pass from `P4HIR` to `ep2` dialect.
+- Implement an analysis conversion pass from `ep2` to `P4HIR` dialect.
+  + Implementation of analysis passes, dynamically deciding which operations are legalizable from Alkali IR to P4.
+  + Implementation of the pre-conversion transformation pipeline within Alkali IR, including applying the existing passes and building new transformation passes.
+  + Implementation of generic P4 performance model within Alkali.
+  + Integration of the Alkali compiler optimization pipeline for `P4HIR` target. 
+
+As both P4MLIR and Alkali are experimental and under active development, the dialect interface, including operator definitions, analysis and optimization passes, and other parts, could be changed along with the development of the project to fit the project's needs. The exact list of tasks is to be determined with mentors.
+
+**Expected outcomes**
+
++ Implementation of the bi-directional dialect conversion pass.
++ Document the changes made.
+
+**Resources**
+
+- Alkali: https://github.com/utnslab/Alkali
+- Alkali Paper: https://www.usenix.org/conference/nsdi25/presentation/lin-jiaxin 
+- P4MLIR: https://github.com/p4lang/p4mlir
+- P4C: https://github.com/p4lang/p4c
+- MLIR: https://mlir.llvm.org/
+
+---
+
+### <a name='project-3.2'></a> Project 3.2: Tutorial documentation for P4-SpecTec: A P4 specification mechanization framework [⤴️](#index)
 
 **Basic info**
 
@@ -790,3 +917,90 @@ The tutorial documentation is expected to include hands-on examples for nano-P4,
 - Reference project: Wasm-SpecTec
   - https://github.com/Wasm-DSL/spectec
   - https://github.com/Wasm-DSL/spectec/tree/main/spectec/doc
+
+---
+### <a name='project-3.3'></a> Project 3.3: Integrating P4-based In-Network Machine Learning framework into P4Pi [⤴️](#index)
+
+**Basic info**
+
+![diffi-medium] ![size-m]
+
+- Potential mentors
+  - Primary: Peng Qian
+  - Support: -
+- Skills
+  - Required: Python, P4, Git, Bash, Programmable data planes, Basic Linux networking  
+  - Preferred: Machine Learning basics (training/inference workflows) p4c, p4c-dpdk
+- Discussion thread: GitHub issue tracker, Zulip
+
+**Alternative Qualification Task**
+
+- Complete an end-to-end [Planter](https://github.com/In-Network-Machine-Learning/Planter) workflow, including data loading, training an existing ML module, automatic generation of target-specific P4 dataplane code, and deployment on a BMv2 environment for functional testing and evaluation.
+
+**Project Description**
+
+[P4Pi](https://github.com/p4lang/p4pi) is a Raspberry Pi–based integrated P4 environment that has been widely used for teaching and research on programmable data planes. It provides a low-cost and reproducible platform for experimenting with P4 programs and software switches.
+
+While P4Pi is well suited for teaching traditional P4-based packet processing, it currently lacks native support for machine-learning-enhanced networking workflows. [Planter](https://github.com/In-Network-Machine-Learning/Planter) is an in-network machine learning framework that enables training and inference of lightweight ML models close to the data plane. Planter adopts a modular, target-oriented design that supports mapping ML models to different programmable datapath targets and automatically generates target-specific P4 dataplane logic from trained models.
+
+This project proposes to integrate P4-based in-network machine learning into P4Pi by incorporating Planter into the existing P4Pi software stack.
+
+**Benefits to the Community**
+
+- Adds native support for in-network machine learning to P4Pi  
+- Enables hands-on teaching of P4 and ML co-design on low-cost hardware  
+- Lowers the barrier for students and researchers to explore ML-assisted networking with P4  
+- Provides reusable examples and documentation for research prototyping  
+
+
+**Work Plan** 
+
+**1. Planter–P4Pi Target Integration and p4c-dpdk Support**
+
+- Extend Planter’s existing `src/targets` abstraction by adding a new target adapter for the p4c-dpdk backend.
+- Implement automatic target-specific P4 code generation for the p4c-dpdk backend, enabling Planter-generated ML logic to be compiled and executed via the existing p4c-dpdk toolchain.
+- For each supported ML module, develop corresponding target-level test code to automatically validate correctness and compatibility with the p4c-dpdk datapath.
+
+
+**2. Extension of In-Network ML Algorithm Modules**
+
+- Extend Planter’s ML algorithm library by implementing one to two additional ML modules that have been identified in prior Planter-related research as promising candidates for further exploration.
+- Integrate these new ML modules into the existing Planter workflow, including model configuration, code generation, and target-specific mapping.
+
+
+**3. P4Pi-Based DPDK Software Switch Examples**
+
+- Develop end-to-end example applications on the P4Pi platform that demonstrate ML-assisted packet processing using a DPDK-based software switch.
+- Validate that ML inference results are correctly reflected in P4 control-plane updates and datapath behavior.
+
+
+**4. System Configuration, Packaging, and Automation**
+
+- Develop setup scripts and configuration files to automate deployment of the integrated Planter–P4Pi environment on Raspberry Pi.
+- Package Planter as an integrated component of the P4Pi system, including a pre-configured P4Pi system image for out-of-the-box experimentation.
+
+**5. Testing, Documentation, and Teaching Materials**
+
+- Develop teaching-oriented examples and step-by-step lab exercises (e.g., flow classification, anomaly detection).
+- Write clear documentation describing the system architecture, usage workflow, and extension points for future research and teaching.
+
+**Deliverables**
+
+- A P4Pi system image with Planter integrated, enabling out-of-the-box in-network ML experiments  
+- At least two end-to-end in-network ML example applications on P4PI platform
+- Automated setup and configuration scripts  
+- Teaching-oriented documentation and tutorials  
+
+
+**References**
+
+1. P4Pi: A Raspberry Pi–based P4 Teaching and Research Platform.  
+   https://github.com/p4lang/p4pi
+
+2. Planter: In-Network Machine Learning Framework.  
+   https://github.com/In-Network-Machine-Learning/Planter
+
+3. p4c-dpdk Backend Documentation and Source Code.  
+   https://github.com/p4lang/p4c/tree/main/backends/dpdk
+---
+
