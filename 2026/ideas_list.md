@@ -711,7 +711,7 @@ Phase 1 is definitely achievable and has academic and practical value in itself 
   - Required: MLIR, C++
   - Preferred: P4, P4C, compiler testing (lit, knowledge of golden testing)
 - Discussion thread: https://github.com/p4lang/p4mlir-incubator/pull/168
-- A bit more information: [slides]([https://p4.org/wp-content/uploads/2024/11/204-P4-Workshop-P4HIR_-Towards-Bridging-P4C-with-MLIR-P4-Workshop-2024.pdf](https://p4.org/wp-content/uploads/sites/53/2024/11/204-P4-Workshop-P4HIR_-Towards-Bridging-P4C-with-MLIR-P4-Workshop-2024.pdf)
+- A bit more information: [slides](https://p4.org/wp-content/uploads/2024/11/204-P4-Workshop-P4HIR_-Towards-Bridging-P4C-with-MLIR-P4-Workshop-2024.pdf](https://p4.org/wp-content/uploads/sites/53/2024/11/204-P4-Workshop-P4HIR_-Towards-Bridging-P4C-with-MLIR-P4-Workshop-2024.pdf)
 
 **Alternative qualification task**
 - The following [pull request](https://github.com/p4lang/p4mlir-incubator/pull/168) already implements an exporter. However, it is only a proof-of-concept and can not be merged as is. Review the pull request and create an issue with an implementation plan to implement the exporter piece-by-piece. 
