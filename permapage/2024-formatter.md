@@ -1,7 +1,8 @@
-# P4 Formatter
+# P4 GSoC 2024 Project: P4 Formatter
 
-## Link to report
-- [ P4 Formatter Report](/2024/projects/formatter/README.md)
+## Major links
+- [Blog post (final report)](/blog/_posts/2024-09-09-formatter.md)
+- Final presentation (Slides, Recording)
 
 ## New p4fmt backend
 Relevant PRs:

@@ -1,7 +1,8 @@
-# P4-Enabled Container Migration in Kubernetes
+# P4 GSoC 2024 Project: P4-Enabled Container Migration in Kubernetes
 
-## Link to report
-- [Container Migration Report](/2024/projects/container_migration/README.md)
+## Major links
+- [Blog post (final report)](/blog/_posts/2024-08-25-container-migration.md)
+- Final presentation (Slides, Recording)
 
 ## Controller
 Relevant PRs:

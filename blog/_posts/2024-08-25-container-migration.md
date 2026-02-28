@@ -69,9 +69,9 @@ Our initial prototype was inspired by the load_balance exercise available in the
 The following diagram shows the initial network topology, with three hosts (`h1`, `h2`, `h3`) and three switches (`s1`, `s2`, `s3`), where `s1` is the load balancer:
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/simple_lb_light.png">
-  <source media="(prefers-color-scheme: light)" srcset="assets/simple_lb_dark.png">
-  <img alt="Shows a graph of nodes and switches to demostrate a simple load balancing solution." src="assets/simple_lb_dark.png" width="500">
+  <source media="(prefers-color-scheme: dark)" srcset="../_assets/2024-container-migration/simple_lb_light.png">
+  <source media="(prefers-color-scheme: light)" srcset="../_assets/2024-container-migration/simple_lb_dark.png">
+  <img alt="Shows a graph of nodes and switches to demostrate a simple load balancing solution." src="../_assets/2024-container-migration/simple_lb_dark.png" width="500">
 </picture>
 
 
@@ -87,9 +87,9 @@ Next, we want to be able to change the hosts during runtime. We built a Python-b
 The controller also keeps track of the match-action table state, by a target IP -> index mapping. The index mapping corresponds to the value in the `ecmp_nhop` table. This makes it more efficient to look up the index of a specific IP in the table, without the need to fetch table state from the switch on each update request.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/controller_light.png">
-  <source media="(prefers-color-scheme: light)" srcset="assets/controller_dark.png">
-  <img alt="Shows a flow chart of interaction between the user script, controller and BMv2 switch." src="assets/controller_dark.png" width="700">
+  <source media="(prefers-color-scheme: dark)" srcset="../_assets/2024-container-migration/controller_light.png">
+  <source media="(prefers-color-scheme: light)" srcset="../_assets/2024-container-migration/controller_dark.png">
+  <img alt="Shows a flow chart of interaction between the user script, controller and BMv2 switch." src="../_assets/2024-container-migration/controller_dark.png" width="700">
 </picture>
 
 During this stage, we faced minor issues:
@@ -131,9 +131,9 @@ Using netns, veth pairs, and the iproute2 suite to set MAC and IP addresses of v
 The following diagram shows the created topology, including the virtual interfaces:
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/linux_network_light.png">
-  <source media="(prefers-color-scheme: light)" srcset="assets/linux_network_dark.png">
-  <img alt="Shows a graph with hosts and switches in the system, wired up via veth pairs." src="assets/linux_network_dark.png" width="600">
+  <source media="(prefers-color-scheme: dark)" srcset="../_assets/2024-container-migration/linux_network_light.png">
+  <source media="(prefers-color-scheme: light)" srcset="../_assets/2024-container-migration/linux_network_dark.png">
+  <img alt="Shows a graph with hosts and switches in the system, wired up via veth pairs." src="../_assets/2024-container-migration/linux_network_dark.png" width="600">
 </picture>
 
 
@@ -152,9 +152,9 @@ Specifically, Podman uses the netavark backend for virtual networking. Each netw
 The following diagram shows the network topology of a single host and the connection of the network to a switch port:
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/container_interface_light.png">
-  <source media="(prefers-color-scheme: light)" srcset="assets/container_interface_dark.png">
-  <img alt="Shows how a container (h1) is connected to its network (h1-net) via a veth pair, and how that network is connected to the switch s1 via the network bridge h1-br." src="assets/container_interface_dark.png" width="400">
+  <source media="(prefers-color-scheme: dark)" srcset="../_assets/2024-container-migration/container_interface_light.png">
+  <source media="(prefers-color-scheme: light)" srcset="../_assets/2024-container-migration/container_interface_dark.png">
+  <img alt="Shows how a container (h1) is connected to its network (h1-net) via a veth pair, and how that network is connected to the switch s1 via the network bridge h1-br." src="../_assets/2024-container-migration/container_interface_dark.png" width="400">
 </picture>
 
 We wrote a script to create a network and a pod for each container. A pod is a group of containers with a shared IP address. This is also the case within the Kubernetes network model. We built a container image using the TCP server executable from the previous steps. Analogously, we built a client image. 
@@ -180,9 +180,9 @@ For simplicity, the switch container runs on the host network. The container ima
 The following diagram shows the network topology, which consists of 4 Podman networks interfaced by bridges, connected to a single BMv2 switch running in a container, but on the host network:
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/container_network_light.png">
-  <source media="(prefers-color-scheme: light)" srcset="assets/container_network_dark.png">
-  <img alt="Shows how hosts h1-h4 are connected to their respective networks and how the container networks are connected to the switch s1." src="assets/container_network_dark.png" width="400">
+  <source media="(prefers-color-scheme: dark)" srcset="../_assets/2024-container-migration/container_network_light.png">
+  <source media="(prefers-color-scheme: light)" srcset="../_assets/2024-container-migration/container_network_dark.png">
+  <img alt="Shows how hosts h1-h4 are connected to their respective networks and how the container networks are connected to the switch s1." src="../_assets/2024-container-migration/container_network_dark.png" width="400">
 </picture>
 
 ### Redis container migration
@@ -195,9 +195,9 @@ A client, also running on `h1`, that periodically fetches data from the BE and p
 A producer, also running on `h1`, periodically fetches a numerical ‘counter’ entry from the Redis DB, increments it by one, and updates the entry in the database.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/redis_light.png">
-  <source media="(prefers-color-scheme: light)" srcset="assets/redis_dark.png">
-  <img alt="Shows the architecture of the Redis migration example, with BE, FE and producer running on h1, and Redis DB on h2, and an arrow showcasing how Redis DB should be migrated to h3." src="assets/redis_dark.png" width="500">
+  <source media="(prefers-color-scheme: dark)" srcset="../_assets/2024-container-migration/redis_light.png">
+  <source media="(prefers-color-scheme: light)" srcset="../_assets/2024-container-migration/redis_dark.png">
+  <img alt="Shows the architecture of the Redis migration example, with BE, FE and producer running on h1, and Redis DB on h2, and an arrow showcasing how Redis DB should be migrated to h3." src="../_assets/2024-container-migration/redis_dark.png" width="500">
 </picture>
 
 After deploying this system, we can observe the counter being periodically incremented by the producer. We perform a migration of the Redis DB from host 2 to host 3, the same way as in the previous examples, and observe little to no downtime from the client’s perspective. 
