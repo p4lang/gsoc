@@ -1,7 +1,8 @@
-# BMv2 PNA
+# P4 GSoC 2024 Project: BMv2 PNA
 
-## Link to report
-- [BMv2 PNA Report](/2024/projects/bmv2_pna/README.md)
+## Major links
+- [Blog post (final report)](/blog/_posts/2024-08-31-bmv2-pna.md)
+- Final presentation (Slides, Recording)
 
 ## New PNA NIC target in BMv2
 Relevant PRs:
