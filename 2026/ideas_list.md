@@ -106,17 +106,21 @@ Presently, BMv2 can only be built with CMake. The goal is to modernize BMv2 and 
 
 Create a PR under https://github.com/p4lang/behavioral-model.
 
+Note: This must not break the current Make build system.
+
 **Project description**
 Having programmatic access to the trace of a packet going through a P4 pipeline (e.g. applied tables, actions, entries hit, etc) has many use cases from human comprehension to use by automated tools for test coverage measurement, automated test generation, automated root causing, etc.
 
-BMv2 currently does provide textual logs that can be used to manually track the packet as it goes through the pipeline. However there is no API to access the trace in a more structured and programmatic form (i.e. in a way that can potentially be digested by other tools).
+BMv2 currently does provide textual logs that can be used to manually track the packet as it goes through the pipeline. However there is no API to access the trace in a more structured and programmatic form (i.e. in a way that can potentially be digested by other tools). Perhaps, using protobuf since protobuf supports serialization/deserialization to/from JSON.
 
 The goal of this project is to provide a mechanism for BMv2 to record the trace and provide it to the user in a structured format.
 
 **Expected outcomes**
-
 * Building BMv2 using Bazel will make it easier to set up, manage dependencies, and faster builds and tests
 *  Structured packet trace outputs supported in BMv2.
+*  Clean-up the code
+   *  Higher performance data structures (ex. absl::flat_hash_map, ankerl::unordered_dense or phmap::flat_hash_map)
+   *  Avoid using raw pointers and use smart pointers
 
 **Resources**
 * BMv2: https://github.com/p4lang/behavioral-model
