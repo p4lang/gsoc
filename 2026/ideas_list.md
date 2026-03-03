@@ -65,7 +65,7 @@ It means we expect you to have made relevant contributions in order to demonstra
 ### Index
 
 **Category 1: Core P4 Tooling**
-  - [Under Review] [Project 1.1: Modernizing the P4 Software Switch BMv2](#project-1.1)
+  - [Project 1.1: BMv2 packet trace support](#project-1.1)
 
 **Category 2: Exploratory P4 Tooling**
   - [Project 2.1: Realistic Traffic Manager and Queueing Architecture for P4 Switch Simulation in ns-3 (P4sim)](#project-2.1)
@@ -80,7 +80,7 @@ It means we expect you to have made relevant contributions in order to demonstra
 
 ---
 
-### <a name='project-1.1'></a> Project 1.1: Modernizing the P4 Software Switch BMv2 [⤴️](#index)
+### <a name='project-1.1'></a> Project 1.1: BMv2 packet trace support [⤴️](#index)
 
 **Note**
 
@@ -106,26 +106,21 @@ Presently, BMv2 can only be built with CMake. The goal is to modernize BMv2 and 
 
 Create a PR under https://github.com/p4lang/behavioral-model.
 
+Note: This must not break the current Make build system.
+
 **Project description**
-BMv2 is a P4-based packet processor that has not been well maintained over the years due to lack of accessibility, slow builds/tests, lack of readability and complexity. One factor contributing towards the lack of accessibility is the difficulty of setting up the project prior to development.
+Having programmatic access to the trace of a packet going through a P4 pipeline (e.g. applied tables, actions, entries hit, etc) has many use cases from human comprehension to use by automated tools for test coverage measurement, automated test generation, automated root causing, etc.
 
-There are many different enhancements to the repository that can be made including: 
-* Extending support for BMv2 to build using Bazel
-* Refactoring BMv2 to use Google style guide (https://google.github.io/styleguide/cppguide.html)
-    * Absl Integration
-    * Discourage exceptions (use status-based error propagation)
-    * Use smart pointer over manual memory
-    * Explicit constructors
-    * Flatten the directory structure
-    * Deprecating unused features
-* Converting textual logs that manually track the packet through the pipeline into a structured and programmatic form (e.g. .proto) 
-    * Can read more information [here](https://github.com/p4lang/gsoc/blob/main/2025/ideas_list.md#project-2). 
+BMv2 currently does provide textual logs that can be used to manually track the packet as it goes through the pipeline. Currently, internally at Google, the BMv2 textual logs get parsed using Regex as there is no API to access the trace in a more structured and programmatic form (i.e. in a way that can potentially be digested by other tools). Perhaps, a structured form like protobuf may be used. Also, protobuf supports serialization/deserialization to/from JSON, which allows additional flexibility in the desired format.
 
+The goal of this project is to provide a mechanism for BMv2 to record the trace and provide it to the user in a structured format.
 
 **Expected outcomes**
 * Building BMv2 using Bazel will make it easier to set up, manage dependencies, and faster builds and tests
-* Improving readability of BMv2 and reducing complexity of the repository
 *  Structured packet trace outputs supported in BMv2.
+*  Clean-up the code
+   *  Higher performance data structures (ex. absl::flat_hash_map, ankerl::unordered_dense or phmap::flat_hash_map)
+   *  Avoid using raw pointers and use smart pointers
 
 **Resources**
 * BMv2: https://github.com/p4lang/behavioral-model
