@@ -111,7 +111,7 @@ Note: This must not break the current Make build system.
 **Project description**
 Having programmatic access to the trace of a packet going through a P4 pipeline (e.g. applied tables, actions, entries hit, etc) has many use cases from human comprehension to use by automated tools for test coverage measurement, automated test generation, automated root causing, etc.
 
-BMv2 currently does provide textual logs that can be used to manually track the packet as it goes through the pipeline. However there is no API to access the trace in a more structured and programmatic form (i.e. in a way that can potentially be digested by other tools). Perhaps, using protobuf since protobuf supports serialization/deserialization to/from JSON.
+BMv2 currently does provide textual logs that can be used to manually track the packet as it goes through the pipeline. Currently, internally at Google, the BMv2 textual logs get parsed using Regex as there is no API to access the trace in a more structured and programmatic form (i.e. in a way that can potentially be digested by other tools). Perhaps, a structured form like protobuf may be used. Also, protobuf supports serialization/deserialization to/from JSON, which allows additional flexibility in the desired format.
 
 The goal of this project is to provide a mechanism for BMv2 to record the trace and provide it to the user in a structured format.
 
