@@ -1,7 +1,8 @@
-# P4 Compiler Documentation
+# P4 GSoC 2024 Project: P4 Compiler Documentation
 
-## Link to report
-- [ Compiler Documentation Report](/2024/projects/documentation/README.md)
+## Major links
+- [Blog post (final report)](/blog/_posts/2024-08-26-documentation.md)
+- Final presentation (Slides, Recording)
 
 ## Workflow Automation 
 Relevant PRs:
@@ -18,5 +19,3 @@ Relevant PR:
 - https://github.com/p4lang/p4c/pull/4708
 - https://github.com/p4lang/p4c/pull/4788
 - https://github.com/p4lang/p4c/pull/4849
-
-
