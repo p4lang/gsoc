@@ -817,8 +817,11 @@ As both P4MLIR and Alkali are experimental and under active development, the dia
 
 **Alternative qualification task**
 
-- The P4C compiler has an existing issue regarding compile-time known-ness of directionless action parameters: https://github.com/p4lang/p4c/issues/5405. The same issue is also present in P4-SpecTec. The current mechanized specification blindly treats directionless parameters as compile-time known, without proper checking of whether the directionless parameter is for an action.
-- Create a PR to P4-SpecTec that resolves this issue by amending the mechanized specification to properly check for action parameters.
+- The P4C compiler has an existing issue regarding compile-time known-ness of directionless action parameters: https://github.com/p4lang/p4c/issues/5405. The same issue is also present in P4-SpecTec. The current mechanized specification blindly treats directionless parameters as compile-time known, without proper checking of whether the directionless parameter is for an action (https://github.com/kaist-plrg/p4-spectec/issues/55).
+- P4 match-action table entry typing semantics is quite complex, as it involves type checking, inferring priority, and so on. The current mechanization is functional, but not very intuitive to read. The specification can be improved by modularizing its structure (https://github.com/kaist-plrg/p4-spectec/issues/130).
+- The mechanization adopts local type inference, but maybe it can be extended to a global Hindley-Milner type inference (https://github.com/kaist-plrg/p4-spectec/issues/108).
+- `+:` slices have been added to the P4 specification. The mechanization should be updated to reflect the new feature (https://github.com/kaist-plrg/p4-spectec/issues/39).
+- Resolve and create a PR for one of the issues above to P4-SpecTec.
 
 **Project description**
 
