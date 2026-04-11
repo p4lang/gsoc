@@ -1,0 +1,30 @@
+name: "Blog PR Preview: Cleanup"
+
+on:
+  pull_request_target:
+    types: [closed]
+    paths:
+      - "blog/**"
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+
+      - name: Remove preview
+        run: |
+          PREVIEW_DIR="blog/pr-preview/pr-${{ github.event.number }}"
+          if [ -d "$PREVIEW_DIR" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git rm -r "$PREVIEW_DIR"
+            git commit -m "Clean up blog PR preview for #${{ github.event.number }}"
+            git push
+          fi

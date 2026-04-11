@@ -1,0 +1,9 @@
+{
+  "name": "P4 GSoC Dev",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  // Forward port 1313 for Hugo.
+  "forwardPorts": [1313],
+  "appPort": [1313]
+}
