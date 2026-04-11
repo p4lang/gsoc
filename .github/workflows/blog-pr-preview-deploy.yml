@@ -1,0 +1,83 @@
+name: "Blog PR Preview: Deploy"
+
+on:
+  workflow_run:
+    workflows: ["Blog PR Preview: Build"]
+    types: [completed]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  deploy:
+    if: github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: blog-pr-preview
+          path: pr-preview
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
+
+      - name: Get PR number
+        id: pr
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const pulls = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              head: `${context.payload.workflow_run.head_repository.full_name}:${context.payload.workflow_run.head_branch}`,
+              state: 'open',
+            });
+            return pulls.data[0]?.number;
+          result-encoding: string
+
+      - name: Deploy preview
+        run: |
+          PR_NUMBER="${{ steps.pr.outputs.result }}"
+          PREVIEW_DIR="blog/pr-preview/pr-${PR_NUMBER}"
+          mkdir -p "$PREVIEW_DIR"
+          cp -r pr-preview/* "$PREVIEW_DIR/"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "$PREVIEW_DIR"
+          git commit -m "Deploy blog PR preview for #${PR_NUMBER}" || exit 0
+          git push
+
+      - name: Comment on PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prNumber = ${{ steps.pr.outputs.result }};
+            const previewUrl = `https://p4lang.github.io/gsoc/blog/pr-preview/pr-${prNumber}/`;
+            const body = `📖 Blog preview deployed: ${previewUrl}`;
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber,
+            });
+            const existing = comments.find(c => c.body.includes('Blog preview deployed'));
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existing.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                body,
+              });
+            }

@@ -1,0 +1,28 @@
+name: "Blog PR Preview: Build"
+
+on:
+  pull_request:
+    paths:
+      - "blog/**"
+
+concurrency:
+  group: blog-pr-preview-${{ github.event.number }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build site
+        uses: devcontainers/ci@v0.3
+        with:
+          runCmd: hugo -s blog --minify --baseURL "https://p4lang.github.io/gsoc/blog/pr-preview/pr-${{ github.event.number }}/"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: blog-pr-preview
+          path: blog/public
