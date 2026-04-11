@@ -578,7 +578,7 @@ You can explore all P4TC repos from the organization page here: [https://github.
 ![diffi-hard] ![size-l]
 
 - Potential mentors
-  - Primary: Takeoki Oura
+  - Primary: Takeaki Oura
   - Support: Ali Imran
 - Skills
   - Required: SystemVerilog (or Verilog) programming with Xilinx Vivado, Git
