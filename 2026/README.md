@@ -4,14 +4,24 @@
 
 ## Updates
 - (2026) 🎥 [P4 GSoC 2026 Wrap-up]()
-- (2026) 🎥 [P4 GSoC 2026 Kickoff Meeting]()
-- (2026) 📝 [Announcing P4 Projects Selected for 2026 GSoC]()
+- (2026-06-12) 🎥 [P4 GSoC 2026 Kickoff Meeting](https://www.youtube.com/watch?v=Dzlfw_Q8xNY)
+- (2026-05-01) 📝 [Announcing P4 Projects Selected for 2026 GSoC](https://p4.org/gsoc-2026-projects/)
 
 ## Accepted Projects
 
-| Project  | Contributor | Primary Mentor | Support Mentor(s) |
+|| Project  | Contributor | Primary Mentor | Support Mentor(s) |
 | -------- | ----------- | -------------- | ----------------- |
-|          |             |                |                   |
+| [Polyglot P4TC: Python and Rust API Wrappers for Linux TC-based P4] | Attaullah | Jamal, Victor | Evangelos |
+| [BMv2 packet trace support] | Yuao | Matthew | Bili |
+| [Enhancing P4-SpecTec Usability: A Mechanized Specification for Nano-P4] | Haechan |Jaehyun |
+| [Improving The Traffic Manager of the P4Sim Switch] | Vineet |  Mingyu | Davide |
+| [Integrating P4 Based In Network Machine Learning Framework into P4Pi] | WeiWei | Peng |
+
+[Polyglot P4TC: Python and Rust API Wrappers for Linux TC-based P4]: https://summerofcode.withgoogle.com/programs/2026/projects/qMVa9F81
+[BMv2 packet trace support]: https://summerofcode.withgoogle.com/programs/2026/projects/DAxIafkq
+[Enhancing P4-SpecTec Usability: A Mechanized Specification for Nano-P4]:https://summerofcode.withgoogle.com/programs/2026/projects/xySpY7SU
+[Improving The Traffic Manager of the P4Sim Switch]: https://summerofcode.withgoogle.com/programs/2026/projects/mIjAcBVg
+[Integrating P4 Based In Network Machine Learning Framework into P4Pi]:https://summerofcode.withgoogle.com/programs/2026/projects/cuGQCuZO
 
 - Contributors:
   -
