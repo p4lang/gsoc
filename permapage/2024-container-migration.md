@@ -8,6 +8,7 @@
     - Primary mentor: Radostin Stoyanov ([@rst0git](https://github.com/rst0git))
     - Support mentor: Davide Scano ([@Dscano](https://github.com/Dscano))
 - Artifacts
-    - [Final report blog](https://p4lang.github.io/gsoc/blog/posts/2024-08-26-container-migration/)
-    - [Final presentation slides](https://p4lang.github.io/gsoc/blog/posts/2024-08-26-container-migration/final-presentation.pdf)
+    - Project repo: https://github.com/stano45/p4containerflow
+    - [Final report blog](https://p4lang.github.io/gsoc/blog/posts/2024-08-25-container-migration/)
+    - [Final presentation slides](https://p4lang.github.io/gsoc/blog/posts/2024-08-25-container-migration/final-presentation.pdf)
     - [Final presentation recording](https://youtu.be/uh9yFf0OpIQ&t=1884)

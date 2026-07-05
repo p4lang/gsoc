@@ -32,8 +32,8 @@
 [p3-rec]: https://youtu.be/uh9yFf0OpIQ&t=1153
 
 [P4-Enabled Container Migration in Kubernetes]: https://summerofcode.withgoogle.com/programs/2024/projects/sYbpOJhD
-[p4-report]: https://p4lang.github.io/gsoc/blog/posts/2024-08-26-container-migration/
-[p4-slides]: https://p4lang.github.io/gsoc/blog/posts/2024-08-26-container-migration/final-presentation.pdf
+[p4-report]: https://p4lang.github.io/gsoc/blog/posts/2024-08-25-container-migration/
+[p4-slides]: https://p4lang.github.io/gsoc/blog/posts/2024-08-25-container-migration/final-presentation.pdf
 [p4-rec]: https://youtu.be/uh9yFf0OpIQ&t=1884
 
 - Contributors:

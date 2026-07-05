@@ -63,4 +63,4 @@ These rules are intended to make the program rewarding and problem-free for ever
     The report template can be found here: [report template](report_template.md). For any insigths here a few example reports that we think is of high quality and roughly follows the template:
 
     - [2025 GSoC - Bmv2 Pkt Out - Xiyu Hao](https://p4lang.github.io/gsoc/blog/posts/2025-09-02-bmv2-pkt-out/)
-    - [2024 GSoC - Container Migration - Stanislav Kosorin](https://p4lang.github.io/gsoc/blog/posts/2024-08-26-container-migration/)
+    - [2024 GSoC - Container Migration - Stanislav Kosorin](https://p4lang.github.io/gsoc/blog/posts/2024-08-25-container-migration/)
