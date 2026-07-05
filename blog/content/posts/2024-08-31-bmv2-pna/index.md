@@ -2,16 +2,10 @@
 title: "BMv2 PNA Support"
 date: 2024-08-31
 author: Rupesh Chiluka
+permapage: https://github.com/p4lang/gsoc/blob/main/permapage/2024-bmv2-pna.md
 draft: false
 ShowToc: true
 ---
-
-Project permapage: [2024-bmv2-pna](https://github.com/p4lang/gsoc/blob/main/permapage/2024-bmv2-pna.md)
-
-**Mentors**: Bili Dong ([@qobilidop]), Hari Thantry ([@thantry])
-
-[@qobilidop]: https://github.com/qobilidop
-[@thantry]: https://github.com/thantry
 
 ## Abstract
 

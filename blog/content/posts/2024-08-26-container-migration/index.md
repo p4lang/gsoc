@@ -2,16 +2,10 @@
 title: "P4-Enabled Container Migration in Kubernetes"
 date: 2024-08-26
 author: Stanislav Kosorin
+permapage: https://github.com/p4lang/gsoc/blob/main/permapage/2024-container-migration.md
 draft: false
 ShowToc: true
 ---
-
-Project permapage: [2024-container-migration](https://github.com/p4lang/gsoc/blob/main/permapage/2024-container-migration.md)
-
-**Mentors**: Radostin Stoyanov ([@rst0git]), Davide Scano ([@Dscano])
-
-[@rst0git]: https://github.com/rst0git
-[@Dscano]: https://github.com/Dscano
 
 
 ## Abstract

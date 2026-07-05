@@ -1,0 +1,9 @@
+{{- /* Shadows PaperMod's edit_post.html: renders a link to the project's
+       permapage (from the `permapage` front matter field) in the post meta
+       line, in the slot the theme reserves for a post link. */ -}}
+{{- with .Param "permapage" -}}
+    {{- printf "&nbsp;|&nbsp;" | safeHTML -}}
+    <span>
+        <a href="{{ . }}" rel="noopener noreferrer" target="_blank">Project permapage</a>
+    </span>
+{{- end }}

@@ -2,16 +2,10 @@
 title: "P4 Formatter"
 date: 2024-09-09
 author: Nitish Kumar
+permapage: https://github.com/p4lang/gsoc/blob/main/permapage/2024-formatter.md
 draft: false
 ShowToc: true
 ---
-
-Project permapage: [2024-formatter](https://github.com/p4lang/gsoc/blob/main/permapage/2024-formatter.md)
-
-**Mentors**: Bili Dong ([@qobilidop]), Fabian Ruffy ([@fruffy])
-
-[@qobilidop]: https://github.com/qobilidop
-[@fruffy]: https://github.com/fruffy
 
 ## Abstract
 This project aims to develop a code formatter for P4. While the reference P4 compiler (P4C) provides foundational components, such as an AST/IR parser and a pretty printer, key gaps remain.
