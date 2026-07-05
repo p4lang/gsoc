@@ -17,12 +17,11 @@ The primary objective of this project was to improve the documentation infrastru
 ![image](https://github.com/user-attachments/assets/97be1b94-fcac-422f-b9e8-5da007948c0d)
 
 ## Technical Considerations
-> [!NOTE]  
-> Previews in this report are mockups and do not reflect the current state of the documentation. They were used for iterative development during the project.
+> **Note:** Previews in this report are mockups and do not reflect the current state of the documentation. They were used for iterative development during the project.
 
 ### Doxygen vs. Sphinx: Documentation Tools Comparison
 
-Initially, I considered using Sphinx with Doxygen and Breathe for documentation [[1]](#1-medium-article-on-using-sphinx-doxygen-and-breathe-c-documentation-with-doxygen-cmake-sphinx--breathe)[[2]](#2-clear-functional-c-documentation-with-sphinx-breathe-doxygen-cmake). However, after discussing with mentors and evaluating the tools, we decided to use Doxygen with Doxygen Awesome CSS for the following reasons:
+Initially, I considered using Sphinx with Doxygen and Breathe for documentation [[1]](#1-medium-article-on-using-sphinx-doxygen-and-breathe-c-documentation-with-doxygen-cmake-sphinx--breathe)[[2]](#2-microsoft-dev-blog-on-functional-c-documentation-clear-functional-c-documentation-with-sphinx-breathe-and-doxygen). However, after discussing with mentors and evaluating the tools, we decided to use Doxygen with Doxygen Awesome CSS for the following reasons:
 
 - **Doxygen**: Provides straightforward and easy-to-generate documentation but lacks mobile responsiveness. Examples of Doxygen-generated docs can be found here:
   - [Eigen Documentation](https://eigen.tuxfamily.org/dox/)
@@ -123,7 +122,7 @@ Doxygen v1.12.0 introduced a critical feature enabling the use of GitHub-flavore
 - **Organized Documentation:** Configured Doxygen and Doxygen Awesome CSS for better organization and clarity.
   <br>
   [PR - Docs : Configuring Doxygen Awesome CSS ](https://github.com/p4lang/p4c/pull/4737)
-- **Interactive SVGs:** Replaced PNGs with interactive SVGs for high-quality, scalable diagrams. <br> [Click to View Previous Diagrams](#https://p4-compiler-docs.netlify.app/class_p4_1_1_control_plane_a_p_i_1_1_p4_runtime_arch_handler_iface.html) | | [Click to view Updated Diagrams](#https://p4c-pototype3.netlify.app/class_p4_1_1_control_plane_a_p_i_1_1_p4_runtime_arch_handler_iface.html)
+- **Interactive SVGs:** Replaced PNGs with interactive SVGs for high-quality, scalable diagrams. <br> [Click to View Previous Diagrams](https://p4-compiler-docs.netlify.app/class_p4_1_1_control_plane_a_p_i_1_1_p4_runtime_arch_handler_iface.html) | | [Click to view Updated Diagrams](https://p4c-pototype3.netlify.app/class_p4_1_1_control_plane_a_p_i_1_1_p4_runtime_arch_handler_iface.html)
 - **Dynamic Architecture Diagram:** Added a homepage diagram illustrating the P4 Compiler architecture with interactive links.
 - Utilized **Graphviz's diagram generation** to visualize class and function relationships.
 

@@ -1,0 +1,15 @@
+/* Per-theme image variants for migrated report diagrams (transparent PNGs
+   with black ink for light backgrounds, white ink for dark). Keyed on the
+   active PaperMod theme (html[data-theme]) rather than prefers-color-scheme,
+   so the images follow the theme toggle. */
+.theme-dark-only {
+    display: none;
+}
+
+[data-theme=dark] .theme-light-only {
+    display: none;
+}
+
+[data-theme=dark] .theme-dark-only {
+    display: inline;
+}

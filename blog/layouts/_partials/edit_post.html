@@ -21,9 +21,9 @@
 {{- end }}
 {{- /* Site addition start: permapage link */ -}}
 {{- with .Param "permapage" -}}
-    {{- printf "&nbsp;|&nbsp;" | safeHTML -}}
-    <span>
-        <a href="{{ . }}" rel="noopener noreferrer" target="_blank">Project permapage</a>
-    </span>
+{{- if or $.Params.author site.Params.author ($.Param "ShowReadingTime") (not $.Date.IsZero) $.IsTranslated }}&nbsp;|&nbsp;{{- end -}}
+<span>
+    <a href="{{ . }}" rel="noopener noreferrer" target="_blank">Project permapage</a>
+</span>
 {{- end }}
 {{- /* Site addition end */ -}}
