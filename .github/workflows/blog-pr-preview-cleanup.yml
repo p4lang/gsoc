@@ -1,13 +1,22 @@
+# pull_request_target lets this run in the base repo's context with write
+# permissions for fork PRs. Safe here because the job runs no PR code —
+# it only deletes a directory keyed by PR number.
+#
+# No paths filter: the preview may exist even if the final diff no longer
+# touches blog/, so always check for the directory.
 name: "Blog PR Preview: Cleanup"
 
 on:
   pull_request_target:
     types: [closed]
-    paths:
-      - "blog/**"
 
 permissions:
   contents: write
+  pull-requests: write
+
+concurrency:
+  group: gh-pages
+  cancel-in-progress: false
 
 jobs:
   cleanup:
@@ -20,11 +29,23 @@ jobs:
 
       - name: Remove preview
         run: |
-          PREVIEW_DIR="blog/pr-preview/pr-${{ github.event.number }}"
+          PREVIEW_DIR="blog/pr-preview/pr-${{ github.event.pull_request.number }}"
           if [ -d "$PREVIEW_DIR" ]; then
             git config user.name "github-actions[bot]"
-            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git rm -r "$PREVIEW_DIR"
-            git commit -m "Clean up blog PR preview for #${{ github.event.number }}"
+            git commit -m "Clean up blog PR preview for #${{ github.event.pull_request.number }}"
             git push
+          else
+            echo "No preview directory to remove."
           fi
+
+      # only_update: PRs that never had a preview get no comment.
+      - name: Update PR comment
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: blog-preview
+          number: ${{ github.event.pull_request.number }}
+          only_update: true
+          message: |
+            📖 Blog preview removed because the PR was closed.

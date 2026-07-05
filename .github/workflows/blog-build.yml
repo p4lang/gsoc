@@ -1,0 +1,66 @@
+# Builds the blog for both production (push to main) and PR previews.
+# Runs with read-only permissions so it is safe for PRs from forks.
+# Blog Deploy picks up the artifact via workflow_run and publishes it.
+name: Blog Build
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "blog/**"
+      - ".devcontainer/**"
+      - ".github/workflows/blog-*.yml"
+  pull_request:
+    paths:
+      - "blog/**"
+      - ".devcontainer/**"
+      - ".github/workflows/blog-*.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: blog-build-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Compute base URL
+        id: cfg
+        run: |
+          site_root="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            echo "base_url=${site_root}/blog/pr-preview/pr-${{ github.event.pull_request.number }}/" >> "$GITHUB_OUTPUT"
+          else
+            echo "base_url=${site_root}/blog/" >> "$GITHUB_OUTPUT"
+          fi
+
+      # For PR builds, the PR number is saved in _meta/ inside the artifact so
+      # Blog Deploy can read it (workflow_run payloads don't reliably carry
+      # it). Blog Deploy validates it against server-side data and strips
+      # _meta/ before publishing, so it never reaches the live site. Written
+      # inside the container because the build output may not be writable by
+      # the host user.
+      - name: Build site
+        uses: devcontainers/ci@v0.3
+        with:
+          runCmd: |
+            hugo -s blog --minify --baseURL "${{ steps.cfg.outputs.base_url }}"
+            pr="${{ github.event.pull_request.number }}"
+            if [ -n "$pr" ]; then
+              mkdir -p blog/public/_meta
+              echo "$pr" > blog/public/_meta/pr_number.txt
+            fi
+
+      - name: Upload site artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: blog-site
+          path: blog/public
+          retention-days: 1

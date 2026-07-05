@@ -1,0 +1,110 @@
+# Publishes Blog Build output to gh-pages: push builds go to blog/,
+# PR builds go to blog/pr-preview/pr-<N>/.
+#
+# Triggered via workflow_run so it runs in the base repo's context with write
+# permissions, even for PRs from forks. Because of that, nothing from the
+# build artifact may be executed here, and deploy decisions must rest on
+# server-side event data, not artifact contents (which a PR fully controls):
+#   - production deploys require workflow_run.event == push/workflow_dispatch
+#     on main, so a PR can never publish to the live blog;
+#   - the artifact-declared PR number must name an open PR whose head SHA
+#     matches workflow_run.head_sha, so a PR can't hijack another PR's
+#     preview directory or comment.
+name: Blog Deploy
+
+on:
+  workflow_run:
+    workflows: [Blog Build]
+    types: [completed]
+
+permissions:
+  contents: write
+  pull-requests: write
+  actions: read
+
+concurrency:
+  group: gh-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download site artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: blog-site
+          path: site
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
+
+      - name: Determine deploy target
+        id: target
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const run = context.payload.workflow_run;
+
+            let pr = '';
+            if (fs.existsSync('site/_meta/pr_number.txt')) {
+              pr = fs.readFileSync('site/_meta/pr_number.txt', 'utf8').trim();
+            }
+            // Strip _meta/ so build metadata never reaches the live site.
+            fs.rmSync('site/_meta', { recursive: true, force: true });
+
+            if (run.event === 'pull_request') {
+              if (!/^\d+$/.test(pr)) {
+                core.setFailed('PR build did not record a valid PR number.');
+                return;
+              }
+              const { data } = await github.rest.pulls.get({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: Number(pr),
+              });
+              if (data.head.sha !== run.head_sha) {
+                core.notice(`Skipping deploy: build SHA ${run.head_sha} is not the head of PR #${pr}.`);
+                return;
+              }
+              if (data.state !== 'open') {
+                core.notice(`Skipping deploy: PR #${pr} is no longer open.`);
+                return;
+              }
+              core.setOutput('pr', pr);
+            } else if (
+              (run.event === 'push' || run.event === 'workflow_dispatch') &&
+              run.head_branch === 'main'
+            ) {
+              core.setOutput('production', 'true');
+            } else {
+              core.notice(`Nothing to deploy for a ${run.event} run on ${run.head_branch}.`);
+            }
+
+      # clean-exclude preserves blog/pr-preview/ on production deploys; for
+      # preview deploys it is a no-op and clean removes stale files from the
+      # preview itself.
+      - name: Deploy to gh-pages
+        if: steps.target.outputs.pr != '' || steps.target.outputs.production == 'true'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: site
+          branch: gh-pages
+          target-folder: ${{ steps.target.outputs.pr && format('blog/pr-preview/pr-{0}', steps.target.outputs.pr) || 'blog' }}
+          clean: true
+          clean-exclude: pr-preview/
+
+      - name: Post or update PR comment
+        if: steps.target.outputs.pr != ''
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: blog-preview
+          number: ${{ steps.target.outputs.pr }}
+          message: |
+            📖 Blog preview ready: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/blog/pr-preview/pr-${{ steps.target.outputs.pr }}/
+
+            Built from ${{ github.event.workflow_run.head_sha }}.
