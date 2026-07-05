@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout gh-pages branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           ref: gh-pages
 
@@ -49,7 +49,7 @@ jobs:
 
       # only_update: PRs that never had a preview get no comment.
       - name: Update PR comment
-        uses: marocchino/sticky-pull-request-comment@v2
+        uses: marocchino/sticky-pull-request-comment@v3
         with:
           header: blog-preview
           number: ${{ github.event.pull_request.number }}

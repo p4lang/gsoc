@@ -34,10 +34,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Download site artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: blog-site
           path: site
@@ -46,7 +46,7 @@ jobs:
 
       - name: Determine deploy target
         id: target
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const fs = require('fs');
@@ -127,7 +127,7 @@ jobs:
 
       - name: Post or update PR comment
         if: steps.target.outputs.pr != ''
-        uses: marocchino/sticky-pull-request-comment@v2
+        uses: marocchino/sticky-pull-request-comment@v3
         with:
           header: blog-preview
           number: ${{ steps.target.outputs.pr }}
