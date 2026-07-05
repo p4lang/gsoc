@@ -4,7 +4,6 @@ date: 2024-08-26
 author: Adarsh Rawat
 permapage: https://github.com/p4lang/gsoc/blob/main/permapage/2024-documentation.md
 draft: false
-ShowToc: true
 ---
 
 ![Gsoc2024 - The P4 Language Consortium](https://github.com/user-attachments/assets/9a9ba7f0-772e-464f-a1e9-81d42286bc6e)

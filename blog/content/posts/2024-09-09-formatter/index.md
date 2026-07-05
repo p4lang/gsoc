@@ -4,7 +4,6 @@ date: 2024-09-09
 author: Nitish Kumar
 permapage: https://github.com/p4lang/gsoc/blob/main/permapage/2024-formatter.md
 draft: false
-ShowToc: true
 ---
 
 ## Abstract

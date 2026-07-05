@@ -1,9 +1,29 @@
-{{- /* Shadows PaperMod's edit_post.html: renders a link to the project's
-       permapage (from the `permapage` front matter field) in the post meta
-       line, in the slot the theme reserves for a post link. */ -}}
+{{- /* Extends PaperMod's edit_post.html: the original template is copied
+       verbatim below, followed by a site addition that renders a link to
+       the project's permapage (from the `permapage` front matter field) in
+       the same post-meta slot.
+
+       Copied from the theme commit pinned in go.mod:
+       https://github.com/adityatelange/hugo-PaperMod/blob/893811ac431f/layouts/partials/edit_post.html
+       (the theme still used the legacy layouts/partials/ path at that
+       commit; Hugo resolves it and this file's layouts/_partials/ path to
+       the same template name). When bumping the theme module, re-diff the
+       upstream file and refresh the copy. */ -}}
+{{- if and (or .Params.editPost.URL site.Params.editPost.URL) (not (.Param "editPost.disabled")) -}}
+{{- $fileUrlPath := path.Join .File.Path }}
+
+{{- if or .Params.author site.Params.author (.Param "ShowReadingTime") (not .Date.IsZero) .IsTranslated }}&nbsp;|&nbsp;{{- end -}}
+<span>
+    <a href="{{ .Params.editPost.URL | default site.Params.editPost.URL }}{{ if .Params.editPost.appendFilePath | default ( site.Params.editPost.appendFilePath | default false ) }}/{{ $fileUrlPath }}{{ end }}" rel="noopener noreferrer edit" target="_blank">
+        {{- .Params.editPost.Text | default (site.Params.editPost.Text | default (i18n "edit_post" | default "Edit")) -}}
+    </a>
+</span>
+{{- end }}
+{{- /* Site addition start: permapage link */ -}}
 {{- with .Param "permapage" -}}
     {{- printf "&nbsp;|&nbsp;" | safeHTML -}}
     <span>
         <a href="{{ . }}" rel="noopener noreferrer" target="_blank">Project permapage</a>
     </span>
 {{- end }}
+{{- /* Site addition end */ -}}
