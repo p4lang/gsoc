@@ -20,9 +20,11 @@ on:
 permissions:
   contents: read
 
+# Cancel superseded PR builds, but let every main build finish: a bad
+# follow-up push must not be able to cancel publishing a good one.
 concurrency:
   group: blog-build-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   build:
@@ -51,6 +53,7 @@ jobs:
         uses: devcontainers/ci@v0.3
         with:
           runCmd: |
+            set -e
             hugo -s blog --minify --baseURL "${{ steps.cfg.outputs.base_url }}"
             pr="${{ github.event.pull_request.number }}"
             if [ -n "$pr" ]; then
@@ -63,4 +66,9 @@ jobs:
         with:
           name: blog-site
           path: blog/public
-          retention-days: 1
+          if-no-files-found: error
+          # Hidden files are excluded by default; the site may legitimately
+          # contain some (.nojekyll, .well-known/).
+          include-hidden-files: true
+          # Long enough to re-run a failed deploy days later.
+          retention-days: 7
