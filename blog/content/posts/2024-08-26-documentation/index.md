@@ -1,35 +1,16 @@
 ---
 title: "P4 Compiler Documentation"
 date: 2024-08-26
+author: Adarsh Rawat
 draft: false
+ShowToc: true
 ---
 
+Project permapage: [2024-documentation](https://github.com/p4lang/gsoc/blob/main/permapage/2024-documentation.md)
 
-**Mentors:** [Davide Scano](https://github.com/Dscano), [Fabian Ruffy](https://github.com/fruffy) <br> 
-**Contributor:** [Adarsh Rawat](https://github.com/AdarshRawat1) <br>   
+**Mentors:** [Davide Scano](https://github.com/Dscano), [Fabian Ruffy](https://github.com/fruffy)
 
 ![Gsoc2024 - The P4 Language Consortium](https://github.com/user-attachments/assets/9a9ba7f0-772e-464f-a1e9-81d42286bc6e)
-
-## Table of Contents
-
-1. [Project Overview](#project-overview)
-2. [Technical Considerations](#technical-considerations)
-   - [Doxygen vs. Sphinx: Documentation Tools Comparison](#doxygen-vs-sphinx-documentation-tools-comparison)
-3. [Documentation Development and Build Process](#documentation-development-and-build-process)
-   - [Deployment Options: Transition to GitHub Pages](#deployment-options-transition-to-github-pages)
-4. [Workflow Automation](#workflow-automation)
-   - [Doxygen Automated Builds Workflow](#doxygen-automated-builds-workflow)
-   - [Automated PR Preview Workflow](#automated-pr-preview-workflow)
-   - [Challenges with PRs from External Forks](#challenges-with-prs-from-external-forks)
-   - [Label Check Implementation for `pull_request_target` Trigger](#label-check-implementation-for-pull_request_target-trigger)
-5. [Doxygen `v1.12.0` Update: Enhancements and Open Source Impact](#doxygen-v1120-update-enhancements-and-open-source-impact)
-6. [Key Improvements and Achievements](#key-improvements-and-achievements)
-   - [Enhanced Documentation Quality](#enhanced-documentation-quality)
-   - [Improved Documentation Accessibility](#improved-documentation-accessibility)
-   - [Enhanced Visual and Functional Features](#enhanced-visual-and-functional-features)
-   - [Efficient Onboarding and Project Management](#efficient-onboarding-and-project-management)
-   - [Automated and Streamlined Processes](#automated-and-streamlined-processes)
-7. [Supporting Pull Requests](#supporting-pull-requests)
 
 
 

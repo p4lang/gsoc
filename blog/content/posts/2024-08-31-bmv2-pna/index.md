@@ -1,31 +1,17 @@
 ---
 title: "BMv2 PNA Support"
 date: 2024-08-31
+author: Rupesh Chiluka
 draft: false
+ShowToc: true
 ---
 
-**Contributor**: Rupesh Chiluka ([@rupesh-chiluka-marvell])
+Project permapage: [2024-bmv2-pna](https://github.com/p4lang/gsoc/blob/main/permapage/2024-bmv2-pna.md)
 
 **Mentors**: Bili Dong ([@qobilidop]), Hari Thantry ([@thantry])
 
-[@rupesh-chiluka-marvell]: https://github.com/rupesh-chiluka-marvell
 [@qobilidop]: https://github.com/qobilidop
 [@thantry]: https://github.com/thantry
-
-## Table of Contents
-- [BMv2 PNA Support](#bmv2-pna-support)
-  - [Table of Contents](#table-of-contents)
-  - [Abstract](#abstract)
-  - [Goals](#goals)
-  - [Results](#results)
-  - [Demo](#demo)
-  - [Implementation details](#implementation-details)
-    - [New PNA NIC target in BMv2](#new-pna-nic-target-in-bmv2)
-    - [P4C backend for the new BMv2 PNA NIC target](#p4c-backend-for-the-new-bmv2-pna-nic-target)
-  - [Future Work](#future-work)
-    - [Standard PNA Features (Implemented)](#standard-pna-features-implemented)
-    - [Standard PNA Features (Yet to be Implemented)](#standard-pna-features-yet-to-be-implemented)
-    - [Experimental PNA Features (Yet to be Implemented)](#experimental-pna-features-yet-to-be-implemented)
 
 ## Abstract
 

@@ -1,35 +1,17 @@
 ---
 title: "P4-Enabled Container Migration in Kubernetes"
 date: 2024-08-26
+author: Stanislav Kosorin
 draft: false
+ShowToc: true
 ---
 
-**Contributor**: Stanislav Kosorin ([@stano45])
+Project permapage: [2024-container-migration](https://github.com/p4lang/gsoc/blob/main/permapage/2024-container-migration.md)
 
 **Mentors**: Radostin Stoyanov ([@rst0git]), Davide Scano ([@Dscano])
 
 [@rst0git]: https://github.com/rst0git
-[@stano45]: https://github.com/stano45
 [@Dscano]: https://github.com/Dscano
-
-## Table of Contents
-- [P4-Enabled Container Migration in Kubernetes](#p4-enabled-container-migration-in-kubernetes)
-  - [Table of Contents](#table-of-contents)
-  - [Abstract](#abstract)
-  - [Goals](#goals)
-  - [Results](#results)
-  - [Links](#links)
-  - [Implementation details](#implementation-details)
-    - [Initial prototype](#initial-prototype)
-    - [Controller](#controller)
-    - [TCP Checksum](#tcp-checksum)
-    - [Linux Networking](#linux-networking)
-    - [Containerizing hosts](#containerizing-hosts)
-    - [Containerizing BMv2 switches](#containerizing-bmv2-switches)
-    - [Redis container migration](#redis-container-migration)
-    - [The Kubernetes network model](#the-kubernetes-network-model)
-    - [Initial Kubernetes integration](#initial-kubernetes-integration)
-  - [Future Work](#future-work)
 
 
 ## Abstract
