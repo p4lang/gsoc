@@ -13,3 +13,7 @@ title = "P4 GSoC Blog"
 # strips by default.
 [markup.goldmark.renderer]
   unsafe = true
+
+[params]
+  # Keep all home-page post cards uniform (no hero for the newest post).
+  disableSpecial1stPost = true
