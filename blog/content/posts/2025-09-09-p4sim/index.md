@@ -1,21 +1,10 @@
-# P4Sim: Control Plane Enhancement
-**Contributor**: Vineet Goel [@Vineet1101](https://github.com/Vineet1101)
-
-**Mentors**: Mingyu Ma [@MingyuMa](https://github.com/Mingyumaz), Davide Scano [@Dscano](https://github.com/Dscano)
-## Table of Contents
-- [P4Sim: Control Plane Enhancement](#p4sim-control-plane-enhancement)
-  - [Table of Contents](#table-of-contents)
-  - [Abstract](#abstract)
-  - [Goals](#goals)
-  - [Results](#results)
-  - [Links](#links)
-  - [Architecture](#architecture)
-    - [Controller](#controller)
-    - [Tracing Mechanism](#tracing-mechanism)
-    - [Examples and Tests](#examples-and-tests)
-    - [Documentation](#documentation)
-  - [Future Work](#future-work)
-
+---
+title: "P4Sim Control Plane Enhancement"
+date: 2025-09-09
+author: Vineet Goel
+permapage: https://github.com/p4lang/gsoc/blob/main/permapage/2025-p4sim.md
+draft: false
+---
 
 ## Abstract
 
@@ -42,7 +31,7 @@ All artifacts developed throughout this GSoC project are available in the follow
 
 ## Architecture
 
-![Architecture Diagram](./Simulazione%20della%20rete%20P4.png)
+![Architecture Diagram](assets/Simulazione%20della%20rete%20P4.png)
 
 The architecture of this project extends **ns-3 P4Sim** by introducing a working **control-plane abstraction**.  
 It follows a layered design that separates **data-plane execution**, **switch abstraction**, and **controller logic**.

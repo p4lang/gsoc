@@ -1,32 +1,19 @@
-# SpliDT: Scaling Stateful Decision Tree Algorithms in P4
+---
+title: "SpliDT: Scaling Stateful Decision Tree Algorithms in P4"
+date: 2025-09-09
+author: Sankalp Jha
+permapage: https://github.com/p4lang/gsoc/blob/main/permapage/2025-splidt.md
+draft: false
+---
 
 ## Google Summer of Code 2025 Final Report
 <img width="1400" height="604" alt="image" src="https://github.com/user-attachments/assets/99b70979-e9e0-46c9-8ae0-e1386950bbf5" />
 
-**Organization:** [P4 Language Consortium](https://p4.org/)  
-**Contributor:** [Sankalp Jha](https://github.com/blackdragoon26)  
-**Mentors:** [Murayyiam Parvez](https://github.com/Murayyiam-Parvez), [Annus Zulfiqar](https://github.com/annuszulfiqar2021), [Ali Imran](https://github.com/ALI11-2000), [Davide Scano](https://github.com/Dscano), [Muhammad Shahbaz](https://github.com/msbaz2013)  
 **Project Repository:** [SpliDT Codebase](https://github.com/blackdragoon26/splidt.git)
 
 
 ---
 
-## Table of Contents
-1. [Project Overview](#project-overview)  
-2. [Project Goals](#project-goals)
-    - [Core Framework](#core-framework)
-    - [Production-Ready Components](#production-ready-components)
-3. [Implementation Details](#implementation-details)
-    - [Project Architecture](#project-architecture)
-        - [1. Model Compilation (SpliDT Compiler)](#1-model-compilation-splidt-compiler)
-        - [2. Code Generation and Standardization (SpliDT Generator)](#2-code-generation-and-standardization-splidt-generator)
-        - [3. Runtime Deployment (Control + Data Plane) ](#3-runtime-deployment-control--data-plane)
-    - [Repository Structure](#repository-structure)
-4. [Future Scope](#future-scope)  
-5. [Conclusion](#conclusion)
-6. [References](#references)
-
----
 
 ## Project Overview
 
@@ -162,3 +149,4 @@ Thanks a lot with deepest regards!
 [1] NetBeacon Project: [IDP-code/NetBeacon](https://www.usenix.org/conference/usenixsecurity23/presentation/zhou-guangmeng)  
 Guangmeng Zhou, Zhuotao Liu, Chuanpu Fu, Qi Li, and Ke Xu. *An Efficient Design of Intelligent Network Data Plane.*  
 In *32nd USENIX Security Symposium (USENIX Security 23)*, pages 6203–6220, Anaheim, CA, August 2023. USENIX Association.
+
