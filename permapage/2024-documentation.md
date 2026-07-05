@@ -1,8 +1,8 @@
 # P4 Compiler Documentation
 
 - Context
-    - Program: [P4 GSoC 2024](/2024/README.md)
-    - [GSoC archive](https://summerofcode.withgoogle.com/archive/2024/projects/u2HpJKI2)
+    - [P4 GSoC 2024](/2024/README.md)
+    - [Official GSoC project archive](https://summerofcode.withgoogle.com/archive/2024/projects/u2HpJKI2)
 - Participants
     - Contributor: Adarsh Rawat (https://github.com/AdarshRawat1)
     - Primary mentor: Davide Scano (https://github.com/Dscano)
