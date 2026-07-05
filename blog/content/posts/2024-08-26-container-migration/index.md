@@ -1,4 +1,9 @@
-# P4-Enabled Container Migration in Kubernetes
+---
+title: "P4-Enabled Container Migration in Kubernetes"
+date: 2024-08-26
+draft: false
+---
+
 **Contributor**: Stanislav Kosorin ([@stano45])
 
 **Mentors**: Radostin Stoyanov ([@rst0git]), Davide Scano ([@Dscano])

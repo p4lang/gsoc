@@ -1,4 +1,9 @@
-# P4 Compiler Documentation
+---
+title: "P4 Compiler Documentation"
+date: 2024-08-26
+draft: false
+---
+
 
 **Mentors:** [Davide Scano](https://github.com/Dscano), [Fabian Ruffy](https://github.com/fruffy) <br> 
 **Contributor:** [Adarsh Rawat](https://github.com/AdarshRawat1) <br>   

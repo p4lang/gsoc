@@ -17,22 +17,22 @@
 | [P4-Enabled Container Migration in Kubernetes] | Stanislav | Radostin, Davide | [Report][p4-report] / [Slides][p4-slides] / [Recording][p4-rec] |
 
 [P4 Compiler Documentation]: https://summerofcode.withgoogle.com/programs/2024/projects/u2HpJKI2
-[p1-report]: projects/documentation/README.md
+[p1-report]: https://p4lang.github.io/gsoc/blog/posts/2024-08-26-documentation/
 [p1-slides]: TODO
 [p1-rec]: https://youtu.be/uh9yFf0OpIQ&t=15
 
 [P4 Formatter]: https://summerofcode.withgoogle.com/programs/2024/projects/TbPyjqVw
-[p2-report]: projects/formatter/README.md
+[p2-report]: https://p4lang.github.io/gsoc/blog/posts/2024-09-09-formatter/
 [p2-slides]: projects/formatter/P4Formatter_GSoC_Final.pdf
 [p2-rec]: https://youtu.be/uh9yFf0OpIQ&t=331
 
 [BMv2 PNA Support]: https://summerofcode.withgoogle.com/programs/2024/projects/oEpUp1dW
-[p3-report]: projects/bmv2_pna/README.md
+[p3-report]: https://p4lang.github.io/gsoc/blog/posts/2024-08-31-bmv2-pna/
 [p3-slides]: projects/bmv2_pna/assets/GsoC_final_presentation-bmv2_pna.pdf
 [p3-rec]: https://youtu.be/uh9yFf0OpIQ&t=1153
 
 [P4-Enabled Container Migration in Kubernetes]: https://summerofcode.withgoogle.com/programs/2024/projects/sYbpOJhD
-[p4-report]: projects/container_migration/README.md
+[p4-report]: https://p4lang.github.io/gsoc/blog/posts/2024-08-26-container-migration/
 [p4-slides]: projects/container_migration/final_presentation_slides.pdf
 [p4-rec]: https://youtu.be/uh9yFf0OpIQ&t=1884
 

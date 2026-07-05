@@ -1,4 +1,9 @@
-# P4 Formatter
+---
+title: "P4 Formatter"
+date: 2024-09-09
+draft: false
+---
+
 **Contributor**: Nitish Kumar ([@snapdgn])
 
 **Mentors**: Bili Dong ([@qobilidop]), Fabian Ruffy ([@fruffy])

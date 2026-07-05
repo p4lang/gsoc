@@ -8,3 +8,8 @@ title = "P4 GSoC Blog"
 
 [pagination]
   pagerSize = 10
+
+# Project reports use raw HTML (<img>, <picture>, <br>), which Goldmark
+# strips by default.
+[markup.goldmark.renderer]
+  unsafe = true

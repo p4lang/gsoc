@@ -1,4 +1,9 @@
-# BMv2 PNA Support
+---
+title: "BMv2 PNA Support"
+date: 2024-08-31
+draft: false
+---
+
 **Contributor**: Rupesh Chiluka ([@rupesh-chiluka-marvell])
 
 **Mentors**: Bili Dong ([@qobilidop]), Hari Thantry ([@thantry])
