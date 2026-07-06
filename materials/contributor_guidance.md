@@ -6,6 +6,9 @@ These rules are intended to make the program rewarding and problem-free for ever
 
 ## Before you apply
 
+- **Learn Some P4**
+    For all our projects, it’s good to know some P4. Check out our [learning materials](learning_materials.md).
+
 - **Managing Commitments and Avoiding Burnout During GSoC**
     Please note that Google Summer of Code requires a time commitment of 20-40 hours per week, depending on the size of the tasks you choose. If you're considering taking on an additional part-time job, have extensive exams, or plan an extended vacation during the program, you need to carefully evaluate whether you can manage all these commitments without risking burnout. To help us better assess your availability, <ins>please make sure to explicitly list any other obligations in your application.</ins>
 

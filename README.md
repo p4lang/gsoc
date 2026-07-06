@@ -1,41 +1,28 @@
 # P4 GSoC
 
-## About
+This repository hosts materials for [The P4 Language Consortium](https://p4.org/)'s participation in [Google Summer of Code](https://summerofcode.withgoogle.com/) (GSoC).
 
-This repository is dedicated to [The P4 Language Consortium](https://p4.org/)'s participation in [Google Summer of Code](https://summerofcode.withgoogle.com/) (GSoC). In this repository, you will find materials for all ongoing and past P4 GSoC programs.
+## Where to start?
 
-## Ongoing Program
-<a href="program/2026/README.md" target="_blank">
-  <img src="https://img.shields.io/badge/Google%20Summer%20of%20Code-2026-fbbc05?style=flat&logo=google-summer-of-code" height="30"/>
-</a>
+- New to P4? Go through our [learning materials](materials/learning_materials.md).
+- Curious what a successful project looks like? Read the final reports of completed projects on [our blog](https://p4lang.github.io/gsoc/blog/).
+- Ready to participate? Check out the [latest program](program/2026/README.md) and our [contributor guidance](materials/contributor_guidance.md).
 
+## Repository layout
 
-## Past Programs
+- [`program/`](program/): one directory per program year, holding that year's README, ideas list, guidance, and assets.
+- [`permapage/`](permapage/): one permanent page per completed project. These are stable link targets designed to never move, so they are safe to cite from proposals, resumes, and external sites.
+- [`blog/`](blog/): the P4 GSoC blog, including project final reports.
+- [`materials/`](materials/): evergreen materials shared across program years.
+- [`2024/`](2024/), [`2025/`](2025/): frozen legacy paths, kept only so old inbound links keep working. The immutable GSoC archive (among other external references) links to `2024/projects/...` and `2025/projects/...`, so these paths must never be deleted; each project's README there is a symlink to its permapage. Do not add new entries; from 2026 on, permapages are the canonical link target from day one.
 
-<a href="program/2025/README.md" target="_blank">
-  <img src="https://img.shields.io/badge/Google%20Summer%20of%20Code-2025-fbbc05?style=flat&logo=google-summer-of-code" height="30"/>
-</a>
-<br>
+## Programs
 
-<a href="program/2024/README.md" target="_blank">
-  <img src="https://img.shields.io/badge/Google%20Summer%20of%20Code-2024-fbbc05?style=flat&logo=google-summer-of-code" height="30"/>
-</a>
-
-## P4 Learning Materials
-
-For all our projects, it’s good to know some P4. Here are some learning materials:
-
-- General hands-on tutorials: https://github.com/p4lang/tutorials
-- Technical documentation on P4 related topics: https://github.com/jafingerhut/p4-guide?tab=readme-ov-file#introduction
-- Motivating P4: [IEEE ICC 2018 // Keynote: Nick McKeown, Programmable Forwarding Planes Are Here To Stay](https://www.youtube.com/watch?v=8ie0FcsN07U)
-- Introducing P4-16 in detail:
-  - Part 1: [Introduction to P4_16. Part 1](https://www.youtube.com/watch?v=GslseT4hY1w)
-  - Part 2: [Introduction to P4_16. Part 2](https://www.youtube.com/watch?v=yqxpypXIOtQ)
-- Material on the official P4 compiler:
-  - [Understanding the Open-Soure P416 Compiler - February 15, 2022 - Mihai Budiu](https://www.youtube.com/watch?v=Rx5AQ0IF6eU)
-  - [Understanding P416 Open-Source Compiler, Part 2 - March 1, 2022 - Mihai Budiu](https://www.youtube.com/watch?v=YnPHPaPSmpU)
-  - https://github.com/p4lang/p4c/blob/main/docs/compiler-design.pdf
-- Introduction to P4Runtime: [Next-Gen SDN Tutorial - Session 1: P4 and P4Runtime Basics](https://www.youtube.com/watch?v=KRx92qSLgo4)
+| Program | Accepted projects | Completed projects |
+| ------- | ----------------- | ------------------ |
+| [![P4 GSoC 2026](https://img.shields.io/badge/P4%20GSoC-2026-fbbc05?style=flat&logo=google-summer-of-code)](program/2026/README.md) | 5 | (ongoing) |
+| [![P4 GSoC 2025](https://img.shields.io/badge/P4%20GSoC-2025-fbbc05?style=flat&logo=google-summer-of-code)](program/2025/README.md) | 5 | 4 |
+| [![P4 GSoC 2024](https://img.shields.io/badge/P4%20GSoC-2024-fbbc05?style=flat&logo=google-summer-of-code)](program/2024/README.md) | 4 | 4 |
 
 ## Participants
 

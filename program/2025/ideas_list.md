@@ -104,7 +104,7 @@ It means we expect you to have made relevant contributions in order to demonstra
 
 [p4-constraints](https://github.com/p4lang/p4-constraints) is a useful extension of the P4 programming language that is currently architected as a standalone library separate from the P4 compiler, P4C.
 
-<img width="757" alt="image" src="../2024/assets/p4_constraints.png">
+<img width="757" alt="image" src="assets/p4_constraints.png">
 
 The goal of this project is to integrate the p4-constraints frontend, which parses and type checks the constraint annotations, into the P4C frontend. This architecture change provides the following benefits:
 

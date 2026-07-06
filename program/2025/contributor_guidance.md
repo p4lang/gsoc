@@ -10,8 +10,7 @@
   [timeline](https://developers.google.com/open-source/gsoc/timeline), and
   [contributor guide](https://google.github.io/gsocguides/student).
 - Check out our
-  [organization profile](https://summerofcode.withgoogle.com/programs/2025/organizations/the-p4-language-consortium),
-  [learning materials](/materials/learning_materials.md), and
+  [organization profile](https://summerofcode.withgoogle.com/programs/2025/organizations/the-p4-language-consortium) and
   [ideas list](ideas_list.md)
   to see if they fit your interests and skills.
 
