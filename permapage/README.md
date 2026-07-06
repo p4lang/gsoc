@@ -15,9 +15,11 @@ Permapage is our solution to this problem. We use permapages as a layer of indir
 
 ## Rules
 
-1. Each successfully completed P4 GSoC project gets assigned a unique project slug in this format: `{year}-{lowercase-project-name}`.
+1. Each accepted P4 GSoC project gets assigned a unique project slug in this format: `{year}-{lowercase-project-name}`.
    - Example: `2024-container-migration`
 2. That project's permapage is `{year}-{lowercase-project-name}.md` under this directory.
    - Example: [2024-container-migration.md](2024-container-migration.md)
 3. The corresponding permalink becomes https://github.com/p4lang/gsoc/blob/main/permapage/{year}-{lowercase-project-name}.md.
    - Example: https://github.com/p4lang/gsoc/blob/main/permapage/2024-container-migration.md
+4. A permapage may be created any time after its project is accepted. It reflects the current state of an ongoing project, and becomes the permanent record once the project completes and the permalink is submitted to the GSoC archive.
+5. If a project ends up not completed, its permapage is removed.

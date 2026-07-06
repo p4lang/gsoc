@@ -13,7 +13,7 @@ These rules are intended to make the program rewarding and problem-free for ever
     Please note that Google Summer of Code requires a time commitment of 20-40 hours per week, depending on the size of the tasks you choose. If you're considering taking on an additional part-time job, have extensive exams, or plan an extended vacation during the program, you need to carefully evaluate whether you can manage all these commitments without risking burnout. To help us better assess your availability, <ins>please make sure to explicitly list any other obligations in your application.</ins>
 
 - **Get in touch with us and our community**
-    In particular, visit our [Zulip workspace](https://p4lang.zulipchat.com/), [P4 forum](https://forum.p4.org), [P4 Linkdin](https://www.linkedin.com/company/p4-language-consortium/) and/or email the mentors listed on the [ideas list](/program/2026/ideas_list.md) for each project that sounds appealing to you.
+    In particular, visit our [Zulip workspace](https://p4lang.zulipchat.com/), [P4 forum](https://forum.p4.org), [P4 LinkedIn](https://www.linkedin.com/company/p4-language-consortium/) and/or email the mentors listed on the ideas list of the [latest program](/README.md#programs) for each project that sounds appealing to you.
 
 - **Respect Mentors, Deliver on Time**
     The P4 Language Consortium values your enthusiasm and willingness to contribute. However, contacting mentors on multiple platforms, sending repeated messages, or asking for shortcuts may be viewed as unprofessional. Likewise, requesting last-minute reviews or urgent feedback when you are close to a deadline can be interpreted as a lack of reliability. Please remember that P4 mentors and admins volunteer their time to support a meaningful and successful GSoC experience.
@@ -63,7 +63,7 @@ These rules are intended to make the program rewarding and problem-free for ever
 
     Students may use any preferred approach to prepare their report, article, and presentations. One suggested method is the laboratory-diary approach: keeping a private log of task progress helps track the work and simplifies the preparation of the final deliverables.
 
-    The report template can be found here: [report template](report_template.md). For any insigths here a few example reports that we think is of high quality and roughly follows the template:
+    The report template can be found here: [report template](report_template.md). For inspiration, here are a few example reports that we think are of high quality and roughly follow the template:
 
     - [2025 GSoC - Bmv2 Pkt Out - Xiyu Hao](https://p4lang.github.io/gsoc/blog/posts/2025-09-02-bmv2-pkt-out/)
     - [2024 GSoC - Container Migration - Stanislav Kosorin](https://p4lang.github.io/gsoc/blog/posts/2024-08-25-container-migration/)
