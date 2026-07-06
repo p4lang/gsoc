@@ -1,63 +1,10 @@
 # P4 GSoC 2024 Program
 
+## Getting started
+
 - [GSoC 2024 Program - The P4 Language Consortium](https://summerofcode.withgoogle.com/programs/2024/organizations/the-p4-language-consortium)
-
-## Application
-
 - [Ideas List](ideas_list.md)
 - [Contributor Guidance](contributor_guidance.md)
-
-## Accepted Projects
-
-| Project  | Contributor | Mentors | Final Report and Presentation |
-| -------- | ----------- | ------- | ----------------------------- |
-| [P4 Compiler Documentation] | Adarsh | Davide, Fabian | [Report][p1-report] / Slides / [Recording][p1-rec] |
-| [P4 Formatter] | Nitish | Bili, Fabian | [Report][p2-report] / [Slides][p2-slides] / [Recording][p2-rec] |
-| [BMv2 PNA Support] | Rupesh | Bili, Hari | [Report][p3-report] / [Slides][p3-slides] / [Recording][p3-rec] |
-| [P4-Enabled Container Migration in Kubernetes] | Stanislav | Radostin, Davide | [Report][p4-report] / [Slides][p4-slides] / [Recording][p4-rec] |
-
-[P4 Compiler Documentation]: https://summerofcode.withgoogle.com/programs/2024/projects/u2HpJKI2
-[p1-report]: https://p4lang.github.io/gsoc/blog/posts/2024-08-26-documentation/
-[p1-slides]: TODO
-[p1-rec]: https://youtu.be/uh9yFf0OpIQ&t=15
-
-[P4 Formatter]: https://summerofcode.withgoogle.com/programs/2024/projects/TbPyjqVw
-[p2-report]: https://p4lang.github.io/gsoc/blog/posts/2024-09-09-formatter/
-[p2-slides]: https://p4lang.github.io/gsoc/blog/posts/2024-09-09-formatter/final-presentation.pdf
-[p2-rec]: https://youtu.be/uh9yFf0OpIQ&t=331
-
-[BMv2 PNA Support]: https://summerofcode.withgoogle.com/programs/2024/projects/oEpUp1dW
-[p3-report]: https://p4lang.github.io/gsoc/blog/posts/2024-08-31-bmv2-pna/
-[p3-slides]: https://p4lang.github.io/gsoc/blog/posts/2024-08-31-bmv2-pna/final-presentation.pdf
-[p3-rec]: https://youtu.be/uh9yFf0OpIQ&t=1153
-
-[P4-Enabled Container Migration in Kubernetes]: https://summerofcode.withgoogle.com/programs/2024/projects/sYbpOJhD
-[p4-report]: https://p4lang.github.io/gsoc/blog/posts/2024-08-25-container-migration/
-[p4-slides]: https://p4lang.github.io/gsoc/blog/posts/2024-08-25-container-migration/final-presentation.pdf
-[p4-rec]: https://youtu.be/uh9yFf0OpIQ&t=1884
-
-- Contributors:
-  - Adarsh Rawat ([@AdarshRawat1])
-  - Nitish Kumar ([@snapdgn])
-  - Rupesh Chiluka ([@rupesh-chiluka-marvell])
-  - Stanislav Kosorin ([@stano45])
-- Mentors:
-  - Bili Dong ([@qobilidop])
-  - Davide Scano ([@Dscano])
-  - Fabian Ruffy ([@fruffy])
-  - Hari Thantry ([@thantry])
-  - Radostin Stoyanov ([@rst0git])
-
-[@AdarshRawat1]: https://github.com/AdarshRawat1
-[@rupesh-chiluka-marvell]: https://github.com/rupesh-chiluka-marvell
-[@snapdgn]: https://github.com/snapdgn
-[@stano45]: https://github.com/stano45
-
-[@Dscano]: https://github.com/Dscano
-[@fruffy]: https://github.com/fruffy
-[@qobilidop]: https://github.com/qobilidop
-[@rst0git]: https://github.com/rst0git
-[@thantry]: https://github.com/thantry
 
 ## Updates
 
@@ -65,3 +12,48 @@
 - (2024-05-21) 🎥 [P4 GSoC Kickoff Meeting](https://youtu.be/Ix6JiiIS-IY)
 - (2024-05-02) 📝 [P4 Projects at Google Summer of Code 2024](https://p4.org/p4-projects-at-google-summer-of-code-2024/)
 - (2024-03-12) 📝 [P4 Joins Google Summer of Code 2024](https://p4.org/p4-joins-google-summer-of-code-2024/)
+
+## Accepted projects
+
+| Project  | Contributor | Primary Mentor | Support Mentor(s) |
+| -------- | ----------- | -------------- | ----------------- |
+| [P4 Compiler Documentation](/permapage/2024-documentation.md) | Adarsh | Davide | Fabian |
+| [P4 Formatter](/permapage/2024-formatter.md) | Nitish | Bili | Fabian |
+| [BMv2 PNA Support](/permapage/2024-bmv2-pna.md) | Rupesh | Bili | Hari |
+| [P4-Enabled Container Migration in Kubernetes](/permapage/2024-container-migration.md) | Stanislav | Radostin | Davide |
+
+## Participants
+
+### Contributors
+
+- Adarsh Rawat ([@AdarshRawat1](https://github.com/AdarshRawat1))
+- Nitish Kumar ([@snapdgn](https://github.com/snapdgn))
+- Rupesh Chiluka ([@rupeshchiluka001](https://github.com/rupeshchiluka001))
+- Stanislav Kosorin ([@stano45](https://github.com/stano45))
+
+### Mentors
+
+#### Primary mentors
+
+- Bili Dong ([@qobilidop](https://github.com/qobilidop))
+- Davide Scano ([@Dscano](https://github.com/Dscano))
+- Radostin Stoyanov ([@rst0git](https://github.com/rst0git))
+
+#### Support mentors
+
+- Fabian Ruffy ([@fruffy](https://github.com/fruffy))
+- Hari Thantry ([@thantry](https://github.com/thantry))
+
+#### Application-phase helpers
+
+- Ali Kheradmand ([@kheradmand](https://github.com/kheradmand))
+- Debobroto (Robin) Das ([@drobinkent](https://github.com/drobinkent))
+- Jonathan DiLorenzo ([@jonathan-dilorenzo](https://github.com/jonathan-dilorenzo))
+- Victor Rios ([@verios-google](https://github.com/verios-google))
+
+### Org admins
+
+- Bili Dong ([@qobilidop](https://github.com/qobilidop), primary)
+- Fabian Ruffy ([@fruffy](https://github.com/fruffy))
+- Hari Thantry ([@thantry](https://github.com/thantry))
+- Steffen Smolka ([@smolkaj](https://github.com/smolkaj))

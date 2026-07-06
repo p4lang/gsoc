@@ -20,8 +20,8 @@ Please check our [Contributor Guidance](contributor_guidance.md) for detailed in
 1. Fabian Ruffy ([@fruffy](https://github.com/fruffy), fruffy@nyu.edu)
 1. Jonathan DiLorenzo ([@jonathan-dilorenzo](https://github.com/jonathan-dilorenzo), dilo@google.com)
 1. Muhammad Shahbaz ([@msbaz2013](https://github.com/msbaz2013), msbaz@umich.edu)
-1. Murayyiam-Parvez ([@Murayyiam-Parvez](https://github.com/Murayyiam-Parvez), parvezm@purdue.edu)
-1. Tommaso Pecorella([@TommyPec](https://github.com/TommyPec), tommaso.pecorella@unifi.it)
+1. Murayyiam Parvez ([@Murayyiam-Parvez](https://github.com/Murayyiam-Parvez), parvezm@purdue.edu)
+1. Tommaso Pecorella ([@TommyPec](https://github.com/TommyPec), tommaso.pecorella@unifi.it)
 1. Walter Willinger
 
 ## FAQ

@@ -14,7 +14,7 @@ Please check our [Contributor Guidance](/materials/contributor_guidance.md) for 
 4. ⭐ Mingyu Ma ([@Mingyumaz](https://github.com/Mingyumaz), mingyu.ma@tu-dresden.de)
 5. ⭐ Matthew Lam ([@matthewtlam](https://github.com/matthewtlam), matthewtlam@google.com)
 6. ⭐ Peng Qian ([@dawndusk0508](https://github.com/dawndusk0508), peng.qian@eng.ox.ac.uk)
-7. ⭐ Takeaki Oura([@iHalt10](https://github.com/iHalt10), ihalt10@icloud.com)
+7. ⭐ Takeaki Oura ([@iHalt10](https://github.com/iHalt10), ihalt10@icloud.com)
 8. ⭐ Victor Nogueira ([@vbnogueira](https://github.com/vbnogueira), victor@mojatatu.com)
 9. ⭐ Zhiyuan Guo ([@depctg](https://github.com/depctg), zhiyuang@cornell.edu)
 10. ⭐ Fabian Ruffy ([@fruffy](https://github.com/fruffy), fruffy@nyu.edu)

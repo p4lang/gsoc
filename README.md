@@ -66,9 +66,9 @@ Everyone who has taken part in P4 GSoC so far.
 <a href="https://github.com/annuszulfiqar2021"><img src="https://github.com/annuszulfiqar2021.png?size=64" width="64" height="64" title="Annus Zulfiqar" alt="Annus Zulfiqar"></a>
 <a href="https://github.com/antoninbas"><img src="https://github.com/antoninbas.png?size=64" width="64" height="64" title="Antonin Bas" alt="Antonin Bas"></a>
 <a href="https://github.com/asl"><img src="https://github.com/asl.png?size=64" width="64" height="64" title="Anton Korobeynikov" alt="Anton Korobeynikov"></a>
-<a href="https://github.com/blp"><img src="https://github.com/blp.png?size=64" width="64" height="64" title="Ben Pfaff" alt="Ben Pfaff"></a>
 <a href="https://github.com/dawndusk0508"><img src="https://github.com/dawndusk0508.png?size=64" width="64" height="64" title="Peng Qian" alt="Peng Qian"></a>
 <a href="https://github.com/depctg"><img src="https://github.com/depctg.png?size=64" width="64" height="64" title="Zhiyuan Guo" alt="Zhiyuan Guo"></a>
+<a href="https://github.com/drobinkent"><img src="https://github.com/drobinkent.png?size=64" width="64" height="64" title="Debobroto (Robin) Das" alt="Debobroto (Robin) Das"></a>
 <a href="https://github.com/evhalep"><img src="https://github.com/evhalep.png?size=64" width="64" height="64" title="Evangelos Haleplidis" alt="Evangelos Haleplidis"></a>
 <a href="https://github.com/fruffy"><img src="https://github.com/fruffy.png?size=64" width="64" height="64" title="Fabian Ruffy" alt="Fabian Ruffy"></a>
 <a href="https://github.com/iHalt10"><img src="https://github.com/iHalt10.png?size=64" width="64" height="64" title="Takeaki Oura" alt="Takeaki Oura"></a>
@@ -76,12 +76,14 @@ Everyone who has taken part in P4 GSoC so far.
 <a href="https://github.com/jhsmt"><img src="https://github.com/jhsmt.png?size=64" width="64" height="64" title="Jamal Hadi Salim" alt="Jamal Hadi Salim"></a>
 <a href="https://github.com/jonathan-dilorenzo"><img src="https://github.com/jonathan-dilorenzo.png?size=64" width="64" height="64" title="Jonathan DiLorenzo" alt="Jonathan DiLorenzo"></a>
 <a href="https://github.com/jxlin-lock"><img src="https://github.com/jxlin-lock.png?size=64" width="64" height="64" title="Jiaxin Lin" alt="Jiaxin Lin"></a>
+<a href="https://github.com/kheradmand"><img src="https://github.com/kheradmand.png?size=64" width="64" height="64" title="Ali Kheradmand" alt="Ali Kheradmand"></a>
 <a href="https://github.com/matthewtlam"><img src="https://github.com/matthewtlam.png?size=64" width="64" height="64" title="Matthew Lam" alt="Matthew Lam"></a>
 <a href="https://github.com/msbaz2013"><img src="https://github.com/msbaz2013.png?size=64" width="64" height="64" title="Muhammad Shahbaz" alt="Muhammad Shahbaz"></a>
 <a href="https://github.com/qobilidop"><img src="https://github.com/qobilidop.png?size=64" width="64" height="64" title="Bili Dong" alt="Bili Dong"></a>
 <a href="https://github.com/rst0git"><img src="https://github.com/rst0git.png?size=64" width="64" height="64" title="Radostin Stoyanov" alt="Radostin Stoyanov"></a>
 <a href="https://github.com/thantry"><img src="https://github.com/thantry.png?size=64" width="64" height="64" title="Hari Thantry" alt="Hari Thantry"></a>
 <a href="https://github.com/vbnogueira"><img src="https://github.com/vbnogueira.png?size=64" width="64" height="64" title="Victor Nogueira" alt="Victor Nogueira"></a>
+<a href="https://github.com/verios-google"><img src="https://github.com/verios-google.png?size=64" width="64" height="64" title="Victor Rios" alt="Victor Rios"></a>
 
 ### Org admins
 

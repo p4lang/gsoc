@@ -2,7 +2,7 @@
 
 - Context
     - [P4 GSoC 2026](/program/2026/README.md)
-    - [Official GSoC project page](https://summerofcode.withgoogle.com/programs/2026/projects/DAxIafkq)
+    - [Official GSoC project archive](https://summerofcode.withgoogle.com/archive/2026/projects/DAxIafkq)
 - Participants
     - Contributor: Yuao Ma ([@c8ef](https://github.com/c8ef))
     - Primary mentor: Matthew Lam ([@matthewtlam](https://github.com/matthewtlam))
