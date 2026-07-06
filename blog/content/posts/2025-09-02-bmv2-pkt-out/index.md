@@ -27,7 +27,7 @@ Multiple allowed behaviors usually arise from various multi-path constructs (e.g
 - Updated documentation on `simple_switch`'s pipeline. 
 
 [pipeline]: assets/pipeline.png
-<p align="center" name="pipeline">
+<p align="center" id="pipeline">
   <img src="assets/pipeline.png" width="600"><br>Pipeline Overview
 </p>
 
