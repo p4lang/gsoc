@@ -1,7 +1,7 @@
 # P4-Enabled Container Migration in Kubernetes
 
 - Context
-    - [P4 GSoC 2024](/2024/README.md)
+    - [P4 GSoC 2024](/program/2024/README.md)
     - [Official GSoC project archive](https://summerofcode.withgoogle.com/archive/2024/projects/sYbpOJhD)
 - Participants
     - Contributor: Stanislav Kosorin ([@stano45](https://github.com/stano45))

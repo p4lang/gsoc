@@ -1,7 +1,7 @@
 # SpliDT: Scaling Stateful Decision Tree Algorithms in P4
 
 - Context
-    - [P4 GSoC 2025](/2025/README.md)
+    - [P4 GSoC 2025](/program/2025/README.md)
     - [Official GSoC project archive](https://summerofcode.withgoogle.com/archive/2025/projects/Qvq4a3yR)
 - Participants
     - Contributor: Sankalp Jha ([@blackdragoon26](https://github.com/blackdragoon26))

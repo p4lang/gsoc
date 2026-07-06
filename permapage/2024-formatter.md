@@ -1,7 +1,7 @@
 # P4 Formatter
 
 - Context
-    - [P4 GSoC 2024](/2024/README.md)
+    - [P4 GSoC 2024](/program/2024/README.md)
     - [Official GSoC project archive](https://summerofcode.withgoogle.com/archive/2024/projects/TbPyjqVw)
 - Participants
     - Contributor: Nitish Kumar ([@snapdgn](https://github.com/snapdgn))

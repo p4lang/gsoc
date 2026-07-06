@@ -1,7 +1,7 @@
 # BMv2 With All Possible Output Packets
 
 - Context
-    - [P4 GSoC 2025](/2025/README.md)
+    - [P4 GSoC 2025](/program/2025/README.md)
     - [Official GSoC project archive](https://summerofcode.withgoogle.com/archive/2025/projects/dsjZn7sx)
 - Participants
     - Contributor: Xiyu Hao ([@Hoooao](https://github.com/Hoooao))
