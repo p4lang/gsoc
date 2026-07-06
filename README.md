@@ -6,15 +6,15 @@ This repository hosts materials for [The P4 Language Consortium](https://p4.org/
 
 - New to P4? Go through our [learning materials](materials/learning_materials.md).
 - Curious what a successful project looks like? Read the final reports of completed projects on [our blog](https://p4lang.github.io/gsoc/blog/).
-- Ready to participate? Check out the [latest program](program/2026/README.md) and our [contributor guidance](materials/contributor_guidance.md).
+- Ready to participate? Check out the [latest program](#programs) and our [contributor guidance](materials/contributor_guidance.md).
 
 ## Repository layout
 
-- [`program/`](program/): one directory per program year, holding that year's README, ideas list, guidance, and assets.
-- [`permapage/`](permapage/): one permanent page per completed project. These are stable link targets designed to never move, so they are safe to cite from proposals, resumes, and external sites.
+- [`program/`](program/): one directory per program year.
+- [`permapage/`](permapage/): one permanent page per completed project, with stable paths that are safe to cite externally.
 - [`blog/`](blog/): the P4 GSoC blog, including project final reports.
 - [`materials/`](materials/): evergreen materials shared across program years.
-- [`2024/`](2024/), [`2025/`](2025/): frozen legacy paths, kept only so old inbound links keep working. The immutable GSoC archive (among other external references) links to `2024/projects/...` and `2025/projects/...`, so these paths must never be deleted; each project's README there is a symlink to its permapage. Do not add new entries; from 2026 on, permapages are the canonical link target from day one.
+- [`2024/`](2024/), [`2025/`](2025/): frozen legacy paths that keep old external links working, notably from the GSoC archive. Never delete or extend these.
 
 ## Programs
 
