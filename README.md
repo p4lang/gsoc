@@ -1,32 +1,30 @@
 # P4 GSoC
 
-This repository hosts materials for [The P4 Language Consortium](https://p4.org/)'s participation in [Google Summer of Code](https://summerofcode.withgoogle.com/) (GSoC).
+This repository hosts materials for [The P4 Language Consortium](https://p4.org/)'s participation in [Google Summer of Code (GSoC)](https://summerofcode.withgoogle.com/).
 
 ## Where to start?
 
-- New to P4? Go through our [learning materials](materials/learning_materials.md).
-- Curious what a successful project looks like? Read the final reports of completed projects on [our blog](https://p4lang.github.io/gsoc/blog/).
-- Ready to participate? Check out the [latest program](#programs) and our [contributor guidance](materials/contributor_guidance.md).
+- New to P4? Go through our [learning materials](handbook/learning_materials.md).
+- Curious what a successful project looks like? Read our [blog posts](https://p4lang.github.io/gsoc/blog/) of completed projects.
+- Ready to participate? Check out the [latest program](#programs) and our [contributor guidance](handbook/contributor_guidance.md).
 
 ## Repository layout
 
 - [`program/`](program/): one directory per program year.
+- [`handbook/`](handbook/): evergreen docs shared across program years.
 - [`permapage/`](permapage/): one permanent page per completed project, with stable paths that are safe to cite externally.
-- [`blog/`](blog/): the P4 GSoC blog, including project final reports.
-- [`materials/`](materials/): evergreen materials shared across program years.
+- [`blog/`](blog/): source of [our blog](https://p4lang.github.io/gsoc/blog/).
 - [`2024/`](2024/), [`2025/`](2025/): frozen legacy paths that keep old external links working, notably from the GSoC archive. Never delete or extend these.
 
 ## Programs
 
 | Program | Accepted projects | Completed projects |
-| ------- | ----------------- | ------------------ |
-| [![P4 GSoC 2026](https://img.shields.io/badge/P4%20GSoC-2026-fbbc05?style=flat&logo=google-summer-of-code)](program/2026/README.md) | 5 | (ongoing) |
+| ------- | ----------------: | -----------------: |
+| [![P4 GSoC 2026](https://img.shields.io/badge/P4%20GSoC-2026-fbbc05?style=flat&logo=google-summer-of-code)](program/2026/README.md) | 5 | ongoing |
 | [![P4 GSoC 2025](https://img.shields.io/badge/P4%20GSoC-2025-fbbc05?style=flat&logo=google-summer-of-code)](program/2025/README.md) | 5 | 4 |
 | [![P4 GSoC 2024](https://img.shields.io/badge/P4%20GSoC-2024-fbbc05?style=flat&logo=google-summer-of-code)](program/2024/README.md) | 4 | 4 |
 
 ## Participants
-
-Everyone who has taken part in P4 GSoC so far.
 
 ### Contributors
 

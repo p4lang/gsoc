@@ -5,7 +5,7 @@
 - [GSoC 2026 Program - The P4 Language Consortium](https://summerofcode.withgoogle.com/programs/2026/organizations/the-p4-language-consortium)
 - [Ideas List](ideas_list.md)
 - [Application Instructions](application_instructions.md)
-- [Contributor Guidance](/materials/contributor_guidance.md)
+- [Contributor Guidance](/handbook/contributor_guidance.md)
 
 ## Updates
 
