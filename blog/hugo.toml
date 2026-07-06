@@ -1,6 +1,7 @@
 baseURL = "https://p4lang.github.io/gsoc/blog/"
-languageCode = "en-us"
+locale = "en-US"
 title = "P4 GSoC Blog"
+copyright = "© [p4lang/gsoc contributors](https://github.com/p4lang/gsoc/graphs/contributors?all=1)"
 
 [module]
   [[module.imports]]
