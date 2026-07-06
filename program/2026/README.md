@@ -20,8 +20,8 @@
 | [Polyglot P4TC: Python and Rust API Wrappers for Linux TC-based P4](/permapage/2026-p4tc.md) | Attaullah | Jamal, Victor | Evangelos |
 | [Enhancing P4-SpecTec Usability: A Mechanized Specification for Nano-P4](/permapage/2026-p4-spectec.md) | Haechan | Jaehyun | |
 | [Improving The Traffic Manager of the P4Sim Switch](/permapage/2026-p4sim.md) | Vineet | Mingyu | Davide |
-| [Integrating P4 Based In Network Machine Learning Framework into P4Pi](/permapage/2026-p4pi.md) | WeiWei | Peng | |
 | [BMv2 packet trace support](/permapage/2026-bmv2-pkt-trace.md) | Yuao | Matthew | Bili |
+| [Integrating P4 Based In Network Machine Learning Framework into P4Pi](/permapage/2026-p4pi.md) | Yuzhong | Peng | |
 
 ## Participants
 
@@ -30,8 +30,8 @@
 - Attaullah Ansari ([@atta-ullah01](https://github.com/atta-ullah01))
 - Haechan Kwon ([@pacokwon](https://github.com/pacokwon))
 - Vineet Goel ([@Vineet1101](https://github.com/Vineet1101))
-- WeiWei Luo
 - Yuao Ma ([@c8ef](https://github.com/c8ef))
+- Yuzhong (WeiWei) Luo ([@pig8pig](https://github.com/pig8pig))
 
 ### Mentors
 

@@ -36,6 +36,7 @@ This repository hosts materials for [The P4 Language Consortium](https://p4.org/
 <a href="https://github.com/blackdragoon26"><img src="https://github.com/blackdragoon26.png?size=64" width="64" height="64" title="Sankalp Jha" alt="Sankalp Jha"></a>
 <a href="https://github.com/c8ef"><img src="https://github.com/c8ef.png?size=64" width="64" height="64" title="Yuao Ma" alt="Yuao Ma"></a>
 <a href="https://github.com/pacokwon"><img src="https://github.com/pacokwon.png?size=64" width="64" height="64" title="Haechan Kwon" alt="Haechan Kwon"></a>
+<a href="https://github.com/pig8pig"><img src="https://github.com/pig8pig.png?size=64" width="64" height="64" title="Yuzhong (WeiWei) Luo" alt="Yuzhong (WeiWei) Luo"></a>
 <a href="https://github.com/rupeshchiluka001"><img src="https://github.com/rupeshchiluka001.png?size=64" width="64" height="64" title="Rupesh Chiluka" alt="Rupesh Chiluka"></a>
 <a href="https://github.com/snapdgn"><img src="https://github.com/snapdgn.png?size=64" width="64" height="64" title="Nitish Kumar" alt="Nitish Kumar"></a>
 <a href="https://github.com/stano45"><img src="https://github.com/stano45.png?size=64" width="64" height="64" title="Stanislav Kosorin" alt="Stanislav Kosorin"></a>
