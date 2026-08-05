@@ -1,6 +1,6 @@
 ---
 title: "BMv2 packet trace support"
-date: 2026-08-23
+date: 2026-08-18
 author: Yuao Ma
 permapage: https://github.com/p4lang/gsoc/blob/main/permapage/2026-bmv2-pkt-trace.md
 draft: false
