@@ -46,7 +46,7 @@ jobs:
 
       - name: Determine deploy target
         id: target
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: |
             const fs = require('fs');
