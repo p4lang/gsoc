@@ -10,6 +10,20 @@ copyright = "© [p4lang/gsoc contributors](https://github.com/p4lang/gsoc/graphs
 [pagination]
   pagerSize = 10
 
+# The JSON home output is the Fuse.js index PaperMod's search page consumes.
+[outputs]
+  home = ["html", "rss", "json"]
+
+[menus]
+  [[menus.main]]
+    name = "Archive"
+    url = "archives/"
+    weight = 10
+  [[menus.main]]
+    name = "Search"
+    url = "search/"
+    weight = 20
+
 # Project reports use raw HTML (<img>, <picture>, <br>), which Goldmark
 # strips by default.
 [markup.goldmark.renderer]
