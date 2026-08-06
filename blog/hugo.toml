@@ -38,6 +38,8 @@ copyright = "© [p4lang/gsoc contributors](https://github.com/p4lang/gsoc/graphs
   ShowToc = true
   ShowCodeCopyButtons = true
   ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
 
   # Renders next to the post meta via the edit_post partial (shadowed in
   # layouts/_partials/ to also show the permapage link).
