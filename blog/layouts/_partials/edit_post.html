@@ -4,26 +4,36 @@
        the same post-meta slot.
 
        Copied from the theme commit pinned in go.mod:
-       https://github.com/adityatelange/hugo-PaperMod/blob/893811ac431f/layouts/partials/edit_post.html
-       (the theme still used the legacy layouts/partials/ path at that
-       commit; Hugo resolves it and this file's layouts/_partials/ path to
-       the same template name). When bumping the theme module, re-diff the
-       upstream file and refresh the copy. */ -}}
-{{- if and (or .Params.editPost.URL site.Params.editPost.URL) (not (.Param "editPost.disabled")) -}}
-{{- $fileUrlPath := path.Join .File.Path }}
+       https://github.com/adityatelange/hugo-PaperMod/blob/d3768854d00a/layouts/_partials/edit_post.html
+       When bumping the theme module, re-diff the upstream file and refresh
+       the copy. */ -}}
+{{- if and (.Param "editPost.URL") (not (.Param "editPost.disabled")) -}}
+    {{- if or (.Param "author") (.Param "ShowReadingTime") (not .Date.IsZero) .IsTranslated }}
+        {{- printf "&nbsp;|&nbsp;" | safeHTML -}}
+    {{- end -}}
 
-{{- if or .Params.author site.Params.author (.Param "ShowReadingTime") (not .Date.IsZero) .IsTranslated }}&nbsp;|&nbsp;{{- end -}}
-<span>
-    <a href="{{ .Params.editPost.URL | default site.Params.editPost.URL }}{{ if .Params.editPost.appendFilePath | default ( site.Params.editPost.appendFilePath | default false ) }}/{{ $fileUrlPath }}{{ end }}" rel="noopener noreferrer edit" target="_blank">
-        {{- .Params.editPost.Text | default (site.Params.editPost.Text | default (i18n "edit_post" | default "Edit")) -}}
-    </a>
-</span>
+    {{- $editURL := .Param "editPost.URL" }}
+    {{- $appendFilePath := .Param "editPost.appendFilePath" | default false }}
+    {{- $editText := .Param "editPost.Text" | default (i18n "edit_post" ) -}}
+
+    {{- if $appendFilePath -}}
+        {{- $fileUrlPath := path.Join .File.Path }}
+        {{- $editURL = printf "%s/%s" $editURL $fileUrlPath -}}
+    {{- end -}}
+
+    <span>
+        <a href="{{ $editURL }}" rel="noopener noreferrer edit" target="_blank">
+            {{- $editText -}}
+        </a>
+    </span>
 {{- end }}
 {{- /* Site addition start: permapage link */ -}}
 {{- with .Param "permapage" -}}
-{{- if or $.Params.author site.Params.author ($.Param "ShowReadingTime") (not $.Date.IsZero) $.IsTranslated }}&nbsp;|&nbsp;{{- end -}}
-<span>
-    <a href="{{ . }}" rel="noopener noreferrer" target="_blank">Project permapage</a>
-</span>
+    {{- if or ($.Param "author") ($.Param "ShowReadingTime") (not $.Date.IsZero) $.IsTranslated }}
+        {{- printf "&nbsp;|&nbsp;" | safeHTML -}}
+    {{- end -}}
+    <span>
+        <a href="{{ . }}" rel="noopener noreferrer" target="_blank">Project permapage</a>
+    </span>
 {{- end }}
 {{- /* Site addition end */ -}}
