@@ -1,0 +1,9 @@
+/* Reports pasted from GitHub-rendered HTML carry fixed width/height
+   attributes on <img> tags. PaperMod caps images at max-width: 100% but
+   leaves the height pinned at the attribute value, distorting the aspect
+   ratio in the narrower content column. Restoring height: auto lets the
+   browser scale both dimensions together; the attributes still provide
+   the intrinsic aspect ratio before load, avoiding layout shift. */
+.post-content img {
+    height: auto;
+}
