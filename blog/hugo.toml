@@ -33,14 +33,14 @@ copyright = "© [p4lang/gsoc contributors](https://github.com/p4lang/gsoc/graphs
   # Keep all home-page post cards uniform (no hero for the newest post).
   disableSpecial1stPost = true
 
-  ShowReadingTime = true
-  ShowWordCount = true
-  ShowToc = true
-  ShowCodeCopyButtons = true
-  ShowShareButtons = true
   ShareButtons = ["x", "linkedin", "reddit", "ycombinator"]
-  ShowPostNavLinks = true
   ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowPostNavLinks = true
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowToc = true
+  ShowWordCount = true
 
   # Renders next to the post meta via the edit_post partial (shadowed in
   # layouts/_partials/ to also show the permapage link).
