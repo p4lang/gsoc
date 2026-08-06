@@ -56,6 +56,10 @@ jobs:
       # hide a just-merged post until an unrelated push after that date.
       # Drafts render only in PR previews so draft: true still means
       # "not published" in production.
+      #
+      # PR previews build in a non-production Hugo environment, which makes
+      # the theme emit noindex robots meta on every page, keeping preview
+      # copies out of search engines.
       - name: Build site
         uses: devcontainers/ci@v0.3
         with:
@@ -64,7 +68,7 @@ jobs:
             pr="${{ github.event.pull_request.number }}"
             extra_flags="--buildFuture"
             if [ -n "$pr" ]; then
-              extra_flags="$extra_flags --buildDrafts"
+              extra_flags="$extra_flags --buildDrafts --environment preview"
             fi
             hugo -s blog --minify --baseURL "${{ steps.cfg.outputs.base_url }}" $extra_flags
             if [ -n "$pr" ]; then
