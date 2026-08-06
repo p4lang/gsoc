@@ -36,3 +36,5 @@ copyright = "© [p4lang/gsoc contributors](https://github.com/p4lang/gsoc/graphs
   ShowReadingTime = true
   ShowWordCount = true
   ShowToc = true
+  ShowCodeCopyButtons = true
+  ShowShareButtons = true
