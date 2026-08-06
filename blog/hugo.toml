@@ -38,6 +38,7 @@ copyright = "© [p4lang/gsoc contributors](https://github.com/p4lang/gsoc/graphs
   ShowToc = true
   ShowCodeCopyButtons = true
   ShowShareButtons = true
+  ShareButtons = ["x", "linkedin", "reddit", "ycombinator"]
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
 
