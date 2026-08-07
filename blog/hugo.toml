@@ -10,6 +10,20 @@ copyright = "© [p4lang/gsoc contributors](https://github.com/p4lang/gsoc/graphs
 [pagination]
   pagerSize = 10
 
+# The JSON home output is the Fuse.js index PaperMod's search page consumes.
+[outputs]
+  home = ["html", "rss", "json"]
+
+[menus]
+  [[menus.main]]
+    name = "Archive"
+    url = "archives/"
+    weight = 10
+  [[menus.main]]
+    name = "Search"
+    url = "search/"
+    weight = 20
+
 # Project reports use raw HTML (<img>, <picture>, <br>), which Goldmark
 # strips by default.
 [markup.goldmark.renderer]
@@ -19,6 +33,18 @@ copyright = "© [p4lang/gsoc contributors](https://github.com/p4lang/gsoc/graphs
   # Keep all home-page post cards uniform (no hero for the newest post).
   disableSpecial1stPost = true
 
+  ShareButtons = ["x", "linkedin", "reddit", "ycombinator"]
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowPostNavLinks = true
   ShowReadingTime = true
-  ShowWordCount = true
+  ShowShareButtons = true
   ShowToc = true
+  ShowWordCount = true
+
+  # Renders next to the post meta via the edit_post partial (shadowed in
+  # layouts/_partials/ to also show the permapage link).
+  [params.editPost]
+    URL = "https://github.com/p4lang/gsoc/blob/main/blog/content"
+    Text = "Suggest Changes"
+    appendFilePath = true

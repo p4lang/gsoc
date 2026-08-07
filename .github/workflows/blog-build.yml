@@ -49,13 +49,28 @@ jobs:
       # _meta/ before publishing, so it never reaches the live site. Written
       # inside the container because the build output may not be writable by
       # the host user.
+      #
+      # Future-dated posts are built everywhere (--buildFuture): post dates
+      # follow the report PR's merge time, so a future date is a placeholder
+      # awaiting correction, not a scheduling signal, and skipping it would
+      # hide a just-merged post until an unrelated push after that date.
+      # Drafts render only in PR previews so draft: true still means
+      # "not published" in production.
+      #
+      # PR previews build in a non-production Hugo environment, which makes
+      # the theme emit noindex robots meta on every page, keeping preview
+      # copies out of search engines.
       - name: Build site
         uses: devcontainers/ci@v0.3
         with:
           runCmd: |
             set -e
-            hugo -s blog --minify --baseURL "${{ steps.cfg.outputs.base_url }}"
             pr="${{ github.event.pull_request.number }}"
+            extra_flags="--buildFuture"
+            if [ -n "$pr" ]; then
+              extra_flags="$extra_flags --buildDrafts --environment preview"
+            fi
+            hugo -s blog --minify --baseURL "${{ steps.cfg.outputs.base_url }}" $extra_flags
             if [ -n "$pr" ]; then
               mkdir -p blog/public/_meta
               echo "$pr" > blog/public/_meta/pr_number.txt
