@@ -7,3 +7,6 @@
     - Contributor: Yuao Ma ([@c8ef](https://github.com/c8ef))
     - Primary mentor: Matthew Lam ([@matthewtlam](https://github.com/matthewtlam))
     - Support mentor: Bili Dong ([@qobilidop](https://github.com/qobilidop))
+- Artifacts
+    - [Final report blog](https://p4lang.github.io/gsoc/blog/posts/2026-08-11-bmv2-pkt-trace/)
+    - [Final presentation slides](https://bmv2-pkt-trace.vercel.app/)
