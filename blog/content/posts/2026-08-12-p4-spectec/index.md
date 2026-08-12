@@ -44,17 +44,17 @@ the full P4 spec. The `nano-p4spectec` CLI that runs the spec is implemented in
 [`kaist-plrg/p4-spectec`](https://github.com/kaist-plrg/p4-spectec) repository
 (on the `gsoc-nano-spec` branch), where the spec is included as a submodule.
 
-**Syntax and IR.** The surface grammar of Nano-P4 is defined in
+**Syntax and IR:** The surface grammar of Nano-P4 is defined in
 `1-syntax.watsup` as P4-SpecTec `syntax` definitions.
 
-**Static semantics.** The static semantics defines what it means for a Nano-P4
+**Static semantics:** The static semantics defines what it means for a Nano-P4
 program to be _well-typed_. The `5.xx-typing-*.watsup` files define
 type-checking relations for every syntactic category. The top-level `Program_ok`
 relation orchestrates the full type-checking pass; if it succeeds, it produces a
 `typingContext` capturing type definitions, as well as the types of identifiers
 and callables.
 
-**Loading phase.** The loading phase sits between type checking and evaluation.
+**Loading phase:** The loading phase sits between type checking and evaluation.
 While the `typingContext` records the type of each callable, it does not retain
 the callable's body; that information is discarded after type checking. The
 loading phase (defined in `7.0-load-context.watsup` and
@@ -62,7 +62,7 @@ loading phase (defined in `7.0-load-context.watsup` and
 `loadContext` that pairs each callable with its body and records the entry-point
 parser and control for the NanoSwitch architecture.
 
-**Dynamic semantics.** The dynamic semantics defines what it means for a Nano-P4
+**Dynamic semantics:** The dynamic semantics defines what it means for a Nano-P4
 program to _run_. The `8.xx-eval-*.watsup` files define evaluation relations,
 following the same structure as the static semantics. Each file covers a
 syntactic category and contains inference rules that describe how they are
@@ -70,7 +70,7 @@ evaluated. The top-level `NanoSwitch_sim` relation models the NanoSwitch
 architecture end to end: it runs the parser block on an input packet, then the
 control block, and produces an output packet.
 
-**Test suite.** The test suite has two kinds of test programs. Positive cases
+**Test suite:** The test suite has two kinds of test programs. Positive cases
 are well-typed `.p4` files that double as both static and dynamic tests. The
 static test verfies that the `Program_ok` relation accepts the program. The
 dynamic test executes the `NanoSwitch_sim` rule with an accompanying `.stf`
@@ -123,13 +123,13 @@ Relevant PRs:
 - [kaist-plrg/p4-spectec#164](https://github.com/kaist-plrg/p4-spectec/pull/164)
 - [ocaml/opam-repository#30455](https://github.com/ocaml/opam-repository/pull/30455)
 
-**Nix flake.** A `flake.nix` was added to `kaist-plrg/p4-spectec`, pinning all
+**Nix flake:** A `flake.nix` was added to `kaist-plrg/p4-spectec`, pinning all
 build and runtime dependencies. Running `nix develop` drops into a shell with
 OCaml, opam, and every required library already present. This gives contributors
 the option to create a fully reproducible development environment with a single
 command.
 
-**opam package.** `p4spectec` is now published on the opam repository as version
+**opam package:** `p4spectec` is now published on the opam repository as version
 `0.1.2`. Users who already have opam can install the binary with
 `opam install p4spectec`, without cloning the source or managing the build
 themselves.
@@ -233,13 +233,13 @@ asciidoctor -o out/conditional-statement.html out/conditional-statement.adoc
 
 ## Future Work
 
-**P4-SpecTec language reference.** The tutorial is designed to introduce
+**P4-SpecTec language reference:** The tutorial is designed to introduce
 P4-SpecTec constructs as they are needed to write the Nano-P4 spec, not as a
 systematic reference. A dedicated P4-SpecTec language reference document, one
 that covers all constructs, syntax forms, and built-in functions in a
 lookup-friendly format, would complement the tutorial well.
 
-**Open-ended exercises.** The current exercises are closely guided: the reader
+**Open-ended exercises:** The current exercises are closely guided: the reader
 is told what is missing and roughly where to look. A natural next step is
 open-ended exercises where the reader is given a feature description and must
 figure out the spec changes themselves. Adding a validity bit to header types is
