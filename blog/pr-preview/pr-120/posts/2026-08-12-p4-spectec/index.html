@@ -34,25 +34,25 @@ as a collection of spec files, organized by phase and mirroring the structure of
 the full P4 spec. The <code>nano-p4spectec</code> CLI that runs the spec is implemented in
 <code>nano-p4/nano.ml</code> in the
 <a href=https://github.com/kaist-plrg/p4-spectec><code>kaist-plrg/p4-spectec</code></a> repository
-(on the <code>gsoc-nano-spec</code> branch), where the spec is included as a submodule.</p><p><strong>Syntax and IR.</strong> The surface grammar of Nano-P4 is defined in
-<code>1-syntax.watsup</code> as P4-SpecTec <code>syntax</code> definitions.</p><p><strong>Static semantics.</strong> The static semantics defines what it means for a Nano-P4
+(on the <code>gsoc-nano-spec</code> branch), where the spec is included as a submodule.</p><p><strong>Syntax and IR:</strong> The surface grammar of Nano-P4 is defined in
+<code>1-syntax.watsup</code> as P4-SpecTec <code>syntax</code> definitions.</p><p><strong>Static semantics:</strong> The static semantics defines what it means for a Nano-P4
 program to be <em>well-typed</em>. The <code>5.xx-typing-*.watsup</code> files define
 type-checking relations for every syntactic category. The top-level <code>Program_ok</code>
 relation orchestrates the full type-checking pass; if it succeeds, it produces a
 <code>typingContext</code> capturing type definitions, as well as the types of identifiers
-and callables.</p><p><strong>Loading phase.</strong> The loading phase sits between type checking and evaluation.
+and callables.</p><p><strong>Loading phase:</strong> The loading phase sits between type checking and evaluation.
 While the <code>typingContext</code> records the type of each callable, it does not retain
 the callable&rsquo;s body; that information is discarded after type checking. The
 loading phase (defined in <code>7.0-load-context.watsup</code> and
 <code>7.1-load-declaration.watsup</code>) walks the declarations a second time to build a
 <code>loadContext</code> that pairs each callable with its body and records the entry-point
-parser and control for the NanoSwitch architecture.</p><p><strong>Dynamic semantics.</strong> The dynamic semantics defines what it means for a Nano-P4
+parser and control for the NanoSwitch architecture.</p><p><strong>Dynamic semantics:</strong> The dynamic semantics defines what it means for a Nano-P4
 program to <em>run</em>. The <code>8.xx-eval-*.watsup</code> files define evaluation relations,
 following the same structure as the static semantics. Each file covers a
 syntactic category and contains inference rules that describe how they are
 evaluated. The top-level <code>NanoSwitch_sim</code> relation models the NanoSwitch
 architecture end to end: it runs the parser block on an input packet, then the
-control block, and produces an output packet.</p><p><strong>Test suite.</strong> The test suite has two kinds of test programs. Positive cases
+control block, and produces an output packet.</p><p><strong>Test suite:</strong> The test suite has two kinds of test programs. Positive cases
 are well-typed <code>.p4</code> files that double as both static and dynamic tests. The
 static test verfies that the <code>Program_ok</code> relation accepts the program. The
 dynamic test executes the <code>NanoSwitch_sim</code> rule with an accompanying <code>.stf</code>
@@ -78,11 +78,11 @@ a skeleton AsciiDoc document with directive placeholders, running
 <code>nano-p4spectec splice</code> to fill them in from the spec, and compiling the
 result with Asciidoctor. Shows how <code>prose_in</code>, <code>prose_out</code>, <code>prose_true</code>, and
 <code>prose_false</code> hints on relation definitions control the quality of the
-generated English.</p></li></ol><h3 id=toolchain-availability>Toolchain Availability<a hidden class=anchor aria-hidden=true href=#toolchain-availability>#</a></h3><p>Relevant PRs:</p><ul><li><a href=https://github.com/kaist-plrg/p4-spectec/pull/164>kaist-plrg/p4-spectec#164</a></li><li><a href=https://github.com/ocaml/opam-repository/pull/30455>ocaml/opam-repository#30455</a></li></ul><p><strong>Nix flake.</strong> A <code>flake.nix</code> was added to <code>kaist-plrg/p4-spectec</code>, pinning all
+generated English.</p></li></ol><h3 id=toolchain-availability>Toolchain Availability<a hidden class=anchor aria-hidden=true href=#toolchain-availability>#</a></h3><p>Relevant PRs:</p><ul><li><a href=https://github.com/kaist-plrg/p4-spectec/pull/164>kaist-plrg/p4-spectec#164</a></li><li><a href=https://github.com/ocaml/opam-repository/pull/30455>ocaml/opam-repository#30455</a></li></ul><p><strong>Nix flake:</strong> A <code>flake.nix</code> was added to <code>kaist-plrg/p4-spectec</code>, pinning all
 build and runtime dependencies. Running <code>nix develop</code> drops into a shell with
 OCaml, opam, and every required library already present. This gives contributors
 the option to create a fully reproducible development environment with a single
-command.</p><p><strong>opam package.</strong> <code>p4spectec</code> is now published on the opam repository as version
+command.</p><p><strong>opam package:</strong> <code>p4spectec</code> is now published on the opam repository as version
 <code>0.1.2</code>. Users who already have opam can install the binary with
 <code>opam install p4spectec</code>, without cloning the source or managing the build
 themselves.</p><h2 id=demo>Demo<a hidden class=anchor aria-hidden=true href=#demo>#</a></h2><h3 id=reading-the-tutorial>Reading the tutorial<a hidden class=anchor aria-hidden=true href=#reading-the-tutorial>#</a></h3><p>The deployed book is live at:
@@ -120,11 +120,11 @@ syntax, static semantics, a loading phase, and dynamic semantics.</li><li>A seve
 covering P4-SpecTec basics, the full Nano-P4 mechanization, debugging
 techniques, and prose generation, with hands-on exercises throughout.</li><li>Reproducible development environments for P4-SpecTec via a Nix flake (pinned
 in the tutorial repository) and an opam package (distributed with
-<code>kaist-plrg/p4-spectec</code>).</li></ul><h2 id=future-work>Future Work<a hidden class=anchor aria-hidden=true href=#future-work>#</a></h2><p><strong>P4-SpecTec language reference.</strong> The tutorial is designed to introduce
+<code>kaist-plrg/p4-spectec</code>).</li></ul><h2 id=future-work>Future Work<a hidden class=anchor aria-hidden=true href=#future-work>#</a></h2><p><strong>P4-SpecTec language reference:</strong> The tutorial is designed to introduce
 P4-SpecTec constructs as they are needed to write the Nano-P4 spec, not as a
 systematic reference. A dedicated P4-SpecTec language reference document, one
 that covers all constructs, syntax forms, and built-in functions in a
-lookup-friendly format, would complement the tutorial well.</p><p><strong>Open-ended exercises.</strong> The current exercises are closely guided: the reader
+lookup-friendly format, would complement the tutorial well.</p><p><strong>Open-ended exercises:</strong> The current exercises are closely guided: the reader
 is told what is missing and roughly where to look. A natural next step is
 open-ended exercises where the reader is given a feature description and must
 figure out the spec changes themselves. Adding a validity bit to header types is
