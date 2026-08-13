@@ -7,8 +7,10 @@
 
 ## Relevant PRs
 
-- [#170: Static semantics](https://github.com/kaist-plrg/p4-spectec/pull/170)
-- [#177: Dynamic semantics and Loading phase](https://github.com/kaist-plrg/p4-spectec/pull/177)
+- [kaist-plrg/p4-spectec#170: Static semantics](https://github.com/kaist-plrg/p4-spectec/pull/170)
+- [kaist-plrg/p4-spectec#177: Dynamic semantics and Loading phase](https://github.com/kaist-plrg/p4-spectec/pull/177)
+- [kaist-plrg/p4-spectec#164](https://github.com/kaist-plrg/p4-spectec/pull/164)
+- [ocaml/opam-repository#30455](https://github.com/ocaml/opam-repository/pull/30455)
 
 ## Repositories
 
