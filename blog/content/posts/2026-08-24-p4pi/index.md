@@ -8,9 +8,10 @@ draft: false
 
 ## Abstract
 
-P4Pi brings P4 programming to a Raspberry Pi, making programmable data planes
-accessible for teaching and research on hardware costing under £100. Planter
-converts trained machine-learning models into P4 programs and match–action table
+[P4Pi](https://github.com/p4lang/p4pi) brings P4 programming to a Raspberry Pi, making programmable data planes
+accessible for teaching and research on hardware costing under £100.
+[Planter](https://github.com/In-Network-Machine-Learning/Planter) converts
+trained machine-learning models into P4 programs and match–action table
 entries, enabling inference to run directly in the packet-processing path.
 
 The two could not be used together. Planter's low-cost target support ended at
@@ -212,6 +213,8 @@ Three items remain open at the end of the coding period:
 
 ## Links
 
+- [Planter](https://github.com/In-Network-Machine-Learning/Planter)
+- [P4Pi](https://github.com/p4lang/p4pi)
 - [Project repository](https://github.com/pig8pig/Planter/tree/gsoc-p4c-dpdk)
 - [`p4c-dpdk` target documentation](https://github.com/pig8pig/Planter/blob/gsoc-p4c-dpdk/DPDK_TARGET.md)
 - [Image build overlay](https://github.com/pig8pig/Planter/tree/gsoc-p4c-dpdk/image-build)
