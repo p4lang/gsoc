@@ -24,7 +24,7 @@ raw byte handling.</p><p>This project built complete, high-level API wrappers in
 developers manage P4 objects (tables, externs) and event subscriptions using
 native language idioms. Both wrappers handle object allocation/deallocation,
 callback bridging, response parsing, and schema-driven type decoding - exposing
-a clean, idiomatic API in each language.</p><h2 id=architecture>Architecture<a hidden class=anchor aria-hidden=true href=#architecture>#</a></h2><p><img alt="P4TC wrapper architecture" loading=lazy src=assets/architecture.png></p><p>Both wrappers sit between user code and the C library (<code>libp4tctrl</code>). Python
+a clean, idiomatic API in each language.</p><h2 id=architecture>Architecture<a hidden class=anchor aria-hidden=true href=#architecture>#</a></h2><p><img alt="P4TC wrapper architecture" loading=lazy src=/gsoc/blog/pr-preview/pr-123/posts/2026-08-24-p4tc/assets/architecture.png></p><p>Both wrappers sit between user code and the C library (<code>libp4tctrl</code>). Python
 uses <code>cffi</code> with <code>dlopen</code> for FFI; Rust uses <code>bindgen</code> with a <code>sys</code> crate. Each
 wrapper translates high-level calls into the C API&rsquo;s object lifecycle
 (create, configure, execute, destroy) and parses kernel responses back into
