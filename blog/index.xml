@@ -7,7 +7,12 @@ entries, enabling inference to run directly in the packet-processing path.&lt;/p
 &lt;p&gt;The two could not be used together. Planter&amp;rsquo;s low-cost target support ended at
 BMv2, which suits functional validation but not sustained traffic, and it had no
 adapter for &lt;code&gt;p4c-dpdk&lt;/code&gt; — the compiler backend for P4Pi&amp;rsquo;s higher-performance DPDK
-pipeline.&lt;/p&gt;</description></item><item><title>Enhancing P4-SpecTec Usability: A Mechanized Specification for Nano-P4</title><link>https://p4lang.github.io/gsoc/blog/posts/2026-08-12-p4-spectec/</link><pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate><guid>https://p4lang.github.io/gsoc/blog/posts/2026-08-12-p4-spectec/</guid><description>&lt;h2 id="abstract"&gt;Abstract&lt;/h2&gt;
+pipeline.&lt;/p&gt;</description></item><item><title>Improving The Traffic Manager of the P4Sim Switch</title><link>https://p4lang.github.io/gsoc/blog/posts/2026-08-22-p4sim/</link><pubDate>Sat, 22 Aug 2026 00:00:00 +0000</pubDate><guid>https://p4lang.github.io/gsoc/blog/posts/2026-08-22-p4sim/</guid><description>&lt;h2 id="abstract"&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;This project reworks the switch datapath of &lt;strong&gt;P4Sim&lt;/strong&gt;, the P4 switch module for the ns-3
+network simulator. Before this work, packets reached the channel through an extra port layer,
+switch links reused the generic CSMA/P2P channel models, and the queues were drained by a timer
+that polled them regardless of port state. The result was an indirect datapath and a scheduler
+that did not track when a port was actually free to send.&lt;/p&gt;</description></item><item><title>Enhancing P4-SpecTec Usability: A Mechanized Specification for Nano-P4</title><link>https://p4lang.github.io/gsoc/blog/posts/2026-08-12-p4-spectec/</link><pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate><guid>https://p4lang.github.io/gsoc/blog/posts/2026-08-12-p4-spectec/</guid><description>&lt;h2 id="abstract"&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://github.com/kaist-plrg/p4-spectec"&gt;P4-SpecTec&lt;/a&gt;&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt; is a mechanization
 toolchain for the P4 programming language. It provides a domain-specific
 language for writing formal specifications in the form of &lt;em&gt;algorithmic&lt;/em&gt;
