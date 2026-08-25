@@ -7,7 +7,17 @@ entries, enabling inference to run directly in the packet-processing path.&lt;/p
 &lt;p&gt;The two could not be used together. Planter&amp;rsquo;s low-cost target support ended at
 BMv2, which suits functional validation but not sustained traffic, and it had no
 adapter for &lt;code&gt;p4c-dpdk&lt;/code&gt; — the compiler backend for P4Pi&amp;rsquo;s higher-performance DPDK
-pipeline.&lt;/p&gt;</description></item><item><title>Improving The Traffic Manager of the P4Sim Switch</title><link>https://p4lang.github.io/gsoc/blog/posts/2026-08-22-p4sim/</link><pubDate>Sat, 22 Aug 2026 00:00:00 +0000</pubDate><guid>https://p4lang.github.io/gsoc/blog/posts/2026-08-22-p4sim/</guid><description>&lt;h2 id="abstract"&gt;Abstract&lt;/h2&gt;
+pipeline.&lt;/p&gt;</description></item><item><title>Polyglot P4TC: Python and Rust API Wrappers for P4TC</title><link>https://p4lang.github.io/gsoc/blog/posts/2026-08-24-p4tc/</link><pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate><guid>https://p4lang.github.io/gsoc/blog/posts/2026-08-24-p4tc/</guid><description>&lt;h2 id="abstract"&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://p4tc.dev"&gt;P4 Traffic Control (P4TC)&lt;/a&gt; is a Linux kernel subsystem that
+runs P4 programs in the networking data path - either in software via eBPF, or
+offloaded to hardware like SmartNICs. Its userspace runtime API (&lt;code&gt;libp4tctrl&lt;/code&gt;)
+is a C library that requires manual memory management, pointer arithmetic, and
+raw byte handling.&lt;/p&gt;
+&lt;p&gt;This project built complete, high-level API wrappers in Python and Rust that let
+developers manage P4 objects (tables, externs) and event subscriptions using
+native language idioms. Both wrappers handle object allocation/deallocation,
+callback bridging, response parsing, and schema-driven type decoding - exposing
+a clean, idiomatic API in each language.&lt;/p&gt;</description></item><item><title>Improving The Traffic Manager of the P4Sim Switch</title><link>https://p4lang.github.io/gsoc/blog/posts/2026-08-22-p4sim/</link><pubDate>Sat, 22 Aug 2026 00:00:00 +0000</pubDate><guid>https://p4lang.github.io/gsoc/blog/posts/2026-08-22-p4sim/</guid><description>&lt;h2 id="abstract"&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;This project reworks the switch datapath of &lt;strong&gt;P4Sim&lt;/strong&gt;, the P4 switch module for the ns-3
 network simulator. Before this work, packets reached the channel through an extra port layer,
 switch links reused the generic CSMA/P2P channel models, and the queues were drained by a timer
