@@ -208,8 +208,8 @@ Three items remain open at the end of the coding period:
   runtime, but the `link` and `ethdev` port types in the DPDK 20.11
   `dpdk-pipeline` sample app do not accept them without additional ethdev
   initialisation; testing currently uses pcap source/sink ports
-- Upstreaming the PSA generator fixes and the DPDK target to Planter, and the
-  image build fixes to P4Pi
+- Review and merge of the upstream pull requests: the PSA generator fixes and
+  the DPDK target to Planter, and the pi-gen build fixes to P4Pi
 
 ## Links
 
@@ -217,7 +217,10 @@ Three items remain open at the end of the coding period:
 - [P4Pi](https://github.com/p4lang/p4pi)
 - [Project repository](https://github.com/pig8pig/Planter/tree/gsoc-p4c-dpdk)
 - [`p4c-dpdk` target documentation](https://github.com/pig8pig/Planter/blob/gsoc-p4c-dpdk/DPDK_TARGET.md)
-- [Image build overlay](https://github.com/pig8pig/Planter/tree/gsoc-p4c-dpdk/image-build)
+- [P4Pi image build scripts](https://github.com/pig8pig/Planter/tree/gsoc-p4c-dpdk/image-build)
+- [PSA generator fixes (Planter PR #11)](https://github.com/In-Network-Machine-Learning/Planter/pull/11)
+- [`p4c-dpdk` target (Planter PR #12)](https://github.com/In-Network-Machine-Learning/Planter/pull/12)
+- [pi-gen build fixes (P4Pi PR #97)](https://github.com/p4lang/p4pi/pull/97)
 - [Python 3.12 compatibility fix](https://github.com/In-Network-Machine-Learning/Planter/pull/10)
 
 ## Acknowledgements
