@@ -24,11 +24,10 @@ P4-SpecTec. It guides readers through writing a complete mechanized
 specification from scratch, covering the toolchain basics, core semantic rules,
 debugging techniques, and prose generation. The subject of the tutorial is
 <em>Nano-P4</em>, an educational dialect of P4, whose mechanized specification is
-developed alongside the text and serves as its running example. Beyond the
-tutorial itself, the project also improves how accessible P4-SpecTec is to
-newcomers: a Nix flake provides a fully reproducible development environment for
-contributors, and an opam package distributes the <code>p4spectec</code> binary to users
-who want to install it without building from source.</p><h2 id=implementation-details>Implementation Details<a hidden class=anchor aria-hidden=true href=#implementation-details>#</a></h2><h3 id=nano-p4-mechanized-specification>Nano-P4 Mechanized Specification<a hidden class=anchor aria-hidden=true href=#nano-p4-mechanized-specification>#</a></h3><p>Relevant PRs:</p><ul><li><a href=https://github.com/kaist-plrg/p4-spectec/pull/170>kaist-plrg/p4-spectec#170: Static semantics</a></li><li><a href=https://github.com/kaist-plrg/p4-spectec/pull/177>kaist-plrg/p4-spectec#177: Dynamic semantics</a></li></ul><p>The Nano-P4 specification lives in the
+developed alongside the text and serves as its running example.</p><p>Beyond the tutorial itself, the project also improves how accessible P4-SpecTec
+is to newcomers: a Nix flake provides a fully reproducible development
+environment for contributors, and an opam package distributes the <code>p4spectec</code>
+binary to users who want to install it without building from source.</p><h2 id=implementation-details>Implementation Details<a hidden class=anchor aria-hidden=true href=#implementation-details>#</a></h2><h3 id=nano-p4-mechanized-specification>Nano-P4 Mechanized Specification<a hidden class=anchor aria-hidden=true href=#nano-p4-mechanized-specification>#</a></h3><p>Relevant PRs:</p><ul><li><a href=https://github.com/kaist-plrg/p4-spectec/pull/170>kaist-plrg/p4-spectec#170: Static semantics</a></li><li><a href=https://github.com/kaist-plrg/p4-spectec/pull/177>kaist-plrg/p4-spectec#177: Dynamic semantics</a></li></ul><p>The Nano-P4 specification lives in the
 <a href=https://github.com/pacokwon/nano-p4-spec><code>pacokwon/nano-p4-spec</code></a> repository
 as a collection of spec files, organized by phase and mirroring the structure of
 the full P4 spec. The <code>nano-p4spectec</code> CLI that runs the spec is implemented in
