@@ -21,11 +21,12 @@ P4-SpecTec. It guides readers through writing a complete mechanized
 specification from scratch, covering the toolchain basics, core semantic rules,
 debugging techniques, and prose generation. The subject of the tutorial is
 _Nano-P4_, an educational dialect of P4, whose mechanized specification is
-developed alongside the text and serves as its running example. Beyond the
-tutorial itself, the project also improves how accessible P4-SpecTec is to
-newcomers: a Nix flake provides a fully reproducible development environment for
-contributors, and an opam package distributes the `p4spectec` binary to users
-who want to install it without building from source.
+developed alongside the text and serves as its running example.
+
+Beyond the tutorial itself, the project also improves how accessible P4-SpecTec
+is to newcomers: a Nix flake provides a fully reproducible development
+environment for contributors, and an opam package distributes the `p4spectec`
+binary to users who want to install it without building from source.
 
 ## Implementation Details
 
@@ -40,9 +41,11 @@ The Nano-P4 specification lives in the
 [`pacokwon/nano-p4-spec`](https://github.com/pacokwon/nano-p4-spec) repository
 as a collection of spec files, organized by phase and mirroring the structure of
 the full P4 spec. The `nano-p4spectec` CLI that runs the spec is implemented in
-`nano-p4/nano.ml` in the
-[`kaist-plrg/p4-spectec`](https://github.com/kaist-plrg/p4-spectec) repository
-(on the `gsoc-nano-spec` branch), where the spec is included as a submodule.
+[`p4spec/bin/nano.ml`](https://github.com/kaist-plrg/p4-spectec/blob/gsoc-nano-spec/p4spec/bin/nano.ml)
+in the
+[`kaist-plrg/p4-spectec`](https://github.com/kaist-plrg/p4-spectec/tree/gsoc-nano-spec)
+repository (on the `gsoc-nano-spec` branch), where the spec is included as a
+submodule.
 
 **Syntax and IR:** The surface grammar of Nano-P4 is defined in
 `1-syntax.watsup` as P4-SpecTec `syntax` definitions.
@@ -72,7 +75,7 @@ control block, and produces an output packet.
 
 **Test suite:** The test suite has two kinds of test programs. Positive cases
 are well-typed `.p4` files that double as both static and dynamic tests. The
-static test verfies that the `Program_ok` relation accepts the program. The
+static test verifies that the `Program_ok` relation accepts the program. The
 dynamic test executes the `NanoSwitch_sim` rule with an accompanying `.stf`
 file. Negative cases are plain `.p4` files that the type checker should reject;
 no `.stf` is involved.
@@ -100,7 +103,7 @@ a working prose document:
 
 5. **Dynamic Semantics:** mirrors the static semantics chapter in structure,
    covering evaluation context, values, expressions, statements, calls, calling
-   convention, parser, control, and tables. Similar exercises to those in
+   convention, parser, control, and tables. Exercises similar to those in
    Chapter 3 can be found here.
 
 6. **Tips for Debugging:** a practical chapter on how to debug a failing spec:
@@ -123,16 +126,18 @@ Relevant PRs:
 - [kaist-plrg/p4-spectec#164](https://github.com/kaist-plrg/p4-spectec/pull/164)
 - [ocaml/opam-repository#30455](https://github.com/ocaml/opam-repository/pull/30455)
 
-**Nix flake:** A `flake.nix` was added to `kaist-plrg/p4-spectec`, pinning all
-build and runtime dependencies. Running `nix develop` drops into a shell with
-OCaml, opam, and every required library already present. This gives contributors
-the option to create a fully reproducible development environment with a single
-command.
+**Nix flake:** A
+[`flake.nix`](https://github.com/kaist-plrg/p4-spectec/blob/main/flake.nix) was
+added to `kaist-plrg/p4-spectec`, pinning all build and runtime dependencies.
+Running `nix develop` drops into a shell with OCaml, opam, and every required
+library already present. This gives contributors the option to create a fully
+reproducible development environment with a single command.
 
-**opam package:** `p4spectec` is now published on the opam repository as version
-`0.1.2`. Users who already have opam can install the binary with
-`opam install p4spectec`, without cloning the source or managing the build
-themselves.
+**opam package:**
+[`p4spectec`](https://opam.ocaml.org/packages/p4spectec/p4spectec.0.1.2/) is now
+published on the opam repository as version `0.1.2`. Users who already have opam
+can install the binary with `opam install p4spectec`, without cloning the source
+or managing the build themselves.
 
 ## Demo
 
@@ -151,9 +156,9 @@ The deployed book is live at:
 To run `nano-p4spectec` against the specification as you read, install the
 toolchain as described in
 [Chapter 1: Installation](https://kaist-plrg.github.io/nano-p4-tutorial/spectec/installation.html).
-The
-[`p4-spectec` repository](https://github.com/kaist-plrg/p4-spectec/tree/gsoc-nano-spec)
-also ships a Nix flake for a fully reproducible setup.
+The `p4-spectec`
+[repository](https://github.com/kaist-plrg/p4-spectec/tree/gsoc-nano-spec) also
+ships a Nix flake for a fully reproducible setup.
 
 With all dependencies installed, build `nano-p4spectec`:
 
