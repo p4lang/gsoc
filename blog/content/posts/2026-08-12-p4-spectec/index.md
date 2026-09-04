@@ -252,4 +252,4 @@ one good candidate: it touches the IR definitions, type checking, and
 evaluation, requires the reader to think about where validity is checked and how
 it propagates.
 
-[^1]: [P4-SpecTec: A Mechanized Specification for P4 (Lee et al., 2026)](https://arxiv.org/abs/2608.00639)
+[^1]: [P4-SpecTec: Integrating a Language Mechanization Framework into the Real-World P4 Specification (Lee et al., 2026)](https://arxiv.org/abs/2608.00639)
