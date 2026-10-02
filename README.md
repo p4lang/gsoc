@@ -20,7 +20,7 @@ This repository hosts materials for [The P4 Language Consortium](https://p4.org/
 
 | Program | Accepted projects | Completed projects |
 | ------- | ----------------: | -----------------: |
-| [![P4 GSoC 2027](https://img.shields.io/badge/P4%20GSoC-2027-fbbc05?style=flat&logo=google-summer-of-code)](program/2026/README.md) | 0 | 0 |
+| [![P4 GSoC 2027](https://img.shields.io/badge/P4%20GSoC-2027-fbbc05?style=flat&logo=google-summer-of-code)](program/2027/README.md) | 0 | 0 |
 | [![P4 GSoC 2026](https://img.shields.io/badge/P4%20GSoC-2026-fbbc05?style=flat&logo=google-summer-of-code)](program/2026/README.md) | 5 | 5 |
 | [![P4 GSoC 2025](https://img.shields.io/badge/P4%20GSoC-2025-fbbc05?style=flat&logo=google-summer-of-code)](program/2025/README.md) | 5 | 4 |
 | [![P4 GSoC 2024](https://img.shields.io/badge/P4%20GSoC-2024-fbbc05?style=flat&logo=google-summer-of-code)](program/2024/README.md) | 4 | 4 |
