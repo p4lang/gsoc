@@ -8,7 +8,7 @@
 - [Contributor Guidance](/handbook/contributor_guidance.md)
 
 ## Updates
-
+- (2026-08-18) 🎥 [P4 GSoC 2026 Wrap-up](https://www.youtube.com/watch?v=3RIHChhYvB4)
 - (2026-06-12) 🎥 [P4 GSoC 2026 Kickoff Meeting](https://www.youtube.com/watch?v=Dzlfw_Q8xNY)
 - (2026-05-01) 📝 [Announcing P4 Projects Selected for GSoC 2026](https://p4.org/gsoc-2026-projects/)
 - (2026-02-23) 📝 [GSoC 2026: P4 Language Consortium Accepted](https://p4.org/gsoc-2026-mentor-org/)

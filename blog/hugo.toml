@@ -42,6 +42,11 @@ copyright = "© [p4lang/gsoc contributors](https://github.com/p4lang/gsoc/graphs
   ShowToc = true
   ShowWordCount = true
 
+  # Official P4 logo from https://p4.org/, shown next to the site title.
+  [params.label]
+    icon = "images/p4-logo.svg"
+    iconHeight = 30
+
   # Renders next to the post meta via the edit_post partial (shadowed in
   # layouts/_partials/ to also show the permapage link).
   [params.editPost]

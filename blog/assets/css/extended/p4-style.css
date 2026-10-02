@@ -1,0 +1,152 @@
+/* P4 brand styling, modeled on https://p4.org/: Arial type, purple
+   (#7256b9) as the accent for links and highlights, green (#8cc63f) for
+   pill-shaped buttons, a white header and a dark footer.
+
+   PaperMod loads assets/css/extended/ after its own stylesheets, so the
+   theme variables below override the ones in its core/theme-vars.css at
+   equal specificity. Selectors follow the theme commit pinned in go.mod;
+   re-check them when bumping the theme module. */
+
+:root {
+    --p4-purple: #7256b9;
+    --p4-purple-soft: #dad0ec;
+    --p4-green: #8cc63f;
+    --p4-footer-bg: #252525;
+    --p4-footer-text: #cccccc;
+
+    --link: var(--p4-purple);
+    --theme: #ffffff;
+    --entry: #ffffff;
+    --primary: #1a1b1b;
+    --secondary: #616161;
+    --tertiary: #d6d6d6;
+    --content: #333333;
+    --code-bg: #f1f1f1;
+    --border: #ecebe9;
+}
+
+:root[data-theme="dark"] {
+    --link: #ad8ff8;
+    --p4-purple-soft: #3b2f5e;
+    --theme: #1a1b1b;
+    --entry: #262626;
+    --primary: #f1f1f1;
+    --secondary: #a0a0a0;
+    --tertiary: #4d4d4d;
+    --content: #d4d4d4;
+    --code-bg: #2d2d2d;
+    --border: #333333;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+::selection {
+    background: var(--p4-purple-soft);
+}
+
+/* Header: white bar with the P4 purple/green rule underneath. */
+.header {
+    background: var(--theme);
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(90deg, var(--p4-purple) 0 60%, var(--p4-green) 60% 100%) 1;
+}
+
+.logo a {
+    color: var(--link);
+}
+
+.menu a:hover,
+.logo-switches button:hover {
+    color: var(--link);
+}
+
+.menu .active {
+    text-decoration-color: var(--p4-green);
+}
+
+/* Headings and links. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.post-content a,
+.toc a,
+.breadcrumbs a,
+.post-meta a {
+    color: var(--link);
+}
+
+.post-content a {
+    box-shadow: 0 1px 0 var(--link);
+}
+
+.post-content a:hover {
+    box-shadow: 0 2px 0 var(--p4-green);
+}
+
+.post-content blockquote {
+    border-inline-start-color: var(--link);
+}
+
+/* Post cards: purple accent on hover. */
+.post-entry:hover,
+.post-entry:focus-within {
+    border-color: var(--link);
+}
+
+.post-entry:hover .entry-header h2 {
+    color: var(--link);
+}
+
+/* Pill buttons in the style of p4.org: green with black text. */
+.pagination a,
+.paginav,
+.post-tags a {
+    border-radius: 200px;
+}
+
+.pagination a {
+    background: var(--p4-green);
+    color: #000000;
+    font-weight: 700;
+}
+
+.pagination a:hover {
+    background: var(--p4-purple);
+    color: #ffffff;
+}
+
+.post-tags a:hover,
+.paginav a:hover {
+    background: var(--p4-purple-soft);
+}
+
+.top-link {
+    background: var(--p4-purple);
+    color: #ffffff;
+}
+
+.top-link:hover {
+    background: var(--p4-green);
+    color: #000000;
+}
+
+/* Footer: full-width dark band, as on p4.org. */
+.footer {
+    max-width: none;
+    margin-top: var(--gap);
+    background: var(--p4-footer-bg);
+    color: var(--p4-footer-text);
+}
+
+.footer a:hover {
+    color: var(--p4-green);
+}
