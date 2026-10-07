@@ -55,9 +55,8 @@ These rules are intended to make the program rewarding and problem-free for ever
     year/projects/student_project/
     ├── assets/
     ├── README.md
-    ├── wiki.md
     ```
-    The `assets` folder should contain any assets, such as screenshots, GIFs, etc., used in the report. The `README.md` file contains the report; more details are provided in the following paragraph, and the `wiki.md` file should contain links to the report and to relevant PRs for the project’s development.
+    The `assets` folder should contain any assets, such as screenshots, GIFs, etc., used in the report. The `README.md` file contains the report; more details are provided in the following paragraph. A permapage should be created for the project to provide a stable permanent link to the project and its artifacts.
 
     The report may be used directly as a blog post. For particularly complex projects, and if the student is willing, an additional blog article can be prepared and published on the P4 Language Consortium blog.
 
